@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(./Assets/homepage-map.png);
+    background-color: white;
+}
+#headerdiv{
+    background-color: aliceblue;
+    z-index: 10;
+}
+.advert{
+    width :100%;
+    height: 40px;
+    background-color:rgb(3, 3, 56);
+    text-align: center;
+    color: aliceblue;
+    padding-top: 5px;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: aliceblue;
+    opacity: 0.9;
+    position: sticky;
+    top: 0;
+    z-index: 10;    
+}
+
+.container{
+    display: flex; 
+    width: 100%;
+    height: 100%; 
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+.container img{
+    width: 130px;
+    margin-left: 25px;
+}
+.containercontent2{
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.container button{
+    width: 220px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #3bb75e;
+    color: aliceblue;
+    border-width: 0;
+    font-size: 15px;
+    margin-left: 20px;
+}
+.container a{
+    font-size: large;
+    color: #03031b;
+    text-decoration: none;
+    margin-left: 30px;
+    padding-top: 0px;   
+}
+
+#content1{
+    font-size: 40px ;
+    line-height: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#content2{
+    font-size: 20px;
+}
+
+#main{
+    position:relative;
+    margin-left: 60px;
+}
+#main p{
+    color: rgb(9, 9, 70);
+
+}
+#main1{
+    display: flex;
+}
+#main1 button{
+    width: 220px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #3bb75e;
+    color: aliceblue;
+    border-width: 0;
+    font-size: 15px;
+
+}
+#main1 p{
+    color: #3bb75e;
+    margin-left: 20px;
+}
+#main h2 {
+    padding-top: 100px;
+    color: #03031b;
+}
+#main2 ul{
+    list-style: none;
+    color: rgb(9, 9, 70);
+}
+#main2 p{
+    color: rgb(9, 9, 70);
+    padding-top: 100px; 
+    font-size: large;
+}
+
+/* #main2 span{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+} */
+#mtn{
+    text-align: right;
+}
+
