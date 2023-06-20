@@ -1,0 +1,135 @@
+.flex-container{
+    display: flex;
+   min-height: auto;
+     /* align-items: flex-end; */
+    justify-content: center;
+    margin-top: 50px;
+    flex-direction:row;
+}
+.flex-box-items{
+  width: 199px; 
+  height: 50px;
+  background-color: peachpuff;
+  margin: 0.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+}
+.flex-box-item{
+    width: 300px; 
+    height: 250px;
+    background-color:red;
+    margin: 0.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;   
+}
+.flex-container3{
+    display: flex;
+     /* align-items: flex-end; */
+    justify-content: center;
+    flex-direction:row;
+}
+.inner-div{
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+}
+.flex-box{
+flex-direction: column;
+background-color:rgb(12, 37, 12);
+  width: 295px; 
+  height: 100px;
+  margin: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: white;
+  border: 9px;
+}
+.container{
+        display: flex;
+         min-height: auto;
+         /* align-items: flex-end; */
+        justify-content: center;
+        margin-top: 50px;
+        flex-direction:row;
+    }
+    
+h2{
+    color: white;
+}
+.container2{
+display: flex;
+min-height:450px;
+  /* align-items: flex-end; */
+
+ background-color: white;
+ margin-top: 3px;
+}
+ .item2{ 
+    height: 380px;
+    width: 400px;
+    background-color: cyan;
+    margin-bottom: 80px;
+    margin: 3px;
+    
+}
+.item3{
+    height: 380px;
+    width: 500px; 
+    background-color: #03feff;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: row;
+    margin: 3px;
+}
+
+.header{
+    margin-left: 20px;
+    color: black;
+}
+.para{
+  margin-left: 20px;
+}
+.grey{
+    background-color: #ececec;
+    width: 100px; 
+    height: 30px;
+    margin: 3px;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: white;
+margin-left: 10px;
+  color: black;
+  margin-top: 13px;
+}
+
+.box{ 
+    width: 1300px;
+    height: 60px;
+    background-color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.blush{
+    height: 60px;
+    background-color: purple;
+    align-items:center; 
+  display: flex;
+  margin-top:160px;
+
+}
+
+
+
+
+
+    
