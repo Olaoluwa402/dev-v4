@@ -20,6 +20,7 @@ ul {
 
 img {
   width: 100%;
+  height: 100%;
 }
 
 /* End of general style */
@@ -116,7 +117,99 @@ header .menu-bar {
 
 /* end of side bar */
 
+/* banner */
+.banner {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.banner .bannerImage {
+  flex: 1;
+  background-color: blue;
+}
+
+.banner .bannerText {
+  flex: 1;
+  background-color: blueviolet;
+  background-image: url("https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=400");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.bannerContent {
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(244, 202, 202, 0.5);
+  z-index: 0;
+}
+/* /end of banner */
+
+.flex-container {
+  min-height: 450px;
+  background-color: azure;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* align-items: center; */
+  /* align-content: flex-end; */
+}
+/* felx principle */
+.flexItems {
+  flex-grow: 1;
+  flex-shrink: 0;
+  height: 100px;
+  background-color: rgb(19, 19, 191);
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexItem-1 {
+  /* width: 50px; */
+  order: 2;
+  flex-basis: 1;
+}
+
+.flexItem-2 {
+  order: 3;
+  /* width: 200px; */
+  flex-basis: 1;
+}
+.flexItem-3 {
+  order: 1;
+  /* width: 300px; */
+  flex-basis: 1;
+}
+
 /* media query */
+/* tablets */
+@media (min-width: 640px) {
+  .banner {
+    flex-direction: row;
+  }
+}
+
 @media (min-width: 678px) {
   header > nav {
     display: flex;
@@ -124,5 +217,18 @@ header .menu-bar {
   header .menu-bar {
     display: none;
   }
+}
+/* tablet */
+@media (min-width: 768px) {
+}
+
+/* laptops */
+@media (min-width: 1024px) {
+}
+
+/* large screens */
+@media (min-width: 1280px) {
+}
+@media (min-width: 1536px) {
 }
 /* End of media query */
