@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header{
+ display: flex; 
+    width: 100%;
+    padding: 3px 10px;
+    margin-top: 0px;
+text-align: center;
+align-items: center;
+}
+
+#bars{
+    width: 30%;
+    flex-direction: end;
+    align-items: flex-end;
+    
+}
+/* .menu{ 
+    display: none;
+}*/
+
+.menu{
+    
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+
+}
+.content{
+    padding-left: 20px;
+    background-color: honeydew;
+    padding-bottom: 40px;
+}
+.content1{
+    
+    margin-top: 0px;
+    padding: 10px 0;
+background-color: black;
+color: white;
+display: flex;
+justify-content: center;
+}
+.content2{
+    font-size: 35px;
+    font-weight: bold;
+}
+.btn2{
+    font-size: 16px;
+    color: white;
+    padding: 10px 10px;
+    background-color: rgba(11, 179, 11, 0.63);
+    border-radius: 8px;
+    border-color: rgba(11, 179, 11, 0.63);
+}
+.bg{
+    background-color: rgb(178, 238, 178);
+}
+.pow{
+    background-color: white;
+    padding: 40px 20px;
+}
+.content3{
+    padding-top: 30px;
+    padding-left: 20px;
+    background-color:honeydew;
+}
+
+@media all and (min-width: 700px){
+    .menu{
+    
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+    }
+    .delight{
+        display: flex;
+    }
+.cont1{
+    
+    margin-left: 40px;
+    
+margin-right: 100px;
+}
+.menubar{
+    display: none;
+}
+.card{
+    width: 500px;
+    /* height: 500px; */
+}
+}
