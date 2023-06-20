@@ -1,0 +1,100 @@
+.box4{
+    width: 200px;
+    height: 175px;
+    background-color: rgb(38, 53, 38);
+}
+.box{
+   width:200px ;
+   height: 40px;
+   margin: 5px;
+   background-color: rgb(63, 97, 63);
+   
+} 
+.second{
+   display: flex;
+}
+.first{
+   display: flex;
+}
+.box1{
+   width: 128px;
+   height: 40px;
+   background-color: brown;
+   margin: 5px;
+}
+.main{
+   flex-direction: column;
+   
+   
+}
+.lefthand{
+   display: flex;
+   margin: 5px;
+}
+.left{
+   flex-direction: column;
+}
+.box-1{
+   width: 95px;
+   height: 50px;
+   background-color: yellow;
+   margin: 3px;
+}
+.main2{
+   outline-width: 5px;
+   background-color: grey;
+   width: 30%;
+   border-radius: 5px;
+}
+
+.inside{
+width: 40px;
+height: 20px;
+background-color: white;
+margin: 10px 20px;
+display: flex;
+gap: 10px;
+
+
+}
+.left-hand{
+flex-direction: column;
+margin-left: 5px;
+width: 350px;
+height: 200px;
+background-color: rgb(70, 70, 170);
+margin-top: 5px;
+}
+.content{
+
+display: flex;
+
+}
+.box-4{
+width: 200px;
+height: 200px;
+background-color: blue;
+margin: 5px;
+}
+.main3{
+margin-top: 100px;
+
+}
+
+.top{
+width: 58.16%;
+height: 40px;
+background-color: purple;
+padding-top: 10px;
+font-size: 20px;
+color: white;
+text-align: center;
+}
+
+button{
+margin-top: 25px;
+margin-left: 75px;
+justify-content: center;
+width: 200px;
+height: 30px;
+}
