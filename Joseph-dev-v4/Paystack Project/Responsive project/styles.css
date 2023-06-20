@@ -43,6 +43,7 @@ header {
   background-color: navy;
   padding: 15px;
 }
+
 header #logo {
   font-size: 15px;
 }
@@ -79,7 +80,7 @@ header .menu-bar {
   left: 0;
   bottom: 0;
   width: 280px;
-  background-color: navy;
+  background-color: rgb(0, 124, 128);
   border: 1px solid #fff;
   z-index: 999;
 
