@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: roboto;
+        }
+
+        .container {
+            padding: 10px;
+            background-color: azure;
+            width: 98%;
+            height: 90vh;
+            display: grid;
+            grid-template-columns: 24% 48% 24%;
+            grid-template-rows: 20% 60% 20%;
+            grid-gap: 10px;
+        }
+
+        .items {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item1 {
+            grid-column: 1/4;
+            background-color: rgb(51, 51, 177);
+        }
+
+        .item2 , .item4 {
+            background-color: rgb(115, 115, 194);
+        }
+
+        .item3 {
+            background-color: rgb(119, 119, 119);
+        }
+
+        .item5 {
+            grid-column: 1/4;
+            background-color: rgb(51, 51, 177);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="items item1">Holy Grail Layout</div>
+        <div class="items item2">Nav</div>
+        <div class="items item3">Main Content</div>
+        <div class="items item4">Sidebar</div>
+        <div class="items item5">Footer</div>
+    </div>
+</body>
+</html>
