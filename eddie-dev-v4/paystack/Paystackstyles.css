@@ -110,12 +110,25 @@ header{
     font-size: large;
 }
 
-/* #main2 span{
+#main2 span{
     display: flex;
     flex-direction: row;
     justify-content: space-between;    
-} */
+}
 #mtn{
     text-align: right;
 }
+#mainbody{
+    display: flex;
+    width: 100%;
+    position: absolute;
 
+}
+.simple{
+    position: relative;
+    width: 100%;
+}
+.simple h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #03031b;
+}
