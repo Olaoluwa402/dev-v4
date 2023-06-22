@@ -15,7 +15,7 @@ body {
 
 /* Start of Navigation Section */
 
-.Navigation .advert {
+.advert {
   width: 100%;
   height: 60px;
   background-color: rgb(16, 16, 46);
@@ -31,25 +31,24 @@ body {
   font-size: 1rem;
 }
 
-.Navigation .nav {
+.nav {
   display: flex;
-  height: 40%;
   justify-content: space-between;
   align-items: center;
-  margin-top: 5px;
-}
-
-.nav {
-  position: -webkit-sticky;
+  padding-top: 5px;
+  height: 55px;
+  position: sticky;
   top: 0px;
-  background-color: #eaf8ee;
+  background-color: rgb(245, 245, 240);
+  z-index: 900;
+  /* margin-top: 0px; */
 }
 
 .subnav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 0;
+  padding-top: 0px;
 }
 
 .nav > .subnav > .sub-logo {
@@ -103,7 +102,7 @@ body {
 
 .modern {
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   margin-top: 0;
 }
 
@@ -137,7 +136,7 @@ body {
   align-items: center;
   list-style: none;
   padding-left: 30px;
-  width: 100%;
+  width: 80%;
   margin: 0;
 }
 
@@ -210,9 +209,6 @@ body {
   justify-content: center;
   list-style: none;
   padding-inline-start: 0;
-  /* position: absolute;
-  right: 0px;
-  bottom: 0; */
 }
 
 .mtn #image {
@@ -301,36 +297,84 @@ body {
   font-size: 1rem;
   font-weight: 500;
   font-style: normal;
-  padding: 1px;
+  padding-left: 30px;
+  position: relative;
+}
+.payment-mode > ul > li > a::before {
+  content: "";
+  position: absolute;
+  background-image: url(./images2/Assets/greencheck.png);
+  width: 40px;
+  background-repeat: no-repeat;
+  /* height: 15px; */
+  left: 0;
+  top: -5px;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .rate h2 {
   font-size: x-large;
   color: rgb(8, 8, 36);
+  padding-left: 15px;
 }
 
 .rate p {
   font-size: medium;
   font-weight: 500;
+  padding-left: 15px;
 }
 .rate span {
   display: flex;
   align-items: center;
   color: rgb(124, 241, 124);
   font-weight: 600;
-  padding: 5px;
+  padding: 15px;
 }
 
-/* .payment-mode>ul>li>a::before {
-  content: "";
-  position: absolute;
-  width: 50x;
-  height: 15px;
-  left: 226px;
-  top: 230px;
-  background-color: #F8C146;
-  z-index: -1;
+/* .custom-api {
+  display: flex;
 } */
+
+.api {
+  margin-top: 50px;
+  width: 100%;
+  padding-left: 30px;
+}
+
+.custom-payment > h2 {
+  font-size: 2rem;
+  padding-left: 15px;
+}
+
+.custom-payment > p {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.custom-links {
+  display: flex;
+  flex-direction: column;
+  margin-block: 0;
+  list-style: none;
+  justify-content: center;
+  padding-inline-start: 5px;
+}
+.custom-links > li {
+  padding: 5px;
+  width: 100%;
+}
+.custom-links > li > a {
+  display: flex;
+  align-items: center;
+  color: rgb(10, 10, 10);
+  text-decoration: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  padding: 1px;
+}
 
 /* sidebar */
 .sidebar {
@@ -340,32 +384,42 @@ body {
   bottom: 0;
   width: 280px;
   background-color: white;
-  border: 1px solid ;
-  z-index: 999; 
+  border: 1px solid;
+  z-index: 999;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 0;
+  padding: 20px 0;
   transform: translateX(-100%);
   transition: all 1s ease-in-out;
+  margin-top: 58px;
 }
 
 .sidebar.open {
   transform: translate;
+  left: 250px;
 }
 
 .sidebar ul {
-  margin-top: 50px;
+  margin-top: 30px;
+  padding-left: 90px;
+  width: 100%;
 }
 
 .sidebar ul > li {
+  list-style: none;
   margin-bottom: 20px;
+}
+
+.sidebar ul > li #login {
+  color: #51b66d;
 }
 
 .sidebar ul > li > a {
   display: inline-block;
-  color: #000;
+  color: rgb(21, 21, 56);
+  font-weight: 600;
   transition: all 0.5s ease-in-out;
   text-decoration: none;
 }
@@ -373,19 +427,45 @@ body {
 .sidebar ul > li > a:hover {
   color: goldenrod;
   transform: scale(1.1);
-} 
+}
+
+.sidebar .logo {
+  padding-left: 90px;
+  width: 100%;
+}
+.sidebar button {
+  border-radius: 5px;
+  height: 38px;
+  font-size: medium;
+  background-color: #51b66d;
+  border: none;
+  color: white;
+}
+/* .Create span {
+  color: #51b66d;
+  font-weight: 600;
+}
+
+.Create > li {
+  padding: 5px;
+  width: 100%;
+}
+
+.Create li a {
+  text-decoration: none;
+} */
 
 /* end of side bar */
 
 /* End of Payment Section */
 
- /* media query */ 
-@media (max-width: 678px) {  
-   header > nav {
-   display: flex;
+/* media query */
+@media (max-width: 678px) {
+  header > nav {
+    display: flex;
   }
-   header .menu-bar {
-   display: none; 
+  header .menu-bar {
+    display: none;
   }
 }
-/* End of media query 
+/* End of media query */
