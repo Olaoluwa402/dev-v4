@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 /* general styles */
 
 * {
@@ -27,6 +28,7 @@ img {
 /* --------------- */
 /* Mobile first */
 /* ------------------ */
+
 /* header */
 #logo {
   font-size: 2rem;
@@ -36,11 +38,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 50px;
   width: 100%;
   border-bottom: 2px solid white;
   background-color: navy;
   padding: 15px;
+}
+header #logo {
+  font-size: 15px;
 }
 
 header > nav {
@@ -64,6 +69,7 @@ header ul > li > a {
 
 header .menu-bar {
   cursor: pointer;
+  background-color: white;
 }
 /* End of header */
 

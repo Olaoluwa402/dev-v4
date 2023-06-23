@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: purple;
+}
+
+.grid-layout {
+  display: grid;
+  background-color: azure;
+  width: 95%;
+  margin-left: 20px;
+  height: 150vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 50px 300px 100px 100px 100px 100px;
+  gap: 10px;
+  padding: 5px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.grid-layout h2 {
+  font-size: 1rem;
+}
+
+.Nav {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #6dfebe;
+  color: black;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 100%;
+}
+
+.sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: aqua;
+  color: black;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #99fdfd;
+  color: black;
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.Content1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #33ffb1;
+  color: black;
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+.Content2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #0efd6a;
+  color: black;
+  grid-column: 1/2;
+  grid-row: 5/6;
+}
+.Content3 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #00ff2a;
+  color: black;
+  grid-column: 1/2;
+  grid-row: 6/7;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #68d6a3;
+  color: black;
+  grid-column: 1/2;
+  grid-row: 7/8;
+}
+
+@media screen and (min-width: 600px) {
+  .grid-layout {
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 50px 240px 170px 90px;
+  }
+
+  .Nav {
+    grid-column: 1/5;
+    grid-row: 1/2;
+  }
+
+  .sidebar {
+    grid-column: 1/2;
+    grid-row: 2/5;
+  }
+
+  .main {
+    grid-column: 2/5;
+    grid-row: 2/3;
+  }
+
+  .Content1 {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+  .Content2 {
+    grid-row: 3/4;
+    grid-column: 3/4;
+  }
+  .Content3 {
+    grid-row: 3/4;
+    grid-column: 4/5;
+  }
+
+  .footer {
+    grid-row: 4/5;
+    grid-column: 2/5;
+  }
+}
