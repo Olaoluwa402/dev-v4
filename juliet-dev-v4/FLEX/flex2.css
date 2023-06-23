@@ -34,7 +34,7 @@ main{
     border: 2px;
     background-color: #03FEFF;
     width: 26%;
-    height: 75vh;
+    height: 100vh;
     border-radius: 6px;
     padding: 12px;
 }
@@ -42,7 +42,7 @@ main{
     border: 2px;
     background-color: #03FEFF;
     width: 26%;
-    height: 75vh;
+    height: 100vh;
     border-radius: 6px;
     padding: 12px;
 }
@@ -50,7 +50,7 @@ main{
     border: 2px;
     background-color: #03FEFF;
     width: 45%;
-    height: 75vh;
+    height: 100vh;
     border-radius: 6px;
 }
 .first_box h1{

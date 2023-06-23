@@ -1,0 +1,133 @@
+.grid_layout{
+    /* display: grid; */
+    gap: 15px;
+    grid-auto-rows: minmax(100px, auto);
+    /* grid-template-areas: 
+    "nav nav nav nav"
+    "side side side side"
+    "main main main main"
+    "c1 c1 c1 c1"
+    "c2 c2 c2 c2"
+    "c3 c3 c3 c3"
+    "footer footer footer"; */
+  }
+
+  .nav-bar{
+    background-color: aqua;
+    /* grid-area: nav; */
+    margin-top: 30px;
+    border-radius: 6px;
+    min-height: 50px;
+    display: flex;
+   justify-content: center;
+   align-items: center
+}
+
+.side-bar{
+    background-color: rgb(31, 243, 243);
+    /* grid-area: side; */
+    margin-top: 30px;
+    border-radius: 6px;
+    min-height: 50px;
+    display: flex;
+   justify-content: center;
+   align-items: center
+}
+
+.main{
+    background-color: rgb(21, 165, 165);
+    /* grid-area: main; */
+    margin-top: 30px;
+    border-radius: 6px;
+    min-height: 50px;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 300px;
+}
+
+.content1{
+    background-color: rgb(17, 141, 96);
+    height: 100px;
+    margin-top: 30px;
+    border-radius: 6px;
+    min-height: 50px;
+    /* grid-area: c1; */
+    display: flex;
+   justify-content: center;
+   align-items: center
+ 
+}
+
+.content2{
+    background-color: rgb(51, 205, 205);
+    height: 100px;
+    margin-top: 30px;
+    border-radius: 6px;
+    min-height: 50px;
+    display: flex;
+   justify-content: center;
+   align-items: center
+
+}
+
+.content3{
+    background-color: rgb(94, 218, 89);
+    height: 100px;
+    margin-top: 30px;
+    border-radius: 6px;
+    min-height: 50px;
+    display: flex;
+   justify-content: center;
+   align-items: center
+}
+
+.footer{
+    background-color: rgb(14, 89, 64);
+    /* grid-area: footer; */
+    margin-top: 30px;
+    border-radius: 6px;
+    min-height: 50px;
+    display: flex;
+   justify-content: center;
+   align-items: center
+}
+
+@media screen and (min-width:600px){
+    .grid_layout{
+        display: grid;
+        /* gap: 15px; */
+        /* grid-auto-rows: minmax(100px, auto); */
+        grid-template-areas: 
+    "nav nav nav nav"
+    "side main main main"
+    "side c1 c2 c3"
+    "side footer footer footer";
+      }
+    
+      .nav-bar{
+        grid-area: nav;
+
+      }
+      .side-bar{
+        grid-area: side;
+      }
+      .main{
+        grid-area: main;
+      }
+
+      .content1{
+        grid-area: c1;
+      }
+
+      .content2{
+        grid-area: c2;
+      }
+
+      .content3{
+        grid-area: c3;
+      }
+      .footer{
+        grid-area: footer;
+      }
+}
