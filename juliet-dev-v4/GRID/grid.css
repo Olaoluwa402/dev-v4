@@ -1,0 +1,51 @@
+.Grid_layout{
+    display: grid;
+    gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 
+    "Holy Holy Holy Holy"
+    "Nav Main Main Side"
+    "Footer Footer Footer Footer";
+  }
+
+
+  .holy_grail{
+    background-color: rgb(18, 18, 200);
+   grid-area: Holy;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+
+  .nav{
+    background-color: rgb(18, 98, 183);
+    grid-area: Nav;
+    min-height:100vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main_content{
+    background-color: gray;
+    grid-area: Main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .side_bar{
+    background-color: rgb(18, 100, 188);
+    grid-area: Side;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer{
+    background-color: rgb(18, 18, 200);
+    grid-area: Footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
