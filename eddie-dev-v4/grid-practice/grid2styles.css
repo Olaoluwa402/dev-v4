@@ -36,7 +36,7 @@ body{background-color: aliceblue;
     background-color: olivedrab;
 }
 @media (min-width:700px) {
-    .grid-container {
+    .grid-layout {
         grid-template-columns: auto auto auto auto;
         grid-template-rows: 30px 200px 100px 50px;
     
@@ -71,7 +71,7 @@ body{background-color: aliceblue;
           background-color: paleturquoise;
           grid-column: 3/4;
           grid-row: 3/4;
-      }
+      } 
       .content3{
           background-color: aqua;
           grid-column: 4/5;
