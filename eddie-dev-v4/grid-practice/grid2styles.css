@@ -1,42 +1,40 @@
-body{background-color: aliceblue;
-    margin: 0;
-    padding: 0;
+body {
+  background-color: aliceblue;
+  margin: 0;
+  padding: 0;
 }
-.grid-layout{
-      background-color: aliceblue;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 30px 100px 200px 100px 100px 100px 50px ;
-      grid-gap: 10px;
-      margin: 20px;
-      height: 100vh;
+.grid-layout {
+  background-color: aliceblue;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30px 100px 200px 100px 100px 100px 50px;
+  grid-gap: 10px;
+  margin: 20px;
+  height: 100vh;
 }
-.navbar{
-    background-color: greenyellow;
-    
-
+.navbar {
+  background-color: greenyellow;
 }
-.sidebar{
-    background-color: blanchedalmond;
-    
+.sidebar {
+  background-color: blanchedalmond;
 }
-.main{
-    background-color:skyblue;
+.main {
+  background-color: skyblue;
 }
-.content1{
-    background-color: grey;
+.content1 {
+  background-color: grey;
 }
-.content2{
-    background-color: paleturquoise;
+.content2 {
+  background-color: paleturquoise;
 }
-.content3{
-    background-color: aqua;
+.content3 {
+  background-color: aqua;
 }
-.footer{
-    background-color: olivedrab;
+.footer {
+  background-color: olivedrab;
 }
 @media (min-width:700px) {
-    .grid-layout {
+    .grid-container {
         grid-template-columns: auto auto auto auto;
         grid-template-rows: 30px 200px 100px 50px;
     
@@ -71,7 +69,7 @@ body{background-color: aliceblue;
           background-color: paleturquoise;
           grid-column: 3/4;
           grid-row: 3/4;
-      } 
+      }
       .content3{
           background-color: aqua;
           grid-column: 4/5;
@@ -83,4 +81,3 @@ body{background-color: aliceblue;
           grid-row: 4/5;
       }
 }
-    

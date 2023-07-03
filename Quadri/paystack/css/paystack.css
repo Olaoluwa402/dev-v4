@@ -1,0 +1,537 @@
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: url('./images/homepage-map');
+     background-color: #EAF8EE; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+header{
+    display: block;
+    background-color: rgba(255, 255, 255, 0);
+
+    
+}
+.header-advert{ 
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-self: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #011b33;
+    height: 50px;
+    
+}
+
+.header-advert>span{ 
+    justify-items: center;
+    color: white;
+    padding-top: 15px;
+   
+}
+
+nav{
+    width: 100%;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.062);
+    height: 60px;
+    opacity: 1;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+  .header-logo{   
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+.menu-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    display: none;
+    
+
+}
+
+  /* @media (max-width:800px){   
+    .menu-list{
+        display: none;
+    }
+
+}*/
+
+#right-menu{
+    margin-left: 50px;
+}
+
+#left-menu{
+    margin-right: 100px;
+    
+}
+
+
+.header-logo .menu-list ul{
+    display: flex;
+}
+
+.header-logo .menu-list ul li{
+    padding: 10px;
+    list-style: none;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+#btn{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #3BB75E;
+    border: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+#img>img{
+    padding: 10px;
+}
+
+main{
+    margin-top: 120px;
+    margin-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.hero-section>h1{
+    font-size: 50px;
+    padding-top: 20px;
+    
+}
+
+.hero-section>p{
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.btn{
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+
+main .btn>button{
+    padding: 25px;
+    border-radius: 5px;
+    background-color: #3BB75E;
+    color: white;
+    border: none;
+    height: 40px;
+    text-align: center;
+}
+
+.btn>button:hover{
+    cursor: pointer;
+}
+
+.btn>a{
+    color: #3BB75E;
+    text-decoration: none;
+    font-weight: 600;
+    padding-left: 20px;
+
+}
+/* side bar */
+
+ /* .side-bar{  
+    position: fixed;
+    top: 150px;
+    left: 0;
+    bottom: 0;
+    width: 90%;
+    background-color: #EAF8EE;
+    z-index: 99;
+
+    display: flex;
+    
+    flex-direction: column;
+    align-items: start;
+    padding: 50px 0;
+    transform: translateX(-100%);
+    transition: all 2s ease-in-out;
+    opacity: 1;
+
+}
+
+.side-open{
+    transform: translateX(0);
+}
+
+.side-bar ul{
+    margin-bottom: 5px;
+
+}
+.side-bar ul> li{
+    margin-bottom: 0px;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    margin: 10px;
+    
+}
+
+#btc{
+    width: 90%;
+    height: 40px;
+    background-color: green;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+    padding: 10px;
+}*/
+
+.last-main{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.hero-left h4{
+    padding: 10px;
+}
+
+
+.hero-left img{
+    padding: 10px;
+    align-items: center;
+    
+}
+
+
+
+.hero-right{
+    display: flex;
+    margin-top: 30px;
+}
+
+.hero-right>p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    font-weight: 500;
+}
+
+#bt-img{
+    background: none;
+    border: none;
+    align-items: center;
+    line-height: 1;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #0ba4db;
+}
+
+#bt-img:hover{
+    cursor: pointer;
+}
+
+.sect{
+    margin-top: 40px;
+    background-color: white;
+    padding: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 40px;
+}
+.sect>h2{
+    font-size: 30px;
+
+}
+
+section img{
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.aside{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.aside ul li{
+    list-style: none;
+
+}
+
+.card{
+    position: absolute;
+    top:-10px;
+    left: 27px;
+    bottom: 50px;
+}
+
+.card ul li{
+    margin-top: 25px;
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card-logo{
+    display: block;
+}
+
+.card-logo h2 p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card-logo  button{
+    text-decoration: none;
+    color: #3BB75E;
+    font-weight: 500;
+    justify-content: center;
+    margin-top: 35px;
+    font-size: 15px;
+    
+}
+
+#btn-arrow{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px;
+    border: none;
+    background: none;
+}
+
+#btn-arrow:hover{
+    cursor: pointer;
+    color: aquamarine;
+}
+
+.corp ul{
+list-style: none;
+}
+.corp ul li{
+    margin-top: 20px;
+
+}
+
+.corp-sect{
+    margin-right: 20px;
+    position: relative;
+}
+
+.corp-sect2{
+    position: absolute;
+    top: -20px;
+    left: 15px
+}
+
+.corp-sect2 ul li{
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    padding: 5px;
+    margin-bottom: 45px;
+}
+.corp-sect2 button{
+    text-decoration: none;
+    color: #3BB75E;
+    font-weight: 500;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+#btn-api{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px;
+    border: none;
+    background: none;
+}
+#btn-api:hover{
+    cursor: pointer;
+    color: #3bb75ebb;
+}
+
+.fraud-sect{
+    margin-top: 140px;
+    display: block;
+}
+
+.fraud-text{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    padding: 20px;
+    
+}
+
+.fraud-text>h2{
+    padding-top: 10px;
+}
+
+.biz-sect{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: #EAF8EE;
+    margin: 20px;
+}
+
+.biz-text{
+    padding: 50px;
+}
+.biz-text>h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+
+.pay-glo{
+    background-color: white;
+    border-radius: 10px;
+    margin: 30px;
+    margin-right: 30px;
+    padding: 10px;
+
+}
+
+
+#pay-btn{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px;
+    border: none;
+    background: none;
+}
+
+.pat-power{
+    margin-top: 50px;
+}
+
+.pat-tex{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.pat-tex>h2{
+    font-size: 40px;
+}
+.pat-tex p{
+    padding: 10px;
+    font-size: 20px;
+}
+.pat-img{
+    margin-top: 40px;
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    
+}
+
+.pat-img>img{
+    height: 30px;
+}
+
+.strong{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 40px;
+    background-color: #eaf8ee3a;
+}
+
+.strong-tex{
+    margin-top: 50px;
+    margin-left: 20px;
+    padding-top: 50px;
+}
+
+.strong-tex h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+}
+
+.strong-tex p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.strong-card{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.strong-card .card-str{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.card-str img{
+    margin-top: 40px;
+    margin-left: 20px;
+    
+}
+
+.card-str>p{
+    margin-top: 30px;
+    margin-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+.card-img{
+display: flex;
+align-items: center;
+margin: 10px;
+padding: 10px;
+}
+
+.stripe-img>img{
+    border-radius: 100%;
+    
+}
+
+.stripe-tex{
+    padding: 20px;
+}
+
+.stripe-tex>span{
+    font-weight: 700;
+    font-size: 25px;
+}
