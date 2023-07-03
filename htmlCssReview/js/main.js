@@ -1,5 +1,5 @@
 // get the elment
-const menuBar = document.getElementById("menu-bar");
+const menuBar = document.getElementById("menubar");
 
 // set event listener
 menuBar.addEventListener("click", function () {

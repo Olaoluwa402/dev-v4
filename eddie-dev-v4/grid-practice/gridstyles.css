@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.grid{
+    background-color: azure;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-gap: 10px;
+  margin: 20px;
+  height: 100vh;
+    
+}
+.grid-items-1{
+    background-color:blue ;
+    grid-column: 1/4;
+}
+.grid-items-2{
+    background-color:lightskyblue ;
+}
+.grid-items-3{
+    background-color:rgb(121, 116, 121) ;
+}
+.grid-items-4{
+    background-color:lightblue ;
+}
+.grid-items-5{
+    background-color:blue ;
+    grid-column: 1/4;
+}
+

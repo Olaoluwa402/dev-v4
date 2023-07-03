@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-layout {
+  display: grid;
+  background-color: azure;
+  width: 90%;
+  margin: 20px;
+  height: 100vh;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 50px 400px 50px;
+  gap: 10px;
+}
+
+.holy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  color: white;
+  grid-column: 1/4;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(95, 95, 241);
+  color: white;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(92, 88, 88);
+  color: white;
+}
+
+.sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(95, 95, 241);
+  color: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  color: white;
+  grid-column: 1/4;
+  grid-row: 3/4;
+}
