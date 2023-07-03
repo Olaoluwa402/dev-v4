@@ -17,12 +17,16 @@ body {
 
 #header-text {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   color: white;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   padding-left: 40px;
   padding-right: 70px;
+}
+
+#header-text img {
+  height: fit-content;
 }
 
 #header-icons {
@@ -32,6 +36,7 @@ body {
 #header-text > span {
   font-size: 0.9rem;
   font-weight: 700;
+  text-align: center;
 }
 
 /* #header-icons {
