@@ -1,21 +1,24 @@
-let darr = [1,2,3,4,5,6,7,8,9,10]
-console.log(darr)
+// function fullName(firstName , lastName){
+//     return `my name is ${firstName} ${lastName}.`
+// }
 
+// console.log(fullName("John" , "Doe"))
 
-function tst1 (nnew) {
-    let newdarr = []
+// or
 
-    for (num in darr){
-        if(num % 2 === 0) {
-            return newdarr + num
-        }
-        else return newdarr
-    }
-    return newdarr
+// function fullName2 (firstName , lastName) {
+//     const intro = "My name is "
+//     return intro.concat(firstName , lastName )+"."
+// }
+
+// console.log(fullName2("Jane " , "Doe"))
+
+function beginWith (motherString , childString) {
+    return motherString.startsWith(childString)
 }
 
-console.log(tst1())
-
+console.log(beginWith ("Javascript is fun" , "is"))
+console.log(beginWith ("James is kind" , "James"))
 
 
 
