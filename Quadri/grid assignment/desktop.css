@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+}
+
+.grid-container{
+    width: 98%;
+    height: 97vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows:10% 10% 30% 12% 12% 12% 12% ;
+    /* min-height: 600px; */
+    background-color: cornsilk;
+    padding: 10px;
+    grid-gap: 10px;
+    /* margin: 5px; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.nav{
+    /* display: grid; */
+    background-color: green;
+    /* height: 20px;
+    align-items: center;
+    justify-content: center; */
+    border-radius: 5px;
+}
+
+.side{
+
+    /* display: grid; */
+    background-color: blue;
+    /* height: 20px;
+    align-items: center;
+    justify-content: center; */
+    border-radius: 5px;
+}
+
+.main{
+    /* display: grid; */
+    background-color: rgba(0, 0, 255, 0.271);
+    /* grid-template-rows: 120px;
+    align-items: center;
+    justify-content: center; */
+    border-radius: 5px;
+
+}
+
+.content-1{
+    /* display: grid; */
+    background-color: greenyellow;
+    /* grid-template-rows: 70px;
+    align-items: center;
+    justify-content: center; */
+    border-radius: 5px;
+}
+
+.content-2{
+    /* display: grid; */
+    background-color: rgba(172, 255, 47, 0.675);
+    /* grid-template-rows: 70px;
+    align-items: center;
+    justify-content: center; */
+    border-radius: 5px;
+
+}
+
+.content-3{
+    /* display: grid; */
+    background-color: rgba(172, 255, 47, 0.401);
+    /* grid-template-rows: 70px;
+    align-items: center;
+    justify-content: center; */
+    border-radius: 5px;
+}
+
+
+.content-4{
+    /* display: grid; */
+    background-color: rgba(172, 255, 47, 0.158);
+    /* grid-template-rows: 70px;
+    align-items: center;
+    justify-content: center; */
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 780px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 10% 40% 28% 18%;
+        background-color: rgb(255, 220, 232);
+        /* margin: 5px; */
+        /* justify-content: center;
+        align-items: center; */
+    }
+
+    .nav {
+        grid-column: 1/5;
+    }
+
+    .side {
+        grid-row: 2/5;
+    }
+
+    .main {
+        grid-column: 2/5;
+    }
+
+    .content-4 {
+        grid-column: 2/5;
+    }
+
+}
