@@ -30,13 +30,13 @@ a {
 }
 
 #ad-top div {
-    /* display: flex; */
+    display: flex;
     align-items: center;
 }
 
 #ad-top img {
     width: 17px;
-    height: 17px;
+    height: fit-content;
 }
 
 #ad-top img:hover {
@@ -48,17 +48,17 @@ a {
 }
 
 #ad-top ul {
-    margin: auto;
-    width: 40%;
+    /* margin: auto; */
     display: flex;
-    /* align-items: center; */
+    width: 80%; 
+    justify-content: center;
     margin-top: 20px;
 
 }
 
 #ad-top ul li {
     padding: 0 5px;
-    align-items: center;
+    /* align-items: end; */
     
 }
 
@@ -90,6 +90,10 @@ nav {
     height: fit-content;
 }
 
+.hamburger-menu:hover {
+    opacity: 0.5;
+}
+
 .desktop-list-right {
     display: none;
 }
@@ -109,12 +113,15 @@ nav {
 
 .side-nav {
     position: fixed;
-    margin-top: 0px;
+    margin: 0px;
+    padding: 0;
     top: 0;
     right: 0;
     left: 30%;
     width: 70%;
-    /* border-collapse: collapse; */
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.959);
+    opacity: 0;
     transform: translatex(100%);
     transition: all .5s ease-in-out;
 }
@@ -122,21 +129,21 @@ nav {
 .side-nav.open {
     transform: translatex(1px);
     right: 100px;
+    opacity: 1;
 }
 
 .side-nav ul {
     color: rgb(201, 201, 201);
     font-weight: 300;
-    background-color: rgba(0, 0, 0, 0.829);
     margin: 0%;
-    padding: 100px 0 150px 0;
+    padding: 10px 0 0 0;
+
     
 }
 
 .side-nav li {
-    border: 1px solid rgb(201, 201, 201);
-    border-collapse: collapse;
-    padding: 10px;
+    border-bottom: 1px solid rgb(201, 201, 201);
+    padding: 10px 40px;
 }
 
 .side-nav li:hover {
@@ -159,6 +166,7 @@ h2 {
     justify-content: space-between;
     border: 1px solid rgb(219, 219, 219);
     margin-bottom: 20px;
+    overflow: auto;
 }
 
 .grid > img {
@@ -373,7 +381,7 @@ footer {
 /* footer end */
 
 /* media query start */
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 1024px) {
     #ad-top {
         background-color: rgb(40,116,252);
         color: white;
@@ -390,7 +398,6 @@ footer {
         margin: 0;
         display: flex;
         /* align-items: center; */
-        margin-top: 20px;
     }
 
     nav {
@@ -427,7 +434,7 @@ footer {
     .grid-section {
         padding: 50px 180px 50px 200px;
         display: flex;
-        justify-content: space-between;
+        justify-content: end;
     }
 
     .grid-apply {
@@ -439,7 +446,7 @@ footer {
     }
 
     .side-tab {
-        width: 40%;
+        width: 100%;
         margin-left: 40px;
     }
 

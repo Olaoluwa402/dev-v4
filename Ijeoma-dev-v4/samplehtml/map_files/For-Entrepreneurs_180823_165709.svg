@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 106.68 66.42">
+  <defs>
+    <clipPath id="a">
+      <circle cx="26.96" cy="39.45" r="26.96" style="fill:none"></circle>
+    </clipPath>
+    <clipPath id="b">
+      <path d="M13.09,22.58H63.45a1.13,1.13,0,0,1,1.14,1.13h0V48.27a1.13,1.13,0,0,1-1.14,1.13H13.09a1.57,1.57,0,0,1-1.58-1.57V24.15a1.57,1.57,0,0,1,1.58-1.57Z" style="fill:none"></path>
+    </clipPath>
+  </defs>
+  <title>For Entrepreneurs</title>
+  <path d="M78.86,60.77a7.54,7.54,0,0,0-2.58-1.86,7,7,0,0,1-2.59-1.72,2.36,2.36,0,0,1-.13-2.92c1.41-1.76,4.14-.53,5.39.79a9.39,9.39,0,0,1,2.25,5.71Z" style="fill:#9fffb3"></path>
+  <path d="M80.49,62.12s-.49-4.2-2.73-5.66" style="fill:none;stroke:#80e598;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.81942427729107px"></path>
+  <polygon points="83.43 65.59 87.06 48.53 93.83 65.59 83.43 65.59" style="fill:#bddef4"></polygon>
+  <polygon points="87.54 48.95 98.7 48.95 101.08 66.02 89.91 66.02 87.54 48.95" style="fill:#fff;stroke:#dcf6ff;stroke-miterlimit:10;stroke-width:0.81942427729107px"></polygon>
+  <circle cx="26.96" cy="39.45" r="26.96" style="fill:#dcf6ff"></circle>
+  <g style="clip-path:url(#a)">
+    <path d="M12.16,22.58H62.52a1.13,1.13,0,0,1,1.14,1.13h0V48.27a1.13,1.13,0,0,1-1.14,1.13H12.16a1.57,1.57,0,0,1-1.58-1.57V24.15a1.57,1.57,0,0,1,1.58-1.57Z" style="fill:#bddef4"></path>
+    <path d="M13.09,22.58H63.45a1.13,1.13,0,0,1,1.14,1.13h0V48.27a1.13,1.13,0,0,1-1.14,1.13H13.09a1.57,1.57,0,0,1-1.58-1.57V24.15a1.57,1.57,0,0,1,1.58-1.57Z" style="fill:#fff"></path>
+    <line x1="16.04" y1="49.4" x2="16.04" y2="68.33" style="fill:none;stroke:#bddef4;stroke-miterlimit:10;stroke-width:0.819000005722046px"></line>
+    <g style="clip-path:url(#b)">
+      <polygon points="31.93 29.51 -6.19 62.05 6.75 71.46 31.33 70.8 45.62 29.51 31.93 29.51" style="fill:#bddef4"></polygon>
+    </g>
+  </g>
+  <rect x="59.18" y="48.95" width="23.21" height="8.74" rx="1.61" ry="1.61" style="fill:#fa2;fill-opacity:0"></rect>
+  <polygon points="47.81 39.7 47.81 66.42 26.43 66.42 26.43 41.1 37.83 30.62 47.81 39.7" style="fill:#dcf6ff"></polygon>
+  <polygon points="76.92 39.33 47.81 39.33 47.81 66.42 78.93 66.42 78.93 41.48 76.92 39.33" style="fill:#f6fcff"></polygon>
+  <rect x="73.16" y="48.14" width="2.64" height="18.28" style="fill:#bddef4"></rect>
+  <path d="M73.16,48.14V62.52l1.54-8.39a4,4,0,0,0,1.1.38V48.14Z" style="fill:#bddef4"></path>
+  <rect x="68.89" y="48.14" width="4.28" height="18.28" style="fill:#fff"></rect>
+  <rect x="62.36" y="48.14" width="2.64" height="10.81" style="fill:#bddef4"></rect>
+  <rect x="50.84" y="48.14" width="11.52" height="10.81" style="fill:#fff"></rect>
+  <g style="opacity:0">
+    <polygon points="62.36 62.52 63.01 58.93 62.36 58.93 62.36 62.52" style="fill:#bddef4"></polygon>
+    <path d="M64.07,53l-1.1,6h2V53.71A3.94,3.94,0,0,1,64.07,53Z" style="fill:#bddef4"></path>
+    <path d="M63.12,48.14h-.76V58.93H63l1.06-6a4.18,4.18,0,0,0,.89.73V48.14Z" style="fill:#bddef4"></path>
+  </g>
+  <rect x="62.36" y="48.14" width="2.64" height="10.81" style="fill:#bddef4"></rect>
+  <path d="M47.81,31.16V46l.54.49v4.35a3.84,3.84,0,0,0,2.46,3.58V31.16Z" style="fill:#ffda3e;fill-opacity:0"></path>
+  <polygon points="37.47 29.51 36.64 31.71 47.81 41.98 47.81 29.51 37.47 29.51" style="fill:#fa2;fill-opacity:0"></polygon>
+  <path d="M75.8,41.23V54.57a3.81,3.81,0,0,0,3.14-3.7V46.46Z" style="fill:#ffda3e;fill-opacity:0"></path>
+  <path d="M65,31.3V53.72a3.76,3.76,0,0,0,3.89.64V34.87Z" style="fill:#ffda3e;fill-opacity:0"></path>
+  <path d="M82.69,60.77a10.24,10.24,0,0,1,3.56-2.54,9.36,9.36,0,0,0,3.53-2.35,3.19,3.19,0,0,0,.16-4C88,49.43,84.29,51.17,82.55,53a12.8,12.8,0,0,0-3.07,7.8Z" style="fill:#9fffb3"></path>
+  <path d="M67.06,29.63l-30.5.09,14,12.87v4.35a3.83,3.83,0,0,0,7.65,0,3.82,3.82,0,0,0,7.64,0,3.83,3.83,0,0,0,7.65,0,3.83,3.83,0,0,0,7.65,0V42.59Z" style="fill:#bddef4"></path>
+  <polygon points="50.83 42.47 36.72 29.51 44.37 29.51 58.46 42.47 50.83 42.47" style="fill:#011b33"></polygon>
+  <polygon points="58.46 42.47 44.37 29.51 52.02 29.51 66.11 42.47 58.46 42.47" style="fill:#f6fcff"></polygon>
+  <polygon points="66.11 42.47 52.02 29.51 59.66 29.51 73.77 42.47 66.11 42.47" style="fill:#011b33"></polygon>
+  <polygon points="73.77 42.47 59.66 29.51 67.31 29.51 81.42 42.47 73.77 42.47" style="fill:#f6fcff"></polygon>
+  <line x1="50.82" y1="42.47" x2="36.72" y2="29.51" style="fill:none"></line>
+  <path d="M36.72,29.51l-14.1,13v4.34a3.82,3.82,0,0,0,3.81,3.83h0V41.1L38.05,30.43Z" style="fill:#011b33"></path>
+  <rect x="56.43" y="55.27" width="11.18" height="0.75" style="fill:#dcf6ff"></rect>
+  <rect x="52.76" y="55.27" width="3.68" height="0.75" style="fill:#bddef4"></rect>
+  <path d="M50.82,42.47h7.66v4.34a3.82,3.82,0,0,1-3.82,3.82h0a3.82,3.82,0,0,1-3.82-3.82V42.47Z" style="fill:#00e1ff"></path>
+  <path d="M58.46,42.47h7.66v4.34a3.82,3.82,0,0,1-3.82,3.82h0a3.82,3.82,0,0,1-3.82-3.82V42.47Z" style="fill:#011b33"></path>
+  <path d="M66.12,42.47h7.65v4.34A3.82,3.82,0,0,1,70,50.63h0a3.82,3.82,0,0,1-3.82-3.82V42.47Z" style="fill:#00e1ff"></path>
+  <path d="M73.77,42.47h7.65v4.34a3.82,3.82,0,0,1-3.82,3.82h0a3.82,3.82,0,0,1-3.82-3.82V42.47Z" style="fill:#011b33"></path>
+  <circle cx="36.05" cy="50.27" r="5.38" style="fill:none;stroke:#bddef4;stroke-miterlimit:10;stroke-width:0.819000005722046px"></circle>
+  <line x1="41.42" y1="50.27" x2="44.8" y2="50.27" style="fill:none;stroke:#bddef4;stroke-miterlimit:10;stroke-width:0.819000005722046px"></line>
+  <path d="M80.49,62.05s.68-4.17,3-5.53" style="fill:none;stroke:#80e598;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.81942427729107px"></path>
+  <polyline points="78.93 66.42 81.7 66.42 82.96 62.2 78.93 62.2 82.96 62.2 83.69 62.2 83.69 60.77 78.93 60.77" style="fill:#bddef4"></polyline>
+  <line x1="26.43" y1="66.02" x2="106.68" y2="66.02" style="fill:none;stroke:#dcf6ff;stroke-miterlimit:10;stroke-width:0.81942427729107px"></line>
+  <polygon points="37.83 30.62 35.03 33.21 47.81 44.48 47.81 39.7 37.83 30.62" style="fill:#bddef4"></polygon>
+</svg>
