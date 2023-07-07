@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+}
+.grid-template{
+    display: grid;
+    grid-template-columns: 200px auto 200px;
+    grid-template-rows: 70px 200px 70px ; 
+    background-color: blue;
+    padding: 20px;
+    gap: 20px;
+    width: 100%;
+    
+}
+.grid-item{
+      
+background-color: red;
+text-align: center;
+} 
+.grid1{
+    grid-column: 1 / 4;
+    
+}
+.grid2{
+    
+    background-color: yellow;
+}
+.grid3{
+   width: 1fr;
+    background-color: green;
+}
+.grid4{
+   
+    background-color: brown;
+}
+.grid5{
+    grid-column: 1/4;
+    
+    background-color: cornflowerblue;
+}
+
+/* second template */
+.grid-template1{
+    display: grid;
+     grid-template-columns: auto auto auto auto;
+    grid-template-rows: 100px 300px 150px 120px;  
+    background-color: yellow;
+    padding: 20px;
+    gap: 20px;
+    width: 100%;  
+    margin-top: 200px; 
+}
+.grid-item1{
+    background-color: green;
+text-align: center;
+}
+.grid-1{
+    grid-column: 1/5;
+}
+.grid-2{
+grid-row: 2/5 ;
+}
+.grid-3{
+    grid-column: 2/5;
+}
+.grid-7{
+    grid-column: 2/5;
+}
+
+@media (max-width: 600px){
+    .grid-template1{
+        display: grid;
+          grid-template-columns: 1fr;
+        grid-template-rows: 50px 50px 200px 100px 100px 100px 80px;   
+        background-color: rgb(192, 192, 26);
+        grid-template-areas: 
+        "grid-1 grid-1 grid-1 grid-1"
+        "grid-2 grid-2 grid-2 grid-2"
+        "grid-3 grid-3 grid-3 grid-3"
+        "grid-4 grid-4 grid-4 grid-4"
+        "grid-5 grid-5 grid-5 grid-5"
+        "grid-6 grid-6 grid-6 grid-6"
+        "grid-7 grid-7 grid-7 grid-7"
+        ;
+        padding: 20px;
+        gap: 10px; 
+        margin-top: 200px; 
+    }   
+    
+     .grid-1{
+        grid-area: grid-1;
+    }
+    .grid-2{
+        grid-area: grid-2;
+    }
+    .grid-3{
+        grid-area: grid-3;
+        
+    }
+     .grid-4{
+        grid-area: grid-4;
+     }
+     .grid-5{
+        grid-area: grid-5;
+     }
+     .grid-6{
+        grid-area: grid-6;
+     }
+     .grid-7{
+        grid-area: grid-7;        
+     }
+}
