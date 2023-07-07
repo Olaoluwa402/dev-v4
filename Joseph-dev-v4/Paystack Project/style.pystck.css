@@ -723,6 +723,8 @@ body {
   }
   .nav .sub-logo {
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .nav .logo {
@@ -730,9 +732,17 @@ body {
   }
 
   .nav .list {
+    padding-top: 10px;
     margin-block-start: 0;
     padding-inline-start: 0;
     padding-right: 40px;
+  }
+
+  .subnav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
   }
 
   .modern {
@@ -830,17 +840,276 @@ body {
     font-size: 1.2rem;
     padding-left: 80px;
   }
+
+  .paymentsect #pos {
+    width: 50%;
+  }
+
+  .pos-container {
+    display: flex;
+    margin-left: 40px;
+  }
+
+  .paymenttxt h2 {
+    font-size: 3rem;
+    margin-block-start: 0;
+  }
+
+  .paymenttxt p {
+    font-size: 1.7rem;
+  }
+
+  .combine-top {
+    width: 50%;
+  }
+
+  .api {
+    width: 50%;
+  }
+
+  .payment-mode {
+    display: flex;
+  }
+
+  .payment-mode ul {
+    padding: 60px;
+    width: 200px;
+  }
+
+  .rate h2 {
+    font-size: 2.5rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  .rate p {
+    font-size: 1.5rem;
+    padding-top: 10px;
+  }
+
+  .custom-api {
+    display: flex;
+    margin-top: 60px;
+    flex-direction: row-reverse;
+    margin-left: 65px;
+  }
+
+  .api-bottom {
+    width: 50%;
+  }
+
+  .custom-payment h2 {
+    font-size: 2.5rem;
+  }
+
+  .custom-payment p {
+    font-size: 1.5rem;
+  }
+
+  .Fraud-protection {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 60px;
+  }
+
+  .fraud-video {
+    display: block;
+    width: 40%;
+  }
+
+  .fruad-text {
+    width: 50%;
+  }
+
+  .fruad-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .fruad-text p {
+    font-size: 1.5rem;
+  }
+
+  .trust {
+    background-image: url(./images2/Assets/pseudo.png);
+    margin-top: 100px;
+  }
+
+  .trust-top {
+    margin-left: 40px;
+  }
+
+  .trust-top h3 {
+    padding-top: 120px;
+    font-size: 2.5rem;
+    width: 40%;
+  }
+
+  .trust-top p {
+    font-size: 1.2rem;
+    width: 40%;
+  }
+
+  .trust-bottom {
+    display: flex;
+    margin-left: 20px;
+  }
+
+  .trust-bottom-items {
+    padding: 30px 20px;
+    width: 350px;
+    height: 250px;
+    margin: 10px;
+  }
+
+  .trust-bottom-items h2 {
+    font-size: 1.5rem;
+  }
+
+  .trust-bottom-items p {
+    font-size: 1.09rem;
+  }
+
+  .Power {
+    margin: 50px;
+  }
+
+  .Power h2 {
+    font-size: 2.5rem;
+    width: 50%;
+  }
+
+  .Power p {
+    width: 50%;
+    font-size: 1.2rem;
+  }
+  .Power .img2 {
+    display: flex;
+  }
+
+  .partners-company {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 40px;
+  }
+
+  .partners-coy {
+    margin: 10px;
+    height: 280px;
+  }
+
+  .partners-coy img {
+    width: 55px;
+  }
+
+  #partners-top {
+    margin: 60px;
+  }
+
+  #partners-top h2 {
+    width: 40%;
+    font-size: 2.5rem;
+  }
+
+  #partners-top p {
+    width: 50%;
+    font-size: 1.3rem;
+  }
+
+  .try-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .try-create button {
+    padding-left: 5px;
+    width: 200px;
+  }
+
+  .try-paystack {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .try-paystack p {
+    font-size: 1.3rem;
+    padding-left: 50px;
+    font-weight: 400;
+  }
+
+  .why-paystack {
+    display: flex;
+  }
+
+  .why-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .why-first ul {
+    list-style: none;
+  }
+
+  .why-first ul li {
+    padding: 5px;
+  }
+
+  .why-first ul li a {
+    text-decoration: none;
+    font-size: 1 rem;
+    color: rgb(43, 41, 41);
+  }
+
+  .why-heading h3 {
+    padding-left: 0px;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  .try-paystack h3 {
+    font-size: 2.5rem;
+    padding-left: 40px;
+    width: 100%;
+  }
+
+  .why-heading img {
+    display: none;
+  }
+
+  .pay-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .why-first {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: start;
+    justify-content: flex-start;
+  }
+
+  .why-first .why-side {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 0px;
+  }
+
+  .footer {
+    display: flex;
+    margin-left: 80px;
+  }
+
+  .foot1 {
+    width: 350px;
+  }
+
+  .footer1 {
+    width: 350px;
+  }
 }
 
-.paymentsect #pos {
-  width: 500px;
-}
-
-.pos-container {
-  display: flex;
-}
-
-.api {
-  width: 500px;
-}
 /* End of media query */
