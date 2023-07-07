@@ -311,6 +311,13 @@ header .menu-bar {
 }
 /* end of grid */
 
+/* psuedo element selector */
+ul li::before {
+  content: "\2714";
+  padding-right: 10px;
+  color: green;
+}
+
 /* media query */
 /* tablets */
 @media (min-width: 640px) {
