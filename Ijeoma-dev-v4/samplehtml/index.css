@@ -5,17 +5,15 @@ body{
 
 .header{
  display: flex; 
-    width: 100%;
-    margin: auto;
-    padding: 3px 10px;
-    margin-top: 0;
-    position: sticky;
-    top: 0;
+    max-width: 100%;
+    height: 70px;
+    position: absolute;
+     position: sticky;
+top: 0;
 text-align: center;
 align-items: center;
-/* position: fixed; */
 background-color: white;
-height: 50px;
+
 }
 .barmenu{
     position: relative;
@@ -83,15 +81,14 @@ ul{
 
 .menu{
     display: none;
-    margin-left: 135px;
-    justify-content: space-between;
+    margin-left: 30px;
+    /* justify-content: space-between; */
     align-items: center;
-    /* position: sticky; */
-   position: fixed;
+    height: 80px;
     font-weight: bold;
     background-color: white;
     height: 52px;
-    font-size: 15px;
+    font-size: 16px;
 }
 .content{
     padding-left: 20px;
@@ -102,10 +99,14 @@ ul{
 .content1{
     
     margin-top: 0px;
+    width: 100%;
+    margin: auto;
+    height: 30px;
     padding: 10px 0;
 background-color: black;
 color: white;
 display: flex;
+align-items: center;
 justify-content: center;
 }
 .content2{
@@ -264,6 +265,12 @@ display: flex;
 .firstimg{
     display: flex;
     gap: 20px;
+}
+.img{
+    width: 140px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
 }
 
 @media all and (min-width: 700px){

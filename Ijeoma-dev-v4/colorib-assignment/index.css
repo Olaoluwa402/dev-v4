@@ -12,7 +12,7 @@ body{
     color: white;
    position: sticky;
 }
-/* .navbar{
+.navbar{
     position: relative;
     width: 500px;
     display: inline-block;
@@ -22,6 +22,9 @@ body{
 display: block;
 
 }
+.navbar.open {
+    transform: translateX(0);
+  }
 nav{
     
     font-size: 17px;
@@ -42,7 +45,7 @@ nav{
 }
 .nav{
     overflow: scroll;
-} */
+}
 .img4{
     float: right;
     
