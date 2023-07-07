@@ -78,7 +78,7 @@ function sumInnerArray(arr) {
   return 0;
 }
 
-console.log(sumInnerArray([1, 2, 3]), "sum");
+console.log(sumInnerArray([1,2,3]), "sum");
 
 const joinData = ["john", "sayo", "moyo", "dayo"]; // "john-sayo"
 const joinResult = joinData.join("-");
@@ -146,3 +146,6 @@ console.log(textData);
 //1,2,3,4,5,10,11,12,13
 const reverseData_1 = [10, 11, 12, 13];
 const reverseData_2 = [1, 2, 3, 4, 5];
+
+
+
