@@ -15,6 +15,22 @@ body {
   align-items: center;
 }
 
+#header-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+#header-icons li {
+  padding: 5px;
+}
+
+#header-icons li img:hover {
+  color: grey;
+  transform: scale(1.1);
+}
+
 #header-text {
   display: flex;
   /* flex-wrap: wrap; */
@@ -439,7 +455,7 @@ body {
   }
 
   .navigation-bar .nav-list a:hover {
-    color: goldenrod;
+    color: blue;
     transform: scale(1.1);
   }
   .navigation-bar #nav-menu-bar {
@@ -535,6 +551,11 @@ body {
 
   .footer-level3 img {
     padding-right: 20px;
+  }
+
+  .footer-list li a:hover {
+    color: goldenrod;
+    transform: scale(1.2);
   }
 
   #sidebar {
