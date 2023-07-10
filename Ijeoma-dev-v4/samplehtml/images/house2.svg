@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 106.14 66.42">
+  <defs>
+    <clipPath id="a">
+      <path d="M35.68,34.31a.87.87,0,0,0,.88-.88V23.54a.87.87,0,0,0-.88-.87H14.86a.88.88,0,0,0-.88.87v8.22a2.57,2.57,0,0,1-2.58,2.55H9.27a.87.87,0,0,0-.88.87V55.62a.87.87,0,0,0,.88.87H30.09a.87.87,0,0,0,.87-.87V35.18a.87.87,0,0,0-.87-.87Z" style="fill:none"></path>
+    </clipPath>
+    <clipPath id="b">
+      <circle cx="26.96" cy="39.46" r="26.96" style="fill:none"></circle>
+    </clipPath>
+  </defs>
+  <title>For Large Corporations</title>
+  <line x1="90.47" y1="59.33" x2="90.47" y2="45.59" style="fill:none;stroke:#caf1fc;stroke-miterlimit:10;stroke-width:0.819000005722046px"></line>
+  <line x1="90.47" y1="66.28" x2="90.47" y2="59.33" style="fill:none;stroke:#bddef4;stroke-miterlimit:10;stroke-width:0.819000005722046px"></line>
+  <line x1="90.47" y1="49.41" x2="92.38" y2="47.66" style="fill:none;stroke:#caf1fc;stroke-miterlimit:10;stroke-width:0.819000005722046px"></line>
+  <line x1="90.47" y1="52.01" x2="88.73" y2="49.99" style="fill:none;stroke:#caf1fc;stroke-miterlimit:10;stroke-width:0.819000005722046px"></line>
+  <line x1="90.47" y1="56.16" x2="92.43" y2="54.61" style="fill:none;stroke:#caf1fc;stroke-miterlimit:10;stroke-width:0.819000005722046px"></line>
+  <rect x="50.63" y="22.15" width="36.97" height="44.27" style="fill:#f6fcff"></rect>
+  <circle cx="26.96" cy="39.46" r="26.96" style="fill:#dcf6ff"></circle>
+  <path d="M38.13,22.67H17.31a.87.87,0,0,0-.87.87v8.22a2.59,2.59,0,0,1-2.59,2.55H11.72a.87.87,0,0,0-.88.87V55.62a.87.87,0,0,0,.88.87H32.54a.87.87,0,0,0,.87-.87V35.18a.86.86,0,0,0-.75-.85v0h5.47a.87.87,0,0,0,.88-.88V23.54A.87.87,0,0,0,38.13,22.67Z" style="fill:#fff"></path>
+  <g style="clip-path:url(#a)">
+    <polygon points="30.43 22.15 10.84 41.74 10.84 65.54 35.53 65.54 52.28 65.54 30.43 22.15" style="fill:#bddef4"></polygon>
+  </g>
+  <circle cx="26.96" cy="39.46" r="26.96" style="fill:none"></circle>
+  <rect x="50.63" y="22.15" width="36.97" height="44.27" style="fill:#f6fcff"></rect>
+  <rect x="62.39" y="26.63" width="4.65" height="7.28" style="fill:#fff"></rect>
+  <rect x="67.05" y="26.63" width="1.58" height="7.28" style="fill:#dcf6ff"></rect>
+  <rect x="33.02" y="26.63" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="32.03" y="26.63" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="38.12" y="26.63" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="37.14" y="26.63" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="43.21" y="26.63" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="42.22" y="26.63" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="33.02" y="26.63" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="32.03" y="26.63" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="38.12" y="26.63" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="37.14" y="26.63" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="43.21" y="26.63" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="42.22" y="26.63" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="33.02" y="26.63" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="32.03" y="26.63" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="38.12" y="26.63" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="37.14" y="26.63" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="43.21" y="26.63" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="42.22" y="26.63" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="33.02" y="36.4" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="32.03" y="36.4" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="37.14" y="36.4" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="43.21" y="36.4" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="42.22" y="36.4" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="33.02" y="46.19" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="32.03" y="46.19" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="38.12" y="46.19" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="37.14" y="46.19" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="43.21" y="46.19" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="42.22" y="46.19" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="33.02" y="55.96" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="32.03" y="55.96" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="38.12" y="55.96" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="37.14" y="55.96" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="43.21" y="55.96" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="42.22" y="55.96" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="62.39" y="26.63" width="4.65" height="7.28" style="fill:#fff"></rect>
+  <rect x="67.05" y="26.63" width="1.58" height="7.28" style="fill:#dcf6ff"></rect>
+  <rect x="62.39" y="26.63" width="4.65" height="7.28" style="fill:#fff"></rect>
+  <rect x="67.05" y="26.63" width="1.58" height="7.28" style="fill:#dcf6ff"></rect>
+  <rect x="70.58" y="26.63" width="4.65" height="7.28" style="fill:#fff"></rect>
+  <rect x="75.23" y="26.63" width="1.58" height="7.28" style="fill:#dcf6ff"></rect>
+  <rect x="78.76" y="26.71" width="4.65" height="16.98" style="fill:#fff"></rect>
+  <rect x="83.41" y="26.63" width="1.58" height="7.28" style="fill:#dcf6ff"></rect>
+  <rect x="70.58" y="26.56" width="4.65" height="16.98" style="fill:#fff"></rect>
+  <rect x="75.23" y="26.56" width="1.58" height="7.28" style="fill:#dcf6ff"></rect>
+  <rect x="83.41" y="26.63" width="1.58" height="7.22" style="fill:#dcf6ff"></rect>
+  <rect x="62.39" y="36.41" width="4.65" height="7.28" style="fill:#fff"></rect>
+  <rect x="67.05" y="36.41" width="1.58" height="7.28" style="fill:#dcf6ff"></rect>
+  <rect x="70.58" y="36.41" width="4.65" height="7.28" style="fill:#fff"></rect>
+  <rect x="75.23" y="36.41" width="1.58" height="7.28" style="fill:#dcf6ff"></rect>
+  <rect x="78.76" y="36.41" width="4.65" height="7.28" style="fill:#fff"></rect>
+  <rect x="83.41" y="36.41" width="1.58" height="7.28" style="fill:#dcf6ff"></rect>
+  <polygon points="27.92 22.15 27.92 35.68 27.92 66.42 50.63 66.42 50.63 22.15 27.92 22.15" style="fill:#dcf6ff"></polygon>
+  <rect x="62.39" y="26.63" width="4.65" height="7.28" style="fill:#fff"></rect>
+  <rect x="67.05" y="26.63" width="1.58" height="7.28" style="fill:#dcf6ff"></rect>
+  <rect x="33.02" y="26.63" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="32.03" y="26.63" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="38.12" y="26.63" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="37.14" y="26.63" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="43.21" y="26.63" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="42.22" y="26.63" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="33.02" y="26.63" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="32.03" y="26.63" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="38.12" y="26.63" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="37.14" y="26.63" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="43.21" y="26.63" width="2.91" height="7.28" style="fill:#f6fcff"></rect>
+  <rect x="42.22" y="26.63" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="37.12" y="26.63" width="0.99" height="36.62" style="fill:#bddef4"></rect>
+  <rect x="42.22" y="26.63" width="0.99" height="36.62" style="fill:#bddef4"></rect>
+  <rect x="33.02" y="36.4" width="2.91" height="7.28" style="fill:#fff"></rect>
+  <rect x="32.03" y="36.4" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="38.12" y="36.4" width="2.91" height="7.28" style="fill:#fff"></rect>
+  <rect x="37.14" y="36.4" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="43.21" y="36.4" width="2.91" height="7.28" style="fill:#fff"></rect>
+  <rect x="42.22" y="36.4" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="33.02" y="46.19" width="2.91" height="7.28" style="fill:#fff"></rect>
+  <rect x="32.03" y="46.19" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="38.12" y="46.19" width="2.91" height="7.28" style="fill:#fff"></rect>
+  <rect x="37.14" y="46.19" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="43.21" y="46.19" width="2.91" height="7.28" style="fill:#fff"></rect>
+  <rect x="42.22" y="46.19" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="33.02" y="55.96" width="2.91" height="7.28" style="fill:#fff"></rect>
+  <rect x="32.03" y="55.96" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="38.12" y="55.96" width="2.91" height="7.28" style="fill:#fff"></rect>
+  <rect x="37.14" y="55.96" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="43.21" y="55.96" width="2.91" height="7.28" style="fill:#fff"></rect>
+  <rect x="42.22" y="55.96" width="0.99" height="7.28" style="fill:#bddef4"></rect>
+  <rect x="62.39" y="26.71" width="4.65" height="17.04" style="fill:#fff"></rect>
+  <rect x="67.05" y="26.63" width="1.58" height="7.28" style="fill:#dcf6ff"></rect>
+  <rect x="67.05" y="36.41" width="1.58" height="7.28" style="fill:#dcf6ff"></rect>
+  <rect x="75.23" y="36.41" width="1.58" height="7.28" style="fill:#dcf6ff"></rect>
+  <rect x="83.41" y="36.41" width="1.58" height="7.28" style="fill:#dcf6ff"></rect>
+  <rect x="46.2" y="-0.01" width="30.6" height="22.17" style="fill:#f6fcff"></rect>
+  <polygon points="46.2 22.15 32.03 22.15 32.03 7 46.2 -0.01 46.2 22.15" style="fill:#dcf6ff"></polygon>
+  <g style="opacity:0">
+    <polygon points="59.98 48.85 50.63 66.42 62.39 66.42 62.39 48.85 59.98 48.85 59.98 48.85" style="fill:#bddef4"></polygon>
+  </g>
+  <rect x="81.09" y="9.02" width="6.83" height="3.73" style="fill:#9fffb3"></rect>
+  <rect x="81.09" y="12.74" width="6.83" height="3.73" style="fill:#9fffb3"></rect>
+  <rect x="87.92" y="9.02" width="6.83" height="3.73" style="fill:#9fffb3"></rect>
+  <rect x="87.92" y="12.74" width="6.83" height="3.73" style="fill:#9fffb3"></rect>
+  <line x1="81.09" y1="22.15" x2="81.09" y2="9.02" style="fill:none;stroke:#dcf6ff;stroke-miterlimit:10;stroke-width:0.81942427729107px"></line>
+  <rect x="50.63" y="6.07" width="21.04" height="16.08" style="fill:#fff"></rect>
+  <rect x="71.67" y="6.07" width="1.58" height="16.08" style="fill:#bddef4"></rect>
+  <rect x="83.41" y="26.63" width="1.58" height="17.06" style="fill:#bddef4"></rect>
+  <rect x="67.03" y="26.56" width="1.58" height="17.19" style="fill:#bddef4"></rect>
+  <rect x="75.23" y="26.56" width="1.58" height="17.13" style="fill:#bddef4"></rect>
+  <rect x="76.8" y="25.8" width="1.96" height="17.89" style="fill:#f6fcff"></rect>
+  <rect x="68.61" y="25.8" width="1.96" height="17.89" style="fill:#f6fcff"></rect>
+  <rect x="50.63" y="13.33" width="21.83" height="0.83" style="fill:#00e1ff"></rect>
+  <rect x="71.67" y="6.07" width="1.58" height="2.11" style="fill:#bddef4"></rect>
+  <rect x="67.03" y="26.56" width="1.58" height="2.62" style="fill:#bddef4"></rect>
+  <rect x="75.23" y="26.56" width="1.58" height="2.62" style="fill:#bddef4"></rect>
+  <rect x="83.41" y="26.56" width="1.58" height="2.62" style="fill:#bddef4"></rect>
+  <rect x="68.3" y="48.84" width="6.67" height="17.57" style="fill:#fff"></rect>
+  <rect x="77.53" y="48.84" width="13.92" height="17.57" style="fill:#fff"></rect>
+  <polygon points="69.22 48.85 69.22 64.99 74.97 59.23 74.97 48.85 69.22 48.85" style="fill:#bddef4"></polygon>
+  <rect x="62.39" y="48.84" width="5.91" height="17.57" style="fill:#dcf6ff"></rect>
+  <line x1="93.56" y1="48.84" x2="93.56" y2="66.42" style="fill:none;stroke:#dcf6ff;stroke-miterlimit:10;stroke-width:0.924085825681686px"></line>
+  <line x1="77.06" y1="48.84" x2="77.06" y2="66.42" style="fill:none;stroke:#dcf6ff;stroke-miterlimit:10;stroke-width:0.924085825681686px"></line>
+  <line x1="68.76" y1="48.84" x2="68.76" y2="66.42" style="fill:none;stroke:#dcf6ff;stroke-miterlimit:10;stroke-width:0.924085825681686px"></line>
+  <rect x="91.45" y="48.85" width="1.63" height="2.6" style="fill:#bddef4"></rect>
+  <rect x="91.45" y="51.46" width="1.63" height="14.95" style="fill:#bddef4"></rect>
+  <rect x="74.97" y="51.02" width="1.63" height="15.39" style="fill:#bddef4"></rect>
+  <rect x="61.39" y="46.18" width="10.09" height="2.66" style="fill:#bddef4"></rect>
+  <rect x="62.39" y="48.84" width="5.91" height="17.57" style="fill:#f6fcff"></rect>
+  <rect x="70.44" y="46.18" width="1.04" height="4.84" style="fill:#bddef4"></rect>
+  <rect x="33.02" y="26.63" width="2.91" height="36.62" style="fill:#fff"></rect>
+  <rect x="38.12" y="26.63" width="2.91" height="36.62" style="fill:#fff"></rect>
+  <rect x="43.21" y="26.63" width="2.91" height="36.62" style="fill:#fff"></rect>
+  <line x1="26.43" y1="66" x2="106.14" y2="66" style="fill:none;stroke:#dcf6ff;stroke-miterlimit:10;stroke-width:0.819000005722046px"></line>
+  <rect x="32.02" y="26.63" width="1.4" height="36.62" style="fill:#bddef4"></rect>
+  <rect x="37.14" y="26.63" width="1.4" height="36.62" style="fill:#bddef4"></rect>
+  <rect x="42.22" y="26.63" width="1.4" height="36.62" style="fill:#bddef4"></rect>
+  <polygon points="94.9 46.18 87.09 46.18 71.47 46.18 71.47 51.02 87.09 51.02 94.9 51.02 96.61 51.02 96.61 46.18 94.9 46.18" style="fill:#011b33"></polygon>
+  <polygon points="61.39 46.18 50.64 56.93 50.64 65.54 62.39 65.54 62.39 48.84 61.39 48.84 61.39 46.18" style="fill:#bddef4"></polygon>
+  <g style="clip-path:url(#b)">
+    <line x1="22.47" y1="66.28" x2="22.47" y2="56.49" style="fill:none;stroke:#bddef4;stroke-miterlimit:10;stroke-width:0.819000005722046px"></line>
+  </g>
+  <polygon points="91.45 51 77.47 64.99 77.47 51.02 91.45 51" style="fill:#bddef4"></polygon>
+  <circle cx="86.38" cy="59.5" r="0.71" style="fill:#00e1ff"></circle>
+  <circle cx="83.96" cy="59.5" r="0.71" style="fill:#00e1ff"></circle>
+</svg>
