@@ -73,5 +73,3 @@ continue;
 console.log(ints);
 }
 
-
-
