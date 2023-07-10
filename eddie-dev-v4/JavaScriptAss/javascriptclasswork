@@ -1,0 +1,90 @@
+let Day = 'Sunday'
+switch(Day){
+    case "Monday":
+        console.log('Today is Monday');
+        break;
+
+    case "Tuesday":
+        console.log('Today is Tuesday');
+        break;
+
+    case "Wednesday":
+        console.log('Today is Wednesday');
+        break;
+
+    case "Thursday":
+        console.log('Today is Thursday');
+        break;
+
+    case "Friday":
+        console.log('Today is Friday');
+        break;
+
+    case "Saturday":
+        console.log('Today is Saturday');
+        break;
+
+    case "Sunday":
+        console.log('Today is Sunday');
+        break;
+        default: 'Not a valid day of week.'
+
+}
+console.log()
+
+
+// to add space between output and next prompt in the terminal window   
+function getday(weekDay){
+
+    if (weekDay === "sunday"){
+        return "Today is sooo beautiful!";
+    }
+    else if (weekDay === "monday"){
+        return "It's going to be an awesome day today, monday ";
+    }
+    else if (weekDay === "tuesday"){
+        return 'I love tuesdays! Today is going to be fun';
+    }
+    else if (weekDay === "wednesday"){
+        return `Yay wednesdays!! Let's party on`;
+    }
+    else if (weekDay === "thursday"){
+        return`Thursdays are so much better than other days...`;
+    }
+    else if (weekDay === "friday"){
+        return `Fridays always make me feel like I'm getting older`;
+    }
+    else if (weekDay === "saturday"){
+        return`Oh noes!!! It's almost weekend already.. `;
+    }
+    else {
+        return"Invalid input";
+    }
+}
+console.log(getday("sunday"))
+
+
+
+const person = {
+    firstName: 'Ben',
+    lastName: 'White',
+    age: 250,
+    country: 'finland',
+    city: 'helsinki',
+    skills: [
+        'Html',
+        'CSS',
+        'JavaScript',
+        'React',
+        'Node',
+        'MongoDB',
+        'Python',
+        'DB.js'
+    ],
+    isMarried: true
+}
+console.log(person.skills)
+console.log(person.isMarried)
+console.log(person['skills'][2])
+console.log(person['isMarried'])
+
