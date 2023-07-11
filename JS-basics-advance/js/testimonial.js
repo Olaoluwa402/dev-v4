@@ -11,7 +11,7 @@ function ready() {
   nextBtn.addEventListener("click", function () {
     next(slides);
   });
-  const prevBtn = document.getElementById("next");
+  const prevBtn = document.getElementById("prev");
   prevBtn.addEventListener("click", function () {
     prev(slides);
   });
