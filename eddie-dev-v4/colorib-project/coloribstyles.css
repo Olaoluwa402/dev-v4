@@ -1,6 +1,6 @@
-*{
+/* *{
     box-sizing: border-box;
-}
+} */
 
 body{
     margin: 0;
@@ -10,17 +10,20 @@ body{
 #Advert{
     display: flex;
     flex-direction: column;
-  height: auto;
-  width:auto;
+   /* height: 100%; */
+   width:100%;
    text-align: center;
    background-color: #1a73ef;
    color: white;
-   font-size: large;
+   font-size: 15px;
    padding-top: 25px;
    align-items: center;
+   margin: 0px;
 }
 #wordpress{
     display: flex;
+    padding-left: 20px;
+    width: 100%;
 }
 #social{
     margin-left: 20px;
@@ -28,6 +31,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-right: 30px;
 }
 .image{
     display: flex;
@@ -40,55 +44,55 @@ body{
     background-color: white;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+    position: sticky;
+    top: 0;
+    z-index: 10;    
+}
+.coloriblogo ul{
+    display: none;
 }
 .logo{
     margin-left: 40px;
     padding-top: 20px;
 }
- .sidebar {
+
+.sidebar {
+    width: 100%;
+    /* background-color: red; */
+}
+
+.sidebar ul{
     position: fixed;
+    left: 10%;
     top: 0;
-    left: 0;
-    bottom: 0;
-    width: 280px;
-    background-color: navy;
-    border: 1px solid #fff;
     z-index: 999;
-  
+    display: block;
+    width: 80%;
+    /* color: white; */
+    background-color:rgb(11, 22, 22) ;
+
+}
+
+.sidebar ul li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.sidebar ul li a{
+    color: white;
+}
+.sidebarsearch a{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 0;
-    transform: translateX(-100%);
-    transition: all 1s ease-in-out;
-  }
-  
-  .sidebar.open {
-    transform: translateX(0);
-  }
-  
-  .sidebar ul {
-    margin-top: 50px;
-  }
-  
-  .sidebar ul > li {
-    margin-bottom: 20px;
-  }
-  
-  .sidebar ul > li > a {
-    display: inline-block;
-    color: #fff;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .sidebar ul > li > a:hover {
-    color: goldenrod;
-    transform: scale(1.1);
-  } 
+    justify-content: space-between;
+}
   
 #blog{
-   padding-top: 50px;
-   padding-left: 40px;
+   padding: 50px;
+   /* margin-left: 30px; */
+   /* padding-left: 40px; */
    font-size: large;
    background-color: beige;
    
@@ -134,10 +138,13 @@ button{
 
 }
 #search{
+    color: blanchedalmond;
+    height: 60px;
     width: 90%;
     display: flex;
     flex-direction: row;
-    border:1px solid ;
+    border:1px solid blanchedalmond;
+    border-radius: 5%;
     margin: 20px;
     justify-content: space-between;
 }
@@ -173,7 +180,8 @@ td{
     margin: 20px;    
 }
 .change button{
-    width: 90%;
+    width: 20%;
+
 }
 footer{
     width: 100%;
@@ -195,14 +203,66 @@ footer ul{
     margin: 10px;
     padding: 10px;
 }
-.copyright{
-    width: 100%;
-    height: 100px;
-    border-style: none;
-    background-color: rgb(11, 14, 14);
-    border-width: 1px;
+footer p{
     text-align: center;
-    padding-top: 20px;
-    /* padding: 20px;
-    margin: 20px; */
+    padding-top:25px ;
+    padding-bottom: 25px;
+}
+ /* start of media query */
+ @media screen and (min-width :678px) {
+    #Advert{
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left:20px;
+        /* padding-right: 40px; */
+        padding-bottom: 25px;
+        /* margin: 20px; */
+        height: 100%;
+    }
+    .coloriblogo ul{
+        list-style: none;
+        display: flex;
+    }
+    
+    .sidebar {
+        display: none;
+    }
+    #menubar{
+        display:none ;
+    }
+    .gridcontainer{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .Grid-layout{
+        
+        display: grid;
+        grid-template-columns: 400px 400px;
+        grid-gap: 25px;
+    }
+    #gridcolumn3{
+        width: 35%;
+        margin-left: 40px;
+    }
+    .footerdiv{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .change{
+        display: flex;
+        justify-content: space-between;
+        background-color:beige;
+        color: silver;
+        font-size: larger;
+        width: 100%;
+        margin: 0;
+        padding: 30px;
+        margin-bottom: -10px;
+    }
+
  }
