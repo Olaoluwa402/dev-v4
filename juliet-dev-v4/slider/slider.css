@@ -42,10 +42,11 @@ li {
     max-width: 500px;
     background-color: whitesmoke;
     border-radius: 6px;
-    box-shadow: 2px 2px 2px 2px gray;
+    box-shadow: 0px 5px 10px gray;
     padding: 40px;
     border: none;
     margin-left: 80px;
+    margin-bottom: 40px;
 }
 .slider{
     display: flex;
@@ -70,8 +71,10 @@ gap: 20px;
     border-radius: 60%;
 }
 
-.s-right img{
-    width: 100px;
+
+.fa-quote-right{
+    font-size: 100px;
+    color: green;
 }
 
 .box > p{
