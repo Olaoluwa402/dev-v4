@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(243, 243, 243);
+    color: rgb(13, 13, 14);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    padding: 30px 300px;
+}
+
+h1 {
+    margin-top: 60px;
+}
+
+#lorem_txt{
+    margin-top: 50px;
+}
+
+.carousel_div {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
+
+}
+
+.next_btn {
+    background-color: whitesmoke;
+    /* border: 1px solid; */
+    border-radius: 100%;
+    height: fit-content;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.356);
+}
+
+.carousel_main {
+    background-color: rgb(236, 235, 235);
+    padding: 20px;
+    border-radius: 7px;
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0px 30px;
+}
+
+.person_info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#info_left {
+    display: flex;
+    align-items: flex-end;
+}
+
+
+#person_img {
+    width: 70px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.cred p {
+    margin: 0px;
+    font-size: 16px;
+    display: block;
+    text-align: left;
+}
+
+#star_img {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 10px;
+    width: 70%;
+    margin-left: 0px;
+}
+
+#star_img li {
+    width: 15px;
+}
+
+#quote_img {
+    width: 50px;
+    height: fit-content;
+    margin-bottom: 20px;
+}
+
+#main_txt {
+    display: block;
+    text-align: left;
+    font-size: 13px;
+    line-height: 20px;
+}

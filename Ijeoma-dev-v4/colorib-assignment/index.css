@@ -12,7 +12,7 @@ body{
     color: white;
    position: sticky;
 }
-/* .navbar{
+.navbar{
     position: relative;
     width: 500px;
     display: inline-block;
@@ -22,6 +22,9 @@ body{
 display: block;
 
 }
+.navbar.open {
+    transform: translateX(0);
+  }
 nav{
     
     font-size: 17px;
@@ -42,7 +45,7 @@ nav{
 }
 .nav{
     overflow: scroll;
-} */
+}
 .img4{
     float: right;
     
@@ -63,7 +66,7 @@ display: flex;
 .header1{
     display: flex;
     justify-content: center;
-    
+
     padding: 0 10px;
     text-align: center;
 }
@@ -77,8 +80,11 @@ display: flex;
 .header2{
     width: 100%;
     background-color: white;
+    
+    
     position: fixed;
     display: flex;
+    position: sticky;
     justify-content: space-between;
     margin: 0 10px;
     border: 1px solid rgb(233, 203, 203);

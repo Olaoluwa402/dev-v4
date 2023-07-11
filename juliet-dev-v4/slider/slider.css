@@ -48,6 +48,11 @@ li {
     margin-left: 80px;
     margin-bottom: 40px;
 }
+.box2{
+    display: none;
+}
+
+
 .slider{
     display: flex;
     justify-content: space-between;
