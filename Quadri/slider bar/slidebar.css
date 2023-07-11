@@ -29,6 +29,7 @@ font-weight: 500;
  /* display: flex;
 justify-content: space-between;  */
  width: 400px;
+ perspective: 1000px;
  height: 200px;
  background-color: rgba(255, 0, 0, 0.034);
  margin: 20px 0 10px 0;
@@ -78,19 +79,21 @@ h4{
 #right-angle{
     position: absolute;
     top: 50%;
-    right: -40px;
+    right: -60px;
 
 }
 
 #left-angle{
     position: absolute;
     top: 50%;
-    left: -40px;
+    left: -60px;
 }
 
 button{
-    padding: 10px;
-    border-radius: 100%;
+    /* padding: 10px; */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     border: none;
     background-color: white;
     box-shadow: 1px 1px 12px 1px black;
