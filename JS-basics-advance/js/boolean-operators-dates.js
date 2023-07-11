@@ -15,7 +15,7 @@ if (
 } else {
   console.log("false");
 }
- 
+
 // windows methods
 // alert("hello");
 // const age = prompt("what is your age");

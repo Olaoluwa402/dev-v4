@@ -10,10 +10,114 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <link rel="stylesheet" href="./css/main.css" />
     <title>Learn Js</title>
   </head>
   <body>
+    <!-- testimonia slider -->
+    <section id="testimonial-section">
+      <div class="testimonial-intro">
+        <h4 class="testimonial-intro-subtitle section-title">testimonials</h4>
+        <h2 class="testimonial-intro-title">What Clients Say</h2>
+        <p class="testimonial-intro-desc">
+          We place huge value on strong relationships and have seen the benefit
+          they bring to our business. <br />
+          Customer feedback is vital in helping us to get it right.
+        </p>
+      </div>
+
+      <div class="testimonial">
+        <div class="slide-container active">
+          <div class="slide">
+            <i class="fas fa-quote-right icon"></i>
+            <div class="user">
+              <img
+                src="./assets/images/testimonial-1.jpg"
+                alt="testimonial-1"
+              />
+              <div class="user-info">
+                <h3>John Doe</h3>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+              voluptas, reiciendis molestiae impedit harum eos, temporibus
+              dolorem expedita debitis culpa voluptate sint nostrum ex tempora
+              quam. Quisquam odit architecto quas!
+            </p>
+          </div>
+        </div>
+
+        <div class="slide-container">
+          <div class="slide">
+            <i class="fas fa-quote-right icon"></i>
+            <div class="user">
+              <img
+                src="./assets/images/testimonial-2.jpg"
+                alt="testimonial-1"
+              />
+              <div class="user-info">
+                <h3>Jane Stone</h3>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+              voluptas, reiciendis molestiae impedit harum eos, temporibus
+              dolorem expedita debitis culpa voluptate sint nostrum ex tempora
+              quam. Quisquam odit architecto quas!
+            </p>
+          </div>
+        </div>
+
+        <div class="slide-container">
+          <div class="slide">
+            <i class="fas fa-quote-right icon"></i>
+            <div class="user">
+              <img
+                src="./assets/images/testimonial-3.jpg"
+                alt="testimonial-1"
+              />
+              <div class="user-info">
+                <h3>Wallet Smith</h3>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+              voluptas, reiciendis molestiae impedit harum eos, temporibus
+              dolorem expedita debitis culpa voluptate sint nostrum ex tempora
+              quam. Quisquam odit architecto quas!
+            </p>
+          </div>
+        </div>
+
+        <!-- next and prev -->
+        <div id="next"><i class="fas fa-chevron-right"></i></div>
+        <div id="prev"><i class="fas fa-chevron-left"></i></div>
+      </div>
+    </section>
+
+    <!-- end of testimonial -->
     <i class="fa-brands fa-wordpress"></i>
     <!-- inline script -->
     <button onclick="alert('inline script')">click</button>
@@ -30,6 +134,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="./js/boolean-operators-dates.js"></script>
+    <script src="./js/testimonial.js"></script>
+    <!-- <script src="./js/objects.js"></script> -->
   </body>
 </html>
