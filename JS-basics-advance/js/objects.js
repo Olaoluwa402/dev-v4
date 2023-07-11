@@ -23,13 +23,36 @@ function gText() {
   var h = "john";
   let j = "james";
 }
-console.log(h, "h");
-console.log(j, "j");
+// console.log(h, "h");
+// console.log(j, "j");
 
 if (true) {
   var n = "nigeria";
   let p = "pap";
 }
 
-console.log(n);
-console.log(p, "p");
+// console.log(n);
+// console.log(p, "p");
+
+const person = {
+  firstName: "Joe",
+  lastName: "Jude",
+  fullName: function () {
+    return `${this.firstName} ${this.lastName}`;
+  },
+};
+
+// add the folowing to the person object and observe the new result
+//friends
+//nationality
+//update firstName to a diffrent name
+//add age
+//add a getAge *  2 function
+
+person.age = 20;
+person.friends = ["Ola"];
+person.getAge = function () {
+  return `${this.age * 2}`;
+};
+person.friends.push("James");
+console.log(person);
