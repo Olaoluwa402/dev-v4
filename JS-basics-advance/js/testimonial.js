@@ -5,25 +5,22 @@ if (document.readyState === "loading") {
 }
 
 let index = 0;
+const slides = document.querySelectorAll(".slide-container"); //returns Nodelist []
 function ready() {
-  const slides = document.querySelectorAll(".slide-container"); //returns Nodelist []
   const nextBtn = document.getElementById("next");
-  nextBtn.addEventListener("click", function () {
-    next(slides);
-  });
+  nextBtn.addEventListener("click", next);
   const prevBtn = document.getElementById("prev");
-  prevBtn.addEventListener("click", function () {
-    prev(slides);
-  });
+  prevBtn.addEventListener("click", prev);
 }
 
-function next(slides) {
+function next() {
   slides[index].classList.remove("active");
   index = (index + 1) % slides.length;
+  console.log(index, "index");
   slides[index].classList.add("active");
 }
 
-function prev(slides) {
+function prev() {
   slides[index].classList.remove("active");
   index = (index - 1 + slides.length) % slides.length;
   slides[index].classList.add("active");
