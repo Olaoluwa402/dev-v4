@@ -65,26 +65,54 @@ console.log(getday("sunday"))
 
 
 
+// const person = {
+//     firstName: 'Ben',
+//     lastName: 'White',
+//     age: 250,
+//     country: 'finland',
+//     city: 'helsinki',
+//     skills: [
+//         'Html',
+//         'CSS',
+//         'JavaScript',
+//         'React',
+//         'Node',
+//         'MongoDB',
+//         'Python',
+//         'DB.js'
+//     ],
+//     isMarried: true
+// }
+// console.log(person.skills)
+// console.log(person.isMarried)
+// console.log(person['skills'][2])
+// console.log(person['isMarried'])
+
+//adding a new property and value dynamically using dot notation or bracket notation
+// const person = {
+//     firstName: "Joe",
+//     lastName: "Jude",
+//     fullName: function(){
+//         return`${this.firstName} ${this.lastName}`;
+//     },
+
+// };
+// person.friends = ["John","Mike","Sean"]
+// person.nationality = 'Mexican'
+// person.firstName = "Frank" 
+// person.age = 36
+// person.getage = function(){
+//     return`${this.age*2}`
+// }
+// console.log(person.getage())
+// console.log(person.fullName())
+
 const person = {
     firstName: 'Ben',
     lastName: 'White',
-    age: 250,
-    country: 'finland',
-    city: 'helsinki',
-    skills: [
-        'Html',
-        'CSS',
-        'JavaScript',
-        'React',
-        'Node',
-        'MongoDB',
-        'Python',
-        'DB.js'
-    ],
-    isMarried: true
+    Country: 'Finland',
+    City: 'Helsinki',
 }
-console.log(person.skills)
-console.log(person.isMarried)
-console.log(person['skills'][2])
-console.log(person['isMarried'])
+
+
 
