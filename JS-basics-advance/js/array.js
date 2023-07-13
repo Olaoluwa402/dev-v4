@@ -78,7 +78,7 @@ function sumInnerArray(arr) {
   return 0;
 }
 
-console.log(sumInnerArray([1,2,3]), "sum");
+console.log(sumInnerArray([1, 2, 3]), "sum");
 
 const joinData = ["john", "sayo", "moyo", "dayo"]; // "john-sayo"
 const joinResult = joinData.join("-");
@@ -147,5 +147,28 @@ console.log(textData);
 const reverseData_1 = [10, 11, 12, 13];
 const reverseData_2 = [1, 2, 3, 4, 5];
 
+// sort  - rearrage an array list in ascending order
+const sortData = ["HTML", "PYTHON", "CSS", "JS", "JAVA"];
 
+const sorted = sortData.sort().reverse();
+console.log(sorted, "sorted");
 
+// array of array or nested array or 2D/3D arrays
+// 1D array
+const oneD = ["HTML", "PYTHON", "CSS", "JS", "JAVA"];
+//  accessing the value
+console.log(oneD[1]);
+// twoD
+const twoD = [
+  ["PYTHON", "JAVA"],
+  ["CSS", "JS", "HTML"],
+];
+//  accessing the value
+console.log(oneD[1][2]);
+//three D
+const threeD = [
+  ["PYTHON", "JAVA", "NODEJS"],
+  ["CSS", "JS", "HTML", ["REACT", "ANGULAR", "VUE"]],
+];
+//  accessing the value
+console.log(threeD[1][3][1]);

@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+width: 100%;
+margin: auto;
+}
+.content{
+    
+    font-size: 17px;
+    display: block;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    width: 70%;
+}
+.content div{
+    margin-bottom: 30px;
+}
+.img1{
+    width: 55px;
+    border-radius: 50%;
+}
+.img2{
+    width: 70px;
+    margin-left: 150px;
+    display: flex;
+    justify-items: flex-end;
+}
+.content2{
+    padding: 10px 20px;
+    border: 1px solid rgb(221, 216, 216);
+    width: 500px;
+    box-shadow: 10px 10px 10px grey;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+}
+.content-2{
+    display: flex;
+    gap: 100px;
+    justify-content: space-between;
+}
+.content3{
+    display: flex;
+}
+.font-w{
+    display: flex;
+    color: green;
+    padding-top: 5px;
+}
+.content4{
+margin-right: 25px;
+margin-left: 8px;
+
+}
+.angle1 i{
+    font-size: 20px;
+}
+.angle2 i{
+    font-size: 20px;
+}
+
+.angle1{
+    
+    border: 1px solid rgb(175, 172, 172);
+    width: 50px;
+    position: relative;
+    left: 220px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 40px;
+    box-shadow: 3px 3px 3px rgb(165, 161, 161);
+}
+.angle2{
+    justify-content: center;
+    width: 50px;
+    height: 40px;
+    border: 1px solid rgb(158, 155, 155);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 3px rgb(160, 156, 156);
+    display: block;
+    position: relative;
+    right: 220px;
+}
