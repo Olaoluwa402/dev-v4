@@ -1,67 +1,67 @@
-let Day = 'Sunday'
-switch(Day){
-    case "Monday":
-        console.log('Today is Monday');
-        break;
+// let Day = 'Sunday'
+// switch(Day){
+//     case "Monday":
+//         console.log('Today is Monday');
+//         break;
 
-    case "Tuesday":
-        console.log('Today is Tuesday');
-        break;
+//     case "Tuesday":
+//         console.log('Today is Tuesday');
+//         break;
 
-    case "Wednesday":
-        console.log('Today is Wednesday');
-        break;
+//     case "Wednesday":
+//         console.log('Today is Wednesday');
+//         break;
 
-    case "Thursday":
-        console.log('Today is Thursday');
-        break;
+//     case "Thursday":
+//         console.log('Today is Thursday');
+//         break;
 
-    case "Friday":
-        console.log('Today is Friday');
-        break;
+//     case "Friday":
+//         console.log('Today is Friday');
+//         break;
 
-    case "Saturday":
-        console.log('Today is Saturday');
-        break;
+//     case "Saturday":
+//         console.log('Today is Saturday');
+//         break;
 
-    case "Sunday":
-        console.log('Today is Sunday');
-        break;
-        default: 'Not a valid day of week.'
+//     case "Sunday":
+//         console.log('Today is Sunday');
+//         break;
+//         default: 'Not a valid day of week.'
 
-}
-console.log()
+// }
+// console.log()
 
 
-// to add space between output and next prompt in the terminal window   
-function getday(weekDay){
+// // to add space between output and next prompt in the terminal window   
+// function getday(weekDay){
 
-    if (weekDay === "sunday"){
-        return "Today is sooo beautiful!";
-    }
-    else if (weekDay === "monday"){
-        return "It's going to be an awesome day today, monday ";
-    }
-    else if (weekDay === "tuesday"){
-        return 'I love tuesdays! Today is going to be fun';
-    }
-    else if (weekDay === "wednesday"){
-        return `Yay wednesdays!! Let's party on`;
-    }
-    else if (weekDay === "thursday"){
-        return`Thursdays are so much better than other days...`;
-    }
-    else if (weekDay === "friday"){
-        return `Fridays always make me feel like I'm getting older`;
-    }
-    else if (weekDay === "saturday"){
-        return`Oh noes!!! It's almost weekend already.. `;
-    }
-    else {
-        return"Invalid input";
-    }
-}
-console.log(getday("sunday"))
+//     if (weekDay === "sunday"){
+//         return "Today is sooo beautiful!";
+//     }
+//     else if (weekDay === "monday"){
+//         return "It's going to be an awesome day today, monday ";
+//     }
+//     else if (weekDay === "tuesday"){
+//         return 'I love tuesdays! Today is going to be fun';
+//     }
+//     else if (weekDay === "wednesday"){
+//         return `Yay wednesdays!! Let's party on`;
+//     }
+//     else if (weekDay === "thursday"){
+//         return`Thursdays are so much better than other days...`;
+//     }
+//     else if (weekDay === "friday"){
+//         return `Fridays always make me feel like I'm getting older`;
+//     }
+//     else if (weekDay === "saturday"){
+//         return`Oh noes!!! It's almost weekend already.. `;
+//     }
+//     else {
+//         return"Invalid input";
+//     }
+// }
+// console.log(getday("sunday"))
 
 
 
@@ -115,4 +115,60 @@ const person = {
 }
 
 
+const week = {
+    0: 'sunday',
+    1: 'monday',
+    2: 'tuesday',
+    3: 'wednesday',
+    4: 'thursday',
+    5: 'friday',
+    6: 'saturday'
+};
+function week_Day(Dyas){
+    let item = Object.keys(week);
+    for (let i = 0; i<item.length; i++){
+        if(Dyas == item[i]){
+            console.log(week[Dyas]);
+        }
+    
+    }
+    return Dyas;
+    
+    }
 
+
+console.log(week_Day(3));
+
+
+// creating a set.
+const {log} = console
+const emptySet = new Set()
+log(emptySet)
+
+
+const arr = ['mango','orange','mango','apple','apple','carrot'];
+
+const fruit = new Set(arr);
+log(fruit);
+
+let uniqueArr =[...fruit] ;// converting array to set using spread operator and then assign it  
+    log(uniqueArr);
+
+
+let myFruit =[]
+    for (const item of fruit ) {
+        myFruit.push(item)
+
+    }
+    log(myFruit)
+
+const list2 = ['javascript','java','pyhton','javascript','java'];
+const addData = new Set(list2)
+
+var list = ['javascript','java','pyhton','javascript','java'];
+
+for(let list of addData){
+    if(list.includes('p')){
+        addData.delete(list);
+    }
+}
