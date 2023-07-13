@@ -360,3 +360,65 @@ function getValueByKey(obj, key) {
 console.log(getValueByKey(dayOfWeek, 2)); 
 console.log(getValueByKey(dayOfWeek, 7)); 
 
+
+// Create an empty set
+
+const products = new Set();
+
+console.log(products, "products");
+
+
+const list = ["John", "James", "John"];
+
+
+// add items to a set
+
+const uniqueSetFromList = new Set(list);
+
+// set class work
+// use set on the array below
+
+const arr = ["mango", "orange", "mango", "apple", "apple", "carrot"];
+
+// get unique set using set
+// get unique array from the unique set
+
+const uniqueSet = new Set(arr);
+console.log(uniqueSet);
+
+const uniqueArray = [...uniqueSet];
+
+console.log(uniqueArray, "UniqueArray");
+
+let uniqueArray_2 = [];
+
+  for (const fruit of uniqueSet){
+    uniqueArray_2.push(fruit) 
+
+    };
+
+    console.log(uniqueArray_2, "UniqueArray_2");
+    
+
+const list2 = ["javascript", "java", "python", "javascript", "java"];
+const addData = new Set(list2);
+
+addData.add("app");
+addData.add("app2");
+addData.add("app3");
+
+console.log(addData, addData.size);
+
+
+
+for (let course of addData ){
+
+  if(course.includes("p")){
+    
+addData.delete(course);
+  }
+}
+
+console.log(addData, addData.size);
+
+

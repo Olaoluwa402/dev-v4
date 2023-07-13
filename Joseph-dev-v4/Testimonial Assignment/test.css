@@ -129,13 +129,25 @@ body {
   padding-top: 100px;
 }
 
+.outter-container .inner-container .outter-inner .slide {
+  /* border-radius: 5px;
+  background-color: #f2f2f2;
+  box-shadow: 0 5px 10px #3337;
+  width: 450px;
+  padding: 20px;
+  margin: 10px;
+  position: relative;
+  transform-style: preserve-3d; */
+  animation: slide 0.4s linear;
+}
+
 @keyframes slide {
   0% {
     transform: rotateX(180deg);
   }
 }
 
-.outter-inner .slide > * {
+.outter-container .inner-container .outter-inner .slide > * {
   animation: slideContent 0.4s backwards;
 }
 

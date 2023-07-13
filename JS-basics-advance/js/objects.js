@@ -56,3 +56,9 @@ person.getAge = function () {
 };
 person.friends.push("James");
 console.log(person);
+
+// loop for objects
+
+for (let key in person) {
+  console.log(person[key], "key");
+}
