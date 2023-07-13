@@ -14,7 +14,7 @@ body {
 }
 
 .outter-container h1 {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   padding-left: 400px;
 }
 
@@ -31,6 +31,7 @@ body {
 }
 
 .inner-container {
+  text-transform: capitalize;
   display: flex;
   width: 600px;
   justify-content: space-evenly;
@@ -38,6 +39,8 @@ body {
 }
 
 .outter-inner {
+  display: none;
+  margin: 10px;
   border: 1px solid;
   border-color: rgb(228, 228, 228);
   background-color: rgb(245, 245, 245);
@@ -45,6 +48,10 @@ body {
   width: 500px;
   height: 250px;
   box-shadow: 5px 5px 5px 5px rgb(211, 207, 207);
+}
+
+.outter-inner.active {
+  display: block;
 }
 
 .inner-top {
@@ -84,10 +91,12 @@ body {
   margin-block-end: 0px;
 }
 
-#quote > img {
+#quote .icon {
   width: 100px;
   padding-right: 10px;
   padding-top: 15px;
+  color: green;
+  font-size: 90px;
 }
 
 .star ul li img {
@@ -118,4 +127,21 @@ body {
   width: 40px;
   padding-left: 20px;
   padding-top: 100px;
+}
+
+@keyframes slide {
+  0% {
+    transform: rotateX(180deg);
+  }
+}
+
+.outter-inner .slide > * {
+  animation: slideContent 0.4s backwards;
+}
+
+@keyframes slideContent {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
 }

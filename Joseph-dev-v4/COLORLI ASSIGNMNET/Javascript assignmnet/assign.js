@@ -161,20 +161,202 @@
 
 
 
-const ints = [1,2,3, "john", 4,5,6,]
+// const ints = [1,2,3, "john", 4,5,6,]
 
-let newInt = []
+// let newInt = []
 
-for (let i=0; i < ints.length; i++){
+// for (let i=0; i < ints.length; i++){
 
-   const current = ints[i];
+//    const current = ints[i];
 
-  if(typeof current === "string")
-  {
-   continue;
+//   if(typeof current === "string")
+//   {
+//    continue;
+//   }
+//   newInt.push(current);
+// }
+
+// console.log(newInt, "newint");
+
+// const dateString = new Date();
+
+// console.log(dateString);
+
+
+// const age = prompt ("What is your age?");
+
+// console.log(age, "age");
+
+// if(age < 18 && age == 17) {
+
+//   alert("You are not eligible to vote");
+// }
+
+// else if (age > 18 && age < 50){
+
+//        alert("You are eligible to vote");
+// }
+
+// else if ( age > 50 || age >= 100 ) {
+
+//         alert("You are too old");
+    
+// }
+
+// else {
+//    alert("Invalid input")
+// }
+
+function getday(dayOfWeek) {
+
+if (dayOfWeek == "Monday" || dayOfWeek == "Thursday" || dayOfWeek == "Wednesday" || dayOfWeek =="Thursday" || 
+
+    dayOfWeek == "Friday" || dayOfWeek == "Saturday" || dayOfWeek == "Sunday") {
+
+   return  (`Today ${dayOfWeek} is a day of the week`);
   }
-  newInt.push(current);
+
+else {
+  return (`Today ${dayOfWeek} is not a day of the week`);
 }
 
-console.log(newInt, "newint");
+}
+
+console.log(getday('Monday'));
+
+
+// function getday(dayOfWeek) {
+
+// switch (dayOfWeek) {
+
+//   case "Sunday":
+//     return ("This is a weekend");
+
+//   case "Monday":
+//     return ("This is a weekday");
+
+//   case "Tuesday":
+//     return ("This is a weekday");
+
+//   case "Wednesday":
+//     return ("This is a weekday");
+
+//   case "Thursday":
+//     return ("This is a weekday");
+
+//   case "Friday":
+//     return ("This is a weekday");
+
+//   case "Saturday":
+//     return ("This is a weekend");
+
+//    default :
+//    return ( "This is not a day of the week");
+// }
+
+
+// }
+
+// console.log(getday("man"));
+
+// // Objects
+
+// const person = {
+//   firstName: "Ben",
+//   lastName: "White",
+//   age: 250,
+//   country: "Finland",
+//   city: "Helsinki",
+//   skills: [
+//     "HTML",
+//     "CSS",
+//     "JavaScript",
+//     "React",
+//     "Node",
+//     "mongoDB",
+//     "Python",
+//     "D3.js"
+//   ],
+//   isMarried: true
+// }
+
+// // console.log(person.firstName, "firstname");
+// // console.log(person.lastName, "lastName");
+// // console.log(person.age, "age");
+// // console.log(person.country, "country");
+// // console.log(person.city, "city");
+
+// // console.log(person["skills"][0]);
+// // console.log(person["skills"][2]);
+// // console.log(person["skills"][3]);
+// // console.log(person["skills"][4]);
+
+
+const person = {
+
+  firstName: "Joe",
+  lastName: "Jude",
+  fullName: function () {
+
+    return `${this.firstName} ${this.lastName}`;
+  },
+
+}
+
+person.friends = ["Eddie", "Kelvin", "Quadri", "Daniel"] ;
+person.nationality = "Nigeria" ;
+person.firstName = "Joseph" ;
+
+person.age = 25;
+
+
+
+person.getAge = function () {
+
+  return `${this.age * 2}`;}
+
+console.log(person.getAge(), "Age");
+
+
+
+const copyPerson = Object.assign({}, person);
+
+console.log(copyPerson, "copyPerson");
+
+
+const keys = Object.keys(person);
+
+console.log(keys, "keys");
+
+const entries = Object.entries(person);
+
+console.log(entries, "entries");
+
+
+// Day of Week Assignmnet
+
+const dayOfWeek = {
+    
+  0 : "Today is Sunday",
+  1 : "Today is Monday",
+  2 : "Today is Tuesday",
+  3 : "Today is Wednesday",
+  4 : "Today is Thursday",
+  5 : "Today is Friday",
+  6 : "Today is Saturday"
+
+}
+
+
+function getValueByKey(obj, key) {
+  if (obj.hasOwnProperty(key)) {
+    return obj[key];
+  } else {
+    return "Invlaid Input";
+  }
+}
+
+
+console.log(getValueByKey(dayOfWeek, 2)); 
+console.log(getValueByKey(dayOfWeek, 7)); 
 
