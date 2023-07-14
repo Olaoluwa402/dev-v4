@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 20px 0 0 50px;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p{
+    margin: 0;
+font-size: 10px;
+font-weight: 500;
+}
+.section{
+ /* display: flex;
+justify-content: space-between;  */
+ width: 400px;
+ perspective: 1000px;
+ height: 200px;
+ background-color: rgba(255, 0, 0, 0.034);
+ margin: 20px 0 10px 0;
+ border-radius: 10px;
+ position: relative;
+ box-shadow: 10px 1px 12px 5px rgba(0, 0, 0, 0.068);
+}
+
+#left-bar{
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+#left-bar>img{
+
+    margin-top: 20px;
+    border-radius: 50%;
+
+}
+
+#img{
+    margin: 10px 0 0 10px;
+}
+
+h4{
+    margin-bottom: 10px;
+}
+
+#right-bar{
+    margin: 25px 10px 0 0; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(13, 117, 40, 0);
+
+    
+
+}
+
+#para>p{
+    margin: 20px 20px;
+    font-size: 14px;
+}
+
+#right-angle{
+    position: absolute;
+    top: 50%;
+    right: -60px;
+
+}
+
+#left-angle{
+    position: absolute;
+    top: 50%;
+    left: -60px;
+}
+
+button{
+    /* padding: 10px; */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    box-shadow: 1px 1px 12px 1px black;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgba(61, 6, 6, 0.048);
+}
