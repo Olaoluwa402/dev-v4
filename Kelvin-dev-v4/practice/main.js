@@ -1,49 +1,46 @@
-// let whileLoopData_2 = [
-//     {product_title: "title 1", product_price: "$200", product_qty: 1},
-//     {product_title: "title 2", product_price: "$100", product_qty: 2},
-//     {product_title: "title 3", product_price: "$300", product_qty: 3},
-//     {product_title: "title 4", product_price: "$400", product_qty: 4},
-//     {product_title: "title 5", product_price: "$500", product_qty: 5}
-// ]
+if (document.readyState === "loading") {
+  document.addEventListener("click", ready);
+} else {
+  ready();
+}
 
-// function whileLoopOp(data){
-//     let productPriceData = 0
-//     for(let i = 0; i < data.length; i++){
-//       whileLoopData_2[i].product_price
-//        productrep1 = data[i].product_price.replace("$" , "")
+function ready() {
+  //get tabs from query selector
+  const tabs = document.querySelectorAll(".carousel_main");
 
-//        productrep2 = parseInt(productrep1)
+  //get the next button from id
+  const nextBtn = document.getElementById("next_btn");
+  // console.log(nextBtn, "next");
+  //add event listener to the next button class
+  nextBtn.addEventListener("click", function () {
+    next(tabs);
+  });
 
-//        productPriceData += productrep2
-      
-       
-//     }
-//     return productPriceData
-// }
+  //get the previous button from id
+  const prevBtn = document.getElementById("prev_btn");
+  console.log(prevBtn, "previous");
+  //add event listener to the previous button class
+  prevBtn.addEventListener("click", function () {
+    prev(tabs);
+  });
+}
 
-// console.log(whileLoopOp(whileLoopData_2))
+let index = 0;
 
-// let num = 1;
-// do{
-//     console.log(num);
-//     num++
-// } while(num <= 5)
+const next = (tabs) => {
+  //initiate a removal of the class "active" from tab
+  tabs[index].classList.remove("active");
+  //increment the variable "index" that is connected to tabs
+  index = (index + 1) % tabs.length;
+  //initiate addition of the class "active" to tab
+  tabs[index].classList.add("active");
+};
 
-// const digits = [1,2,3,4,5]
-
-// for (const num of digits){
-//     console.log(num * num)
-// }
-
-const ints = [1, 2, 3, "John", 5, 6, 7, 8, 10]
-
-const newArr = []
-
-for(let i = 0; i < ints.length; i++){
-    if (typeof(ints[i]) === "string" ) {
-        continue
-    }
-    newArr.push(ints[i])
-} 
-
-console.log(newArr)
+const prev = (tabs) => {
+  //initiate a removal of the class "active" from tab
+  tabs[index].classList.remove("active");
+  //increment the variable "index" that is connected to tabs
+  index = (index - 1 + tabs.length) % tabs.length;
+  //initiate addition of the class "active" to tab
+  tabs[index].classList.add("active");
+};
