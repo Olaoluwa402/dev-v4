@@ -8,13 +8,9 @@ let index = 0;
 const box = document.querySelectorAll(".outer-box");
 function ready() {
   const nextBtn = document.getElementById("next");
-  nextBtn.addEventListener("click", function () {
-  });
-
+  nextBtn.addEventListener("click", next);
   const prevBtn = document.getElementById("prev");
-  prevBtn.addEventListener("click", function () {
-    prev(box);
-  });
+  prevBtn.addEventListener("click", prev);
 }
 
 function next() {
@@ -63,27 +59,5 @@ function prev() {
 //     // box[index].classList.add('active')
 //     console.log(index) // 1
 //   }
-// }
-
-
-
-// const box = document.querySelectorAll('.outer-box');
-// const nextBtn = document.getElementById('next');
-// const prevBtn = document.getElementById('prev');
-
-// let index = 0
-
-// function next(box) {
-
-//   box[index].classList.remove("active");
-//   index = (index + 1) % box.length;
-//   console.log('index is ', index)
-//   box[index].classList.add("active");
-// }
-
-// function prev(box) {
-//   box[index].classList.remove("active");
-//   index = (index - 1 + box.length) % box.length;
-//   box[index].classList.add("active");
 // }
 
