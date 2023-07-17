@@ -28,7 +28,7 @@ h2{
     position: relative;
     perspective: 1000px;
 }
-#box2 #innercontainer {
+#box2 .innercontainer {
     border-radius: 5px;
     background-color: #f2f2f2;
     box-shadow: 0 5px 10px #3337;
@@ -46,7 +46,7 @@ h2{
     }
   }
   
-  #box2 #innercontainer > * {
+  #box2 .innercontainer> * {
     animation: slideContent 0.4s backwards;
   }
   
@@ -56,8 +56,8 @@ h2{
       transform: scale(0.5);
     }
   }
-.prev,
-.next{
+#prev,
+#next{
     /* position: absolute;
   top: 50%; */
   transform: translateY(-50%);
@@ -75,20 +75,20 @@ h2{
   align-items: center;
   /* margin: 20px; */
 }
-.prev{
+#prev{
     left: -70px;
 }
-.next{
+#next{
     right: -70px;
 }
-.prev:hover,
-.next:hover{
+#prev:hover,
+#next:hover{
     background-color: #333;
     color: #f8f4f4;
   }
-#innercontainer{
+.innercontainer{
     display: none;
-    height: auto;
+    /* height: auto;
     box-shadow: inset;
     border-style: groove;
     border-radius: 5px;
@@ -98,23 +98,23 @@ h2{
     align-items: center;
     background-color: beige;
     margin: 10px 40px;
-    padding: 10px;
+    padding: 10px; */
 }
-#innercontainer.Active{
+.Active{
     display: block;
     height: auto;
     box-shadow: inset;
     border-style: groove;
     border-radius: 5px;
     width: 30%;
-    flex-direction: column;
-    justify-content: center;
+    /* flex-direction: column; */
+    /* justify-content: center; */
     align-items: center;
     background-color: beige;
     margin: 10px 40px;
     padding: 10px;
 }
-#innercontainer p{
+.innercontainer p{
     font-style: italic;
 }
 .subcontainer{
