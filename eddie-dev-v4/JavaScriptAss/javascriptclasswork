@@ -172,3 +172,35 @@ for(let list of addData){
         addData.delete(list);
     }
 }
+
+
+const arr1 =[13, 15, 20, 10]
+const arr2 = [9, 13, 10, 14, 17]
+const set1 = new Set([13, 15, 20, 10]);
+const set2 = new Set([9, 13, 10, 14, 17]);
+
+let c = arr1.filter((num)=> !set2.has(num))
+let arr3 = new Set(c)
+
+console.log(c)
+
+
+const mapArr = [
+    ["Lagos", "Ikeja"],
+    ["Oyo","Ibadan"]
+    ["Ekiti","Ado"]
+];
+
+
+const periOfCircle = function(r){
+ 
+   let perimeter =Math.ceil (Math.PI*2*r);
+   return perimeter    
+}
+
+console.log(periOfCircle(5));
+
+console.log((function(L){
+    return 4 * L
+ })(9))
+    
