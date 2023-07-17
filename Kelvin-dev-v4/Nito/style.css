@@ -1,0 +1,160 @@
+body {
+  background-color: rgb(10, 10, 10);
+  margin: 0;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Navigation style */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: rgba(255, 255, 255, 0.007);
+  backdrop-filter: blur(5px);
+  box-shadow: 1px 1px 10px 1px black;
+  position: fixed;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: poppins;
+  z-index: 999;
+}
+
+#nav-left {
+  width: 50px;
+  height: fit-content;
+}
+
+#nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+  width: 50%;
+}
+
+#nav-right li {
+  margin: 0 20px;
+  width: 100%;
+}
+
+#nav-right > li > a {
+  transition: color 0.2s;
+}
+
+#nav-right > li > a:hover {
+  color: rgba(255, 0, 200, 0.514);
+}
+
+#nav-right li button {
+  padding: 5px 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 0, 200, 0.514);
+  border-radius: 10px;
+  font-family: poppins;
+  transition: border-color 0.2s, padding 0.2s;
+}
+
+#nav-right li button:hover {
+  border-color: rgba(248, 54, 206, 0.849);
+  padding: 6px 21px;
+  /* opacity: 0; */
+}
+
+/* Navigation style */
+
+.transBG {
+  margin: auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.transBG div {
+  /* content: ""; */
+  border: 1px solid white;
+  /* margin: auto; */
+  position: absolute;
+  left: 40%;
+  right: 40%;
+  top: 20%;
+  /* width: 50%; */
+  /* height: 100%; */
+  background-color: rgba(255, 255, 255, 0.11);
+  text-align: center;
+  padding: 200px 100px;
+  border-radius: 10px;
+  backdrop-filter: opacity(0.5) blur(100px);
+}
+
+.transBG div:hover {
+  animation: colorchange 0.2s ease-in-out backwards;
+  background-color: rgba(252, 104, 220, 0.233);
+  box-shadow: 10px 10px 50px rgba(255, 0, 200, 0.11),
+    -10px -10px 50px rgba(255, 0, 200, 0.11);
+}
+
+@keyframes colorchange {
+  from {
+    background-color: rgba(255, 255, 255, 0.11);
+    box-shadow: none;
+  }
+  to {
+    background-color: rgba(252, 104, 220, 0.233);
+    box-shadow: 10px 10px 50px rgba(255, 0, 200, 0.11),
+      -10px -10px 50px rgba(255, 0, 200, 0.11);
+  }
+}
+
+.transBG h1 {
+  font-size: 150px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.171);
+  transition: font-size 0.5s;
+}
+
+.transBG h1:hover {
+  font-size: 170px;
+}
+
+.transBG h2 {
+  position: absolute;
+  font-size: 40px;
+  text-align: center;
+  left: 40%;
+  right: 40%;
+  letter-spacing: 5px;
+  transition: letter-spacing 1s;
+}
+
+.transBG h2:hover {
+  letter-spacing: 10px;
+}
+
+.about-section {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  position: relative;
+  height: 500px;
+  background-color: rgba(255, 0, 200, 0.11);
+  padding: 50px;
+  overflow: hidden;
+}
