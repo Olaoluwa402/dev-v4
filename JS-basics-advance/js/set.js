@@ -67,4 +67,34 @@ for (let i = 0; i < setArr.length; i++) {
 //   }
 // }
 
-console.log(addData, addData.size);
+// console.log(addData, addData.size);
+
+// union of set
+const uData = [1, 2, 3, 4, 5];
+const uData2 = [3, 7, 5, 9];
+const uData3 = [...uData, ...uData2];
+
+const setU = new Set(uData3);
+log(setU);
+
+// interset of set
+const setInter = new Set(uData2);
+// const finalInterArray = uData.filter(function (n) {
+//   return setInter.has(n);
+// });
+// const finalInterArraySet = new Set(finalInterArray);
+// console.log(finalInterArraySet);
+
+let finalInterArray2 = [];
+for (let i = 0; i < uData.length; i++) {
+  const curr = uData[i];
+  if (setInter.has(curr)) {
+    finalInterArray2.push(curr);
+  }
+}
+const finalInterArraySet2 = new Set(finalInterArray2);
+log(finalInterArraySet2);
+
+// get the set union and set interset of the following
+const arr1 = [13, 15, 20, 10];
+const arr2 = [9, 13, 10, 14, 17];

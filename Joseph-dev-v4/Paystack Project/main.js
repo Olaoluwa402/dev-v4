@@ -3,7 +3,9 @@ const menuBar = document.getElementById("menu-bar");
 
 // set event listener
 menuBar.addEventListener("click", function () {
-  // alert('fghfgghg')
+  // alert('Alert Message')
   const sideBar = document.getElementById("sidebar");
   sideBar.classList.toggle("open");
 });
+
+
