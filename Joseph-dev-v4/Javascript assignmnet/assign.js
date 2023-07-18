@@ -78,6 +78,8 @@ for(let i = givenString.length -1; i >=0; i--){
 
 //  log(curr, "Current");
 
+
+
 finalReverse = finalReverse + curr;
 
 
@@ -293,5 +295,33 @@ log(truncate(str_3, 17), "truncate3");
 
 
   
+// let count = 0;
+// const interval = setInterval(counter, 5000)
+
+// function counter(){
+//     count = count + 5;
+//     log(count);
+// };
+
+// const intterval = setInterval(counter,5000);
+
+// log(setInterval);
+
+// if (count == 30) {
+//     clearInterval(interval)
+// }
+
+// log(setInterval);
 
 
+const arr = [1,2,3,4,5];
+
+let arr_1 = []
+
+arr.forEach(function (element, index, arr){
+
+    log(index, element, arr);
+
+
+
+})
