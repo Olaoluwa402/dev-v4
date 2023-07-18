@@ -114,7 +114,7 @@ li {
 #d-anim,
 #l-anim,
 #i-anim {
-  animation: flicker 1s ease-in-out backwards;
+  animation: flicker 1s ease-in-out;
   /* animation-delay: 5s; */
   animation-iteration-count: infinite;
 }
@@ -132,14 +132,18 @@ li {
 } */
 
 @keyframes flicker {
-  from {
+  0% {
     /* color: rgba(255, 255, 255, 0); */
     text-shadow: none;
   }
-  to {
+  50% {
     /* background-color: rgba(252, 104, 220, 0.233); */
     text-shadow: 1px 1px 5px rgba(0, 140, 255, 0.849),
       -1px -1px 5px rgba(0, 140, 255, 0.849);
+  }
+  100% {
+    /* color: rgba(255, 255, 255, 0); */
+    text-shadow: none;
   }
 }
 
