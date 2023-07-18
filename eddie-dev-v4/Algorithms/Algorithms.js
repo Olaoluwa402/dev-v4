@@ -57,3 +57,35 @@ function twoArr (arr) {
 }
 
 console.log (twoArr(arr))
+
+
+// // write a function that increment  by 5 after every seconds
+// function callback(){
+//     setInterval(() => console.log('hello'),  3 * 60);
+//     setInterval(() => console.log('hello javascript'), 3 * 60);
+// }
+// callback()
+
+
+// // find the sum of an array and multiply each item by 2
+//  const ijay = [1,2,3,4,5];
+// let sum = 0;
+//  ijay.forEach((ijay) => console.log(sum = sum + ijay*2));
+    
+// filter
+// perform a search through the full book list using the book titl and author field and return the search result.
+
+const books = [
+    {title:"lord of the rings", author:"ay", isbn:1, price:"$200"},
+    {title:"Game of thrones", author:"ay", isbn:2, price:"$300"},
+    {title:"Wonder", author:"Johnson", isbn:3, price:"$250"},
+    {title:"Men in Black", author:"Black", isbn:4, price:"$400"},
+    {title:"Kweku the traveller", author:"James", isbn:5, price:"$500"},
+];
+// Write code to implement searching for book using title or author name as input parameter from user
+function searchBooks(book,keyword){
+    const searchedbooks = books.filter((book)=> book.title === keyword || book.author === keyword);
+    return searchedBooks;
+}
+
+console.log(searchBooks(books,"ay"))
