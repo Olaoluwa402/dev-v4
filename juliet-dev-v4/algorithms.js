@@ -53,13 +53,17 @@ function titleCase(str) {
 // the given maximum string length (second argument). Return 
 // the truncated string with a ... ending.
 
-function truncString(str, lengthStr){
-    if(str <= lengthStr){
-        return str;
-    }else{
-        return str.slice(0, lengthStr) + "...;"
-    }
-}
+// function truncString(str, lengthStr){
+//     if(str <= lengthStr){
+//         return str;
+//     }else{
+//         return str.slice(0, lengthStr) + "...;"
+//     }
+// }
 
 
-log(truncString("juliet is a good person", 10))
+// log(truncString("juliet is a good person", 10))
+
+
+
+
