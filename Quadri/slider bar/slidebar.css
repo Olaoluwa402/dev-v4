@@ -25,6 +25,8 @@ p{
 font-size: 10px;
 font-weight: 500;
 }
+
+ 
 .section{
  /* display: flex;
 justify-content: space-between;  */
@@ -36,6 +38,31 @@ justify-content: space-between;  */
  border-radius: 10px;
  position: relative;
  box-shadow: 10px 1px 12px 5px rgba(0, 0, 0, 0.068);
+ transform-style: preserve-3d;
+  animation: slide 0.4s linear;
+}
+
+@keyframes section{
+    0%{
+        transform: rotateX(180deg);
+    }
+}
+ .main .section > *{
+    animation: sectionContent 0.4 sec backwards ;
+ }
+
+ @keyframes sectionContent{
+    0%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+ }
+.section{
+    display: none;
+}
+
+.section.active{
+    display: block;
 }
 
 #left-bar{
