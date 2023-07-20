@@ -48,7 +48,6 @@ function twoArr(arr) {
   return newArr;
 }
 
-<<<<<<< HEAD
 console.log (twoArr(arr))
 
 
@@ -69,19 +68,61 @@ console.log (twoArr(arr))
 // perform a search through the full book list using the book titl and author field and return the search result.
 
 const books = [
-    {title:"lord of the rings", author:"ay", isbn:1, price:"$200"},
-    {title:"Game of thrones", author:"ay", isbn:2, price:"$300"},
-    {title:"Wonder", author:"Johnson", isbn:3, price:"$250"},
-    {title:"Men in Black", author:"Black", isbn:4, price:"$400"},
-    {title:"Kweku the traveller", author:"James", isbn:5, price:"$500"},
+    {title:"lord of the rings", author:"ay", isbn:1, price:"$200",qty:2},
+    {title:"Game of thrones", author:"ay", isbn:2, price:"$300",qty:5},
+    {title:"Wonder", author:"Johnson", isbn:3, price:"$250",qty:4},
+    {title:"Men in Black", author:"Black", isbn:4, price:"$400",qty:3},
+    {title:"Kweku the traveller", author:"James", isbn:5, price:"$500",qty:1},
 ];
-// Write code to implement searching for book using title or author name as input parameter from user
-function searchBooks(book,keyword){
-    const searchedbooks = books.filter((book)=> book.title === keyword || book.author === keyword);
-    return searchedBooks;
-}
 
-console.log(searchBooks(books,"ay"))
-=======
-console.log(twoArr(arr));
->>>>>>> 8f9b38706ad2cd7f537f0691c3fd32d073889e9c
+// use map function to select prices for the books.
+prices=books.map(({price})=> parseFloat(price.replace("$","")));
+console.log("Prices:",prices );
+
+// use map.reduce to sum up the prices
+
+const totalPrice = prices.reduce((acc, curr) => acc + curr, 0);
+console.log(`Total Price:${totalPrice}`);
+
+// using every fucntion.
+
+const isPricesNumber = prices.every((prices) => typeof prices === "number");
+console.log(isPricesNumber)
+
+// write a function to find a book in books
+
+function findBook(books, isbn){
+  const request = books.find((books) =>books.isbn === isbn);
+}
+console.log(findBook(books, 4))
+
+// write a function to return books with price greater than $250
+
+function bookPrice (books, price){
+  const answer = books.filter ((prices)=>parseInt(prices.price.replace(`$`, ` `))>price );
+  return answer;
+}
+console.log(bookPrice(books, 250))
+
+
+function bookQty (books, quantity){
+  const answer = books.filter ((quant) => quant["qty"] > quantity );
+  return answer;
+}
+console.log(bookQty(books, 2));
+
+// write a fucntion to update the price by searching with isbn and updating its value
+
+function updatedPrice(books, prices){
+  const indexNumber = books.findIndex((book)=> book.isbn === 3);
+  books[indexNumber].price = `$${prices}`;
+  return books;
+}
+console.log(updatedPrice(books, 800))
+
+// write a function sorting the prices in descending order.
+function sortBooks (books){
+  const answer = books.sort ((a, b)=>parseInt(b.price.replace(`$`, ` `))-parseInt(a.price.replace(`$`, ` `)));
+  return answer;
+}
+console.log(sortBooks(books))

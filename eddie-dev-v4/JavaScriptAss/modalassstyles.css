@@ -1,0 +1,118 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* The modal (hidden by default) */
+.modal {
+    /* display: none; */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+#myModal{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(13, 14, 13);
+    opacity: 0.9;
+     
+}
+.modalcontentcontainer{
+    background-color: whitesmoke;
+    margin: 50px;
+    padding: 50px;
+}
+
+
+/* Modal content */
+.modal-content {
+
+    display: flex;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: px;
+    border: 1px solid #888;
+    max-width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+.innermodalleft{
+    background-color:rgb(66, 101, 196) ;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    height: auto;
+}
+#digital{
+    margin: 30px;
+    padding: 30px;
+    border: solid beige;
+    border-width: 1px;
+    width: auto;
+    height:auto;
+    font-size: 30px;
+    color: #fefefe;
+    background-color: rgb(104, 104, 180);
+}
+.learn{
+    color: black;
+    margin-left: -275px;
+    padding-top: 5px;
+    padding-bottom: 50px;
+    position: relative;   
+}
+h6{
+    font-size:10px;
+}
+.form{
+    margin-right: 150px;
+    width: 50%;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.innermodalright{
+    display: inline-block;
+}
+#shakediv{
+    display: inline-block;
+    justify-items: left;
+}
+#shakediv h6{
+    color: #888;
+    padding-top: 0;
+}
+#hey{
+    display: flex;
+    font-size: 25px;
+    justify-content: space-around;
+    margin-right: 100px;
+    padding-bottom: 0px;
+
+}
+#checkbox{
+    display: flex;
+}
+.loginbtn{
+    background-color:rgb(66, 101, 196) ; 
+    width: 200px;
+    height: 25px;
+}
+/* Close button */
+.close {
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    padding: 20px;
+}
+
+.close:hover {
+    color: rgb(112, 7, 7);
+}
