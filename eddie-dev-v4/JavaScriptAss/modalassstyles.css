@@ -40,6 +40,7 @@ body {
     max-width: 100%;
     height: 100%;
     justify-content: space-between;
+    border-radius: 5px;
 }
 .innermodalleft{
     background-color:rgb(66, 101, 196) ;
@@ -70,10 +71,18 @@ h6{
     font-size:10px;
 }
 .form{
-    margin-right: 150px;
+    margin-right: 250px;
     width: 50%;
     flex-wrap: wrap;
     padding-top: 30px;
+
+}
+#arrowdiv i{
+    font-size: 40px;
+}
+#hey i{
+    padding-top: 30px;
+    margin-left: 10px;
 }
 
 .innermodalright{
