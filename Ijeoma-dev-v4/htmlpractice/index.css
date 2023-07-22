@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* .menu{
+    display: flex;
+    gap: 50px;
+    position: sticky;
+    background-color: red;
+    width: 100%;
+    margin: 0;
+}
+#menubar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar a{
+    display: block;
+    background-color: black;
+    text-decoration: none;
+    position: relative;
+    top: 30px;
+    color: white;
+
+}
+.open{
+    position: relative;
+    left: 0;
+}
+.close{
+    position: relative;
+    left: -20px;
+}
+.nav{
+    display: block;
+
+}
+a:hover{
+    color: grey;
+}
+
+#big{
+    width: 300px;
+    height: 200px;
+    background-color: red;
+    color: blue;
+    transform: rotateX(30deg);
+    font-size: 15px;
+} */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .large{
+    font-size: 50px;
+    color: white;
+  }
+  .content2{
+    background-color: rgb(78, 78, 233);
+    border: 1px solid white;
+    padding: 15px 25px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 80%;
+    margin: 20px;
+  }
+  .content1{
+    background-color: rgba(72, 72, 80, 0.5);
+    width: 50%;
+    margin: 0;
+    height: 100vh;
+  }
+  .content3{
+    display: block;
+    align-items: center;
+    padding: 50px;
+    
+  }
+  .input{
+    width: 320px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid rgb(210, 207, 207);
+  }
+  .button1{
+    width: 320px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: rgb(87, 157, 219);
+    color: white;
+    border: none;
+  }
+  .text1{
+    font-size: 18px;
+  }

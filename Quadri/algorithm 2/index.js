@@ -17,7 +17,7 @@
 // for(let i = 0; i <d.length; i++){
 //     const current = d[i];
 //     if(current.includes('l')){
-    
+
 //     }
 // }
 
@@ -29,18 +29,12 @@
 //         if(number >=1 && number % 2 !==0 &&){
 //             arr.push(number);
 //         }
-    
 
-        
-    
 //     }
 //     return arr;
 // }
 
-
 // console.log(getEven(num))
-
-
 
 /*1. The formula to convert from Celsius to Fahrenheit is the
 temperature in Celsius times 9/5, plus 32.
@@ -77,117 +71,97 @@ NOTE; Return the value of the result from the function*/
         1 and return the result. Example addition(0) => 1, addition(4) => 5
     */
 
-
-
 // converting Celcius to Fahrenheit
-    //     function celciusToFahrenheit(celcius){
-    //         let fahrenheit = celcius*(9/5) + 32;
+//     function celciusToFahrenheit(celcius){
+//         let fahrenheit = celcius*(9/5) + 32;
 
-    //         fahrenheit = Math.floor(fahrenheit)
-    //         return fahrenheit
-    //     }
+//         fahrenheit = Math.floor(fahrenheit)
+//         return fahrenheit
+//     }
 
-    //     console.log(celciusToFahrenheit(25));
+//     console.log(celciusToFahrenheit(25));
 
+//     // moving even interger to begining of array and odd to the end
+//         let arr = [2,3,4,5,6,7,8]
+//         let Arr2 = [];
+//     function evenFirst(arr){
+//         for(number of arr){
+//             if(number % 2 ===0){
+//              Arr2.unshift(number)
 
-    //     // moving even interger to begining of array and odd to the end
-    //         let arr = [2,3,4,5,6,7,8]
-    //         let Arr2 = [];
-    //     function evenFirst(arr){
-    //         for(number of arr){
-    //             if(number % 2 ===0){
-    //              Arr2.unshift(number)
-                 
-                
-    //             }
+//             }
 
-    //             if(number % 2 !==0){
-    //                 Arr2.push(number);
-    //             }
-    //         }
-    //         return Arr2
-    //     }
+//             if(number % 2 !==0){
+//                 Arr2.push(number);
+//             }
+//         }
+//         return Arr2
+//     }
 
-    //     console.log(evenFirst(arr));
+//     console.log(evenFirst(arr));
 
-    //     // converting minutes to seconds
-    //     function minToSec(min){
+//     // converting minutes to seconds
+//     function minToSec(min){
 
-    //         return min * 60;
+//         return min * 60;
 
-    //     }
+//     }
 
-    //     console.log(minToSec(5));
+//     console.log(minToSec(5));
 
-    //     // function that return true when argument is even and false when odd
-    //     function evenOrOdd(value){
-    //         if(value % 2 !==0){
-    //             return false
-    //         } else{
+//     // function that return true when argument is even and false when odd
+//     function evenOrOdd(value){
+//         if(value % 2 !==0){
+//             return false
+//         } else{
 
-    //         } return true
+//         } return true
 
-    //     }
+//     }
 
-    //     console.log(evenOrOdd(2));
+//     console.log(evenOrOdd(2));
 
-    //     // function that return its argument plus 1
-    // let sum = 0
-    //     function additionByOne(num){
-    //         let sum = num + 1
+//     // function that return its argument plus 1
+// let sum = 0
+//     function additionByOne(num){
+//         let sum = num + 1
 
-    //         return sum;
-    //     }
+//         return sum;
+//     }
 
-    //     console.log(additionByOne(9));
+//     console.log(additionByOne(9));
 
-    //         // reversing string
-    //     function stringReverse(word){
-    //         let split = word.split("");
+//         // reversing string
+//     function stringReverse(word){
+//         let split = word.split("");
 
-    //         let reverse = split.reverse();
+//         let reverse = split.reverse();
 
-    //         let join = reverse.join("");
+//         let join = reverse.join("");
 
-    //         return join;
-    //     }
+//         return join;
+//     }
 
-    //     console.log(stringReverse("Quadri"))
+//     console.log(stringReverse("Quadri"))
 
-    //     function truncate(sentence){
-    //             if(sentence.length > 10){
-    //                 return sentence.slice(0,15) + '....'
-    //             }
-    //     }
+//     function truncate(sentence){
+//             if(sentence.length > 10){
+//                 return sentence.slice(0,15) + '....'
+//             }else{return sentence}
+//     }
 
-    //     console.log(truncate('Real Madrid, they are champions of europe again'));
+//     console.log(truncate('Real Madrid, they are champions of europe again'));
 
+// function capitalizeFirstLetter(values){
 
-        function capitalizeFirstLetter(values){
+//     let str = values.split("");
 
-            let str = values.split(" ");
+//     for(let i = 0; i < str.length; i++){
+//         str[i] = str[i].charAt(0).toUpperCase()+str[i].substring(1)
 
-            for(let i = 0; i < str.length; i++){
-                str[i] = str[i].charAt(0).toUpperCase()+str[i].substring(1)
+//     }
+//     return str.join("");
 
-               
-            }
-            return str.join(" ");
-           
-        }
+// }
 
-        console.log(capitalizeFirstLetter('chelsea has the london bragging rights'));
-
-
-        // function chunkArr(Array,size){
-        //     let arr = [];
-
-        //     if(Array.length > 2){
-        //         arr.push(Array.splice(2))
-        //     }
-
-        //     return arr
-        // }
-
-        // console.log(chunkArr('a','b','c','d'))
-
+// console.log(capitalizeFirstLetter('chelsea has the london bragging rights'));
