@@ -369,10 +369,8 @@ function isPrime(nume) {
   for (let i = 2; i < nume; i++) {
     if (nume % i == 0) {
       return false;
-    } 
-    else {
+    } else {
       return true;
-      
     }
     // return `${nume} is a prime number`;
   }
@@ -380,26 +378,22 @@ function isPrime(nume) {
 }
 console.log(isPrime(9));
 
-
-function mini(...numb){
+function mini(...numb) {
   return "";
 }
-console.log(mini(1,4,5,7,5,3,2));
+console.log(mini(1, 4, 5, 7, 5, 3, 2));
 
-const perimeter = function(radius){
+const perimeter = function (radius) {
+  let circle = Math.ceil(2 * Math.PI * radius);
 
- let circle = Math.ceil(2 * Math.PI * radius);
-
-
- return circle;
-
+  return circle;
 };
 console.log(perimeter(8));
 
-console.log((function(a){
-  return 4 * a;
-})
-(5)
+console.log(
+  (function (a) {
+    return 4 * a;
+  })(5)
 );
 
 // Reverse the provided string and return the reversed string.
@@ -410,38 +404,34 @@ console.log(estring);
 console.log(estring.reverse().toString().replaceAll(",", ""));
 
 // Truncate a string (first argument) if it is longer
-// than the given maximum string length (second argument). 
+// than the given maximum string length (second argument).
 //Return the truncated string with a ... ending.
 
-const str = function(newString, dot){
+const str = function (newString, dot) {
   let truncate = newString.substring(0, 30);
-  return truncate + dot;
+  return truncate;
 }
-console.log(str("Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with", "..."));
-
-
+console.log(str("Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with"));
 
 /*Return the provided string with the first letter of each
  word capitalized. Make sure the rest of the word is in lower case.
  */
+//"i am coming"  => split(" ") => ["i","am","coming"]
 
- const stri = ["strong", "weak", "happy"];
- for(let i=0; i < stri.length; i++){
+const stri = ["strong", "weak", "happy"];
+for (let i = 0; i < stri.length; i++) {
   const stringupper = stri[i].charAt(0).toUpperCase();
   const stringlower = stri[i].slice(1).toLowerCase();
-console.log(stringupper + stringlower);
- }
- 
+  console.log(stringupper + stringlower);
+}
 
- /* Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
+/* Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
 chunkArrayInGroups(["a", "b", "c", "d"], 2) should return [["a", "b"], ["c", "d"]]
  */
 
-function splitArray(array1){
-   const chunkArrayInGroups = array1.splice(0, array1.indexOf("c"));
-   const chunkArrayInGroupse = array1.splice(2, array1.indexOf("d"));
-return chunkArrayInGroups + chunkArrayInGroupse;
+function splitArray(array1) {
+  const chunkArrayInGroups = array1.splice(0, array1.indexOf("c"));
+  const chunkArrayInGroupse = array1.splice(2, array1.indexOf("d"));
+  return chunkArrayInGroups + chunkArrayInGroupse;
 }
 console.log(splitArray(["a", "b", "c", "d"]));
-
-
