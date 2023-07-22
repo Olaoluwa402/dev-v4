@@ -163,18 +163,31 @@ NOTE; Return the value of the result from the function*/
     //     console.log(truncate('Real Madrid, they are champions of europe again'));
 
 
-        // function capitalizeFirstLetter(values){
+        function capitalizeFirstLetter(values){
 
-        //     let str = values.split("");
+            let str = values.split(" ");
 
-        //     for(let i = 0; i < str.length; i++){
-        //         str[i] = str[i].charAt(0).toUpperCase()+str[i].substring(1)
+            for(let i = 0; i < str.length; i++){
+                str[i] = str[i].charAt(0).toUpperCase()+str[i].substring(1)
 
                
-        //     }
-        //     return str.join("");
+            }
+            return str.join(" ");
            
+        }
+
+        console.log(capitalizeFirstLetter('chelsea has the london bragging rights'));
+
+
+        // function chunkArr(Array,size){
+        //     let arr = [];
+
+        //     if(Array.length > 2){
+        //         arr.push(Array.splice(2))
+        //     }
+
+        //     return arr
         // }
 
-        // console.log(capitalizeFirstLetter('chelsea has the london bragging rights'));
+        // console.log(chunkArr('a','b','c','d'))
 
