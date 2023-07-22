@@ -413,11 +413,13 @@ console.log(estring.reverse().toString().replaceAll(",", ""));
 // than the given maximum string length (second argument). 
 //Return the truncated string with a ... ending.
 
-const str = function(newString){
+const str = function(newString, dot){
   let truncate = newString.substring(0, 30);
-  return truncate;
+  return truncate + dot;
 }
-console.log(str("Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with"));
+console.log(str("Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with", "..."));
+
+
 
 /*Return the provided string with the first letter of each
  word capitalized. Make sure the rest of the word is in lower case.
@@ -441,3 +443,5 @@ function splitArray(array1){
 return chunkArrayInGroups + chunkArrayInGroupse;
 }
 console.log(splitArray(["a", "b", "c", "d"]));
+
+
