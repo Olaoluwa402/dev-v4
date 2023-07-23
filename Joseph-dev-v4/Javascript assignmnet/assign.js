@@ -432,7 +432,7 @@ function multiplyAll(arr) {
     return finalPrice;
    }
 
-   log(searchPrice(books, 250, "finalPrice"));
+  //  log(searchPrice(books, 250, "finalPrice"));
 
 
 
@@ -443,7 +443,7 @@ function multiplyAll(arr) {
     return finalPrice_1;
    }
 
-   log(searchPrice(books, 250, 4 ,"finalPrice"));
+  //  log(searchPrice(books, 250, 4 ,"finalPrice"));
 
 
 
@@ -456,6 +456,216 @@ function multiplyAll(arr) {
     return arr;
    }
 
-   log(updatePrice(books, 3, 800, "updated"));
+  //  log(updatePrice(books, 3, 800, "updated"));
+
+
+
+  const arr = [
+    2,
+    "john",
+    [3,4,5],
+    {name: "john", age: 20},
+    15,
+    "bola", null
+  ];
+
+  let [item1, item2, item3, item4] = arr;
+
+const {} = item4;
+  // log([item1, item2, item3, item4]);
+
+  let[, ,...others] = arr;
+
+
+log(others,"Others");
+
+
+let arr2 =  ["cashew", "password", "orange", "mango", "banana", "apple"];
+
+const [p1, ,...rest] = arr2;
+
+
+let output = p1 + "," + rest;
+
+log(output.split(","));
+
+
+// const countries = [
+//   ["Lagos","Ikeja"],
+//   ["Oyo", "Ibadan"],
+//   ["Kwara", "Ilorin"]
+// ];
+
+
+// for (let[state,capital] of countries) {
+
+//   log(state, capital);
+// }
+
+
+const continent = [
+  {Africa: [
+   ["Lagos","Ikeja"],
+   ["Oyo", "Ibadan"],
+   ["Kwara", "Ilorin"]
+  ],
+},
+]
+  
+
+// for (let{Africa} of continent) {
+
+//       log(Africa);
+
+//     for(let[st,cp] of Africa){
+
+//       log(st,cp);
+//     } 
+//   }
 
   
+  // shortcut
+  
+  // for (let [state, capital] of continent[0].africa) {
+  //   log(state, capital);
+  // }
+  
+  // no shortcut
+
+  // function getStateCapital(continentData, continentName,) {
+  //   for (let continent of continentData) {
+  //     if (!continent.hasOwnProperty(continentName)) {
+  //       return "Not a valid continent";
+  //     }
+  //     for (let [state, capital] of continent[continentName]) {
+  //       log(state, capital);
+  //         // return `${state} ${capital}`;
+  //     }
+  //   }
+  
+  //   return "";
+  // }
+  
+  // log(getStateCapital(continent, "Africa"));
+  
+  // aasignment: get the state and capital
+
+  const continent_2 = [
+    {
+      africa: {
+        nigeria: [
+          ["Lagos", "Ikeja"],
+          ["Oyo", "Ibadan"],
+          ["Kwara", "Ilorin"],
+        ],
+        ghana: [
+          ["G_state_1", "G_city_1"],
+          ["G_state_2", "G_city_2"],
+          ["G_state_3", "G_city_3"],
+        ],
+      },
+    },
+  
+    {
+      europe: {
+        france: [
+          ["F_state_1", "F_city_1"],
+          ["F_state_2", "F_city_2"],
+          ["F_state_3", "F_city_3"],
+        ],
+        italy: [
+          ["I_state_1", "I_city_1"],
+          ["I_state_2", "I_city_2"],
+          ["I_state_3", "I_city_3"],
+        ],
+      },
+    },
+  ];
+
+
+
+  // function getStateCapital(continentData, continentName) {
+  //   for (let items of continentData) {
+  //     if (!continentData.hasOwnProperty(continentName)) {
+  //       return "Not a valid continent";
+  //     }
+  //     for (let [countryName] of continent_2[continentName]) {
+
+  //         return countryName;
+  //     }
+     
+  //   }
+  //   return "";
+  // }
+
+  // log(continent_2, africa);
+  
+
+
+  // function findCity(country, state) {
+  //   for (let continent of continent_2) {
+  //     for (const continentKey in continent) {
+  //       if (continent.hasOwnProperty(continentKey)) {
+  //         const countries = continent[continentKey];
+  //         if (countries.hasOwnProperty(country)) {
+  //           const states = countries[country];
+  //           for (const stateArray of states) {
+  //             if (stateArray[0] === state) {
+  //               return stateArray[1];
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  //   return "City not found";
+  // }
+  
+  // const city = findCity("nigeria", "Lagos");
+  // console.log(city); // Output: "Ikeja"
+
+
+
+  
+// function getStatesAndCapitals(country) {
+//   for (const continent of continent_2) {
+//     for (const continentKey in continent) {
+//       if (continent.hasOwnProperty(continentKey)) {
+//         const countries = continent[continentKey];
+//         if (countries.hasOwnProperty(country)) {
+//           const statesAndCapitals = countries[country].map(([state, capital]) => ({ state, capital }));
+//           return statesAndCapitals;
+//         }
+//       }
+//     }
+//   }
+//   return "Country not found";
+// }
+// const county = "nigeria";
+// let city = getStatesAndCapitals(county)
+// log(city);
+  
+
+
+
+
+function getStatesAndCapitals(continentData, country) {
+  for (let continentObj of continent_2) {
+    if (continentObj.hasOwnProperty(continentData)) {
+      const countries = continentObj[continentData];
+      if (countries.hasOwnProperty(country)) {
+        const statesAndCapitals = countries[country];
+        let result = "";
+        for (let [state, capital] of statesAndCapitals) {
+          result += `${state}: ${capital}\n`;
+       
+        }
+        return result;
+      }
+    }
+  }
+  return "Not a valid country.";
+}
+
+// const statesAndCapitals1 = getStatesAndCapitals("africa", "ghana");
+log(getStatesAndCapitals("africa", "ghana"));
