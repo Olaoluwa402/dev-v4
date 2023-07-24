@@ -126,3 +126,39 @@ function sortBooks (books){
   return answer;
 }
 console.log(sortBooks(books))
+
+// destructuring of an array
+const Array = [
+  2, "john",[3, 4, 5], {name:"john", age:20}, 15, "bola", null
+];
+let [p1, p2, p3, p4]= Array;
+console.log(p1, p2, p3, p4)
+
+// spread operator in array destructuring
+let [, , ...rest] = Array;
+console.log(rest, "rest")
+
+let arr2 = ["cashew", "password", "orange", "mango", "banana", "apple"];
+let [ a1, ,...data]= arr2
+data.unshift(a1)
+console.log(data)
+
+
+// destructure the data below
+const continent = [
+  {
+    africa:[
+      [`lagos`,`ikeja`],
+      [`oyo`, `ibadan`],
+      [`kwara`, `ilorin,`]
+    ]
+  }
+]
+
+
+
+// create a user object with the following keys.
+// set a value of your choice to each key- username, email, firends, token
+// store the created user in local storage
+// log your result in console
+
