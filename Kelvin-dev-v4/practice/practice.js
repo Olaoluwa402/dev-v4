@@ -1,10 +1,10 @@
-const books = [
-  { title: "Lord of the rings", author: "Ay", ISBN: 1, price: "$200" },
-  { title: "song of Ice and Fire", author: "Ay", ISBN: 2, price: "$100" },
-  { title: "Dance of dragons", author: "Lily", ISBN: 6, price: "$500" },
-  { title: "Velarion", author: "sewa", ISBN: 3, price: "$300" },
-  { title: "snow", author: "Joy", ISBN: 5, price: "$800" },
-];
+// const books = [
+//   { title: "Lord of the rings", author: "Ay", ISBN: 1, price: "$200" },
+//   { title: "song of Ice and Fire", author: "Ay", ISBN: 2, price: "$100" },
+//   { title: "Dance of dragons", author: "Lily", ISBN: 6, price: "$500" },
+//   { title: "Velarion", author: "sewa", ISBN: 3, price: "$300" },
+//   { title: "snow", author: "Joy", ISBN: 5, price: "$800" },
+// ];
 
 // const objectMap1 = books.map((elem) => {
 //   // let bookPrice1 = elem.price;
@@ -34,13 +34,13 @@ const books = [
 //   return findBookIsbn;
 // }
 // console.log(bookFind(books, 6));
-function priceChangeByIsbn(arr, num) {
-  const indexOfIsbn = arr.findIndex((book) => book.ISBN === num);
-  // console.log(indexOfIsbn);
-  arr[indexOfIsbn].price = "$1,200";
-  return arr[indexOfIsbn];
-  // console.log(rr);
-}
+// function priceChangeByIsbn(arr, num) {
+//   const indexOfIsbn = arr.findIndex((book) => book.ISBN === num);
+// console.log(indexOfIsbn);
+// arr[indexOfIsbn].price = "$1,200";
+// return arr[indexOfIsbn];
+// console.log(rr);
+// }
 // console.log(priceChangeByIsbn(books, 5));
 
 // function orderBook(obj) {
@@ -59,19 +59,32 @@ function priceChangeByIsbn(arr, num) {
 // console.log(nw3);
 // console.log(item1, item2);
 
-const continent = [
-  {
-    Africa: [
-      ["Lagos", "Ikeja"],
-      ["Oyo", "Ibadan"],
-      ["Kwara", "Ilorin"],
-    ],
-  },
-];
+// const continent = [
+//   {
+//     Africa: [
+//       ["Lagos", "Ikeja"],
+//       ["Oyo", "Ibadan"],
+//       ["Kwara", "Ilorin"],
+//     ],
+//   },
+// ];
 
-for (let { Africa } of continent) {
-  // console.log(Africa);
-  for (let [state, capital] of Africa) {
-    console.log(state, capital);
-  }
-}
+// for (let { Africa } of continent) {
+//   console.log(Africa);
+//   for (let [state, capital] of Africa) {
+// console.log(state, capital);
+//   }
+// }
+
+const user = {
+  username: "elder",
+  email: "elder@user.com",
+  friends: ["bond", "drac", "jone"],
+  token: "fungible",
+};
+
+localStorage.setItem("userStor", JSON.stringify(user));
+console.log(localStorage);
+
+const parsedUser = JSON.parse(localStorage.getItem("userStor"));
+console.log(parsedUser);
