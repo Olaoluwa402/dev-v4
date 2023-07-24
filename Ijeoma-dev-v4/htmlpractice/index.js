@@ -410,8 +410,12 @@ console.log(estring.reverse().toString().replaceAll(",", ""));
 const str = function (newString, dot) {
   let truncate = newString.substring(0, 30);
   return truncate;
-}
-console.log(str("Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with"));
+};
+console.log(
+  str(
+    "Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with"
+  )
+);
 
 /*Return the provided string with the first letter of each
  word capitalized. Make sure the rest of the word is in lower case.
@@ -435,3 +439,64 @@ function splitArray(array1) {
   return chunkArrayInGroups + chunkArrayInGroupse;
 }
 console.log(splitArray(["a", "b", "c", "d"]));
+
+// aasignment: get the state and capital
+const continent_2 = [
+  {
+    africa: {
+      nigeria: [
+        ["Lagos", "Ikeja"],
+        ["Oyo", "Ibadan"],
+        ["Kwara", "Ilorin"],
+      ],
+      ghana: [
+        ["G_state_1", "G_city_1"],
+        ["G_state_2", "G_city_2"],
+        ["G_state_3", "G_city_3"],
+      ],
+    },
+  },
+
+  {
+    europe: {
+      france: [
+        ["F_state_1", "F_city_1"],
+        ["F_state_2", "F_city_2"],
+        ["F_state_3", "F_city_3"],
+      ],
+      italy: [
+        ["I_state_1", "I_city_1"],
+        ["I_state_2", "I_city_2"],
+        ["I_state_3", "I_city_3"],
+      ],
+    },
+  },
+];
+
+function diffCountries(country22) {
+  let continent = continent_2[0].africa;
+  let country = continent_2[0].africa[country22];
+  let continent2 = continent_2[1].europe;
+  let country2 = continent_2[1].europe[country22];
+  if (
+    continent.hasOwnProperty(country) ||
+    continent2.hasOwnProperty(country2)
+  ) {
+    let [state, capital] = continent_2[0].africa[country22];
+    [state, capital] = continent_2[0].europe[country22];
+    return `${state} ${capital}`;
+  }
+  return `${continent} ${country} ${continent2} ${country2}`;
+}
+console.log(diffCountries("italy"));
+
+const user = {
+  username: "Naomi",
+  email: "naomi@gmail.com",
+  friends: ["ben", "joy"],
+  tokens: 4,
+};
+
+localStorage.setItem("user", JSON.stringify(user));
+const getItems = JSON.parse(localStorage.getItem("user"));
+console.log(getItems, "items");
