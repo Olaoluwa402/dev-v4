@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url(./unsplashimageformodalbackground.avif);
+            
+        
+        }
+        .mainbody{
+            display: inline-block;
+            width: auto;
+            height:auto ;
+            align-items: center;
+            text-align: center;
+            position: absolute;
+            top :40%; left:30%; 
+        }
+        h1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 50px;
+            color: purple;
+        }
+        span{
+            display: flex;
+            justify-content:space-around ;
+            padding-top: 25px;
+        }
+        a{
+            text-decoration: none;
+            cursor: pointer;
+            
+        }
+        button{
+            width:auto;
+            height: 50px;
+            border-radius: 10px;
+            background-color: purple;
+            color: aliceblue;
+            cursor: pointer;
+            
+        }
+        button:hover{
+            opacity:.8;
+            color: black;
+            font-style: italic;
+        }
+    </style>
+    <link rel="stylesheet" href="modalassstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="mainbody">
+         <h1>FORMATION OF A MODAL.</h1>
+         <span>
+           <a href=""> <button>CLICK TO SIGN UP</button></a>
+            <a href=><button id="openModalBtn">CLICK TO LOGIN</button></a>
+         </span>
+
+    </div>
+    <div class="modal" id="myModal">
+        <span class="close" id="closeModalBtn">&times;</span>
+        <div class="modalcontentcontainer">
+        <div class="modal-content">
+            <div class="innermodalleft">
+                <div id="digital">
+                    <h2>
+                        Digital<br> platform for distance<span class="learn">learning</span>
+                    </h2>
+                    <h6>You will never know everything<br>But you will know more</h6>
+                
+                </div>
+            </div>
+            <div class="innermodalright">
+                <div class="form">
+                    <div id="shakediv">
+                        <div id="arrowdiv">
+                            <i class="fa-solid fa-right-to-bracket"></i>
+                        </div>
+                        <div id="hey">
+                            <h3>Hey,Hello</h3> 
+                            <i class="fa-solid fa-handshake-angle"></i>
+                        </div>
+
+                        <h6>Complete the registraton fields below to get registered</h6>
+                    </div>
+                    <form>
+                        <label for="email">email</label><br>
+                        <input type="text"><br>
+                        <label for="password">password</label><br>
+                        <input type="text"><br>
+                        <div id="checkbox">
+                            <label for="checkbox"></label><br>
+                            <input type="checkbox">
+                            <h6>I have read and accept the terms and conditions</h6>
+                        </div> 
+                    </form>
+
+                    <button class="loginbtn">Login</button>
+
+                </div>
+            </div>
+
+            </div>
+            
+            
+        </div>
+        
+    </div>
+
+    <script src="modalscript.js"></script>
+</body>
+</html>
