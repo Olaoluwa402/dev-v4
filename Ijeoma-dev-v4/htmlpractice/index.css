@@ -94,7 +94,7 @@ a:hover{
     color: white;
   }
   .content2{
-    background-color: rgb(78, 78, 233);
+    background-color: rgb(80, 80, 213);
     border: 1px solid white;
     padding: 15px 25px;
     display: block;
@@ -105,7 +105,11 @@ a:hover{
     margin: 20px;
   }
   .content1{
-    background-color: rgba(72, 72, 80, 0.5);
+    background:linear-gradient(
+      100deg,
+rgba(rgb(221, 136, 221) , 0.8),
+rgba(purple, 0.3)80%
+    );
     width: 50%;
     margin: 0;
     height: 100vh;
@@ -129,6 +133,7 @@ a:hover{
     background-color: rgb(87, 157, 219);
     color: white;
     border: none;
+    font-size: 18px;
   }
   .text1{
     font-size: 18px;
