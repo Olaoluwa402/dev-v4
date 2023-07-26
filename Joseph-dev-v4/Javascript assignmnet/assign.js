@@ -649,7 +649,7 @@ const continent = [
 
 
 
-function getStatesAndCapitals(continentData, country) {
+function getStatesAndCapitals(continent_2, continentData, country) {
   for (let continentObj of continent_2) {
     if (continentObj.hasOwnProperty(continentData)) {
       const countries = continentObj[continentData];
@@ -657,7 +657,7 @@ function getStatesAndCapitals(continentData, country) {
         const statesAndCapitals = countries[country];
         let result = "";
         for (let [state, capital] of statesAndCapitals) {
-          result += `${state}: ${capital}\n`;
+          result += `${state} : ${capital}\n`;
        
         }
         return result;
@@ -667,5 +667,23 @@ function getStatesAndCapitals(continentData, country) {
   return "Not a valid country.";
 }
 
-// const statesAndCapitals1 = getStatesAndCapitals("africa", "ghana");
-log(getStatesAndCapitals("africa", "ghana"));
+// const statesAndCapitals1 = getStatesAndCapitals("africa", "nigeria");
+log(getStatesAndCapitals(continent_2, "africa", "nigeria"));
+
+
+
+
+// const user = {
+//   username : "jossyhod",
+//   email : "ikeanyi_joseph@yahoo.com",
+//   friends : " James",
+//   token : "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"
+// }
+
+
+// localStorage.setItem("user", JSON.stringify(user));
+
+// let username =  JSON.parse(localStorage.getItem("user"));
+
+// log(user, "User");
+

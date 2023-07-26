@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(129, 129, 230);
+  border: solid 1px;
+  width: 100%;
+  height: 100vh;
+}
+
+.inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: white;
+  width: 40%;
+  height: 550px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+  width: 100%;
+  margin-top: 0px;
+}
+
+.header h2 {
+  color: white;
+  font-style: bold;
+  font-size: 2.5rem;
+}
+
+#para {
+  padding-left: 35px;
+}
+
+#para p {
+  font-weight: 600;
+}
+
+/* #form {
+  padding-left: 50px;
+} */
+
+#form .email {
+  padding-left: 40px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+
+#form .email p {
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  font-size: larger;
+}
+
+#form .email input {
+  width: 200px;
+  height: 25px;
+  border-radius: 5px;
+}
+.password {
+  padding-left: 40px;
+}
+
+.password p {
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  font-size: larger;
+}
+
+.password input {
+  width: 200px;
+  height: 25px;
+  border-radius: 5px;
+}
+#form .username {
+  padding-left: 40px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+
+#form .username input {
+  width: 200px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.username p {
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  font-size: larger;
+}
+.confirm-password {
+  padding-left: 40px;
+}
+
+.confirm-password p {
+  margin-block-end: 0px;
+  margin-block-start: 1rem;
+  font-size: larger;
+}
+
+.confirm-password input {
+  width: 200px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+#button {
+  padding-left: 150px;
+}
+
+#button button {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: blueviolet;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#button a {
+  text-decoration: none;
+}
+
+#terms {
+  padding-left: 35px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
