@@ -295,6 +295,11 @@ label {
   width: 100%;
 }
 
+#email:active,
+#password:active {
+  border: none;
+}
+
 #checkbox {
   display: inline;
 }

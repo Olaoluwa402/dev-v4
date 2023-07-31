@@ -62,7 +62,7 @@ function getStateCapital(continentData, continentName) {
       return "Not a valid continent";
     }
     for (let [state, capital] of continent[continentName]) {
-      log(state, capital);
+      // log(state, capital);
       //   return `${state} ${capital}`;
     }
   }
@@ -70,7 +70,7 @@ function getStateCapital(continentData, continentName) {
   return "";
 }
 
-log(getStateCapital(continent, "africa"));
+getStateCapital(continent, "africa");
 
 // aasignment: get the state and capital
 const continent_2 = [

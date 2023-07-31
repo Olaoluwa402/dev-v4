@@ -103,61 +103,61 @@ userform.addEventListener("submit", (event) => {
 
 //REGEX ASSIGNMNENTS
 
-1. Which of the following matches regexp /a(ab)*a/
+// 1. Which of the following matches regexp /a(ab)*a/
 
- ans: aaba
-      aabababa
+//  ans: aaba
+//       aabababa
 
 
-2. Which of the following matches regexp /ab+c?/
+// 2. Which of the following matches regexp /ab+c?/
 
- ans: abc
-      abbb
+//  ans: abc
+//       abbb
 
-3. Which of the following matches regexp /a.[bc]+/
+// 3. Which of the following matches regexp /a.[bc]+/
 
- ans: abc
-      abbbbbbb
-      azc
-      abcbcbcbc
-      asccbbbbcbcccc
+//  ans: abc
+//       abbbbbbb
+//       azc
+//       abcbcbcbc
+//       asccbbbbcbcccc
 
-4. Which of the following matches regexp /abc|xyz/
+// 4. Which of the following matches regexp /abc|xyz/
 
- ans: abc
-      xyz
+//  ans: abc
+//       xyz
   
-5. Which of the following matches regexp /[a-z]+[\.\?!]/
+// 5. Which of the following matches regexp /[a-z]+[\.\?!]/
 
-  ans: battle!
-     swamping.
-     undulate?
+//   ans: battle!
+//      swamping.
+//      undulate?
 
-6. Which of the following matches regexp /[a-zA-Z]*[^,]=/
+// 6. Which of the following matches regexp /[a-zA-Z]*[^,]=/
 
-  ans: Butt=
-       Brittle=
-       Other=
+//   ans: Butt=
+//        Brittle=
+//        Other=
 
-7. Which of the following matches regexp /[a-z][\.\?!]\s+[A-Z]/     (\s matches any space character)
+// 7. Which of the following matches regexp /[a-z][\.\?!]\s+[A-Z]/     (\s matches any space character)
 
-  ans: g. H
-       i? J
+//   ans: g. H
+//        i? J
 
-8. Which of the following matches regexp /(very )+(fat )?(tall|ugly) man/
+// 8. Which of the following matches regexp /(very )+(fat )?(tall|ugly) man/
 
-ans: very very fat man
-     very very very tall man
+// ans: very very fat man
+//      very very very tall man
 
 
-9. Which of the following matches regexp /<[^>]+>/
+// 9. Which of the following matches regexp /<[^>]+>/
 
-ans: <an xml tag>
-     </closetag>
-     <with attribute="77"></with>
+// ans: <an xml tag>
+//      </closetag>
+//      <with attribute="77"></with>
 
     
-10. Which of the following matches regexp /[Aa-z-_\*\\4-9-]{4,20}@[a-z]{4,9}\.[a-z]{2}/
+// 10. Which of the following matches regexp /[Aa-z-_\*\\4-9-]{4,20}@[a-z]{4,9}\.[a-z]{2}/
 
-ans: A*mail\a@seznam.uk
-    ____\_@aaaa.uk
+// ans: A*mail\a@seznam.uk
+//     ____\_@aaaa.uk

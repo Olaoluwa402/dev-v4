@@ -147,140 +147,140 @@
 // console.log(person.skills[0]);
 // console.log(person.skills[1]);
 
-const person = {
-  firstname: "Blessing",
-  lastname: "John",
-  fullName: function () {
-    return `${this.firstname} ${this.lastname}`;
-  },
-};
+// const person = {
+//   firstname: "Blessing",
+//   lastname: "John",
+//   fullName: function () {
+//     return `${this.firstname} ${this.lastname}`;
+//   },
+// };
 
-person.friends = ["james", "joy"];
-person.nationality = "American";
-person.firstname = "Vivian";
-person.age = 24;
-(person.getAge = function () {
-  return `${this.age * 2}`;
-}),
-  console.log(person.getAge(24));
+// person.friends = ["james", "joy"];
+// person.nationality = "American";
+// person.firstname = "Vivian";
+// person.age = 24;
+// (person.getAge = function () {
+//   return `${this.age * 2}`;
+// }),
+//   console.log(person.getAge(24));
 
-console.log(person);
+// console.log(person);
 
-const copyPerson = Object.assign({}, person);
-console.log(copyPerson);
+// const copyPerson = Object.assign({}, person);
+// console.log(copyPerson);
 
-const keys = Object.keys(person);
-console.log(keys);
+// const keys = Object.keys(person);
+// console.log(keys);
 
-const values = Object.values(person);
-console.log(values);
-const entries = Object.entries(person);
-console.log(entries);
+// const values = Object.values(person);
+// console.log(values);
+// const entries = Object.entries(person);
+// console.log(entries);
 
-let weeks = {
-  0: "sunday",
-  1: "monday",
-  2: "tuesday",
-  3: "wednesday",
-  4: "thursday",
-  5: "friday",
-  6: "saturday",
-};
-var dayPrompt = prompt("input a day number from zero to six");
-let weekKeys = Object.keys(weeks);
-for (let i = 0; i < weekKeys.length; i++) {
-  if (dayPrompt == weekKeys[i]) {
-    console.log(`today is ${weeks[dayPrompt]}`);
-    alert(`today is ${weeks[dayPrompt]}`);
-  } else {
-    console.log("not a valid input");
-  }
-}
+// let weeks = {
+//   0: "sunday",
+//   1: "monday",
+//   2: "tuesday",
+//   3: "wednesday",
+//   4: "thursday",
+//   5: "friday",
+//   6: "saturday",
+// };
+// var dayPrompt = prompt("input a day number from zero to six");
+// let weekKeys = Object.keys(weeks);
+// for (let i = 0; i < weekKeys.length; i++) {
+//   if (dayPrompt == weekKeys[i]) {
+//     console.log(`today is ${weeks[dayPrompt]}`);
+//     alert(`today is ${weeks[dayPrompt]}`);
+//   } else {
+//     console.log("not a valid input");
+//   }
+// }
 
-// const { log } = console;
-// const emptySet = new Set();
+// // const { log } = console;
+// // const emptySet = new Set();
 
-const arr = ["mango", "orange", "mango", "apple", "apple", "carrot"];
+// const arr = ["mango", "orange", "mango", "apple", "apple", "carrot"];
 
-const get = new Set(arr);
-const getin = [...get];
-console.log(getin);
-let arra = [];
-for (const arr of get) {
-  arra.push[arr];
-}
-arra = [...get];
-console.log(arra);
+// const get = new Set(arr);
+// const getin = [...get];
+// console.log(getin);
+// let arra = [];
+// for (const arr of get) {
+//   arra.push[arr];
+// }
+// arra = [...get];
+// console.log(arra);
 
-const list = ["javascript", "java", "python", "javascript", "java"];
-const addData = new Set(list);
-const getData = [...addData];
-console.log(addData);
-addData.add("app");
-addData.add("app2");
-addData.add("app3");
-console.log(addData, addData.size);
+// const list = ["javascript", "java", "python", "javascript", "java"];
+// const addData = new Set(list);
+// const getData = [...addData];
+// console.log(addData);
+// addData.add("app");
+// addData.add("app2");
+// addData.add("app3");
+// console.log(addData, addData.size);
 
-for (let list of addData) {
-  if (list.includes("p")) {
-    addData.delete(list);
-  }
-}
-console.log(addData);
+// for (let list of addData) {
+//   if (list.includes("p")) {
+//     addData.delete(list);
+//   }
+// }
+// console.log(addData);
 
-const uData = [1, 2, 3, 4, 5];
-const uData2 = [6, 7, 8, 9];
-const uData3 = [...uData, ...uData2];
-const data1 = new Set(uData3);
-console.log(uData3);
+// const uData = [1, 2, 3, 4, 5];
+// const uData2 = [6, 7, 8, 9];
+// const uData3 = [...uData, ...uData2];
+// const data1 = new Set(uData3);
+// console.log(uData3);
 
-const arr1 = [13, 15, 20, 10];
-const arr2 = [9, 13, 10, 14, 17];
-const arr3 = [...arr1, ...arr2];
-const arrr3 = new Set(arr3);
+// const arr1 = [13, 15, 20, 10];
+// const arr2 = [9, 13, 10, 14, 17];
+// const arr3 = [...arr1, ...arr2];
+// const arrr3 = new Set(arr3);
 
-console.log(arrr3);
+// console.log(arrr3);
 
-// int c = a.filter((num) => b.has(num));
-const setInter = new Set(arr2);
-let finalArr = [];
-for (let i = 0; i < arr1.length; i++) {
-  const curr = arr1[i];
-  console.log(curr);
-  if (setInter.has(curr)) {
-    finalArr.push(curr);
-  }
-}
-const finalArrset = new Set(finalArr);
-console.log(finalArrset);
-console.log(finalArr);
+// // int c = a.filter((num) => b.has(num));
+// const setInter = new Set(arr2);
+// let finalArr = [];
+// for (let i = 0; i < arr1.length; i++) {
+//   const curr = arr1[i];
+//   console.log(curr);
+//   if (setInter.has(curr)) {
+//     finalArr.push(curr);
+//   }
+// }
+// const finalArrset = new Set(finalArr);
+// console.log(finalArrset);
+// console.log(finalArr);
 
-const mapArr = [
-  ["Lagos", "Ikeja"],
-  ["Oyo", "Ibadan"],
-  ["Ekiti", "Ado"],
-];
+// const mapArr = [
+//   ["Lagos", "Ikeja"],
+//   ["Oyo", "Ibadan"],
+//   ["Ekiti", "Ado"],
+// ];
 
-const mapData = new Map(mapArr);
+// const mapData = new Map(mapArr);
 
-mapData.set("Kwara", "Ilorin");
-console.log(mapData);
-let myData = [...mapData];
-console.log(myData);
+// mapData.set("Kwara", "Ilorin");
+// console.log(mapData);
+// let myData = [...mapData];
+// console.log(myData);
 
-const mapData2 = [
-  ["JS", 2],
-  ["HTML", 10],
-  ["CSS", 5],
-];
+// const mapData2 = [
+//   ["JS", 2],
+//   ["HTML", 10],
+//   ["CSS", 5],
+// ];
 
-for (let i = 0; i < mapData2.length; i++) {
-  myData.push(mapData2[i]);
-  console.log(myData);
-}
+// for (let i = 0; i < mapData2.length; i++) {
+//   myData.push(mapData2[i]);
+//   console.log(myData);
+// }
 
-const arr5 = new Map(myData);
-console.log(arr5);
+// const arr5 = new Map(myData);
+// console.log(arr5);
 
 /*1. The formula to convert from Celsius to Fahrenheit is the
 temperature in Celsius times 9/5, plus 32.
@@ -407,7 +407,7 @@ console.log(estring.reverse().toString().replaceAll(",", ""));
 // than the given maximum string length (second argument).
 //Return the truncated string with a ... ending.
 
-const str = function (newString) {
+const str = function (newString, dot) {
   let truncate = newString.substring(0, 30);
   return truncate;
 };
@@ -439,3 +439,64 @@ function splitArray(array1) {
   return chunkArrayInGroups + chunkArrayInGroupse;
 }
 console.log(splitArray(["a", "b", "c", "d"]));
+
+// aasignment: get the state and capital
+const continent_2 = [
+  {
+    africa: {
+      nigeria: [
+        ["Lagos", "Ikeja"],
+        ["Oyo", "Ibadan"],
+        ["Kwara", "Ilorin"],
+      ],
+      ghana: [
+        ["G_state_1", "G_city_1"],
+        ["G_state_2", "G_city_2"],
+        ["G_state_3", "G_city_3"],
+      ],
+    },
+  },
+
+  {
+    europe: {
+      france: [
+        ["F_state_1", "F_city_1"],
+        ["F_state_2", "F_city_2"],
+        ["F_state_3", "F_city_3"],
+      ],
+      italy: [
+        ["I_state_1", "I_city_1"],
+        ["I_state_2", "I_city_2"],
+        ["I_state_3", "I_city_3"],
+      ],
+    },
+  },
+];
+
+function diffCountries(country22) {
+  let continent = continent_2[0].africa;
+  let country = continent_2[0].africa[country22];
+  let continent2 = continent_2[1].europe;
+  let country2 = continent_2[1].europe[country22];
+  if (
+    continent.hasOwnProperty(country) ||
+    continent2.hasOwnProperty(country2)
+  ) {
+    let [state, capital] = continent_2[0].africa[country22];
+    [state, capital] = continent_2[0].europe[country22];
+    return `${state} ${capital}`;
+  }
+  return `${continent} ${country} ${continent2} ${country2}`;
+}
+console.log(diffCountries("italy"));
+
+const user = {
+  username: "Naomi",
+  email: "naomi@gmail.com",
+  friends: ["ben", "joy"],
+  tokens: 4,
+};
+
+localStorage.setItem("user", JSON.stringify(user));
+const getItems = JSON.parse(localStorage.getItem("user"));
+console.log(getItems, "items");
