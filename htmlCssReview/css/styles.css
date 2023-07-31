@@ -67,7 +67,7 @@ header ul > li > a {
   text-transform: uppercase;
 }
 
-header .menu-bar {
+header .menubar {
   cursor: pointer;
   background-color: white;
 }
