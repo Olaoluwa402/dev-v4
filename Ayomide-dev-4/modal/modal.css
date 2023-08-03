@@ -1,0 +1,143 @@
+body {
+  font-family: roboto;
+  margin: 0;
+}
+
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  color: blueviolet;
+}
+
+.logo {
+  margin-top: 19px;
+  align-items: center;
+  margin-left: 2%;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav > li {
+  margin: 0 30px;
+}
+
+.nav > li > a {
+  font-weight: medium;
+  text-decoration: none;
+}
+
+.teambody {
+  display: block;
+  margin: 5%;
+}
+.creative {
+  display: flex;
+
+  color: blueviolet;
+}
+
+.join {
+  border-radius: 15px;
+  padding: 10px 15px;
+  border: 2px;
+  margin-top: 5%;
+  background-color: violet;
+  color: white;
+  text-align: center;
+  transition: background-color 0.5s ease-in-out;
+}
+.join:hover {
+  /* color: darkmagenta; */
+  background-color: darkviolet;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.first{
+  background-image: linear-gradient(to bottom right ,rgba(150, 162, 249, 0.67) , rgba(77, 0, 128, 0.653));
+  border-radius: 5px;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+
+}
+
+.second{
+  background-color:rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  height: 70%;
+}
+
+.second>h3 {
+  font-size: 30px;
+}
+
+label{
+  display: block;
+  margin-bottom: 10px;
+}
+
+#check {
+  display: inline;
+  width: 20px;
+}
+.login{
+  border: 10px;
+  border-radius: 6px;
+  width: 100%;
+  padding: 10px;
+  margin-top:10px;
+  background-image: linear-gradient(to bottom right ,rgba(150, 162, 249, 0.67) , rgba(77, 0, 128, 0.653));
+  transition: background-color 0.5s ease-in-out;
+  color: white;
+}
+.login:hover {
+  background-color: darkviolet;
+}
+input{
+  margin-bottom: 15px;
+  width: 80%;
+  padding: 10px 60px 10px 5px
+}
+.container2{
+  display: flex;
+ 
+}
+.hello{
+  padding: 40px;
+  background-color: white;
+}
+
+.close{
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#myModal{
+
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 20%;
+  z-index: 2;
+  background-color: rgba(173, 173, 173, 0.395);
+  padding: 100px;
+  backdrop-filter: blur(10px);
+  box-shadow: 1px 1px 10px grey ;
+}

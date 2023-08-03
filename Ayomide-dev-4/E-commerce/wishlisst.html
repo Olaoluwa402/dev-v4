@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css"
+      integrity="sha512-Z0kTB03S7BU+JFU0nw9mjSBcRnZm2Bvm0tzOX9/OuOuz01XQfOpa0w/N9u6Jf2f1OAdegdIPWZ9nIZZ+keEvBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="wishlist.css" />
+    <title>Edimoya</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <p>
+        Summer Sale for All swim suits and free express Delivery- OFF 50%!
+        <a href="#" style="color: white">Shop Now</a>
+      </p>
+      <select name="" id="navselect">
+        <option value="">English</option>
+        <option value="">Mandarin</option>
+        <option value="">French</option>
+      </select>
+    </header>
+    <!-- end of header -->
+    <!-- navbar start -->
+    <navbar>
+      <b>Exclusive</b>
+      <ul class="navhome">
+        <li>Home</li>
+        <li>Contact</li>
+        <li>About</li>
+        <li>Sign Up</li>
+      </ul>
+      <i class="fa-solid fa-bars" id="hamburger-icon"></i>
+      <div class="search-container">
+        <input
+          id="searchid"
+          type="text"
+          placeholder="What are you looking for?"
+        />
+        <div class="fav">
+          <i class="fa-regular fa-heart"></i>
+          <ion-icon
+            name="cart-outline"
+            style="font-size: 20px"
+            class="cart"
+          ></ion-icon>
+          <img
+            src="../E-commerce/wishlist-asset/user.png"
+            height="20px"
+            alt="user"
+          />
+        </div>
+      </div>
+      <!-- <div class="cart"> -->
+    </navbar>
+    <!-- end of navbar -->
+    <!-- main section -->
+    <section>
+      <div class="wish-list">
+        <h4>Wishlist(4)</h4>
+        <button class="matb">Move All To Bag</button>
+      </div>
+      <div class="wishsection">
+        <div class="wishlist-tab1">
+          <div class="tab-main">
+            <div class="tab1">
+              <p style="background-color: #db4444">-35%</p>
+              <i class="fa-regular fa-trash-can"></i>
+            </div>
+            <img
+              src="../E-commerce/wishlist-asset/guccibag.png"
+              class="imgclass"
+              alt=""
+            />
+            <button class="cartbtn">
+              <ion-icon name="cart-outline"></ion-icon> Add to cart
+            </button>
+          </div>
+          <div class="nameprice">
+            Gucci duffle bag <br />
+            <span style="color: #db4444"
+              >$960 <span class="spa" style="color: #000000">$1160</span></span
+            >
+          </div>
+        </div>
+
+        <div class="wishlist-tab1">
+          <div class="tab-main">
+            <div class="tab1">
+              <!-- <p>-35%</p> -->
+              <i class="fa-regular fa-trash-can"></i>
+            </div>
+            <img
+              src="../E-commerce/wishlist-asset/radio.png"
+              class="imgclass"
+              alt="radiopic"
+            />
+            <button class="cartbtn">
+              <ion-icon name="cart-outline"></ion-icon> Add to cart
+            </button>
+          </div>
+
+          <div class="nameprice">
+            RGB liquid CPU Cooler <br /><span>$1960</span>
+          </div>
+        </div>
+        <div class="wishlist-tab1">
+          <div class="tab-main">
+            <div class="tab1">
+              <!-- <p style="background-color: red;">-35%</p> -->
+              <i class="fa-regular fa-trash-can"></i>
+            </div>
+            <img
+              src="../E-commerce/wishlist-asset/black-keypad.png"
+              class="imgclass"
+              alt=""
+            />
+            <button class="cartbtn">
+              <ion-icon name="cart-outline"></ion-icon> Add to cart
+            </button>
+          </div>
+
+          <div class="nameprice">
+            GP11 Shooter USB Gamepad <br /><span>$550</span>
+          </div>
+        </div>
+        <div class="wishlist-tab1">
+          <div class="tab-main">
+            <div class="tab1">
+              <!-- <p>-35%</p> -->
+              <i class="fa-regular fa-trash-can"></i>
+            </div>
+            <img
+              src="../E-commerce/wishlist-asset/jacket.png"
+              class="imgclass"
+              alt=""
+            />
+            <button class="cartbtn">
+              <ion-icon name="cart-outline"></ion-icon> Add to cart
+            </button>
+          </div>
+
+          <div class="nameprice">
+            Quilted Satin Jacket <br /><span>$750</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-2">
+        <div class="wish-list">
+         <div id="list-2">
+             <button id="btn"></button>
+          <h4>Just For You</h4>
+         </div>
+          <button class="matb">See All</button>
+        </div>
+        <div class="wishsection">
+          <div class="wishlist-tab1">
+            <div class="tab-main">
+              <div>
+                <div class="tab1">
+                  <p style="background-color: #db4444">-35%</p>
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+                <img
+                  src="../E-commerce/wishlist-asset/laptop.png"
+                  class="imgclass"
+                  alt="laptop"
+                />
+                <button class="cartbtn">
+                  <ion-icon name="cart-outline"></ion-icon> Add to cart
+                </button>
+              </div>
+            </div>
+            <div class="nameprice">
+              ASUS FHD Gaming Laptop <br /><span style="color: #db4444"
+                >$960
+                <span class="spa" style="color: #000000">$1160</span></span
+              >
+            </div>
+            <div class="star">
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              (65)
+            </div>
+          </div>
+
+          <div class="wishlist-tab1">
+            <div class="tab-main">
+              <div class="tab1">
+                <!-- <p>-35%</p> -->
+                <ion-icon name="eye-outline" class="eyeicon"></ion-icon>
+              </div>
+              <img
+                src="../E-commerce/wishlist-asset/television.png"
+                class="imgclass"
+                alt="television"
+              />
+              <button class="cartbtn">
+                <ion-icon name="cart-outline"></ion-icon> Add to cart
+              </button>
+            </div>
+
+            <div class="nameprice">IPS LCD Gaming Monitor <br />$1160</div>
+            <div class="star">
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              (65)
+            </div>
+          </div>
+          <div class="wishlist-tab1">
+            <div class="tab-main">
+              <div class="tab1">
+                <p style="background-color: #00ff66">New</p>
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
+              <img
+                src="../E-commerce/wishlist-asset/red-keypad.png"
+                class="imgclass"
+                alt="red-keypad"
+              />
+              <button class="cartbtn">
+                <ion-icon name="cart-outline"></ion-icon> Add to cart
+              </button>
+            </div>
+            <div class="nameprice">HAVIT HV-G92 Gamepad<br />$560</div>
+            <div class="star">
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              (65)
+            </div>
+          </div>
+          <div class="wishlist-tab1">
+            <div class="tab-main">
+              <div class="tab1">
+                <!-- <p>-35%</p> -->
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
+              <img
+                src="../E-commerce/wishlist-asset/keyboard.png"
+                class="imgclass"
+                alt="keyboard"
+              />
+              <button class="cartbtn">
+                <ion-icon name="cart-outline"></ion-icon> Add to cart
+              </button>
+            </div>
+
+            <div class="nameprice">AK-900 Wired Keyboard <br />$200</div>
+            <div class="star">
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              (65)
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of main -->
+    <!-- footer -->
+    <footer>
+        <div class="footer-flexed">
+          <div class="foot-flexed">
+            <h3>Exclusive</h3>
+            <ul>
+              <li><a href="#">Subscribe</a></li>
+              <li><a href="#">Get 10% off your first order</a></li>
+            </ul>
+            <div class="nav-right">
+              <div class="email-container">
+                <input
+                  type="email"
+                  class="search-buttons"
+                  placeholder="Enter Your Email?"
+                />
+                <button class="cursur-button">
+                  <img src="../E-commerce/wishlist-asset/icon-send.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="foot-flexed2">
+            <h4>Support</h4>
+            <p>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p>
+            <a href="#">exclusive@gmail.com</a>
+            <p>+88015-88888-9999</p>
+          </div>
+          <div class="foot-flexed3">
+            <h4>Account</h4>
+            <ul>
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Login / Register</a></li>
+              <li><a href="#">Cart</a></li>
+              <li><a href="#">Wishlist</a></li>
+              <li><a href="#">Shop</a></li>
+            </ul>
+          </div>
+          <div class="foot-flexed3 foot-flexed4">
+            <h4>Quick link</h4>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms Of Use</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="foot-flexed5">
+            <h3>Download App</h3>
+            <span>Save $3 with App New User Only</span>
+            <div class="inner-flexed">
+              <div class="barcode">
+                <img src="../E-commerce/wishlist-asset/Qr Code.png" alt="">
+              </div>
+              <div class="app-download">
+              <a href="#"><img src="../E-commerce/wishlist-asset/GooglePlay.png" alt=""></a>
+              <a href="#"><img src="../E-commerce/wishlist-asset/AppStore.png" alt=""></a>
+              </div>
+            </div>
+            <div class="social-handles">
+             <i class="fa-brands fa-facebook-f" style="color: white;"></i>
+              <i class="fa-brands fa-twitter" style="color: white;"></i>
+             <i class="fa-brands fa-instagram" style="color: white;"></i>
+             <i class="fa-brands fa-linkedin" style="color: white;"></i>
+            </div>
+          </div>
+        </div>
+        <div class="f-last">
+          <img src="../E-commerce/wishlist-asset/icon-copyright.png" alt="">
+          <p>Copyright Rimel 2022. All right reserved</p>
+        </div>
+      </footer>
+    <!-- end of footer -->
+
+    <!-- modal start -->
+    <div id="myModal" class="modality">
+      <!-- <div class="modal-table"> -->
+      <span class="close">&times;</span>
+      <!-- <div class="modal">
+          <p>
+            Summer Sale for All swim suits and free express Delivery- OFF 50%!
+            <a href="#" style="color: white">Shop Now</a>
+          </p>
+          <select name="" id="modal-select">
+            <option value="">English</option>
+            <option value="">Mandarin</option>
+            <option value="">French</option>
+          </select>
+        </div> -->
+      <!-- <navb>
+          <b>Exclusive</b>
+          <ul class="navhomee">
+            <li>Home</li>
+            <li>Contact</li>
+            <li>About</li>
+            <li>Sign Up</li>
+          </ul>
+          <i class="fa-solid fa-bars" id="hamburger-icon"></i>
+          <div class="search-containe">
+            <input
+              id="searchd"
+              type="text"
+              placeholder="What are you looking for?"
+            />
+            <div class="favi">
+              <i class="fa-regular fa-heart"></i>
+              <ion-icon
+                name="cart-outline"
+                style="font-size: 20px"
+                class="cat"
+              ></ion-icon>
+              <img
+                src="../E-commerce/wishlist-asset/user.png"
+                height="20px"
+                alt="user"
+              />
+            </div>
+          </div>
+        </navb> -->
+      <div class="home-cart"><span style="opacity: 0.5">Home /</span> Cart</div>
+
+      <table>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+        </tr>
+        <tr>
+          <td>img</td>
+          <td>$650</td>
+          <td>button</td>
+          <td>$650</td>
+        </tr>
+        <tr>
+          <td>img</td>
+          <td>$550</td>
+          <td>button</td>
+          <td>$1100</td>
+        </tr>
+      </table>
+      <div class="updatecar">
+        <button>Return To Shop</button>
+        <button>Update To Cart</button>
+      </div>
+      <div class="last-column">
+        <div class="coupon">
+        <input type="text" placeholder="Coupon Code"/>
+          <a href="#"><button>Apply Coupon</button></a>
+        </div>
+        <div class="pay-id">
+          <p>Cart Table</p>
+          <table >
+            <p>Subtotal</p>
+            <p>$1750</p>
+          </table>
+          <hr />
+          <div class="subtottal-shipping">
+            <p>shipping</p>
+            <p>Free</p>
+          </div>
+          <hr />
+         <div class="subtotal-total">
+            <p>Total</p>
+            <p>$1750</p>
+         </div>
+         <a href="#"><button class="lastbtn">Pocess to checkout</button></a>
+        </div>
+      </div>
+      <!-- </div> -->
+      
+    </div>
+    <!-- end of modal -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="../E-commerce/commerce.js"></script>
+  </body>
+</html>
