@@ -38,7 +38,7 @@
 //   .then((result) => console.log(result))
 //   .catch((err) => console.log(err));
 
-//   API calls fetch API
+//API calls fetch API
 function getAllCountries() {
   const url = "https://restcountries.com/v2/all";
   // GET, POST,PUT, PATCH, DELETE HEAD, OPTION
@@ -69,22 +69,24 @@ getAllCountries();
 
 //using axio library and async await
 
-async function getAllCountriesAsyncAwait() {
-  const API_KEY = "fbb78052bd44e687a4726295a1ad399e";
-  const lat = 33.44;
-  const lon = -94.04;
+// async function getAllCountriesAsyncAwait() {
+//   const API_KEY = "fbb78052bd44e687a4726295a1ad399e";
+//   const lat = 33.44;
+//   const lon = -94.04;
 
-  const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
-  //const url = "https://restcountries.com/v2/all";
-  try {
-    const { data } = await axios.get(
-      "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m"
-    );
-    console.log("weather");
-    console.log(data);
-  } catch (error) {
-    console.log(error);
-  }
-}
+//   //const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+//   const url = "https://restcountries.com/v2/all";
+//   try {
+//     // const user = {};
+//     // if (Object.keys(user).length == 0) {
+//     //   throw new Error("User record not found");
+//     // }
+//     const { data } = await axios.get(url);
+//     console.log("weather");
+//     console.log(data);
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// }
 
-getAllCountriesAsyncAwait();
+// getAllCountriesAsyncAwait();
