@@ -116,8 +116,10 @@ const ab = [
   { id: 3, name: "bayo" },
 ];
 
+
 const sortedDesc = ab.sort((a, b) => a.id - b.id);
-// log(sortedDesc);
+
+log(sortedDesc);
 // sort the book list by price in descending order
 
 function sortBooksDesc(books) {
@@ -127,4 +129,4 @@ function sortBooksDesc(books) {
   return sorted;
 }
 
-log(sortBooksDesc(books));
+// log(sortBooksDesc(books));
