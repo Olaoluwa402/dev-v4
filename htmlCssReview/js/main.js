@@ -5,4 +5,7 @@ const menuBar = document.getElementById("menubar");
 menuBar.addEventListener("click", function () {
   const sideBar = document.getElementById("sidebar");
   sideBar.classList.toggle("open");
+
+  const banner = document.querySelector(".bannerText ");
+  banner.classList.toggle("open");
 });
