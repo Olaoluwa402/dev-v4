@@ -524,22 +524,20 @@ class Student {
     this.courses = courses && Array.isArray(courses) ? courses : [];
     this.score = 0;
     // this.skill = [];
-
   }
   studentCourses() {
     const course = this.courses;
     return course;
   }
-  set setScore(score){
-this.score += score;
+  set setScore(score) {
+    this.score += score;
   }
-  set setSkill(item){
-    
-  if(Array.isArray(item)){
-    for(let course of item){
-    this.courses.push(course);
+  set setSkill(item) {
+    if (Array.isArray(item)) {
+      for (let course of item) {
+        this.courses.push(course);
+      }
     }
-  }
   }
 }
 const student_1 = new Student("joy", "samuel", "40", "joy@gmail.com", [
@@ -550,22 +548,20 @@ const student_1 = new Student("joy", "samuel", "40", "joy@gmail.com", [
 ]);
 console.log(student_1);
 console.log(student_1.studentCourses());
-console.log(student_1.setScore = 7);
-console.log(student_1.setSkill = ["HTML", "CSS"]);
+console.log((student_1.setScore = 7));
+console.log((student_1.setSkill = ["HTML", "CSS"]));
 
-
-class Bird{
-  constructor(numLegs, numEyes, kingdom, sound){
-this.numLegs = numLegs;
-this.numEyes = numEyes;
-this.kingdom = kingdom;
-this.sound = sound;
- 
+class Bird {
+  constructor(numLegs, numEyes, kingdom, sound) {
+    this.numLegs = numLegs;
+    this.numEyes = numEyes;
+    this.kingdom = kingdom;
+    this.sound = sound;
   }
 }
-class Eagle extends Bird{
-  constructor(name, age){
-this.name = name;
-this.age = age;
+class Eagle extends Bird {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
   }
 }

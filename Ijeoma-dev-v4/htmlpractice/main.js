@@ -24,6 +24,8 @@ window.onclick = function (event) {
   }
 };
 
+// end of modal class
+
 document.getElementById("email");
 document.getElementById("password");
 document.getElementById("comfirm_password");
