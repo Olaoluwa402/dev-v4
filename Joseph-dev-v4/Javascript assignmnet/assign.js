@@ -596,3 +596,29 @@ log(getStatesAndCapitals(continent_2, "africa", "nigeria"));
 
 // log(user, "User");
 
+
+class Birds {
+  constructor(numLegs, numEyes, kingdom, sound){
+    this.numLegs = numLegs;
+    this.numEyes = numEyes;
+    this.sound = sound;
+  }
+
+  getSound(){
+     return ("peal call");
+  }
+}
+Birds.prototype.kingdom = "Animal";
+
+class Eagle extends Birds {
+
+  constructor(numLegs, numEyes, kingdom, sound, name, age){
+   super(numLegs, numEyes, kingdom, sound)
+   this.name = name;
+   this.age = age;
+  }
+}
+
+const eagle1 = new Eagle(2, 2, () =>"peal call", "Wilo", 6);
+
+console.log(eagle1.getSound());
