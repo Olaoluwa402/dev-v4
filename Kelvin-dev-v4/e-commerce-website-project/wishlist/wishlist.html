@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./wishlist.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css"
+      integrity="sha512-Z0kTB03S7BU+JFU0nw9mjSBcRnZm2Bvm0tzOX9/OuOuz01XQfOpa0w/N9u6Jf2f1OAdegdIPWZ9nIZZ+keEvBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- modal start -->
+    <div id="modal-container">
+      <p id="modalclose">&times;</p>
+
+      <div id="page-dir">
+        <p>Home</p>
+        <p>/</p>
+        <p>Cart</p>
+      </div>
+      <table>
+        <tr>
+          <td>Product</td>
+          <td>Price</td>
+          <td>Quantity</td>
+          <td>Subtotal</td>
+        </tr>
+        <tr>
+          <td class="product-data">
+            <img
+              src="../Assets/wishlist-page-assets/wishlist-television.png"
+              alt=""
+            />LCD Monitor
+          </td>
+          <td>$650</td>
+          <td><input type="number" value="01" min="01" max="100" /></td>
+          <td>$650</td>
+        </tr>
+        <tr>
+          <td class="product-data">
+            <img
+              src="../Assets/wishlist-page-assets/wishlist-red-gamepad.png"
+              alt=""
+            />H1 Gamepad
+          </td>
+          <td>$550</td>
+          <td><input type="number" value="01" min="01" max="100" /></td>
+          <td>$1100</td>
+        </tr>
+      </table>
+
+      <div id="cart-list-action-button">
+        <button><a href="">Return To Shop</a></button>
+        <button><a href="">Update Cart</a></button>
+      </div>
+
+      <div id="checkout-foot">
+        <div id="coupon-code-entry">
+          <input type="text" placeholder="Coupon Code" />
+          <button type="submit">Apply Coupon</button>
+        </div>
+
+        <ul id="cart-total">
+          <p>Cart Total</p>
+          <li>
+            <p>Subtotal:</p>
+            <p>$1750</p>
+          </li>
+          <li>
+            <p>Shipping:</p>
+            <p>Free</p>
+          </li>
+          <li>
+            <p>Total:</p>
+            <p>$1750</p>
+          </li>
+          <button id="checkout-btn">Procees to checkout</button>
+        </ul>
+      </div>
+    </div>
+    <!-- modal end -->
+
+    <div id="top-ad">
+      <p>
+        Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+        <span>ShopNow</span>
+      </p>
+      <select name="" id="select">
+        <option value="">English</option>
+        <option value="">French</option>
+        <option value="">Japanese</option>
+      </select>
+    </div>
+
+    <!-- navbar start -->
+    <nav>
+      <img src="../Assets/lodo black.png" alt="" />
+
+      <i
+        class="fa-solid fa-bars"
+        style="color: #09101a"
+        id="hamburger-icon"
+      ></i>
+
+      <ul>
+        <li>Home</li>
+        <li>Contact</li>
+        <li>About</li>
+        <li>Sign Up</li>
+      </ul>
+
+      <div>
+        <div id="search-div">
+          <input type="search" placeholder="What are you looking for?" />
+
+          <i class="fa-solid fa-magnifying-glass" id="nav-search-icon"></i>
+        </div>
+
+        <i class="fa-regular fa-heart" style="color: #000000"></i>
+        <ion-icon name="cart-outline" class="cart" id="nav-cart-id"></ion-icon>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- mobile nav -->
+    <div class="menuclose" id="mobilenav">
+      <ul>
+        <li>Home</li>
+        <li>Contact</li>
+        <li>About</li>
+        <li>Sign Up</li>
+      </ul>
+
+      <div>
+        <div id="search-div">
+          <input type="search" placeholder="What are you looking for?" />
+
+          <i class="fa-solid fa-magnifying-glass" id="nav-search-icon"></i>
+        </div>
+
+        <div id="mobilenav-icons">
+          <i class="fa-regular fa-heart" style="color: #000000"></i>
+          <ion-icon
+            name="cart-outline"
+            class="cart"
+            id="nav-cart-id-mobile"
+          ></ion-icon>
+        </div>
+      </div>
+    </div>
+    <!-- mobile nav -->
+
+    <!-- main body start -->
+    <section>
+      <div class="wishlist-cta">
+        <h5>Wishlist (4)</h5>
+        <button>Move All To Bag</button>
+      </div>
+      <div id="wishlist-tabs">
+        <div class="wishlist-tab wltab1">
+          <div class="tab-main">
+            <div>
+              <i class="fa-regular fa-trash-can" style="color: #000000"></i>
+            </div>
+
+            <img
+              src="../Assets/wishlist-page-assets/wishlist-guccibag.png"
+              alt=""
+            />
+
+            <button>
+              <ion-icon name="cart-outline" class="cart"></ion-icon>
+              Add To Cart
+            </button>
+          </div>
+
+          <div class="tab-desc">
+            <h6>Gucci duffle bag</h6>
+            <p>$960<span>$1160</span></p>
+          </div>
+        </div>
+
+        <div class="wishlist-tab wltab2">
+          <div class="tab-main">
+            <div>
+              <i class="fa-regular fa-trash-can" style="color: #000000"></i>
+            </div>
+
+            <img
+              src="../Assets/wishlist-page-assets/wishlist-radio.png"
+              alt=""
+            />
+
+            <button>
+              <ion-icon name="cart-outline" class="cart"></ion-icon> Add To Cart
+            </button>
+          </div>
+
+          <div class="tab-desc">
+            <h6>RGB liquid CPU Cooler</h6>
+            <p>$1960</p>
+          </div>
+        </div>
+
+        <div class="wishlist-tab wltab3">
+          <div class="tab-main">
+            <div>
+              <i class="fa-regular fa-trash-can" style="color: #000000"></i>
+            </div>
+
+            <img
+              src="../Assets/wishlist-page-assets/wishlist-black-gamepad.png"
+              alt=""
+            />
+
+            <button>
+              <ion-icon name="cart-outline" class="cart"></ion-icon> Add To Cart
+            </button>
+          </div>
+
+          <div class="tab-desc">
+            <h6>GP11 Shooter USB Gamepad</h6>
+            <p>$550</p>
+          </div>
+        </div>
+
+        <div class="wishlist-tab wltab4">
+          <div class="tab-main">
+            <div>
+              <i class="fa-regular fa-trash-can" style="color: #000000"></i>
+            </div>
+
+            <img
+              src="../Assets/wishlist-page-assets/wishlist-jacket.png"
+              alt=""
+            />
+
+            <button>
+              <ion-icon name="cart-outline" class="cart"></ion-icon> Add To Cart
+            </button>
+          </div>
+
+          <div class="tab-desc">
+            <h6>Quilted Satin Jacket</h6>
+            <p>$750</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="wishlist-cta">
+        <h5>Just For You</h5>
+        <button>See All</button>
+      </div>
+
+      <div id="suggestion-tabs">
+        <div class="suggestion-tab sttab1">
+          <div class="tab-main">
+            <div>
+              <i class="fa-regular fa-eye" style="color: #000000"></i>
+            </div>
+
+            <img
+              src="../Assets/wishlist-page-assets/wishlist-laptop.png"
+              alt=""
+            />
+
+            <button>
+              <ion-icon name="cart-outline" class="cart"></ion-icon> Add To Cart
+            </button>
+          </div>
+
+          <div class="tab-desc">
+            <h6>ASUS FHD Gaming Laptop</h6>
+            <p>$960<span>$1160</span></p>
+            <div class="product-rating">
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <span>(65)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="suggestion-tab sttab2">
+          <div class="tab-main">
+            <div>
+              <i class="fa-regular fa-eye" style="color: #000000"></i>
+            </div>
+
+            <img
+              src="../Assets/wishlist-page-assets/wishlist-television.png"
+              alt=""
+            />
+
+            <button>
+              <ion-icon name="cart-outline" class="cart"></ion-icon> Add To Cart
+            </button>
+          </div>
+
+          <div class="tab-desc">
+            <h6>IPS LCD Gaming Monitor</h6>
+            <p>$1160</p>
+
+            <div class="product-rating">
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <span>(65)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="suggestion-tab sttab3">
+          <div class="tab-main">
+            <div>
+              <i class="fa-regular fa-eye" style="color: #000000"></i>
+            </div>
+
+            <img
+              src="../Assets/wishlist-page-assets/wishlist-red-gamepad.png"
+              alt=""
+            />
+
+            <button>
+              <ion-icon name="cart-outline" class="cart"></ion-icon> Add To Cart
+            </button>
+          </div>
+
+          <div class="tab-desc">
+            <h6>HAVIT HV-G92 Gamepad</h6>
+            <p>$560</p>
+
+            <div class="product-rating">
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <span>(65)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="suggestion-tab sttab4">
+          <div class="tab-main">
+            <div class="">
+              <i class="fa-regular fa-eye" style="color: #000000"></i>
+            </div>
+            <img
+              src="../Assets/wishlist-page-assets/wishlist-keyboard.png"
+              alt=""
+            />
+            <button>
+              <ion-icon name="cart-outline" class="cart"></ion-icon> Add To Cart
+            </button>
+          </div>
+
+          <div class="tab-desc">
+            <h6>AK-900 Wired Keyboard</h6>
+            <p>$200</p>
+
+            <div class="product-rating">
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <i class="fa-solid fa-star" style="color: #ffd200"></i>
+              <span>(65)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- main body end -->
+
+    <!-- footer start -->
+    <footer>
+      <div id="footer-grid">
+        <div>
+          <img src="../Assets/logo white.png" alt="" />
+          <h5>Subscribe</h5>
+          <p>Get 10% off your first order</p>
+          <div>
+            <input type="email" placeholder="Enter your email" />
+            <img
+              src="../Assets/icon-send.png"
+              alt=""
+              id="footer-email-submit"
+            />
+          </div>
+        </div>
+
+        <ul>
+          <li class="footer-list-head">Support</li>
+          <li>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</li>
+          <li>exclusive@gmail.com</li>
+          <li>+88015-88888-9999</li>
+        </ul>
+
+        <ul>
+          <li class="footer-list-head">Account</li>
+          <li>My Account</li>
+          <li>Login / Register</li>
+          <li>Cart</li>
+          <li>Wishlist</li>
+          <li>Shop</li>
+        </ul>
+
+        <ul>
+          <li class="footer-list-head">Quick Link</li>
+          <li>Privacy Policy</li>
+          <li>Terms Of Use</li>
+          <li>FAQ</li>
+          <li>Contact</li>
+        </ul>
+
+        <div id="footer-app-link">
+          <h4 class="footer-list-head">Download App</h4>
+          <p>Save $3 with App New User Only</p>
+          <div id="footer-grid-link">
+            <img
+              src="../Assets/wishlist-page-assets/wishlist-Qrcode 1.png"
+              alt=""
+              id="footer-qr"
+            />
+            <img
+              src="../Assets/wishlist-page-assets/wishlist-googleplay-img.png"
+              alt=""
+              id="footer-gp"
+            />
+            <img
+              src="../Assets/wishlist-page-assets/wishlist-appstore-img.png"
+              alt=""
+              id="footer-as"
+            />
+          </div>
+          <div id="footer-sm-icons">
+            <i class="fa-brands fa-facebook-f" style="color: #ffffff"></i>
+            <i class="fa-brands fa-twitter" style="color: #ffffff"></i>
+            <i class="fa-brands fa-instagram" style="color: #ffffff"></i>
+            <i class="fa-brands fa-linkedin-in" style="color: #ffffff"></i>
+          </div>
+        </div>
+      </div>
+      <p id="copyright-text">
+        <span>&copy</span> Copyright Rimel 2022. All right reserved
+      </p>
+    </footer>
+    <!-- footer end -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="../js/nav.js"></script>
+    <script src="../js/modal.js"></script>
+  </body>
+</html>

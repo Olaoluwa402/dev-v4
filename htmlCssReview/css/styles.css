@@ -67,7 +67,7 @@ header ul > li > a {
   text-transform: uppercase;
 }
 
-header .menu-bar {
+header .menubar {
   cursor: pointer;
   background-color: white;
 }
@@ -79,7 +79,7 @@ header .menu-bar {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 280px;
+  width: 100px;
   background-color: navy;
   border: 1px solid #fff;
   z-index: 999;
@@ -94,6 +94,7 @@ header .menu-bar {
 
 .sidebar.open {
   transform: translateX(0);
+  background-color: green;
 }
 
 .sidebar ul {
@@ -146,6 +147,10 @@ header .menu-bar {
   text-align: center;
   color: #fff;
   position: relative;
+}
+
+.banner .bannerText.open {
+  background-image: url("https://images.pexels.com/photos/1208074/pexels-photo-1208074.jpeg?auto=compress&cs=tinysrgb&w=600");
 }
 
 .bannerContent {
