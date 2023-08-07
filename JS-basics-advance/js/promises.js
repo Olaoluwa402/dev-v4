@@ -1,8 +1,8 @@
-// callbacks
+// callback
 
 // const doSomething = (callback) => {
 //   setTimeout(() => {
-//     const skills = [];
+//     const skills = ["HTML"];
 //     if (skills.length == 0) {
 //       callback("Did not go well", null);
 //     } else {
@@ -10,6 +10,8 @@
 //     }
 //   }, 5000);
 // };
+
+
 
 // const callback = (error, result) => {
 //   console.log(error, result);
@@ -39,33 +41,33 @@
 //   .catch((err) => console.log(err));
 
 //API calls fetch API
-function getAllCountries() {
-  const url = "https://restcountries.com/v2/all";
-  // GET, POST,PUT, PATCH, DELETE HEAD, OPTION
-  const resultPromise = fetch(url);
+// function getAllCountries() {
+//   const url = "https://restcountries.com/v2/all";
+//   // GET, POST,PUT, PATCH, DELETE HEAD, OPTION
+//   const resultPromise = fetch(url);
 
-  resultPromise
-    .then((res) => res.json())
-    .then((result) => {
-      const countries = result.slice(0, 10);
-      console.log(countries);
-      const countriesBox = document.querySelector(".countries");
-      countries.forEach((c) => {
-        const country = document.createElement("div");
-        country.className = "country";
-        country.innerHTML = `<div>
-        <img src= ${c.flag} />
-        <p>${c.name}</p>
-        </div>`;
+//   resultPromise
+//     .then((res) => res.json())
+//     .then((result) => {
+//       const countries = result.slice(0, 10);
+//       console.log(countries);
+//       const countriesBox = document.querySelector(".countries");
+//       countries.forEach((c) => {
+//         const country = document.createElement("div");
+//         country.className = "country";
+//         country.innerHTML = `<div>
+//         <img src= ${c.flag} />
+//         <p>${c.name}</p>
+//         </div>`;
 
-        countriesBox.appendChild(country);
-      });
-    })
-    .catch((err) => console.log(err));
-  console.log(resultPromise);
-}
+//         countriesBox.appendChild(country);
+//       });
+//     })
+//     .catch((err) => console.log(err));
+//   console.log(resultPromise);
+// }
 
-getAllCountries();
+// getAllCountries();
 
 //using axio library and async await
 
