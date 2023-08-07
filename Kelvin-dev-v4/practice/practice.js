@@ -76,15 +76,82 @@
 //   }
 // }
 
-const user = {
-  username: "elder",
-  email: "elder@user.com",
-  friends: ["bond", "drac", "jone"],
-  token: "fungible",
-};
+// class person {
+//   constructor(firstName, lastName, email, courses) {
+//     (this.firstName = firstName), (this.lastName = lastName);
+//     this.emailAddress = email;
+//     this.courses = courses;
+//   }
 
-localStorage.setItem("userStor", JSON.stringify(user));
-console.log(localStorage);
+//   getCourses() {
+//     return this.courses;
+//   }
 
-const parsedUser = JSON.parse(localStorage.getItem("userStor"));
-console.log(parsedUser);
+//   addCourse(course) {
+//     if (Array.isArray(course)) {
+// for (let item of course) {
+//   this.courses.push(item);
+// }
+// let newArr = this.courses;
+// newArr.concat(course);
+// console.log(newArr);
+//       return this.courses.concat(course);
+//     } else {
+//       this.courses.push(course);
+//       return this.courses;
+//     }
+//   }
+// }
+
+// const janeData = new person("Jane", "stone", "Janestone@email.com", [
+//   "HTML",
+//   "CSS",
+//   "Javascript",
+//   "React",
+//   "NodeJS",
+//   "ExpressJS",
+// ]);
+
+// console.log(janeData.getCourses());
+
+// janeData.addCourse(["PHP", "SQL", "MongoDB"]);
+// console.log(janeData.addCourse(["PHP", "SQL", "MongoDB"]));
+
+// const one = [1, 2, 3];
+// const two = [4, 5, 6];
+// const three = one.concat(two);
+// console.log(three);
+
+class Bird {
+  constructor(numLegs, numEyes, kingdom, sound) {
+    this.numLegs = numLegs;
+    this.numEyes = numEyes;
+    this.kingdom = kingdom;
+    this.sound = sound;
+  }
+
+  getSound() {
+    return "caw";
+  }
+}
+
+class eagles extends Bird {
+  constructor(numLegs, numEyes, kingdom, sound, gender, type) {
+    super(numLegs, numEyes, kingdom, sound);
+    this.gender = gender;
+    this.type = type;
+  }
+}
+
+const firstEagle = new eagles(2, 1, "animalia", "eaglesound", "male", "bald");
+
+const secondEagle = new eagles(
+  1,
+  3,
+  "animalia",
+  "eaglesound",
+  "female",
+  "bald"
+);
+
+console.log(firstEagle, secondEagle);

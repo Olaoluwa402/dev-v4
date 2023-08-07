@@ -58,6 +58,8 @@ const continent = [
 // no shortcut
 function getStateCapital(continentData, continentName) {
   for (let continent of continentData) {
+
+    console.log(continent);
     if (!continent.hasOwnProperty(continentName)) {
       return "Not a valid continent";
     }
@@ -67,10 +69,14 @@ function getStateCapital(continentData, continentName) {
     }
   }
 
-  return "";
+  // return "";
 }
 
+<<<<<<< HEAD
+// log(getStateCapital(continent, "africa"));
+=======
 getStateCapital(continent, "africa");
+>>>>>>> e289c34327022ee977d30610234f4b706bd0c993
 
 // aasignment: get the state and capital
 const continent_2 = [

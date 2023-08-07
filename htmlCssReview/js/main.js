@@ -1,4 +1,4 @@
-// get the elment
+// get the element
 const menuBar = document.getElementById("menubar");
 
 // set event listener
