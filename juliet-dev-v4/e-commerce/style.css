@@ -11,7 +11,7 @@ ul {
 
 header {
   background-color: #000000;
-  min-height: 50px;
+  height: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -59,11 +59,11 @@ nav {
   background-color: #fff;
   padding: 0 80px;
   /* box-shadow: 4px 4px 10px rgba(0,0,0,0.1); */
-  /* position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; */
+  z-index: 1000;
 }
 
 .nav-left h2 {
@@ -142,7 +142,7 @@ nav {
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #f7f3f3;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
