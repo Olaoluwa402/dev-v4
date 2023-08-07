@@ -26,7 +26,7 @@ class Student {
       }
     } else {
       this.courses.push(item);
-    }
+    } 
   }
 }
 

@@ -138,3 +138,71 @@ rgba(purple, 0.3)80%
   .text1{
     font-size: 18px;
   }
+/* form css */
+  
+body{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    justify-content: center;
+width: 350px;
+background-color: white;
+padding: 12px;
+
+}
+
+.lgin{
+    background-color: blue;
+    color: white;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+height: 35px;
+}
+
+.user{
+    text-align: center;
+    font-size: 35px;
+    color: grey;
+} 
+input{
+    width: 300px;
+    height: 35px;
+    font-size: 22px;
+}
+.img1{
+    width: 20px;
+    height: 3px;
+}
+.img2{
+    width: 20px;
+    height: 3px;
+}
+.img1, .img2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 35px;
+height: 30px;
+padding: 20px;
+background-color: white;
+border-color: grey;
+
+
+}
+.img{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+}
