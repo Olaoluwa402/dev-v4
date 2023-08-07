@@ -17,7 +17,28 @@
     <div class="bg">
       <img src="./assets/images/bg.jpg" alt="" />
     </div>
-    <div class="select-container"></div>
+
+    <form class="form">
+      <h4>Sign Up</h4>
+      <div class="form-group">
+        <p style="color: brown" id="error-email"></p>
+        <label for="email">email</label>
+        <input type="email" id="email" placeholder="email" />
+      </div>
+      <div class="form-group">
+        <p style="color: brown" id="error-password"></p>
+        <label for="password">password</label>
+        <input type="password" id="password" placeholder="password" />
+      </div>
+      <div class="privacy">
+        <p style="color: brown" id="error-privacy"></p>
+        <input type="checkbox" id="privacy" value="accepted" />
+        <label for="privacy">Accept our privacy</label>
+      </div>
+
+      <button id="signup-btn">Submit</button>
+    </form>
+    <div class="countries"></div>
     <!-- <select name="courses" id="courses">
       <option value="javascript">JAVASCRIPT</option>
       <option value="java">JAVA</option>
@@ -145,6 +166,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="./js/testimonial.js"></script>
-    <script src="./js/local-storage.js"></script>
+    <script src="./js/promises.js"></script>
+    <script src="./js/form-validation.js"></script>
   </body>
 </html>
