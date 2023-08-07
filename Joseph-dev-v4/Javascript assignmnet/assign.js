@@ -555,6 +555,9 @@ const continent_2 = [
 // let city = getStatesAndCapitals(county)
 // log(city);
 
+
+
+
 function getStatesAndCapitals(continent_2, continentData, country) {
   for (let continentObj of continent_2) {
     if (continentObj.hasOwnProperty(continentData)) {
@@ -563,7 +566,8 @@ function getStatesAndCapitals(continent_2, continentData, country) {
         const statesAndCapitals = countries[country];
         let result = "";
         for (let [state, capital] of statesAndCapitals) {
-          result += `${state}: ${capital}\n`;
+          result += `${state} : ${capital}\n`;
+       
         }
         return result;
       }
@@ -572,5 +576,49 @@ function getStatesAndCapitals(continent_2, continentData, country) {
   return "Not a valid country.";
 }
 
-// const statesAndCapitals1 = getStatesAndCapitals("africa", "ghana");
-log(getStatesAndCapitals(continent_2, "africa", "ghana"));
+// const statesAndCapitals1 = getStatesAndCapitals("africa", "nigeria");
+log(getStatesAndCapitals(continent_2, "africa", "nigeria"));
+
+
+
+
+// const user = {
+//   username : "jossyhod",
+//   email : "ikeanyi_joseph@yahoo.com",
+//   friends : " James",
+//   token : "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"
+// }
+
+
+// localStorage.setItem("user", JSON.stringify(user));
+
+// let username =  JSON.parse(localStorage.getItem("user"));
+
+// log(user, "User");
+
+
+class Birds {
+  constructor(numLegs, numEyes, kingdom, sound){
+    this.numLegs = numLegs;
+    this.numEyes = numEyes;
+    this.sound = sound;
+  }
+
+  getSound(){
+     return ("peal call");
+  }
+}
+Birds.prototype.kingdom = "Animal";
+
+class Eagle extends Birds {
+
+  constructor(numLegs, numEyes, kingdom, sound, name, age){
+   super(numLegs, numEyes, kingdom, sound)
+   this.name = name;
+   this.age = age;
+  }
+}
+
+const eagle1 = new Eagle(2, 2, () =>"peal call", "Wilo", 6);
+
+console.log(eagle1.getSound());

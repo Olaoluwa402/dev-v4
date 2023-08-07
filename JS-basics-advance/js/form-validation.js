@@ -80,7 +80,7 @@ function submitHandler(e) {
     ? JSON.parse(localStorage.getItem("users"))
     : [];
   //check that email does not exist and return error message if it exist
-  const userExist = users.find((u) => user.email == user.email);
+  const userExist = users.find((u) => u.email == user.email);
 
   if (userExist) {
     alertMsg("user already exist");
