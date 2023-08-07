@@ -52,18 +52,18 @@ select:focus {
 /* NAV BAR */
 nav {
   display: flex;
-  border: 1px solid gray;
+  border: 0.1px solid rgb(201, 196, 196);
   justify-content: space-around;
   align-items: center;
   min-height: 100px;
   background-color: #fff;
   padding: 0 80px;
   /* box-shadow: 4px 4px 10px rgba(0,0,0,0.1); */
-  position: fixed;
+  /* position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1000; */
 }
 
 .nav-left h2 {
@@ -280,7 +280,7 @@ nav {
 }
 
 a button:hover{
-  background-color: #8d5a91;
+  background-color: #e0c2c2;
 }
 
 .checkout {
