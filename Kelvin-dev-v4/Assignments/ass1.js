@@ -17,5 +17,5 @@ formcl.addEventListener("submit", () => {
     alert("password does not match.");
   }
   //   console.log(passWord.value.length);
-  console.log(ss2.value);
+  //   console.log(ss2.value);
 });
