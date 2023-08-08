@@ -41,4 +41,16 @@ function alertMsg(message, type) {
   }, 4000);
 }
 
-export { openModal, closeModal, alertMsg }; //named export
+function getItemsStore(key) {
+  const items = localStorage.getItem(key)
+    ? JSON.parse(localStorage.getItem(key))
+    : [];
+
+  return items;
+}
+
+function saveItemToStore(key, item) {
+  localStorage.setItem(key, JSON.stringify(item));
+}
+
+export { openModal, closeModal, alertMsg, getItemsStore, saveItemToStore }; //named export

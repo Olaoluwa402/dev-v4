@@ -1,4 +1,10 @@
-import { openModal, closeModal, alertMsg } from "./common.js";
+import {
+  openModal,
+  closeModal,
+  alertMsg,
+  getItemsStore,
+  saveItemToStore,
+} from "./common.js";
 
 if (document.readyState == "loading") {
   document.addEventListener("DOMContentLoaded", ready);
@@ -7,6 +13,9 @@ if (document.readyState == "loading") {
 }
 
 function ready() {
+  //load all products
+  displayProducts();
+
   let addProductBtn = document.querySelector(".add-product-btn");
   addProductBtn.addEventListener("click", () => openModal(0));
 
@@ -24,25 +33,51 @@ function addProductHandler() {
   const title = document.querySelector(".product-title").value;
   const imageUrl = document.querySelector(".product-img").value;
   const price = document.querySelector(".product-price").value;
-  const discount = document.querySelector(".product-discount").value;
+  const old_price = document.querySelector(".product-old_price").value;
   const desc = document.querySelector(".product-desc").value;
-
-  //   validation
-
+  console.log(price);
   const data = {
     title,
     price,
-    discount,
+    old_price,
     imageUrl,
     desc,
   };
+
+  //   validation
+  const validatResult = validate(data);
+  if (Object.keys(validatResult).length > 0) {
+    alertMsg("Form validation errors", "error");
+    // add error messages to form fields
+    document.getElementById("error-title").textContent = validatResult.title
+      ? validatResult.title
+      : "";
+    document.getElementById("error-price").textContent = validatResult.price
+      ? validatResult.price
+      : "";
+    document.getElementById("error-imageurl").textContent =
+      validatResult.imageUrl ? validatResult.imageUrl : "";
+    document.getElementById("error-desc").textContent = validatResult.desc
+      ? validatResult.desc
+      : "";
+    document.getElementById("error-old-price").textContent =
+      validatResult.old_price ? validatResult.old_price : "";
+
+    setTimeout(() => {
+      document.getElementById("error-title").textContent = "";
+      document.getElementById("error-price").textContent = "";
+      document.getElementById("error-imageurl").textContent = "";
+      document.getElementById("error-desc").textContent = "";
+      document.getElementById("error-old-price").textContent = "";
+    }, 4000);
+    return;
+  }
+
   // Product class instantiation
   const product = new Product(data);
 
   //   save to local storage
-  const products = localStorage.getItem("products")
-    ? JSON.parse(localStorage.getItem("products"))
-    : [];
+  const products = getItemsStore("products");
 
   // check if product already exist
   const productExist = products.find((p) => p.title == product.title);
@@ -56,7 +91,8 @@ function addProductHandler() {
   const newProductList = [...products, product];
 
   //save the new update back
-  localStorage.setItem("products", JSON.stringify(newProductList));
+  saveItemToStore("products", newProductList);
+  //localStorage.setItem("products", JSON.stringify(newProductList));
 
   //succes message
   alertMsg("Product added successfully", "success");
@@ -66,23 +102,102 @@ function addProductHandler() {
 
   //close modal
   closeModal(0);
+
+  displayProducts();
 }
 
 function clearProductFields() {
   document.querySelector(".product-title").value = "";
   document.querySelector(".product-img").value = "";
   document.querySelector(".product-price").value = "";
-  document.querySelector(".product-discount").value = "";
+  document.querySelector(".product-old_price").value = "";
   document.querySelector(".product-desc").value = "";
 }
 
 class Product {
-  constructor({ title, price, discount, imageUrl, desc }) {
+  constructor({ title, price, old_price, imageUrl, desc }) {
     this.id = title + Math.random() * 1000000;
     this.title = title;
     this.price = +price;
     this.imgeUrl = imageUrl;
-    this.discount = discount;
+    this.old_price = old_price;
     this.desc = desc;
   }
+}
+
+function displayProducts() {
+  document.getElementById("justtop").innerHTML = "";
+  //get products from storage
+  const products = getItemsStore("products");
+  console.log(products);
+  products.forEach((p) => {
+    const wishlistbox = document.createElement("div");
+    wishlistbox.className = "wishlistbox";
+
+    const content = `
+    <div class="topbox">
+    <div class="topbox-img">
+      <a href="#"><img src="./Exclusive Assets/Quick View.png" /></a>
+    </div>
+
+    <div class="wishlist-image">
+      <img src=${p.imgeUrl} />
+    </div>
+  </div>
+  <div class="addtocart">
+    <img src="./Exclusive Assets/Cart1.png" />
+    <p>Add to cart</p>
+  </div>
+  <div class="wishlistitems">
+    <h4>${p.title}</h4>
+    <div class="prices">
+      <p>$${p.price}</p>
+      <h5>${p.old_price ? `$${p.old_price}` : ""}</h5>
+    </div>
+    <ul>
+      <li><img src="./Exclusive Assets/Vector (1).png" /></li>
+      <li><img src="./Exclusive Assets/Vector (1).png" /></li>
+      <li><img src="./Exclusive Assets/Vector (1).png" /></li>
+      <li><img src="./Exclusive Assets/Vector (1).png" /></li>
+      <li><img src="./Exclusive Assets/Vector (1).png" /></li>
+      <li>(65)</li>
+    </ul>
+  </div>
+    `;
+
+    wishlistbox.innerHTML = content;
+
+    const justtop = document.getElementById("justtop");
+    justtop.appendChild(wishlistbox);
+  });
+}
+
+function validate({ title, price, old_price, imageUrl, desc }) {
+  console.log(+price);
+  const errors = {};
+  if (!title) {
+    errors.title = "title is required";
+  }
+
+  if (+price == 0) {
+    errors.price = "price must be a number greater than 0";
+  }
+
+  if (+old_price == 0) {
+    errors.old_price = "old_price must be a number greater than 0";
+  }
+
+  const regex = /^https:\/\/[a-zA-Z0-9\W]+.png|.jpg|.jpeg|.svg$/gi;
+
+  console.log(regex.test(imageUrl));
+  if (!imageUrl) {
+    errors.imageUrl = "image url is required";
+  }
+
+  if (!desc) {
+    errors.desc = "desc is required";
+  }
+  console.log(errors);
+
+  return errors;
 }
