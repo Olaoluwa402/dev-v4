@@ -26,5 +26,3 @@ function openSideBar() {
   console.log(sideBar);
   sideBar.classList.toggle("open");
 }
-
-function addProductHandler() {}
