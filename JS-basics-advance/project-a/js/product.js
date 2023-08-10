@@ -4,6 +4,7 @@ import {
   alertMsg,
   getItemsStore,
   saveItemToStore,
+  displayCartCount,
 } from "./common.js";
 
 if (document.readyState == "loading") {
@@ -13,6 +14,8 @@ if (document.readyState == "loading") {
 }
 
 function ready() {
+  // load cart count
+  displayCartCount();
   //load all products
   displayProducts();
 
@@ -26,16 +29,24 @@ function ready() {
   //   add product
   const submitProductBtn = document.querySelector("#add-product-btn");
   submitProductBtn.addEventListener("click", addProductHandler);
+
+  // add product to cart
+  const addToCartBtn = document.querySelectorAll(".tocart");
+  addToCartBtn.forEach((btn) => {
+    btn.addEventListener("click", addToCartHandler);
+  });
 }
 
 function addProductHandler() {
   //collect form fields
   const title = document.querySelector(".product-title").value;
   const imageUrl = document.querySelector(".product-img").value;
+  const imageFile = document.querySelector(".product-file").files[0];
   const price = document.querySelector(".product-price").value;
   const old_price = document.querySelector(".product-old_price").value;
   const desc = document.querySelector(".product-desc").value;
   console.log(price);
+  //upload image
   const data = {
     title,
     price,
@@ -144,12 +155,12 @@ function displayProducts() {
       <img src=${p.imgeUrl} />
     </div>
   </div>
-  <div class="addtocart">
-    <img src="./Exclusive Assets/Cart1.png" />
-    <p>Add to cart</p>
+  <div class="addtocart cursor-pointer">
+    <img class="tocart" src="./Exclusive Assets/Cart1.png" />
+    <p class="tocart">Add to cart</p>
   </div>
   <div class="wishlistitems">
-    <h4>${p.title}</h4>
+    <h4 class="title">${p.title}</h4>
     <div class="prices">
       <p>$${p.price}</p>
       <h5>${p.old_price ? `$${p.old_price}` : ""}</h5>
@@ -200,4 +211,59 @@ function validate({ title, price, old_price, imageUrl, desc }) {
   console.log(errors);
 
   return errors;
+}
+
+function addToCartHandler(e) {
+  console.log("cleicked");
+  const parentElem = e.target.parentElement.parentElement;
+  console.log(parentElem);
+  const title = parentElem.querySelector(".title").textContent;
+  console.log(title);
+
+  // get the product to be added to cart from the store
+  addProductToCart(title);
+}
+
+function addProductToCart(title) {
+  //  get products from store
+  const products = getItemsStore("products");
+
+  // find the product with the title from the products
+  const product = products.find((p) => p.title == title);
+
+  console.log(product);
+
+  const carts = getItemsStore("carts");
+
+  //check that product is not already in cart
+  const productExistInCart = carts.find((c) => c.title == title);
+  if (productExistInCart) {
+    alertMsg("product already in cart", "error");
+    return;
+  }
+  const cartProduct = { ...product, qty: 1, subtotal: +product.price * 1 };
+
+  const cartsUpdate = [...carts, cartProduct];
+
+  localStorage.setItem("carts", JSON.stringify(cartsUpdate));
+
+  // load cart count
+  displayCartCount();
+}
+
+async function saveImageToCloud(imageFile) {
+  const formData = new FormData();
+  formData.append("file", imageFile);
+  formData.append("upload_preset", "commerce_files");
+
+  const response = await fetch(
+    `https://api.cloudinary.com/v1_1/dvq5qpz3n/image/upload`,
+    {
+      method: "POST",
+      body: formData,
+    }
+  );
+
+  const data = await response.json();
+  return data.secure_url;
 }
