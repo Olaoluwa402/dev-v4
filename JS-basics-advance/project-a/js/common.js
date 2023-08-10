@@ -49,8 +49,25 @@ function getItemsStore(key) {
   return items;
 }
 
+function getCartCount() {
+  const carts = getItemsStore("carts");
+  return carts.length;
+}
+
+function displayCartCount() {
+  const cartCountElem = document.querySelector(".cart-count");
+  cartCountElem.textContent = getCartCount();
+}
+
 function saveItemToStore(key, item) {
   localStorage.setItem(key, JSON.stringify(item));
 }
 
-export { openModal, closeModal, alertMsg, getItemsStore, saveItemToStore }; //named export
+export {
+  openModal,
+  closeModal,
+  alertMsg,
+  getItemsStore,
+  saveItemToStore,
+  displayCartCount,
+}; //named export
