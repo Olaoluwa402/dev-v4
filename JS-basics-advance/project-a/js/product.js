@@ -12,6 +12,7 @@ if (document.readyState == "loading") {
   ready();
 }
 
+
 function ready() {
   //load all products
   displayProducts();

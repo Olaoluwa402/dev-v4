@@ -72,6 +72,7 @@ body {
   position: sticky;
   top: 0;
   background-color: white;
+  background: rgb(255, 255, 255, 0.9);
   z-index: 10;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.8);
 }
@@ -563,7 +564,7 @@ body {
   /* padding: 5px; */
   list-style: none;
   /* margin-left: 10px;
-  margin-top: 10px; */
+    margin-top: 10px; */
   padding-inline-start: 0;
   margin-block-end: 0;
 }
@@ -574,7 +575,7 @@ body {
 
 #nav-btn ul li a {
   /* width: 100%;
-  height: 100%; */
+    height: 100%; */
   text-decoration: none;
   color: white;
   font-family: Poppins;
@@ -633,6 +634,23 @@ body {
   width: 25px;
 }
 
+.add-product-bar {
+  width: 15px;
+  height: 15px;
+  padding: 7px;
+  background-color: #042331;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.fa-plus:hover {
+  color: goldenrod;
+  transform: scale(1.1);
+}
+
 .sidebarinner {
   width: 300px;
 
@@ -659,21 +677,39 @@ body {
 
 /* Start of Modal Styling */
 
-.modal-container {
-  display: none;
-  width: 90%;
-  height: 80vh;
+.modal-inner {
+  display: block;
+  width: 80%;
+  height: 90%;
   background-color: white;
   position: fixed;
   z-index: 15;
   top: 20px;
-  bottom: 0px;
+  bottom: 0;
   left: 0;
   right: 0;
   overflow-y: scroll;
   margin: auto;
   padding: 10px;
   box-shadow: 0px 0px 5px black, -0px -0px 5px black;
+}
+
+.modal-container {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  z-index: 15;
+  top: 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
+  margin: auto;
+  padding: 10px;
+  box-shadow: 0px 0px 5px black, -0px -0px 5px black;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .modal-close {
@@ -724,27 +760,27 @@ table {
 }
 
 /* table .heading {
-  display: flex;
-  width: 1100px;
-  height: 72px;
-  /* justify-content: center; 
-  align-items: center;
-} */
+    display: flex;
+    width: 1100px;
+    height: 72px;
+    /* justify-content: center; 
+    align-items: center;
+  } */
 
 table .product-data {
   display: flex;
   align-items: center;
 
   /* width: 1170px;
-  height: 102px;
-  border-radius: 4px;
-  background: var(--primary, #fff);
-  box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);  */
+    height: 102px;
+    border-radius: 4px;
+    background: var(--primary, #fff);
+    box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);  */
 }
 /* 
-table .product-data p {
-  padding-left: 20px;
-} */
+  table .product-data p {
+    padding-left: 20px;
+  } */
 
 th {
   font-size: 20px;
@@ -792,7 +828,7 @@ tr {
   border: 1px solid rgba(0, 0, 0, 0.5);
   background-color: white;
   /* margin-left: 135px;
-  margin-right: 135px; */
+    margin-right: 135px; */
 }
 
 .action-button button:hover {
@@ -909,7 +945,7 @@ tr {
 
 /* Start of Media Query */
 
-@media screen and (min-width: 678px) {
+@media screen and (min-width: 770px) {
   #menubar {
     display: none;
     margin-left: 240px;
@@ -942,7 +978,7 @@ tr {
     text-decoration: none;
     color: var(--text-2, #000);
     font-family: Poppins;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
   }
@@ -957,9 +993,28 @@ tr {
     line-height: 24px;
   }
 
+  .add-product-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fafafa;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .fa-plus {
+    font-size: 20px;
+    font-weight: 900;
+  }
+
   .nav-images {
     display: flex;
     margin-left: 15px;
+    align-items: center;
   }
 
   #wishlist1 {
@@ -994,6 +1049,7 @@ tr {
 
   #justtop {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-left: 115px;
   }
