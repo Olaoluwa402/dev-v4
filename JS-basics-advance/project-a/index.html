@@ -93,26 +93,37 @@
         <h2>Add product</h2>
         <div class="form">
           <div class="form-group">
+            <p style="color: brown; margin: 0; padding: 0" id="error-title"></p>
             <label for="title">Title<sup style="color: brown">*</sup></label>
             <input type="text" placeholder="title" class="product-title" />
           </div>
           <div class="form-group">
+            <p style="color: brown; margin: 0; padding: 0" id="error-price"></p>
             <label for="price">Price<sup style="color: brown">*</sup></label>
-            <input type="number" min="0" class="product-price" />
+            <input type="number" min="1" class="product-price" />
           </div>
           <div class="form-group">
-            <label for="price-discount"
-              >price discount<sup style="color: brown">*</sup></label
+            <p
+              style="color: brown; margin: 0; padding: 0"
+              id="error-old-price"
+            ></p>
+            <label for="price-old_price"
+              >old price<sup style="color: brown">*</sup></label
             >
-            <input type="number" class="product-discount" />
+            <input type="number" class="product-old_price" />
           </div>
           <div class="form-group">
+            <p
+              style="color: brown; margin: 0; padding: 0"
+              id="error-imageurl"
+            ></p>
             <label for="image-url"
               >product image<sup style="color: brown">*</sup></label
             >
             <input type="text" placeholder="image url" class="product-img" />
           </div>
           <div class="form-group">
+            <p style="color: brown; margin: 0; padding: 0" id="error-desc"></p>
             <label for="desc"
               >Description<sup style="color: brown">*</sup></label
             >
@@ -240,7 +251,7 @@
       </div>
 
       <div id="justtop">
-        <div class="wishlistbox">
+        <!-- <div class="wishlistbox">
           <div class="topbox">
             <div class="topbox-img">
               <a href="#"><img src="./Exclusive Assets/Quick View.png" /></a>
@@ -359,7 +370,7 @@
               <li>(65)</li>
             </ul>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
     <section class="footer">
