@@ -500,3 +500,68 @@ const user = {
 localStorage.setItem("user", JSON.stringify(user));
 const getItems = JSON.parse(localStorage.getItem("user"));
 console.log(getItems, "items");
+
+const data =
+  "Hacking is the act of identifying and then exploiting weaknesses in a computer system or network, usually to gain unauthorized access to personal or organizational data";
+function patterns(record) {
+  const regGex = new RegExp(record, "gi");
+  // /record/gi;
+  const pattern = regGex.test(data);
+  if (pattern) {
+    return true;
+  }
+  return ` ${regGex} ${pattern}`;
+}
+console.log(patterns("hacking"));
+
+console.clear();
+class Student {
+  constructor(firstname, lastname, age, email, courses) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+    this.age = age;
+    this.email = email;
+    this.courses = courses && Array.isArray(courses) ? courses : [];
+    this.score = 0;
+    // this.skill = [];
+  }
+  studentCourses() {
+    const course = this.courses;
+    return course;
+  }
+  set setScore(score) {
+    this.score += score;
+  }
+  set setSkill(item) {
+    if (Array.isArray(item)) {
+      for (let course of item) {
+        this.courses.push(course);
+      }
+    }
+  }
+}
+const student_1 = new Student("joy", "samuel", "40", "joy@gmail.com", [
+  "english",
+  "chemistry",
+  "math",
+  "physics",
+]);
+console.log(student_1);
+console.log(student_1.studentCourses());
+console.log((student_1.setScore = 7));
+console.log((student_1.setSkill = ["HTML", "CSS"]));
+
+class Bird {
+  constructor(numLegs, numEyes, kingdom, sound) {
+    this.numLegs = numLegs;
+    this.numEyes = numEyes;
+    this.kingdom = kingdom;
+    this.sound = sound;
+  }
+}
+class Eagle extends Bird {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
