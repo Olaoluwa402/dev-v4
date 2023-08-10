@@ -86,7 +86,7 @@
 
     <div class="modal11">
       <div class="modal1">
-      <input class = "inputmodal" input="text" placeholder="Coupon Code"><button class="btn6">Apply Coupon</button>
+      <input class = "inputmodal" input="text" placeholder="Coupon Code"><button class="btn6" id="btn6">Apply Coupon</button>
     </div>
     <div class="modal2">
       <p>Cart Total</p>
@@ -107,6 +107,58 @@
           </div></div>
           <!-- end of modal content -->
           <span><i class="fa-regular fa-user"></i></span>
+          <span class="pluss" id="product"><i class="fa-solid fa-plus"></i></span>
+
+          <!-- beginning of product -->
+          <div>
+
+            <div class="modal-container" id="modal-container">
+              <p class="modal-close">&times;</p>
+        
+              <div class="add-product">
+                <h2>Add product</h2>
+                <div class="form">
+                  <div class="form-group">
+                    <label for="title">Title<sup style="color: brown">*</sup></label>
+                    <input type="text" placeholder="title" class="product-title" />
+                  </div>
+                  <div class="form-group">
+                    <label for="price">Price<sup style="color: brown">*</sup></label>
+                    <input type="number" min="0" class="product-price" />
+                  </div>
+                  <div class="form-group">
+                    <label for="price-discount"
+                      >price discount<sup style="color: brown">*</sup></label
+                    >
+                    <input type="number" class="product-discount" />
+                  </div>
+                  <div class="form-group">
+                    <label for="image-url"
+                      >product image<sup style="color: brown">*</sup></label
+                    >
+                    <input type="text" placeholder="image url" class="product-img" />
+                  </div>
+                  <div class="form-group">
+                    <label for="desc"
+                      >Description<sup style="color: brown">*</sup></label
+                    >
+                    <textarea
+                      name="desc"
+                      id="desc"
+                      cols="30"
+                      rows="10"
+                      class="product-desc"
+                    ></textarea>
+                  </div>
+        
+                  <button class="add-product-btn" class="sidebar">Submit</button>
+                </div>
+              </div>
+            </div>
+
+<!-- end of product -->
+
+          </div>
         </div>
         </div>
         <div class="menubar"><i class="fa-solid fa-bars"></i></div>
@@ -312,5 +364,6 @@
   <p class="footer5">&copy Copyright Rimel 2022. All right reserved</p>
 </footer>
 <script src="./index.js"></script>
+<script src="./main.js"></script>
   </body>
 </html>
