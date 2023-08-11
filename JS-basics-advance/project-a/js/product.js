@@ -47,6 +47,8 @@ function addProductHandler() {
   const desc = document.querySelector(".product-desc").value;
   console.log(price);
   //upload image
+  saveImageToCloud(imageFile);
+
   const data = {
     title,
     price,
@@ -245,7 +247,8 @@ function addProductToCart(title) {
 
   const cartsUpdate = [...carts, cartProduct];
 
-  localStorage.setItem("carts", JSON.stringify(cartsUpdate));
+  //save to store
+  saveItemToStore("carts", cartsUpdate);
 
   // load cart count
   displayCartCount();
@@ -257,7 +260,7 @@ async function saveImageToCloud(imageFile) {
   formData.append("upload_preset", "commerce_files");
 
   const response = await fetch(
-    `https://api.cloudinary.com/v1_1/dvq5qpz3n/image/upload`,
+    `https://api.cloudinary.com/v1_1/dklrn1vdy/image/upload`,
     {
       method: "POST",
       body: formData,
@@ -265,5 +268,7 @@ async function saveImageToCloud(imageFile) {
   );
 
   const data = await response.json();
+
+  console.log(response, data);
   return data.secure_url;
 }
