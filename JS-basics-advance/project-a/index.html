@@ -71,8 +71,13 @@
       </div>
       <div class="nav-images">
         <a href="#"><img src="./Exclusive Assets/Wishlist.png" /></a>
-        <div id="buy-cart">
+        <div id="buy-cart" class="relative">
           <a href="#"><img src="./Exclusive Assets/Cart1 with buy.png" /></a>
+          <div
+            class="absolute top-5 right-0 w-5 h-5 bg-red-600 text-white text-xs rounded-full flex flex-row justify-center items-center"
+          >
+            <span class="cart-count">1</span>
+          </div>
         </div>
         <a href="#"><img src="./Exclusive Assets/user.png" /></a>
         <div class="add-product-btn">
@@ -112,6 +117,17 @@
             >
             <input type="number" class="product-old_price" />
           </div>
+
+          <div class="form-group">
+            <p
+              style="color: brown; margin: 0; padding: 0"
+              id="error-imageurl"
+            ></p>
+            <label for="image-url"
+              >product image<sup style="color: brown">*</sup></label
+            >
+            <input type="file" placeholder="image url" class="product-file" />
+          </div>
           <div class="form-group">
             <p
               style="color: brown; margin: 0; padding: 0"
@@ -140,6 +156,7 @@
         </div>
       </div>
     </div>
+
     <!-- end of add product -->
     <section class="wishlist">
       <div id="wishlist1">
@@ -353,11 +370,11 @@
             </div>
           </div>
           <div class="addtocart">
-            <img src="./Exclusive Assets/Cart1.png" />
-            <p>Add to cart</p>
+            <img class="tocart" src="./Exclusive Assets/Cart1.png" />
+            <p class="tocart">Add to cart</p>
           </div>
           <div class="wishlistitems">
-            <h4>AK-900 Wired Keyboard</h4>
+            <h4 class="title">AK-900 Wired Keyboard</h4>
             <div class="prices">
               <p>$200</p>
             </div>
@@ -538,43 +555,47 @@
         <p>Cart</p>
       </div>
       <table>
-        <tr class="heading">
-          <th>Product</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Subtotal</th>
-        </tr>
+        <thead>
+          <tr class="heading">
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
 
-        <tr>
-          <td class="product-data">
-            <img
-              src="./Exclusive Assets/television.png"
-              width="54px"
-              height="54px"
-            />
-            <p>LCD Monitor</p>
-          </td>
-          <td>$650</td>
-          <td>
-            <input type="number" value="01" min="01" max="100" />
-          </td>
-          <td>$650</td>
-        </tr>
-        <tr>
-          <td class="product-data">
-            <img
-              src="./Exclusive Assets/red-keypad.png"
-              width="54px"
-              height="54px"
-            />
-            <p>H1 Gamepad</p>
-          </td>
-          <td>$550</td>
-          <td>
-            <input type="number" value="02" min="01" max="100" />
-          </td>
-          <td>$1100</td>
-        </tr>
+        <tbody id="cartBody">
+          <!-- <tr>
+            <td class="product-data">
+              <img
+                src="./Exclusive Assets/television.png"
+                width="54px"
+                height="54px"
+              />
+              <p>LCD Monitor</p>
+            </td>
+            <td>$650</td>
+            <td>
+              <input type="number" value="01" min="01" max="100" />
+            </td>
+            <td>$650</td>
+          </tr>
+          <tr>
+            <td class="product-data">
+              <img
+                src="./Exclusive Assets/red-keypad.png"
+                width="54px"
+                height="54px"
+              />
+              <p>H1 Gamepad</p>
+            </td>
+            <td>$550</td>
+            <td>
+              <input type="number" value="02" min="01" max="100" />
+            </td>
+            <td>$1100</td>
+          </tr> -->
+        </tbody>
       </table>
       <div class="action-button">
         <button><a href="#">Return To Shop</a></button>
@@ -591,7 +612,7 @@
           <h4>Cart Total</h4>
           <li>
             <p>Subtotal:</p>
-            <p>$1750</p>
+            <p class="cart-subtotal">$1750</p>
           </li>
           <hr />
           <li>
@@ -601,16 +622,23 @@
           <hr />
           <li>
             <p>Total:</p>
-            <p>$1750</p>
+            <p class="cart-total">$1750</p>
           </li>
           <button class="proceedbtn">Proceed to checkout</button>
         </ul>
       </div>
     </div>
     <!-- End of Modal -->
-
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary/1.28.0/cloudinary.min.js"></script> -->
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-jquery/2.13.0/cloudinary-jquery.min.js"
+      integrity="sha512-da4/9SHI5W0IH1FEZvPM0nEQfVVAzNgCpJ/X7yBfNtbQnwSvGO+XpCK0hByUR4kdgi3Ldwymnr09iOfjD+GyCg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
     <script type="module" src="./js/common.js"></script>
     <script type="module" src="./js/main.js"></script>
     <script type="module" src="./js/product.js"></script>
+    <script type="module" src="./js/cart.js"></script>
   </body>
 </html>

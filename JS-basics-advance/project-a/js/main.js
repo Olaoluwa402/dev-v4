@@ -11,14 +11,6 @@ function ready() {
   // get the elment
   const menuBar = document.getElementById("menubar");
   menuBar.addEventListener("click", openSideBar);
-
-  // Get the button that opens the modal
-  let buyCartBtn = document.getElementById("buy-cart");
-  buyCartBtn.addEventListener("click", () => openModal(1));
-
-  // Get the <span> element that closes the modal
-  let closecartModalBtn = document.getElementsByClassName("modal-close")[1];
-  closecartModalBtn.addEventListener("click", () => closeModal(1));
 }
 
 function openSideBar() {

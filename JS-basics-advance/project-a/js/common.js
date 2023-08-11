@@ -1,6 +1,42 @@
+import { displayCartTotalDetail, displayCartItems } from "./cart.js";
 function openModal(position) {
   let modal = document.getElementsByClassName("modal-container")[position];
   modal.style.display = "block";
+
+  if (position == 1) {
+    // increment/decrement event
+    const updateCartQtyBtn = document.querySelectorAll(".updateQty");
+
+    updateCartQtyBtn.forEach((btn) => {
+      btn.addEventListener("change", updateCartQtyHandler);
+    });
+  }
+}
+
+function updateCartQtyHandler(e) {
+  const newQty = e.target.value;
+  const parentElem = e.target.parentElement.parentElement;
+  const title = parentElem.querySelector(".cart-title").textContent;
+
+  const carts = getItemsStore("carts");
+  const index = carts.findIndex((p) => p.title == title);
+
+  const cartsCopy = [...carts];
+  //update cart with the new change
+  const foundCartProduct = cartsCopy[index];
+  foundCartProduct.qty = newQty;
+  foundCartProduct.subtotal = foundCartProduct.qty * foundCartProduct.price;
+
+  console.log(cartsCopy);
+
+  saveItemToStore("carts", cartsCopy);
+
+  //display carts
+  location.reload();
+  //displayCartItems(cartsCopy);
+
+  //update cart totlas
+  displayCartTotalDetail();
 }
 
 function closeModal(position) {
@@ -49,8 +85,25 @@ function getItemsStore(key) {
   return items;
 }
 
+function getCartCount() {
+  const carts = getItemsStore("carts");
+  return carts.length;
+}
+
+function displayCartCount() {
+  const cartCountElem = document.querySelector(".cart-count");
+  cartCountElem.textContent = getCartCount();
+}
+
 function saveItemToStore(key, item) {
   localStorage.setItem(key, JSON.stringify(item));
 }
 
-export { openModal, closeModal, alertMsg, getItemsStore, saveItemToStore }; //named export
+export {
+  openModal,
+  closeModal,
+  alertMsg,
+  getItemsStore,
+  saveItemToStore,
+  displayCartCount,
+}; //named export
