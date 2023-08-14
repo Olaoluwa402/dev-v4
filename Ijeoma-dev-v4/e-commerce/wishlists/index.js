@@ -20,7 +20,6 @@ span.onclick = function () {
 
 // }
 
-
 // When the user clicks anywhere outside of the modal, close it
 // window.onclick = function (event) {
 //   if (event.target == modal) {
@@ -28,3 +27,4 @@ span.onclick = function () {
 //   }
 // };
 
+export { btn1, span };
