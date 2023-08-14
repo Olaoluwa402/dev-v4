@@ -39,8 +39,49 @@
                     <i class="fa-regular fa-heart"></i>
                     <i class="fa-solid  fa-cart-shopping" id="cart"></i>
                     <i class="fa-regular fa-user"></i>
+                    <i id="addproduct-btn" class="fa-solid  fa-plus"></i>
             </span>
             </div>
+
+            <!-- add product modal -->
+            <div class="modal" id="modal">
+                <span class="close"> &times;</span>
+                <div class="addproduct">
+                    <h2>Add Products</h2>
+                    <div class="form">
+                        <div class="form-grp">
+                            <label for="title">Title <sup style="color: red;">*</sup></label>
+                                <input type="text" name="" class="product-title" placeholder="title">
+                                <p id="error-title" style="padding: 0; margin: 0; color: red;"></p>
+                        </div>
+                        <div class="form-grp">
+                            <label for="title">Price<sup style="color: red;">*</sup></label>
+                                <input type="number" min="1" name="" class="product-price" placeholder="price">
+                                <p id="error-price" style="margin: 0; padding: 0; color: red;"></p>
+                        </div>
+                        <div class="form-grp">
+                            <label for="title">old-Price<sup style="color: red;">*</sup></label>
+                                <input type="number" name="" class="product-oldprice" placeholder="oldPrice">
+                                <p id="error-oldprice" style="padding: 0; margin: 0; color: red;"></p>
+                        </div>
+                        <div class="form-grp">
+                            <label for="Img-url">Product Image<sup style="color: red;">*</sup></label>
+                                <input type="text" name="" class="product-img" placeholder="Product Image">
+                                <p id="error-img" style="margin: 0; padding: 0; color: red;"></p>
+                        </div>
+                        <div class="form-grp">
+                            <label for="title">Description <sup style="color: red;">*</sup></label>
+                                <textarea name="desc" id="desc" class="product-desc" cols="30" rows="10" required></textarea>
+                                <p id="error-desc"  style="margin: 0; padding: 0; color: red;"></p>
+                        </div>
+                        <button class="btn" id="add_productBtn">Submit</button>
+                    </div>
+                </div>
+            </div>
+            
+        
+            
+
         </header>
 
         <main>
