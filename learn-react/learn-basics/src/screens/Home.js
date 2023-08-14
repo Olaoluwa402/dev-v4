@@ -6,7 +6,6 @@ import Footer from "../components/Footer/Footer";
 const HomeScreen = () => {
   return (
     <div>
-      Home screen
       {/* navigation */}
       <Navigation />
       {/* hero */}
