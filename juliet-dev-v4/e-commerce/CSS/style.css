@@ -409,9 +409,16 @@ a button:hover{
   margin: 20px 0;
   position: relative;
   border: none;
+  overflow: hidden;
+  
 }
 .pics > img {
-  margin: auto;
+  /* margin: auto; */
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  max-height: 215px;
+  mix-blend-mode: darken;
 }
 
 .cart {
@@ -425,7 +432,7 @@ a button:hover{
   align-items: center;
   gap: 10px;
   border-radius: 0 0 5px 5px;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   width: 100%;
 }
@@ -518,12 +525,14 @@ a button:hover{
 
 /* section 2 */
 
-.section2 {
+#section2 {
   display: flex;
   justify-content: center;
   align-content: center;
   gap: 25px;
 }
+
+
 
 .fa-star {
   color: #ffad33;

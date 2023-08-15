@@ -16,7 +16,7 @@ if (document.readyState == "loading") {
 
 
 function ready(){
-    // displayProducts();   //to display added product
+    displayProducts();   //to display added product
 
   const openProductBtn = document.getElementById("myBtnn");
   openProductBtn.addEventListener("click",() => openModal(0));
@@ -140,16 +140,16 @@ function addProductHandler() {
     document.getElementById("section2").innerHTML = "";
     //get products from storage
     const products = getItemsStore("products");
-    console.log(products);
+    console.log(12, products);
     products.forEach((p) => {
-      const wishlistbox = document.createElement("div");
-      wishlistbox.className = "product";
+      const productbox = document.createElement("div");
+      productbox.className = "product";
 
 
       const content = `
-      <div class="product laptop">
+ 
       <div class="pics">
-        <img src="${p.imgeUrl} />
+        <img src="${p.imgeUrl}" />
         <div class="cart">
           <img src="./e-images/white-cart.svg" alt="" />
           <span>Add To Cart</span>
@@ -174,14 +174,13 @@ function addProductHandler() {
         <i class="fa-solid fa-star"></i>
         <i class="fa-solid fa-star"></i>
         <span>(65)</span>
-      </div>
-    </div>`;
+      </div>`;
   
   
-      wishlistbox.innerHTML = content;
+    productbox.innerHTML = content;
   
-      const justtop = document.getElementById("product");
-      justtop.appendChild(wishlistbox);
+      const section2 = document.getElementById("section2");
+      section2.appendChild(productbox);
     });
   }
   
