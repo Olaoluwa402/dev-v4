@@ -24,7 +24,7 @@ function ready() {
 }
 
 function cartHandler() {
-  console.log(cartHandler);
+  //console.log(cartHandler);
 
   // get all cart items
   const carts = getItemsStore("carts");
@@ -39,7 +39,9 @@ function cartHandler() {
   openModal(1);
 }
 
-function displayCartItems(carts) {
+export function displayCartItems(carts) {
+  document.getElementById("cartBody").innerHTML = "";
+  //tbody.appendChild(cartElemRow);
   carts.forEach((product) => {
     const cartElemRow = document.createElement("tr");
     const content = `
@@ -49,11 +51,11 @@ function displayCartItems(carts) {
               width="54px"
               height="54px"
             />
-            <p>${product.title}</p>
+            <p class="cart-title">${product.title}</p>
           </td>
           <td>$${product.price}</td>
           <td>
-            <input type="number" value=${product.qty} min="01" max="100" />
+            <input  type="number" value=${product.qty} min="01" max="100" class="updateQty"/>
           </td>
           <td>$${product.subtotal}</td>`;
 
@@ -64,7 +66,7 @@ function displayCartItems(carts) {
   });
 }
 
-function displayCartTotalDetail() {
+export function displayCartTotalDetail() {
   const carts = getItemsStore("carts");
   const subTotal = carts
     .map((p) => p.price * p.qty)
