@@ -3,9 +3,8 @@ import React from "react";
 import styles from "./Navigation.module.css";
 
 const Navigation = () => {
-  const style = { textDecoration: "none" };
   return (
-    <nav style={style} className={`${styles.container} container`}>
+    <nav className={`${styles.container} container`}>
       <a href="/">LOGO</a>
       <ul>
         <li>
