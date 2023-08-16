@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;0,6..96,900;1,6..96,600&family=Source+Sans+3:wght@300;400;500;600;700;900&display=swap");
 :root {
   --white100: #fff;
   --white90: #f3f3f3;
   --brown100: brown;
-  --font-stack: "Roboto", sans-serif;
+  --black90: #333333;
+  --font-stack_1: "Roboto", sans-serif;
+  --font-stack_2: "Bodoni Moda", serif;
 }
 
 * {
@@ -15,7 +17,17 @@
 
 body {
   font-family: var(--font-stack);
-  font-size: 12px;
+  font-size: calc(7px + 2vw);
+  color: var(--black90);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-stack_2);
 }
 
 img {
