@@ -2,6 +2,7 @@ import React from "react";
 
 import styles from "./Hero.module.css";
 import Button from "../Button/Button";
+import { ButtonStyled } from "../ButtonStyled";
 
 const Hero = () => {
   return (
@@ -18,8 +19,26 @@ const Hero = () => {
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
           repellat ratione quas, laboriosam architecto tempora.
         </p>
+        <ButtonStyled color="red" bgColor="green">
+          our list
+        </ButtonStyled>
+
+        <ButtonStyled color="white" bgColor="purple">
+          our list
+        </ButtonStyled>
+
         {/* button component */}
-        <Button />
+        <Button
+          text="our services"
+          color="var(--black90)"
+          bgColor="var(--white90)"
+        />
+
+        <Button
+          text="our jobs"
+          color="var(--white90)"
+          bgColor="var(--brown100)"
+        />
       </div>
     </div>
   );
