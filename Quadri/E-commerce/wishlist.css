@@ -154,18 +154,25 @@ main{
     margin-right: 10px;
 }
 
-.display-items{
+.display-items, .display-item{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+
+    
 }
 
-.display{
-    width: 300px;
+.display, .displayz{
+    width: 260px;
     height: 220px;
     background-color: #f5f5f5;
     margin: 16px;
+    
 }
+
+.displayz{
+  margin-top: 200px;
+}
+
 
 #per{
     display: flex;
@@ -190,6 +197,9 @@ main{
 
 .display>img{
     margin: 0 20%;
+}
+.displayz>img{
+  margin: 0 20%;
 }
 
 #gucci{

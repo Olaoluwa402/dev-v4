@@ -1,4 +1,6 @@
 
+
+displayProduct()
 // getting the button that opens the Modal
     let btn = document.getElementById('cart');
 btn.addEventListener('click',()=>openModal(1))
@@ -96,6 +98,9 @@ const productExist = products.find((p)=> p.title == product.title)
     saveItemToStore('products',newProduct)
 alertMsg('product added successfully')
 
+clearProductsField()
+
+closeModal(0)
 
 displayProduct()
 
@@ -189,39 +194,56 @@ class Product{
 
 
 function displayProduct(){
-    document.getElementsByClassName('display-items').innerHTML = "";
+    document.getElementsByClassName('display-item').innerHTML = "";
     const product = getItemsStore('products')
     product.forEach((p)=>{
         const display = document.createElement('div');
-        display.className ='display';
+        display.className ='displayz';
         const content = `
-    <img src="${p.productImg} width="50px">
-    <span id="gucci">
-    <i class="fa-solid fa-cart-shopping"></i>
-    <p>Add to Cart</p>
-</span>
-<span id="description">
-    <p>${p.title}</p>
-    <p style="color: #db4444;">$${p.price} <span>${p.oldPrice ? `$${p.oldPrice}` : ""}</span></p>
-    </span>
-    <span id="star">
-        <img src="./E-Assets/yellowstar.png" alt="">
-        <img src="./E-Assets/yellowstar.png" alt="" >
-        <img src="./E-Assets/yellowstar.png" alt="">
-        <img src="./E-Assets/yellowstar.png" alt="">
-        <img src="./E-Assets/yellowstar.png" alt="">
-            <p>(65)</p>
-         </span>
-</div>`;
+               <span id="per">
+                   <p>-35%</p>
+                   <img src="./E-Assets/Quick View.png" alt="" width="20px" height="20px">
+               </span>
+               <img src=${p.productImg} alt="" width="150px">
+               <span id="gucci">
+               <i class="fa-solid fa-cart-shopping"></i>
+               <p>Add to Cart</p>
+           </span>
+           <span id="description">
+               <p>${p.title}</p>
+               <p style="color: #db4444;">$${p.price} <span>$${p.oldPrice}</span></p>
+               </span>
+               <span id="star">
+                   <img src="./E-Assets/yellowstar.png" alt="">
+                   <img src="./E-Assets/yellowstar.png" alt="" >
+                   <img src="./E-Assets/yellowstar.png" alt="">
+                   <img src="./E-Assets/yellowstar.png" alt="">
+                   <img src="./E-Assets/yellowstar.png" alt="">
+                       <p>(65)</p>
+                    </span>
+
+    
+        `
+        
 
         display.innerHTML = content;
 
-        const displayItems = document.querySelector('.display-items')
+        const displayItems = document.querySelector('.display-item')
 
         displayItems.appendChild(display)
 
     })
 }
+
+
+function clearProductsField(){
+    document.querySelector('.product-title').value = "";
+    document.querySelector('.product-price').value= "";
+    document.querySelector('.product-oldprice').value = "";
+     document.querySelector('.product-img').value = "";
+     document.querySelector('.product-desc').value = "";
+
+};
 
 
 
