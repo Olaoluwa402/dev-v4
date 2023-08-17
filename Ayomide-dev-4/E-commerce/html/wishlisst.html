@@ -10,13 +10,19 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      referrerpolicy="no-referrer"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="wishlist.css" />
+    <link rel="stylesheet" href="../css/wishlist.css" />
+    <link rel="stylesheet" href="../css/product.css" />
     <title>Edimoya</title>
   </head>
   <body>
@@ -42,7 +48,7 @@
         <li>About</li>
         <li>Sign Up</li>
       </ul>
-      <i class="fa-solid fa-bars" id="hamburger-icon"></i>
+      <!-- <i class="fa-solid fa-bars" id="hamburger-icon"></i> -->
       <div class="search-container">
         <input
           id="searchid"
@@ -50,22 +56,108 @@
           placeholder="What are you looking for?"
         />
         <div class="fav">
-          <i class="fa-regular fa-heart"></i>
-          <ion-icon
-            name="cart-outline"
-            style="font-size: 20px"
-            class="cart"
-          ></ion-icon>
+          <div id="heart" class="relative">
+            <img src="../wishlist-asset/Wishlist.png" />
+
+            <div
+              class="absolute top-0 right-0 w-4 h-4 rounded-full bg-red-600 justify-center items-center flex flex-row text-white text-xs"
+            >
+              <span class="favourite-count">1</span>
+            </div>
+          </div>
+          <div id="carty" class="relative">
+            <div class="piccart"><img src="../wishlist-asset/Cart1 with buy.png" /></div>
+            <div
+              class="absolute top-0 right-0 w-4 h-4 rounded-full bg-red-600 justify-center items-center flex flex-row text-white text-xs"
+            >
+              <span class="favourite-count">1</span>
+            </div>
+          </div>
           <img
-            src="../E-commerce/wishlist-asset/user.png"
+            src="../wishlist-asset/user.png"
             height="20px"
             alt="user"
           />
+          <div class="add-product-btn">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </div>
         </div>
       </div>
+      <!-- <div id="menubar">
+        <a href="#"><img src="./Exclusive Assets/menu.png" alt="menu bar" /></a>
+      </div> -->
       <!-- <div class="cart"> -->
     </navbar>
     <!-- end of navbar -->
+
+    <!-- add  product-->
+    <div id="myModal" class="modal-container">
+      <p class="close">&times;</p>
+
+      <div class="add-product">
+        <h2>Add product</h2>
+        <div class="form">
+          <div class="form-group">
+            <p style="color: brown; margin: 0; padding: 0" id="error-title"></p>
+            <label for="title">Title<sup style="color: brown">*</sup></label>
+            <input type="text" placeholder="title" class="product-title" />
+          </div>
+          <div class="form-group">
+            <p style="color: brown; margin: 0; padding: 0" id="error-price"></p>
+            <label for="price">Price<sup style="color: brown">*</sup></label>
+            <input type="number" min="1" class="product-price" />
+          </div>
+          <div class="form-group">
+            <p
+              style="color: brown; margin: 0; padding: 0"
+              id="error-old-price"
+            ></p>
+            <label for="price-old_price"
+              >old price<sup style="color: brown">*</sup></label
+            >
+            <input type="number" class="product-old_price" />
+          </div>
+
+          <div class="form-group">
+            <p
+              style="color: brown; margin: 0; padding: 0"
+              id="error-imageurl"
+            ></p>
+            <label for="image-url"
+              >product image<sup style="color: brown">*</sup></label
+            >
+            <input type="file" placeholder="image url" class="product-file" />
+          </div>
+          <div class="form-group">
+            <p
+              style="color: brown; margin: 0; padding: 0"
+              id="error-imageurl"
+            ></p>
+            <label for="image-url"
+              >product image<sup style="color: brown">*</sup></label
+            >
+            <input type="text" placeholder="image url" class="product-img" />
+          </div>
+          <div class="form-group">
+            <p style="color: brown; margin: 0; padding: 0" id="error-desc"></p>
+            <label for="desc"
+              >Description<sup style="color: brown">*</sup></label
+            >
+            <textarea
+              name="desc"
+              id="desc"
+              cols="30"
+              rows="10"
+              class="product-desc"
+            ></textarea>
+          </div>
+
+          <button id="add-product-btn" class="btn">Submit</button>
+        </div>
+      </div>
+    </div>
+    <!-- end of add product modal -->
+
     <!-- main section -->
     <section>
       <div class="wish-list">
@@ -77,10 +169,10 @@
           <div class="tab-main">
             <div class="tab1">
               <p style="background-color: #db4444">-35%</p>
-              <i class="fa-regular fa-trash-can"></i>
+              <div class="trash"><i class="fa-regular fa-trash-can"></i></div>
             </div>
             <img
-              src="../E-commerce/wishlist-asset/guccibag.png"
+              src="../wishlist-asset/guccibag.png"
               class="imgclass"
               alt=""
             />
@@ -100,10 +192,12 @@
           <div class="tab-main">
             <div class="tab1">
               <!-- <p>-35%</p> -->
+             <div class="trashy">
               <i class="fa-regular fa-trash-can"></i>
             </div>
+            </div>
             <img
-              src="../E-commerce/wishlist-asset/radio.png"
+              src="../wishlist-asset/radio.png"
               class="imgclass"
               alt="radiopic"
             />
@@ -113,17 +207,21 @@
           </div>
 
           <div class="nameprice">
-            RGB liquid CPU Cooler <br /><span>$1960</span>
+            RGB liquid CPU Cooler <br /><span style="color: #db4444"
+              >$1960</span
+            >
           </div>
         </div>
         <div class="wishlist-tab1">
           <div class="tab-main">
             <div class="tab1">
               <!-- <p style="background-color: red;">-35%</p> -->
+              <div class="trashy">
               <i class="fa-regular fa-trash-can"></i>
             </div>
+            </div>
             <img
-              src="../E-commerce/wishlist-asset/black-keypad.png"
+              src="../wishlist-asset/black-keypad.png"
               class="imgclass"
               alt=""
             />
@@ -133,17 +231,21 @@
           </div>
 
           <div class="nameprice">
-            GP11 Shooter USB Gamepad <br /><span>$550</span>
+            GP11 Shooter USB Gamepad <br /><span style="color: #db4444"
+              >$550</span
+            >
           </div>
         </div>
         <div class="wishlist-tab1">
           <div class="tab-main">
             <div class="tab1">
               <!-- <p>-35%</p> -->
+             <div class="trashy">
               <i class="fa-regular fa-trash-can"></i>
             </div>
+            </div>
             <img
-              src="../E-commerce/wishlist-asset/jacket.png"
+              src="../wishlist-asset/jacket.png"
               class="imgclass"
               alt=""
             />
@@ -153,17 +255,17 @@
           </div>
 
           <div class="nameprice">
-            Quilted Satin Jacket <br /><span>$750</span>
+            Quilted Satin Jacket <br /><span style="color: #db4444">$750</span>
           </div>
         </div>
       </div>
 
       <div class="section-2">
         <div class="wish-list">
-         <div id="list-2">
-             <button id="btn"></button>
-          <h4>Just For You</h4>
-         </div>
+          <div id="list-2">
+            <button id="btn"></button>
+            <h4>Just For You</h4>
+          </div>
           <button class="matb">See All</button>
         </div>
         <div class="wishsection">
@@ -175,7 +277,7 @@
                   <ion-icon name="eye-outline"></ion-icon>
                 </div>
                 <img
-                  src="../E-commerce/wishlist-asset/laptop.png"
+                  src="../wishlist-asset/laptop.png"
                   class="imgclass"
                   alt="laptop"
                 />
@@ -207,7 +309,7 @@
                 <ion-icon name="eye-outline" class="eyeicon"></ion-icon>
               </div>
               <img
-                src="../E-commerce/wishlist-asset/television.png"
+                src="../wishlist-asset/television.png"
                 class="imgclass"
                 alt="television"
               />
@@ -216,7 +318,11 @@
               </button>
             </div>
 
-            <div class="nameprice">IPS LCD Gaming Monitor <br />$1160</div>
+            <div class="nameprice">
+              IPS LCD Gaming Monitor <br /><span style="color: #db4444"
+                >$1160</span
+              >
+            </div>
             <div class="star">
               <i class="fa-solid fa-star" style="color: #ffd200"></i>
               <i class="fa-solid fa-star" style="color: #ffd200"></i>
@@ -233,7 +339,7 @@
                 <ion-icon name="eye-outline"></ion-icon>
               </div>
               <img
-                src="../E-commerce/wishlist-asset/red-keypad.png"
+                src="../wishlist-asset/red-keypad.png"
                 class="imgclass"
                 alt="red-keypad"
               />
@@ -241,7 +347,9 @@
                 <ion-icon name="cart-outline"></ion-icon> Add to cart
               </button>
             </div>
-            <div class="nameprice">HAVIT HV-G92 Gamepad<br />$560</div>
+            <div class="nameprice">
+              HAVIT HV-G92 Gamepad<br /><span style="color: #db4444">$560</span>
+            </div>
             <div class="star">
               <i class="fa-solid fa-star" style="color: #ffd200"></i>
               <i class="fa-solid fa-star" style="color: #ffd200"></i>
@@ -258,7 +366,7 @@
                 <ion-icon name="eye-outline"></ion-icon>
               </div>
               <img
-                src="../E-commerce/wishlist-asset/keyboard.png"
+                src="../wishlist-asset/keyboard.png"
                 class="imgclass"
                 alt="keyboard"
               />
@@ -267,7 +375,11 @@
               </button>
             </div>
 
-            <div class="nameprice">AK-900 Wired Keyboard <br />$200</div>
+            <div class="nameprice">
+              AK-900 Wired Keyboard <br /><span style="color: #db4444"
+                >$200</span
+              >
+            </div>
             <div class="star">
               <i class="fa-solid fa-star" style="color: #ffd200"></i>
               <i class="fa-solid fa-star" style="color: #ffd200"></i>
@@ -283,181 +395,158 @@
     <!-- end of main -->
     <!-- footer -->
     <footer>
-        <div class="footer-flexed">
-          <div class="foot-flexed">
-            <h3>Exclusive</h3>
-            <ul>
-              <li><a href="#">Subscribe</a></li>
-              <li><a href="#">Get 10% off your first order</a></li>
-            </ul>
-            <div class="nav-right">
-              <div class="email-container">
-                <input
-                  type="email"
-                  class="search-buttons"
-                  placeholder="Enter Your Email?"
-                />
-                <button class="cursur-button">
-                  <img src="../E-commerce/wishlist-asset/icon-send.png" alt="" />
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="foot-flexed2">
-            <h4>Support</h4>
-            <p>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p>
-            <a href="#">exclusive@gmail.com</a>
-            <p>+88015-88888-9999</p>
-          </div>
-          <div class="foot-flexed3">
-            <h4>Account</h4>
-            <ul>
-              <li><a href="#">My Account</a></li>
-              <li><a href="#">Login / Register</a></li>
-              <li><a href="#">Cart</a></li>
-              <li><a href="#">Wishlist</a></li>
-              <li><a href="#">Shop</a></li>
-            </ul>
-          </div>
-          <div class="foot-flexed3 foot-flexed4">
-            <h4>Quick link</h4>
-            <ul>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms Of Use</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-          <div class="foot-flexed5">
-            <h3>Download App</h3>
-            <span>Save $3 with App New User Only</span>
-            <div class="inner-flexed">
-              <div class="barcode">
-                <img src="../E-commerce/wishlist-asset/Qr Code.png" alt="">
-              </div>
-              <div class="app-download">
-              <a href="#"><img src="../E-commerce/wishlist-asset/GooglePlay.png" alt=""></a>
-              <a href="#"><img src="../E-commerce/wishlist-asset/AppStore.png" alt=""></a>
-              </div>
-            </div>
-            <div class="social-handles">
-             <i class="fa-brands fa-facebook-f" style="color: white;"></i>
-              <i class="fa-brands fa-twitter" style="color: white;"></i>
-             <i class="fa-brands fa-instagram" style="color: white;"></i>
-             <i class="fa-brands fa-linkedin" style="color: white;"></i>
+      <div class="footer-flexed">
+        <div class="foot-flexed">
+          <h3>Exclusive</h3>
+          <ul>
+            <li><a href="#">Subscribe</a></li>
+            <li><a href="#">Get 10% off your first order</a></li>
+          </ul>
+          <div class="nav-right">
+            <div class="email-container">
+              <input
+                type="email"
+                class="search-buttons"
+                placeholder="Enter Your Email?"
+              />
+              <button class="cursur-button">
+                <img src="../E-commerce/wishlist-asset/icon-send.png" alt="" />
+              </button>
             </div>
           </div>
         </div>
-        <div class="f-last">
-          <img src="../E-commerce/wishlist-asset/icon-copyright.png" alt="">
-          <p>Copyright Rimel 2022. All right reserved</p>
+        <div class="foot-flexed2">
+          <h4>Support</h4>
+          <p>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p>
+          <a href="#">exclusive@gmail.com</a>
+          <p>+88015-88888-9999</p>
         </div>
-      </footer>
+        <div class="foot-flexed3">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Login / Register</a></li>
+            <li><a href="#">Cart</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Shop</a></li>
+          </ul>
+        </div>
+        <div class="foot-flexed3 foot-flexed4">
+          <h4>Quick link</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms Of Use</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="foot-flexed5">
+          <h3>Download App</h3>
+          <span>Save $3 with App New User Only</span>
+          <div class="inner-flexed">
+            <div class="barcode">
+              <img src="../E-commerce/wishlist-asset/Qr Code.png" alt="" />
+            </div>
+            <div class="app-download">
+              <a href="#"
+                ><img src="../E-commerce/wishlist-asset/GooglePlay.png" alt=""
+              /></a>
+              <a href="#"
+                ><img src="../E-commerce/wishlist-asset/AppStore.png" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="social-handles">
+            <i class="fa-brands fa-facebook-f" style="color: white"></i>
+            <i class="fa-brands fa-twitter" style="color: white"></i>
+            <i class="fa-brands fa-instagram" style="color: white"></i>
+            <i class="fa-brands fa-linkedin" style="color: white"></i>
+          </div>
+        </div>
+      </div>
+      <div class="f-last">
+        <img src="../E-commerce/wishlist-asset/icon-copyright.png" alt="" />
+        <p>Copyright Rimel 2022. All right reserved</p>
+      </div>
+    </footer>
     <!-- end of footer -->
 
     <!-- modal start -->
-    <div id="myModal" class="modality">
+    <div id="myModal" class="modal-container">
       <!-- <div class="modal-table"> -->
       <span class="close">&times;</span>
-      <!-- <div class="modal">
-          <p>
-            Summer Sale for All swim suits and free express Delivery- OFF 50%!
-            <a href="#" style="color: white">Shop Now</a>
-          </p>
-          <select name="" id="modal-select">
-            <option value="">English</option>
-            <option value="">Mandarin</option>
-            <option value="">French</option>
-          </select>
-        </div> -->
-      <!-- <navb>
-          <b>Exclusive</b>
-          <ul class="navhomee">
-            <li>Home</li>
-            <li>Contact</li>
-            <li>About</li>
-            <li>Sign Up</li>
-          </ul>
-          <i class="fa-solid fa-bars" id="hamburger-icon"></i>
-          <div class="search-containe">
-            <input
-              id="searchd"
-              type="text"
-              placeholder="What are you looking for?"
-            />
-            <div class="favi">
-              <i class="fa-regular fa-heart"></i>
-              <ion-icon
-                name="cart-outline"
-                style="font-size: 20px"
-                class="cat"
-              ></ion-icon>
-              <img
-                src="../E-commerce/wishlist-asset/user.png"
-                height="20px"
-                alt="user"
-              />
-            </div>
-          </div>
-        </navb> -->
-      <div class="home-cart"><span style="opacity: 0.5">Home /</span> Cart</div>
 
+      <!-- first modal -->
+      
+<!-- end of first modal -->
+      
+<!-- second modal -->
+    
+      <div class="home-cart"><span style="opacity: 0.5">Home /</span> Cart</div>
       <table>
+        <thead>
         <tr>
           <th>Product</th>
           <th>Price</th>
           <th>Quantity</th>
           <th>Subtotal</th>
+          <th>Remove</th>
         </tr>
+        </thead>
+        <tbody id="cartbody">
         <tr>
           <td>img</td>
           <td>$650</td>
-          <td>button</td>
+          <td><input type="number" value="1" min="1" max="100" class="updateQty"></input></td>
           <td>$650</td>
         </tr>
         <tr>
           <td>img</td>
           <td>$550</td>
-          <td>button</td>
+          <td><input type="number" value="1" min="1" max="100" class="updateQty"></input></td>
           <td>$1100</td>
+          <td><button  class="btndelete" style="border: 1px solid; border-radius: 5px; background: rgb(43,43, 70); width: 100px; height: 30px; color: white;">Delete</button></td>
         </tr>
+        </tbody>
       </table>
       <div class="updatecar">
-        <button>Return To Shop</button>
-        <button>Update To Cart</button>
+        <button class="bt1">Return To Shop</button>
+        <button class="bt2">Update To Cart</button>
       </div>
       <div class="last-column">
         <div class="coupon">
-        <input type="text" placeholder="Coupon Code"/>
+          <input type="text" placeholder="Coupon Code" />
           <a href="#"><button>Apply Coupon</button></a>
         </div>
         <div class="pay-id">
-          <p>Cart Table</p>
-          <table >
+          <h5>Cart Table</h5>
+          <div class="mytable">
             <p>Subtotal</p>
             <p>$1750</p>
-          </table>
+          </div>
           <hr />
           <div class="subtottal-shipping">
             <p>shipping</p>
             <p>Free</p>
           </div>
           <hr />
-         <div class="subtotal-total">
+          <div class="subtotal-total">
             <p>Total</p>
             <p>$1750</p>
-         </div>
-         <a href="#"><button class="lastbtn">Pocess to checkout</button></a>
+          </div>
+          <a href="#"><button class="lastbtn">Pocess to checkout</button></a>
         </div>
       </div>
-      <!-- </div> -->
-      
+    
     </div>
-    <!-- end of modal -->
+    <!-- end of second modal -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
-    <script src="../E-commerce/commerce.js"></script>
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/common.js"></script>
+    <script type="module" src="../js/commerce.js"></script>
+    <script type="module" src="../js/cart.js"></script>
   </body>
 </html>

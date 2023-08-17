@@ -73,11 +73,16 @@ select:focus{
   display: flex;
   gap: 10px;
 }
+
+/* #heart fa-heart {
+  
+} */
 .fav {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
+
 }
 
 .search-container input[type="text"] {
@@ -118,15 +123,32 @@ navbar {
 }
 .tab1 {
   display: flex;
-
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
+}
+
+.trashy {
+  /* position: absolute; */
+  background-color: #f1f1f1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 80%;
+}
+.trash {
+  /* position: absolute; */
+  background-color: blueviolet;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .fa-trash-can {
   width: 100%;
   height: 50%;
-  text-align: right;
+  text-align:center;
+  margin-top: 15px;
 }
 
 #btn{
@@ -430,7 +452,7 @@ footer {
 /* footer end */
 
 
-
+ 
 #myModal {
   position: fixed;
   width: 100%;
@@ -575,8 +597,46 @@ tr {
   border-bottom: 3px solid #ddd;
 }
 
-.pay-id p {
-  margin-left: 15px;
+
+.pay-id {
+  border: 1px solid gray;
+  width: 300px;
+  padding:30px;
+  margin-top: 5%;
+}
+
+
+.subtottal-shipping{
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.subtotal-total{
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.subtotal-total > a{
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.pay-id h5 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.mytable {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mytable p {
+  font-size: 17px;
+  font-weight: 300;
+  margin:10px 0;
 }
 
 .updatecar {
@@ -585,15 +645,31 @@ tr {
   align-items: center;
   margin-top: 20px;
 }
+.bt1{
+ background-color: white;
+ height: 60px;
+ width:200px;
+ padding:5px;
+}
+.bt2{
+  background-color: white;
+  height: 60px;
+  padding: 5px;
+  width:200px;
+}
 .last-column {
   display: flex;
   justify-content: space-between;
   
 }
 
+.coupon {
+ margin-top: 5%;
+}
+
 .coupon input{
-  width: 280px;
-  height: 60px;
+  width: 300px;
+  height: 24px;
   font-size: 16px;
   padding: 20px;
   font-weight: 300;
@@ -617,9 +693,15 @@ a button:hover {
 }
 
 .lastbtn {
-  justify-content: space-around;
-  background-color: aqua;
-  margin-right: 30%;
+  background-color: #db4444;
+  color: #f5f5f5;
+  border: none;
+  /* padding: 15px; */
+  margin-left: 40px;
+  margin-top: 5px;
+  width: 70%;
+  height: 30px;
+  
 }
 
 
