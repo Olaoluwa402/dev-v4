@@ -2,44 +2,7 @@ import React from "react";
 import Title from "../Title/Title";
 import styles from "./Blog.module.css";
 
-const Blog = () => {
-  const blogData = [
-    {
-      id: Math.floor(Math.random() * 1000),
-      title: "blog title one",
-      desc: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, explicabo?",
-    },
-    {
-      id: Math.floor(Math.random() * 1000),
-      title: "blog title two",
-      desc: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, explicabo?",
-    },
-    {
-      id: Math.floor(Math.random() * 1000),
-      title: "blog title three",
-      desc: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, explicabo?",
-    },
-    {
-      id: Math.floor(Math.random() * 1000),
-      title: "blog title three",
-      desc: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, explicabo?",
-    },
-    {
-      id: Math.floor(Math.random() * 1000),
-      title: "blog title three",
-      desc: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, explicabo?",
-    },
-    {
-      id: Math.floor(Math.random() * 1000),
-      title: "blog title three",
-      desc: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, explicabo?",
-    },
-    {
-      id: Math.floor(Math.random() * 1000),
-      title: "blog title three",
-      desc: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, explicabo?",
-    },
-  ];
+const Blog = ({ blogData }) => {
   return (
     <div className={`${styles.container} container`}>
       {/* header title */}
@@ -47,7 +10,7 @@ const Blog = () => {
       <div className={styles.blog__articles}>
         {blogData && blogData.length > 0 ? (
           blogData.map((item) => (
-            <div className={styles.blog__article}>
+            <div key={item.id} className={styles.blog__article}>
               <h4>{item.title}</h4>
               <p>{item.desc}</p>
             </div>
