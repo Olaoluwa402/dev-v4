@@ -7,6 +7,9 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./wishlist.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/product-tab.css" />
+    <link rel="stylesheet" href="../css/modalcontainer.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,77 +28,6 @@
   </head>
 
   <body>
-    <!-- modal start -->
-    <div id="modal-container">
-      <p id="modalclose">&times;</p>
-
-      <div id="page-dir">
-        <p>Home</p>
-        <p>/</p>
-        <p>Cart</p>
-      </div>
-      <table>
-        <tr>
-          <td>Product</td>
-          <td>Price</td>
-          <td>Quantity</td>
-          <td>Subtotal</td>
-        </tr>
-        <tr>
-          <td class="product-data">
-            <img
-              src="../Assets/wishlist-page-assets/wishlist-television.png"
-              alt=""
-            />LCD Monitor
-          </td>
-          <td>$650</td>
-          <td><input type="number" value="01" min="01" max="100" /></td>
-          <td>$650</td>
-        </tr>
-        <tr>
-          <td class="product-data">
-            <img
-              src="../Assets/wishlist-page-assets/wishlist-red-gamepad.png"
-              alt=""
-            />H1 Gamepad
-          </td>
-          <td>$550</td>
-          <td><input type="number" value="01" min="01" max="100" /></td>
-          <td>$1100</td>
-        </tr>
-      </table>
-
-      <div id="cart-list-action-button">
-        <button><a href="">Return To Shop</a></button>
-        <button><a href="">Update Cart</a></button>
-      </div>
-
-      <div id="checkout-foot">
-        <div id="coupon-code-entry">
-          <input type="text" placeholder="Coupon Code" />
-          <button type="submit">Apply Coupon</button>
-        </div>
-
-        <ul id="cart-total">
-          <p>Cart Total</p>
-          <li>
-            <p>Subtotal:</p>
-            <p>$1750</p>
-          </li>
-          <li>
-            <p>Shipping:</p>
-            <p>Free</p>
-          </li>
-          <li>
-            <p>Total:</p>
-            <p>$1750</p>
-          </li>
-          <button id="checkout-btn">Procees to checkout</button>
-        </ul>
-      </div>
-    </div>
-    <!-- modal end -->
-
     <div id="top-ad">
       <p>
         Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
@@ -110,7 +42,7 @@
 
     <!-- navbar start -->
     <nav>
-      <img src="../Assets/lodo black.png" alt="" />
+      <img src="../Assets/lodo black.png" alt="" id="navlogo" />
 
       <i
         class="fa-solid fa-bars"
@@ -132,8 +64,9 @@
           <i class="fa-solid fa-magnifying-glass" id="nav-search-icon"></i>
         </div>
 
-        <i class="fa-regular fa-heart" style="color: #000000"></i>
-        <ion-icon name="cart-outline" class="cart" id="nav-cart-id"></ion-icon>
+        <i class="fa-regular fa-heart"></i>
+        <ion-icon name="cart-outline" class="cart" id="navCartId"></ion-icon>
+        <img src="../Assets/user.png" alt="" id="user-icon" />
       </div>
     </nav>
     <!-- navbar end -->
@@ -155,12 +88,13 @@
         </div>
 
         <div id="mobilenav-icons">
-          <i class="fa-regular fa-heart" style="color: #000000"></i>
+          <i class="fa-regular fa-heart"></i>
           <ion-icon
             name="cart-outline"
             class="cart"
-            id="nav-cart-id-mobile"
+            id="navCartIdMobile"
           ></ion-icon>
+          <img src="../Assets/user.png" alt="" id="user-icon-mobile" />
         </div>
       </div>
     </div>
@@ -172,8 +106,8 @@
         <h5>Wishlist (4)</h5>
         <button>Move All To Bag</button>
       </div>
-      <div id="wishlist-tabs">
-        <div class="wishlist-tab wltab1">
+      <div id="product-tabs">
+        <div class="product-tab">
           <div class="tab-main">
             <div>
               <i class="fa-regular fa-trash-can" style="color: #000000"></i>
@@ -196,7 +130,7 @@
           </div>
         </div>
 
-        <div class="wishlist-tab wltab2">
+        <div class="product-tab">
           <div class="tab-main">
             <div>
               <i class="fa-regular fa-trash-can" style="color: #000000"></i>
@@ -218,7 +152,7 @@
           </div>
         </div>
 
-        <div class="wishlist-tab wltab3">
+        <div class="product-tab">
           <div class="tab-main">
             <div>
               <i class="fa-regular fa-trash-can" style="color: #000000"></i>
@@ -240,7 +174,7 @@
           </div>
         </div>
 
-        <div class="wishlist-tab wltab4">
+        <div class="product-tab">
           <div class="tab-main">
             <div>
               <i class="fa-regular fa-trash-can" style="color: #000000"></i>
@@ -268,8 +202,8 @@
         <button>See All</button>
       </div>
 
-      <div id="suggestion-tabs">
-        <div class="suggestion-tab sttab1">
+      <div id="product-tabs">
+        <div class="product-tab">
           <div class="tab-main">
             <div>
               <i class="fa-regular fa-eye" style="color: #000000"></i>
@@ -299,7 +233,7 @@
           </div>
         </div>
 
-        <div class="suggestion-tab sttab2">
+        <div class="product-tab">
           <div class="tab-main">
             <div>
               <i class="fa-regular fa-eye" style="color: #000000"></i>
@@ -330,7 +264,7 @@
           </div>
         </div>
 
-        <div class="suggestion-tab sttab3">
+        <div class="product-tab">
           <div class="tab-main">
             <div>
               <i class="fa-regular fa-eye" style="color: #000000"></i>
@@ -361,7 +295,7 @@
           </div>
         </div>
 
-        <div class="suggestion-tab sttab4">
+        <div class="product-tab">
           <div class="tab-main">
             <div class="">
               <i class="fa-regular fa-eye" style="color: #000000"></i>
@@ -395,9 +329,9 @@
 
     <!-- footer start -->
     <footer>
+      <img src="../Assets/logo white.png" alt="" />
       <div id="footer-grid">
         <div>
-          <img src="../Assets/logo white.png" alt="" />
           <h5>Subscribe</h5>
           <p>Get 10% off your first order</p>
           <div>
@@ -467,6 +401,96 @@
       </p>
     </footer>
     <!-- footer end -->
+
+    <!-- ****************************************************************************************** -->
+    <!-- ****************************************************************************************** -->
+
+    <!-- modal for cart start -->
+    <div class="modal-container" id="cartContainer">
+      <div id="close-container">
+        <p class="modal-close" id="cartClose">&times;</p>
+      </div>
+
+      <div id="page-dir">
+        <p>Home</p>
+        <p>/</p>
+        <p>Cart</p>
+      </div>
+      <table>
+        <tr>
+          <td>Product</td>
+          <td>Price</td>
+          <td>Quantity</td>
+          <td>Subtotal</td>
+        </tr>
+        <tr>
+          <td class="product-data">
+            <img
+              src="../Assets/wishlist-page-assets/wishlist-television.png"
+              alt=""
+            />LCD Monitor
+          </td>
+          <td>$650</td>
+          <td><input type="number" value="01" min="01" max="100" /></td>
+          <td>$650</td>
+        </tr>
+        <tr>
+          <td class="product-data">
+            <img
+              src="../Assets/wishlist-page-assets/wishlist-red-gamepad.png"
+              alt=""
+            />H1 Gamepad
+          </td>
+          <td>$550</td>
+          <td><input type="number" value="01" min="01" max="100" /></td>
+          <td>$1100</td>
+        </tr>
+      </table>
+
+      <div id="cart-list-action-button">
+        <button><a href="">Return To Shop</a></button>
+        <button><a href="">Update Cart</a></button>
+      </div>
+
+      <div id="checkout-foot">
+        <div id="coupon-code-entry">
+          <input type="text" placeholder="Coupon Code" />
+          <button type="submit">Apply Coupon</button>
+        </div>
+
+        <ul id="cart-total">
+          <p>Cart Total</p>
+          <li>
+            <p>Subtotal:</p>
+            <p>$1750</p>
+          </li>
+          <li>
+            <p>Shipping:</p>
+            <p>Free</p>
+          </li>
+          <li>
+            <p>Total:</p>
+            <p>$1750</p>
+          </li>
+          <button id="checkout-btn">Procees to checkout</button>
+        </ul>
+      </div>
+    </div>
+    <!-- modal for cart end -->
+
+    <!-- modal for account start -->
+    <div class="modal-container" id="accountContainer">
+      <div id="close-container">
+        <p class="modal-close" id="accountClose">&times;</p>
+      </div>
+
+      <div id="page-dir">
+        <p>Home</p>
+        <p>/</p>
+        <p>Account</p>
+      </div>
+    </div>
+    <!-- modal for account end -->
 
     <script
       type="module"
