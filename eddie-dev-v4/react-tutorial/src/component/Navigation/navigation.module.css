@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+  }
+  
+  .container ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .container ul li {
+    margin-right: 20px;
+  }
+  
+  .container > a {
+    font-size: 3rem;
+  }
+  
+  .container a {
+    text-decoration: none;
+  }
+  
