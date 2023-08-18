@@ -39,6 +39,7 @@
 
       <nav>
         <div class="nav-left">
+          <!-- <img src="./e-images/xclusive.jpeg" alt=""> -->
           <h2>Exclusive</h2>
         </div>
         <div class="nav-middle">
@@ -61,11 +62,20 @@
             </button>
           </div>
         </div>
+        
         <div class="logos">
+         <div class="favourite">
           <img src="./e-images/Vector.svg" alt="" />
+          <div class="counter">
+            <span>1</span>
+          </div>
+         </div>
 
           <div class="application">
             <img src="./e-images/Cart1 with buy.svg" alt="" id="myBtn" />
+            <div class="counter">
+              <span class="cart-count">1</span>
+            </div>
           </div>
           <img src="./e-images/user.svg" alt="" />
         </div>
@@ -150,40 +160,44 @@
                   <li>Subtotal</li>
                 </ul>
               </div>
-              <div class="selected-items">
-                <div class="inner">
-                  <img src="./e-images/Monitor-Cart-Small.svg" alt="" />
-                  <div class="cancel">
-                    <img src="./e-images/icon-cancel.svg" alt="" id="cancel" />
+              <div id="cart_body">
+
+                <div class="selected-items">
+                  <div class="inner">
+                    <img src="./e-images/Monitor-Cart-Small.svg" alt="" />
+                    <div class="cancel">
+                      <img src="./e-images/icon-cancel.svg" alt="" id="cancel" />
+                    </div>
+                    <p>LCD Monitor</p>
                   </div>
-                  <p>LCD Monitor</p>
+                  <p>$650</p>
+                  <input
+                    type="number"
+                    id="numberSelector"
+                    name="numberSelector"
+                    min="0"
+                    max="100"
+                    value="1"
+                  />
+                  <p>$650</p>
                 </div>
-                <p>$650</p>
-                <input
-                  type="number"
-                  id="numberSelector"
-                  name="numberSelector"
-                  min="0"
-                  max="100"
-                  step="1"
-                />
-                <p>$650</p>
-              </div>
-              <div class="selected-items">
-                <div class="inner">
-                  <img src="./e-images/Gamepad-Cart-Small.svg" alt="" />
-                  <p>H1 Gamepad</p>
+                <div class="selected-items">
+                  <div class="inner">
+                    <img src="./e-images/Gamepad-Cart-Small.svg" alt="" />
+                    <p>H1 Gamepad</p>
+                  </div>
+                  <p>$550</p>
+                  <input
+                    type="number"
+                    id="numberSelector"
+                    name="numberSelector"
+                    min="0"
+                    max="100"
+                    value="1"
+                  />
+                  <p>$1100</p>
                 </div>
-                <p>$550</p>
-                <input
-                  type="number"
-                  id="numberSelector"
-                  name="numberSelector"
-                  min="0"
-                  max="100"
-                  step="1"
-                />
-                <p>$1100</p>
+
               </div>
               <div class="modal-ibtn">
                 <button>Return To Shop</button>
@@ -198,7 +212,7 @@
                   <h5>Cart Total</h5>
                   <div class="subtotal">
                     <p>Subtotal</p>
-                    <p>$1750</p>
+                    <p class="cart-subtotal">$1750</p>
                   </div>
                   <hr />
                   <div class="subtotal shipping">
@@ -208,9 +222,9 @@
                   <hr />
                   <div class="subtotal total">
                     <p>Total</p>
-                    <p>$1750</p>
+                    <p class="cart-total">$1750</p>
                   </div>
-                  <a href="#"><button>Process To checkout</button></a>
+                  <a href="#"><button class="proceedbtn">Process To checkout</button></a>
                 </div>
               </div>
             </div>
@@ -319,8 +333,8 @@
           <div class="pics">
             <img src="./e-images/laptop.png" alt="" />
             <div class="cart">
-              <img src="./e-images/white-cart.svg" alt="" />
-              <span>Add To Cart</span>
+              <img class="tocart" src="./e-images/white-cart.svg" alt="" />
+              <span class="tocart">Add To Cart</span>
             </div>
             <div class="position">
               <button>-35%</button>
@@ -329,7 +343,7 @@
             </div>
           </div>
           <div class="price">
-            <p>ASUS FHD Gaming Laptop</p>
+            <p class="title">ASUS FHD Gaming Laptop</p>
             <div class="dollar">
               <span>$960</span>
               <s>$1160</s>
@@ -446,15 +460,19 @@
                 <button class="cursur-button">
                   <img src="./e-images/arrow.png" alt="" />
                 </button>
+
               </div>
             </div>
+
           </div>
+
           <div class="foot-flexed2">
             <h4>Support</h4>
             <p>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p>
             <a href="#">exclusive@gmail.com</a>
             <p>+88015-88888-9999</p>
           </div>
+
           <div class="foot-flexed3">
             <h4>Account</h4>
             <ul>
@@ -503,5 +521,6 @@
     <script type="module" src="../JS/commerce.js"></script>
    <script type="modale" src="../JS/common.js"></script>
    <script type="module" src="../JS/product.js"></script>
+   <script type="module" src="../JS/cart.js"></script>
   </body>
 </html>

@@ -5,6 +5,7 @@ import {
     alertMsg,
     getItemsStore,
     saveItemToStore,
+    displayCartCount,
   } from "../JS/common.js";
   
 
@@ -27,7 +28,11 @@ function ready(){
         //the submit button for adding product
   const submitProductBtn = document.querySelector("#add-product-btn");
   submitProductBtn.addEventListener("click", addProductHandler);
-
+ // add product to cart
+ const addToCartBtn = document.querySelectorAll(".tocart");
+ addToCartBtn.forEach((btn) => {
+   btn.addEventListener("click", addToCartHandler);
+ });
 
 }
 
@@ -41,6 +46,8 @@ function addProductHandler() {
     const old_price = document.querySelector(".product-old_price").value;
     const desc = document.querySelector(".product-desc").value;
     console.log(price);
+
+    saveImageToCloud(imageFile);
     const data = {
       title,
       price,
@@ -151,8 +158,8 @@ function addProductHandler() {
       <div class="pics">
         <img src="${p.imgeUrl}" />
         <div class="cart">
-          <img src="./e-images/white-cart.svg" alt="" />
-          <span>Add To Cart</span>
+          <img class="tocart" src="./e-images/white-cart.svg" alt="" />
+          <span class="tocart">Add To Cart</span>
         </div>
         <div class="position">
           <button>-35%</button>
@@ -161,7 +168,7 @@ function addProductHandler() {
         </div>
       </div>
       <div class="price">
-        <p>${p.title}</p>
+        <p class="title">${p.title}</p>
         <div class="dollar">
           <span>$${p.price}</span>
           <s>$${p.old_price ? `$${p.old_price}` : ""}</s>
@@ -213,4 +220,64 @@ function addProductHandler() {
   
     return errors;
   }
+
+
+  function addToCartHandler(e) {
+    console.log("cleicked");
+    const parentElem = e.target.parentElement.parentElement;
+    console.log(parentElem);
+    const title = parentElem.querySelector(".title").textContent;
+    console.log(title);
+  
+    // get the product to be added to cart from the store
+    addProductToCart(title);
+  }
+  
+  function addProductToCart(title) {
+    //  get products from store
+    const products = getItemsStore("products");
+  
+    // find the product with the title from the products
+    const product = products.find((p) => p.title == title);
+  
+    console.log(product);
+  
+    const carts = getItemsStore("carts");
+  
+    //check that product is not already in cart
+    const productExistInCart = carts.find((c) => c.title == title);
+    if (productExistInCart) {
+      alertMsg("product already in cart", "error");
+      return;
+    }
+    const cartProduct = { ...product, qty: 1, subtotal: +product.price * 1 };
+  
+    const cartsUpdate = [...carts, cartProduct];
+  
+    //save to store
+    saveItemToStore("carts", cartsUpdate);
+  
+    // load cart count
+    displayCartCount();
+  }
+  
+  async function saveImageToCloud(imageFile) {
+    const formData = new FormData();
+    formData.append("file", imageFile);
+    formData.append("upload_preset", "commerce_files");
+  
+    const response = await fetch(
+      `https://api.cloudinary.com/v1_1/dklrn1vdy/image/upload`,
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
+  
+    const data = await response.json();
+  
+    console.log(response, data);
+    return data.secure_url;
+  }
+  
   

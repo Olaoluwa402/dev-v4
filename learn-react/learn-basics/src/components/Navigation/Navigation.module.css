@@ -22,4 +22,5 @@
 
 .container a {
   text-decoration: none;
+  color: var(--white100);
 }

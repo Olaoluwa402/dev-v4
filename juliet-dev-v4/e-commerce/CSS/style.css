@@ -65,6 +65,9 @@ nav {
   width: 100%;
   z-index: 1;
 }
+/* .nav-left>img{
+  width: 80px; 
+} */
 
 .nav-left h2 {
   font-size: 24px;
@@ -125,6 +128,28 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+.favourite{
+  position: relative;
+}
+
+.counter {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: #db4444;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+
+.application{
+  position: relative;
 }
 
 .add-product-btn {
@@ -435,6 +460,10 @@ a button:hover{
   /* position: absolute; */
   bottom: 0;
   width: 100%;
+}
+
+.tocart:hover{
+  cursor: pointer;
 }
 
 .position button {
