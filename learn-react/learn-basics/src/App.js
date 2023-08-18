@@ -1,10 +1,10 @@
 import React from "react";
-import HomeScreen from "./screens/Home";
+import Router from "./Router";
 
 function App() {
   return (
     <div className="wrapper">
-      <HomeScreen />
+      <Router />
     </div>
   );
 }
