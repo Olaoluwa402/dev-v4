@@ -1,3 +1,6 @@
+.wrapper {
+  background-color: var(--brown100);
+}
 .container {
   display: flex;
   justify-content: space-between;
