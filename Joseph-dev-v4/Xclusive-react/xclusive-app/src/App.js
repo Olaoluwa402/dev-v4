@@ -1,15 +1,16 @@
 
 import './App.css';
-import HomePage from './Pages/Home';
-import {BrowserRouter as Router} from 'react-router-dom'
+import Router from './Router';
 
 
 function App() {
   return (
-    <div className=''>
-       <HomePage/>
-    </div>
+   <div className=''>
+       <Router />
+   </div>
+ 
   );
 }
+
 
 export default App;

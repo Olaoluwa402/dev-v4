@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Navigation.module.css";
 import {AiOutlinePlus} from "react-icons/ai"
+import { Link } from "react-router-dom";
 
 
 
@@ -12,9 +13,9 @@ const Navigation = () => {
          <img src="https://res.cloudinary.com/dfeyofjln/image/upload/v1692172726/2OC_logo-removebg-preview_q75nqy.png"></img>
       </div>
       <ul className={styles.nav_ul}>
-        <li> <a href="/">Home</a></li>
+        <li> <Link to={"/"}>Home</Link></li>
         <li> <a href="/">Contact</a></li>
-        <li> <a href="/">About</a></li>
+        <li> <Link to={"/about"}>About</Link></li>
         <li> <a href="/">Sign Up</a></li>
       </ul>
       <div className={styles.nav_search}>
@@ -33,16 +34,16 @@ const Navigation = () => {
           </div>
         </div>
         <div id={styles.buy_cart} className="relative">
-          <a href="/">
+          <Link to={"/cartproducts "}>
             <img src="https://res.cloudinary.com/dfeyofjln/image/upload/v1692171622/Cart1_with_buy_uri7s5.png" alt="Cart" />
-          </a>
+          </Link>
           <div className="absolute top-5 right-0 w-5 h-5 rounded-full bg-red-600 justify-center items-center flex flex-row text-white text-xs">
             <span className={styles.cart_count}>1</span>
           </div>
         </div>
-        <a href="/">
+        <Link to="cartproduct">
           <img src="https://res.cloudinary.com/dfeyofjln/image/upload/v1692172730/user_tx8xws.png" alt="User" />
-        </a>
+        </Link>
         <div className={styles.add_product_btn}>
           <AiOutlinePlus className="icons plus"/>
         </div>
