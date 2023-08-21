@@ -1,4 +1,5 @@
 import React from "react";
+//import bg from "../../assets/images/";
 
 import styles from "./Hero.module.css";
 import Button from "../Button/Button";
@@ -13,6 +14,7 @@ const Hero = () => {
           alt=""
         />
       </div>
+
       <div className={styles.hero__right}>
         <h2>We bake well</h2>
         <p>
