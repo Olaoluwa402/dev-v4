@@ -18,8 +18,8 @@ const HeroPage = () => {
       </div>
 
 <div className={styles.wishlist}>
-      {Product && Product.map((product)=>{
-        return  <Box key={product.id} products={product} />
+      {Product && Product.map((items)=>{
+        return  <Box key={items.id} products={items} />
       })}
 </div>
       
