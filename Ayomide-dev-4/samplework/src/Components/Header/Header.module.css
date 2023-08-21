@@ -1,0 +1,39 @@
+section {
+  display: flex;
+  position: relative;
+  left: 0;
+  right: 0;
+ margin: 25px auto;
+  padding: 10px 40px;
+  background-color: rgba(128, 128, 128, 0.237);
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.frontend {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+ .iconstyle {
+    font-size: 100px;
+    color: Red;
+  };
+
+  .iconstyle1 {
+    font-size: 100px;
+    color: Blue;
+  };
+
+  .iconstyle2 {
+    font-size: 100px;
+    color: Yellow;
+  };
+
+  .iconstyle3 {
+    font-size: 100px;
+    color: skyblue;
+  };
