@@ -1,6 +1,7 @@
 import React from "react"
 import Wishlist from "../Components/Wishlist/Wishlist"
 import Just from "../Components/JustForYou/Just"
+import Contact from "./Contact";
 
 const Home=()=>{
     const cartsData = [
@@ -82,6 +83,7 @@ const Home=()=>{
     ];
     return(
         <div>
+            <Contact/>
             <Wishlist cartsData = {cartsData}/>
             <Just justData ={justData}/>
         </div>
