@@ -1,6 +1,11 @@
 import React from "react";
 import Hero from "../components/Hero/Hero";
 import Blog from "../components/Blog/Blog";
+import {
+  ClassState,
+  StateManagementHook,
+} from "../components/StateManagement/StateManagement";
+import Forms from "../components/Forms/Forms";
 
 import styles from "./Home.module.css";
 const HomeScreen = () => {
@@ -47,6 +52,8 @@ const HomeScreen = () => {
         {/* hero */}
         <Hero />
       </section>
+      {/* state */}
+      <Forms />
       {/* blog */}
       <Blog blogData={blogData} />
       {/* footer */}
