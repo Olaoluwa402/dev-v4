@@ -5,13 +5,15 @@ import Hero from "../../Component/Hero/Hero";
 import Footer from "../../Component/Footer/Footer";
 
 
-import styles from "./Home.css";
+import styles from "./Home.module.css";
 const HomeScreen = () => {
   return (
     <div>
+      
       <section className={styles.container}>
-        {/* navigation */}
         <Navigation />
+        {/* navigation */}
+        
         {/* hero */}
         <Hero />
 

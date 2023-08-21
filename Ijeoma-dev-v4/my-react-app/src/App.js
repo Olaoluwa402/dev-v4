@@ -1,11 +1,9 @@
-
-import './App.css';
-import Home from "../../my-react-app/src/screens/Home/Home"
+import React from "react";
+import HomeScreen from "../../my-react-app/src/screens/Home/Home";
 function App() {
   return (
     <div className="App">
-     
-      <Home/>
+      <HomeScreen />
     </div>
   );
 }
