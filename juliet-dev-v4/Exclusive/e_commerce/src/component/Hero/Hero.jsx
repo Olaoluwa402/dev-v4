@@ -3,7 +3,7 @@ import styles from './Hero.module.css'
 import Box from '../Box/box'
 import Box1 from '../Box1/Box1'
 import { Product } from '../Box/Data'
-import style from "../Box/box.module.css"
+import { Product1 } from '../Box1/Data1'
 
 
 const HeroPage = () => {
@@ -17,9 +17,11 @@ const HeroPage = () => {
         <button>Move All To The Bag</button>
       </div>
 
+<div className={styles.wishlist}>
       {Product && Product.map((product)=>{
-        return  <Box key={product.id} products={product} className={style.wishlist} />
+        return  <Box key={product.id} products={product} />
       })}
+</div>
       
 
       <div className={styles.intro2}>
@@ -30,7 +32,13 @@ const HeroPage = () => {
         <button>See All</button>
       </div>
 
-      <Box1/>
+
+      <div className={styles.just_for_you}>
+      {Product1 && Product1.map((product)=>{
+        return  <Box1 key={product.id} Items={product} />
+      })}
+</div>
+
 
         </div>
     </div>

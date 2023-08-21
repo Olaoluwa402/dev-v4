@@ -2,10 +2,8 @@ import React from 'react'
 import styles from "./box1.module.css" 
 import{FaStar} from 'react-icons/fa'
 
-const Box1 = () => {
-    const newBtn = {
-        backgroundColor: '#00ff66',
-    }
+const Box1 = ({Items}) => {
+  const {img, title, price,} = Items
     const stars = {
         color: '#ffad33'
     }
@@ -14,22 +12,20 @@ const Box1 = () => {
 
          <div className={styles.product}>
           <div className={styles.product_box}>
-            <img src="./e-images/laptop.png" alt="" />
+            <img src={img} alt="" />
             <div className={styles.cart}>
               <img src="./e-images/white-cart.svg" alt="" />
               <span>Add To Cart</span>
             </div>
             <div className={styles.position}>
-              <button>-35%</button>
               <img src="./e-images/Ellipse 13.png" alt="" className={styles.elipse} />
               <img src="./e-images/eye.svg" alt="" className={styles.eye} />
             </div>
           </div>
           <div className={styles.price}>
-            <p class="title">ASUS FHD Gaming Laptop</p>
+            <p class="title">{title}</p>
             <div className={styles.dollar}>
-              <span>$960</span>
-              <s>$1160</s>
+              <span>{price}</span>
             </div>
           </div>
           <div class="stars">
@@ -44,8 +40,8 @@ const Box1 = () => {
           </div>
         </div>
 
-        {/* second product */}
-        <div className={styles.product}>
+       
+        {/* <div className={styles.product}>
           <div className={styles.product_box}>
             <img src="./e-images/tv.png" alt="" />
             <div className={styles.cart}>
@@ -74,7 +70,7 @@ const Box1 = () => {
           </div>
         </div>
 
-            {/* third product */}
+           
         <div className={styles.product}>
           <div className={styles.product_box}>
             <img src="./e-images/game-pad.png" alt="" />
@@ -106,7 +102,7 @@ const Box1 = () => {
           </div>
         </div>
 
-        {/* last product */}
+        
         <div className={styles.product}>
           <div className={styles.product_box}>
             <img src="./e-images/keyboard.png" alt="" />
@@ -135,7 +131,7 @@ const Box1 = () => {
           
             <span>(65)</span>
           </div>
-        </div>
+        </div> */}
 
 
     </div>

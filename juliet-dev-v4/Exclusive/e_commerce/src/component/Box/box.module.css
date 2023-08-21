@@ -1,6 +1,6 @@
 .wishlist {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-content: center;
     gap: 25px;
   }
@@ -38,7 +38,6 @@
     align-items: center;
     gap: 10px;
     border-radius: 0 0 5px 5px;
-    /* position: absolute; */
     bottom: 0;
     width: 100%;
   }

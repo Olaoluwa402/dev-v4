@@ -1,3 +1,4 @@
+
 nav {
     display: flex;
     border: 0.1px solid rgb(201, 196, 196);
@@ -10,7 +11,7 @@ nav {
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 100;
   }
 
 .nav_right img{

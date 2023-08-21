@@ -1,21 +1,21 @@
 import React from "react";
 import { BsSearch, BsPlusCircleFill } from "react-icons/bs";
-import{FaBars} from "react-icons/fa"
+import { FaBars } from "react-icons/fa";
 import styles from "./Nav.module.css";
 
 const Nav = () => {
-    const searchStyle = {       
-        fontSize: '22px',
-        paddingTop: '5px'
-      };
+  const searchStyle = {
+    fontSize: "22px",
+    paddingTop: "5px",
+  };
 
-      const barStyle = {
-        fontSize: '20px',
-        display: 'none'
-      }
+  const barStyle = {
+    fontSize: "20px",
+    display: "none",
+  };
 
   return (
-    <div>
+    <div className={styles.parent_div}>
       <nav className={styles.nav}>
         <div className={styles.nav_right}>
           {/* <h2>Exclusive</h2> */}
@@ -47,7 +47,7 @@ const Nav = () => {
               placeholder="what are you looking for?"
             />
             <button className={styles.search_button}>
-              <BsSearch style={searchStyle}/>
+              <BsSearch style={searchStyle} />
             </button>
           </div>
         </div>
@@ -57,7 +57,7 @@ const Nav = () => {
           <img src="./e-images/Cart1 with buy.svg" alt="" id="myBtn" />
           <img src="./e-images/user.svg" alt="" />
           <BsPlusCircleFill fontSize={"25px"} />
-          <FaBars style={barStyle}/>
+          <FaBars style={barStyle} />
         </div>
       </nav>
     </div>

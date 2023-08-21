@@ -39,8 +39,6 @@
     font-size: 20px;
   }
   
- 
-
 
   .intro2_flex {
     display: flex;
@@ -79,3 +77,19 @@
     background-color: #fff;
     border-radius: 6px;
   }
+
+  .wishlist {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 25px;
+  }  
+  
+  .just_for_you {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 25px;
+  }
+
+
