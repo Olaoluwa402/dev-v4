@@ -1,25 +1,33 @@
 import React from "react";
-
+import { FaUserAlt, FaSearchengin } from "react-icons/fa";
+import { BsSearchHeart } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
 import styles from "./Navigation.module.css";
 
-const Navigation = () => {
+const Navigation = ({ title }) => {
+  console.log(title);
   return (
-    <nav className={`${styles.container} container`}>
-      <a href="/">LOGO</a>
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/">About</a>
-        </li>
-        <li>
-          <a href="/">Contact</a>
-        </li>
-        <li>
-          <a href="/">Apps</a>
-        </li>
-      </ul>
+    <nav className={styles.wrapper}>
+      <div className={`${styles.container} container `}>
+        <NavLink to="/">LOGO</NavLink>
+        <ul>
+          <li>
+            <FaUserAlt />
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <FaSearchengin />
+            <NavLink to="/about">About</NavLink>
+          </li>
+          <li>
+            <BsSearchHeart />
+            <a href="/">Contact</a>
+          </li>
+          <li>
+            <a href="/">Apps</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };
