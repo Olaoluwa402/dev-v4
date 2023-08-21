@@ -1,0 +1,22 @@
+section {
+  background-color: rgb(216, 214, 214);
+  padding: 40px;
+  width: 100vw;
+}
+
+h5 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.div {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+img {
+  max-width: 200px;
+  height: fit-content;
+}

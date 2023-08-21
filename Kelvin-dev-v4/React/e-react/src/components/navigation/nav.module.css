@@ -1,0 +1,291 @@
+.topAd {
+  margin: 0;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 9;
+}
+
+.topAd p {
+  /* text-align: center; */
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 11px;
+  margin: 0;
+}
+
+.topAd span {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  text-decoration-line: underline;
+}
+
+.select {
+  background-color: black;
+  margin: 0;
+  height: 25px;
+  color: white;
+  border: none;
+  font-size: 12px;
+}
+
+.select:focus {
+  border: none;
+  outline: none;
+}
+/* top ad end */
+
+/* nav start */
+nav {
+  background-color: white;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  box-shadow: 0px 0px 3px black;
+  position: sticky;
+  top: 0px;
+}
+
+nav ul,
+nav div {
+  display: none;
+}
+
+.navlogo {
+  width: 60px;
+}
+
+nav > div > img {
+  width: 22px;
+}
+
+/* nav end */
+
+/* mobile navbar start*/
+.menuclose {
+  display: flex;
+  transform: translateY(-300%);
+  transition: all 0.2s ease-in-out;
+}
+
+.menushow {
+  display: flex;
+  transform: translateY(1%);
+}
+
+.mobilenav {
+  position: sticky;
+  top: 40px;
+  z-index: 7;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 40px 20px 40px;
+  background-color: white;
+  box-shadow: 0px 0px 3px black;
+}
+
+.mobilenav ul,
+.mobilenav div {
+  display: flex;
+  width: 100%;
+}
+
+.mobilenav ul {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobilenav ul li {
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.mobilenav > div {
+  margin: 0;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobilenav_icons {
+  justify-content: end;
+  align-items: center;
+  gap: 15px;
+}
+
+.mobilenav_icons img {
+  width: 22px;
+}
+
+.searchDiv {
+  position: relative;
+  width: minmax(50%, 80%);
+}
+
+.searchDiv input {
+  padding: 6px 20px 6px 10px;
+  font-size: 13px;
+  width: 100%;
+  border: none;
+  background-color: #f5f5f5;
+}
+
+.nav_search_icon {
+  font-size: 13px;
+  position: absolute;
+  width: 20px;
+  top: 0;
+  bottom: 0;
+  padding-top: 10px;
+  right: 15px;
+}
+/* mobile navbar end */
+
+@media screen and (min-width: 950px) {
+  .mobilenav {
+    display: none;
+  }
+
+  .top_ad {
+    padding: 10px 20px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .top_ad p {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+  }
+
+  .top_ad span {
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px; /* 171.429% */
+    text-decoration-line: underline;
+  }
+
+  .select {
+    background-color: black;
+    margin: 0;
+    height: 25px;
+    color: white;
+    border: none;
+    font-size: 14px;
+    position: absolute;
+    right: 135px;
+  }
+
+  .select:focus {
+    border: none;
+    outline: none;
+  }
+  /* top ad end */
+
+  /* nav start */
+  nav {
+    background-color: white;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 135px;
+    box-shadow: 0px 0px 3px black;
+    position: sticky;
+    top: 0px;
+  }
+
+  nav ul,
+  nav div {
+    display: flex;
+  }
+
+  .hamburger_icon {
+    display: none;
+    opacity: 0;
+  }
+
+  nav ul li {
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0px 20px;
+    flex-grow: 1;
+    border-bottom: 1px solid transparent;
+    transition: all 0.4s;
+  }
+  nav ul li:hover {
+    cursor: pointer;
+    border-bottom: 1px solid black;
+  }
+
+  nav div {
+    text-align: right;
+    margin: 0;
+    align-items: center;
+    gap: 20px;
+  }
+
+  nav div > .i {
+    padding: 5px;
+    border-radius: 40%;
+    background-color: transparent;
+    transition: all 0.4s;
+  }
+  nav div > .i:hover {
+    background-color: firebrick;
+    color: white;
+  }
+
+  .searchDiv {
+    position: relative;
+  }
+
+  .searchDiv input {
+    padding: 8px 20px 8px 10px;
+    font-size: 10px;
+    border: none;
+    background-color: #f5f5f5;
+  }
+
+  .nav_search_icon {
+    font-size: 13px;
+    position: absolute;
+    width: 20px;
+    top: 0;
+    bottom: 0;
+    padding-top: 5px;
+    right: 10px;
+  }
+
+  .mobileNav {
+    display: none;
+  }
+  /* nav end */
+}
+
+@media screen and (min-width: 1204px) {
+  .searchDiv {
+    position: relative;
+  }
+
+  .searchDiv input {
+    padding: 6px 30px 6px 10px;
+    font-size: 14px;
+  }
+}

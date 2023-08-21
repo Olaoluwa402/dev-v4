@@ -1,0 +1,20 @@
+.ratingbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0px;
+}
+
+.ratingbox div {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.ratingbox div > * {
+  color: rgb(228, 196, 13);
+}
+
+.ratingbox span {
+  display: inline;
+}
