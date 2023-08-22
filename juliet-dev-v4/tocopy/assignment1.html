@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <script
+      src="https://kit.fontawesome.com/4934005bfa.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./assigment1.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form"> 
+        <h1>Login Form</h1>
+        <div class="wrapper">
+
+          <div class="input-wrap FullName">
+            <div class="icon-wrapper">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <input type="text" placeholder="FullName" />
+          </div>
+
+          <div  class="input-wrap">
+            <div class="icon-wrapper">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <input type="text" value="" placeholder="Username" id="Username" />
+          </div>
+          
+          <div class="input-wrap">
+            <div class="icon-wrapper">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <input type="text" value="" placeholder="Email" class="email"/>
+          </div>
+
+          <div class="input-wrap">
+            <div class="icon-wrapper">
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            <input type="password" value="" placeholder="Password"  class="password"/>
+          </div>
+
+          <div class="input-wrap">
+            <div class="icon-wrapper">
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            <input type="password" value="" placeholder="Confirm Password"  id="C-password"/>
+          </div>
+
+          <a href="#">Forgot password?</a>
+
+          <button id="submit">Login</button>
+
+          <p class="signup">Not a member? <a href="#">Signup now</a></p>
+        </div>
+      </form>
+    </div>
+    <script src="./assignment.js"></script>
+  </body>
+</html>
