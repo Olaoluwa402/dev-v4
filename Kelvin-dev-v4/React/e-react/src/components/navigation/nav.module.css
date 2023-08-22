@@ -67,6 +67,12 @@ nav > div > img {
   width: 22px;
 }
 
+.userIcon {
+  margin-top: 5px;
+  font-size: 20px;
+  color: black;
+}
+
 /* nav end */
 
 /* mobile navbar start*/
@@ -212,6 +218,7 @@ nav > div > img {
   nav ul,
   nav div {
     display: flex;
+    align-items: center;
   }
 
   .hamburger_icon {
@@ -241,13 +248,15 @@ nav > div > img {
     gap: 20px;
   }
 
-  nav div > .i {
+  nav div > .i,
+  .userIcon {
     padding: 5px;
     border-radius: 40%;
     background-color: transparent;
     transition: all 0.4s;
   }
-  nav div > .i:hover {
+  nav div .i:hover,
+  .userIcon:hover {
     background-color: firebrick;
     color: white;
   }

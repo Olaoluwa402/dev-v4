@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./nav.module.css";
 import { BsCart3, BsHeart, BsSearch } from "react-icons/bs";
+import { FiUser } from "react-icons/fi";
 import { AiOutlineMenu } from "react-icons/ai";
+import { NavLink } from "react-router-dom";
 
 function Nav() {
   return (
@@ -20,7 +22,14 @@ function Nav() {
 
       {/* navbar start */}
       <nav>
-        <img src="../Assets/lodo black.png" alt="" className={styles.navlogo} />
+        <NavLink to="/">
+          {" "}
+          <img
+            src="../Assets/lodo black.png"
+            alt=""
+            className={styles.navlogo}
+          />
+        </NavLink>
         <AiOutlineMenu className={styles.hamburger_icon} id="hamburger_icon" />
 
         <ul>
@@ -37,12 +46,9 @@ function Nav() {
 
           <BsHeart className={styles.i} />
           <BsCart3 className={styles.i} id="navCartId" />
-          <img
-            src="../Assets/user.png"
-            alt=""
-            className={styles.userIcon}
-            id="user_icon"
-          />
+          <NavLink to="/accountscreen">
+            <FiUser className={styles.userIcon} id="user_icon" />
+          </NavLink>
         </div>
       </nav>
       {/* navbar end */}
