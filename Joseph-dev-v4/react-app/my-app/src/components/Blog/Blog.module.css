@@ -1,0 +1,11 @@
+.blog__articles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.blog__article {
+  width: 200px;
+  padding: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
