@@ -1,0 +1,50 @@
+.profile{
+    width: 90%;
+    margin: 40px auto;
+    background-color: aliceblue;
+    height: 60vh;
+    border-radius: 10px;
+}
+
+.profile_img img{
+    width: 150px;
+    margin: 5px 10px;
+
+}
+
+#span{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    margin: 10px 10px;
+}
+
+#span a{
+    color:lightseagreen;
+    font-size:15px ;
+    text-align: center;
+}
+
+.profile_img >p{
+    margin: 10px 10px;
+    color: lightseagreen;
+}
+
+.profile_img>h5{
+    font-size: 25px;
+    margin: 15px 10px;
+}
+
+#skills_btn{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 5px 10px;
+}
+
+#duration{
+    display: flex;
+    margin: 15px 10px;
+}

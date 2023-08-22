@@ -1,0 +1,11 @@
+.rating{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.rating img{
+    width: 10px;
+    margin: 0;
+}
