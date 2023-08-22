@@ -9,9 +9,7 @@ export class ClassState extends React.Component {
     };
   }
   render() {
-    // this.setState((prev) => ({
-    //   isLoggedIn: !prev.isLoggedIn,
-    // }));
+    
     return (
       <div>
         {this.state.isLoggedIn ? <Dashboard /> : <Login />}
@@ -49,3 +47,4 @@ export const StateManagementHook = () => {
     </div>
   );
 };
+ 
