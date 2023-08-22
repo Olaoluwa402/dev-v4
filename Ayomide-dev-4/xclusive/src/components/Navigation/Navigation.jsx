@@ -1,5 +1,4 @@
 import React from "react";
-
 import styles from "./Navigation.module.css";
 import {AiOutlineHeart, AiOutlinePlus} from "react-icons/ai"
 import {GrCart} from "react-icons/gr"
@@ -24,7 +23,7 @@ const Navigation = () => {
       <navbar>
         <b>Exclusive</b>
         <ul className={styles.navhome}>
-          <li>Home</li>
+          <li>Home</li>   
           <li>Contact</li>
           <li>About</li>
           <li>Sign Up</li>
