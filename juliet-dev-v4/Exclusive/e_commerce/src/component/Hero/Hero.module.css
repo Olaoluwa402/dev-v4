@@ -1,0 +1,95 @@
+.intro {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 560px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+  }
+  
+  .intro h4 {
+    font-weight: 300;
+    font-size: 20px;
+  }
+  
+  .intro > button {
+    border: 1px solid gray;
+    width: 230px;
+    min-height: 60px;
+    font-size: 16px;
+    font-family: poppins;
+    font-weight: 600;
+    background-color: #fff;
+    border-color: gray;
+    border-radius: 6px;
+  }
+
+
+  .intro2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 560px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+  }
+  
+  .intro2 h4 {
+    font-weight: 300;
+    font-size: 20px;
+  }
+  
+
+  .intro2_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .btn {
+    border: 1px solid gray;
+    width: 25px;
+    min-height: 60px;
+    font-size: 16px;
+    font-family: poppins;
+    font-weight: 600;
+    background-color: #db4444;
+    border-color: gray;
+    border-radius: 6px;
+    border: none;
+    margin-top: 30px;
+  }
+  
+  .intro2 h4 {
+    font-weight: 300;
+    font-size: 20px;
+    padding-top: 22px;
+  }
+  
+  .intro2 > button {
+    border: 1px solid gray;
+    width: 150px;
+    min-height: 60px;
+    font-size: 16px;
+    font-family: poppins;
+    font-weight: 600;
+    background-color: #fff;
+    border-radius: 6px;
+  }
+
+  .wishlist {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 25px;
+  }  
+  
+  .just_for_you {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 25px;
+  }
+
+
