@@ -1,0 +1,21 @@
+.container{
+    width: 90%;
+    margin: 20px;
+    margin: 0 auto;
+    background-color: rgba(224, 211, 211, 0.644);
+    /* height: 40vh; */
+}
+
+.container_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.container_img img{
+    width: 200px;
+    margin: 20px;
+   
+}

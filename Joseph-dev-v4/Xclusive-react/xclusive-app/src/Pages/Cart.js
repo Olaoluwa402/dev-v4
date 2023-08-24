@@ -1,15 +1,15 @@
 import React from 'react'
 import Advert from '../Components/Advert/Advert'
-import Navigation from '../Components/Navigation/Navigation'
 import CartProduct from '../Components/CartProduct/CartProduct'
 import Footer from '../Components/Footer/Footer'
+import Navigation2 from '../Components/Navigation/Navigation2/Navigation2'
 
 
 const Cart = () => {
   return (
     <div>
       <Advert/>
-      <Navigation/>
+      <Navigation2/>
       <CartProduct/>
       <Footer/>
     </div>

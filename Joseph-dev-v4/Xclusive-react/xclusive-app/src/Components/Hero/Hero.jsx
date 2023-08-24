@@ -3,6 +3,7 @@ import BoxTop from '../BoxTop/BoxTop'
 import Box from '../Box/Box'
 import BoxTop2 from '../BoxTop2/BoxTop2'
 import Box2 from '../Box2/Box2'
+import styles from './Hero.module.css'
 
 
 const Hero = () => {
@@ -37,11 +38,14 @@ const Hero = () => {
         }
     ]
   return (
-    <div>
+    <div className={styles.container}>
       <BoxTop/>
       <Box />
       <BoxTop2/>
+      <div className={styles.box2}>
       <Box2 boxData={boxData}/>
+      </div>
+      
     
     </div>
   )

@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  font-family: "Roboto", sans-serif;
 }
 
 .nav {
@@ -16,74 +17,314 @@ body {
   text-align: center;
 }
 
+.hero1 {
+  background-image: url(../image/paystack/homepage-map.png);
+  background-color: #eaf8ee;
+  width: 100%;
+  /* height: 100vh; */
+  background-size: cover;
+  background-position: center;
+  margin-top: -90px;
+  padding-bottom: 100px;
+}
+
+.nav1 {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: rgba(255, 255, 255, 0.11);
+}
+
+.navb {
+  display: none;
+}
+
+.navv {
+  display: flex;
+}
+
+.nav-right {
+  display: none;
+}
+
+.hero2 {
+  padding: 10% 2%;
+  color: #011b33;
+}
+.hero2 > h2 {
+  font-size: 48px;
+}
+.hero2 > p {
+  font-size: 20px;
+}
+.hero3 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+  color: #3bb75e;
+  font-size: 15px;
+}
+.hero3 > button {
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  width: 190px;
+  background-color: #3bb75e;
+  color: white;
+  font-size: 16px;
+}
+
+/* .fa-duotone fa-play{
+    display:flex
+} */
+
+.grid-container {
+  /* background-color: #011b33; */
+  display: flex;
+  /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+  gap: 5px;
+}
+
+/* .hero5{
+    display: flex;
+    gap: 10px;
+} */
+
+.hero4 {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.img-edit {
+  display: none;
+  /* background-color: aquamarine; */
+}
+
+.checklist {
+  list-style: none;
+  padding-left: 0;
+ 
+  
+}
+
+.check-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  margin-right: 8px;
+   color: #3bb75e;
+}
+
+.shape {
+  width: 15px;
+  height: 12px;
+  left: 6px;
+  background-color: #cccccc6e;
+  position: relative;
+  border-radius: 50%;
+  border-color: #3bb75e;
+}
+
+.arrow {
+  position: relative;
+  bottom: 6px;
+  left: 5px;
+  transform: translate(-70%, -50%);
+  font-size: 10px;
+  color: #3bb75e;
+}
+
+.simple{
+  justify-content: center;
+ padding: 30px;
+}
+
+.simple > h3 {
+  font-weight: 900;
+  
+}
+.ratex{
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    color: #3bb75e;
+}
+.api{
+   display: flex;
+   justify-content: center;
+   align-content: center;
+    
+}
+
+@media (min-width: 603px) {
+  .hero4 {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
 @media (min-width: 1024px) {
   .nav {
     background-color: #011b33;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
-    display: flex;
+    /* display: flex; */
   }
 
-  .nav1{
- display:flex;
- position:sticky;
- margin: 0%;
-background-color: rgba(0, 128, 0, 0.118);
-color: rgba(0, 0, 255, 0.116);
+  .nav1 {
+    display: flex;
+    position: sticky;
+    top: 0;
+    margin: 0%;
+    color: #011b33;
+    justify-content: space-between;
+    padding: 0 50px;
+    /* background-color: ; */
   }
 
-  .pics{
+  .pics {
     display: flex;
-   
+
     margin: 1%;
   }
 
-  .navb{
+  /* .navb {
     display: flex;
-   align-items: center; 
-   list-style: none;
-   padding: 5px;
-   margin: 0;
-   margin-right: 25%;
-   
-   
-  }
+    align-items: center;
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+    margin-right: 25%;
+  } */
 
-  .navb li{
+  .navb li {
     margin: 0 10px;
   }
 
-  .navb a{
+  .navb a {
     text-decoration: none;
+  }
+
+  .navb {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    /* padding: 5px; */
+    margin: 0;
+    padding: 0;
+    /* margin-left: 20px; */
+    /* width: 100%; */
+  }
+
+  .navb li {
+    display: flex;
+    /* width: 100%; */
+  }
+
+  .navv {
+    width: 50%;
+    color: #011b33;
+  }
+
+  .navvr {
+    width: 50%;
+    }
+
+    .navvr a{
+         text-decoration: none;
+         color: #011b33;
+    }
+    .navvr li > button{
+      border: none;
+  border-radius: 4px;
+ 
+  width: 180px;
+  background-color: #3bb75e;
+  color: white;
+  font-size: 16px;
+  margin: 0 10px;
+    }
+
+  .nav-right {
+    display: flex;
+    justify-content: end;
+    align-items: center;
     
   }
 
-  .nav2{
-    display: flex;
-    align-items: center;
-   list-style: none;
-   padding: 5px;
-   margin: 0;
-   margin-left: 10%;
+  .nav-right li {
+    margin: 10px;
+    list-style-type: none;
+   
+  }
+  .nav-right li button {
+    padding: 10px;
+   
   }
 
-  .nav2 li{
+  /* .navb{
+    margin-left: 30px;
+  } */
+
+  .navb li {
     margin: 0 10px;
-
+  }
+  .navb li a{
+    color: #011b33;
+    margin-right: 10px;
   }
 
-  .nav2 a{
+  .navb li i{
+    margin-top: 4px;
+  }
+
+  .navb a {
     text-decoration: none;
   }
 
-  .hero1{
-    background-image: url(../image/paystack/homepage-map.png);
-    /* background-color: aquamarine; */
-    height: 100%;
-    background-size: cover;
-  background-position: center
+  .navr {
+    display: none;
+  }
+  .navv {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* margin-right: -100px */
+  }
 
+  .hero1 {
+    background-image: url(../image/paystack/homepage-map.png);
+    background-color: #eaf8ee;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px 120px;
+  }
+
+  .hero4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .hero3 > button {
+    border: none;
+    border-radius: 4px;
+    padding: 15px;
+    width: 250px;
+    background-color: #3bb75e;
+    color: white;
+    font-size: 16px;
   }
 }

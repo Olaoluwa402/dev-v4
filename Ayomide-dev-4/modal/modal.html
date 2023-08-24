@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="modal.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Modal Work</title>
+  </head>
+  <body>
+    <div class="Navbar">
+      <div class="logo">DEV.GALAXY</div>
+      <ul class="nav">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">GALLERY</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </div>
+    <div class="container" id="body">
+      <div class="teambody">
+        <div class="creative">
+          <h3>
+            CREATIVE <br />
+            TEAM
+          </h3>
+        </div>
+        <div>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.<br />
+          Lorem Ipsum has been the industry's standard dummy text ever since the
+          1500s,<br />
+          when an unknown printer took a galley of type and scrambled it to make
+          a type specimen book. <br />It has survived not only five centuries,
+          but also the leap into electronic typesetting,<br />
+          remaining essentially unchanged. <br />It was popularised in the 1960s
+          with the release of Letraset sheets containing Lorem Ipsum
+          passages,<br />
+          and more recently with desktop publishing software like Aldus
+          PageMaker<br />
+          including versions of Lorem Ipsum.
+        </div>
+        <button class="join">JOIN NOW</button>
+      </div>
+      <div class="image">
+        <img src="../img/Modal image.jpg" height="500px" />
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="container2">
+          <div class="first">
+            <div class="second">
+              <h3>
+                Digital <br />
+                platform for distance<br /><span style="color: black"
+                  >learning</span
+                >
+              </h3>
+              <p>You will never know everything <br />but you will know more</p>
+            </div>
+          </div>
+          <div class="hello">
+            <p><i class="fa-solid fa-arrow-right-to-bracket"></i></p>
+            <div class="hi">
+              <h3>Hey, Hello <i class="fa-solid fa-handshake-angle"></i></h3>
+              <p style="color: rgba(128, 128, 128, 0.801)">
+                complete the registration form fields below to get<br />registered
+              </p>
+            </div>
+            <form method="dialog">
+              <label for="email">email</label>
+              <input type="text" value="" placeholder="email" />
+              <br />
+              <label for="password">password</label>
+              <input type="text" value="" placeholder="password" />
+              <label for="termsandcondition"
+                ><input type="checkbox" id="check" />I have read and accept the
+                terms and<br />
+                condition</label
+              >
+              <button class="login">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- end of modal -->
+    </div>
+
+    <script src="./modal.js"></script>
+  </body>
+</html>

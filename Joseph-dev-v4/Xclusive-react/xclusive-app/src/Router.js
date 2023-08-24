@@ -3,6 +3,9 @@ import HomePage from "./Pages/Home";
 import AboutPage from "./Pages/About";
 import NotFound from "./Components/NotFound/NotFound";
 import Cart from "./Pages/Cart";
+import SignUp from "./Components/SignUp/SignUp";
+import LoginPage from "./Pages/LoginPage";
+import ContactPage from "./Pages/ContactPage";
 // import Layout from "./Components/Layout/Layout;
 
 
@@ -19,6 +22,24 @@ const Router = () => {
         path="/about"
         element={
             <AboutPage />
+        }
+      />
+      <Route
+        path="/signup"
+        element={
+            <SignUp />
+        }
+      />
+      <Route
+        path="/login"
+        element={
+            <LoginPage />
+        }
+      />
+      <Route
+        path="/contact"
+        element={
+            <ContactPage />
         }
       />
 

@@ -1,9 +1,14 @@
 import React from 'react'
-import styles from 'Contact.module.css'
+import styles from './Contact.module.css'
+import Advert from '../Advert/Advert'
+import Navigation from '../Navigation/Navigation'
+import Footer from '../Footer/Footer'
 
 const Contact = () => {
   return (
     <div className={styles.container}>
+       <Advert />
+       <Navigation />
        <div className={styles.page_title}>
           <h4>Home</h4>
           <h4>/</h4>
@@ -35,6 +40,7 @@ const Contact = () => {
             </div>
 
         </section>
+        <Footer />
     </div>
   )
 }
