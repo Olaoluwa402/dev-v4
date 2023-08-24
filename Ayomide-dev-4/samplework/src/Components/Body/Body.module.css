@@ -1,0 +1,70 @@
+body {
+  margin: o;
+  width: 100%;
+}
+.container {
+  display: flex;
+  width: 90%;
+  margin: 50px;
+  background-color: rgba(128, 128, 128, 0.36);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container1 {
+  width: 90%;
+  background-color: white;
+  margin-top: 50px;
+  padding: 40px;
+  margin: 30px;
+  border-radius: 10px;
+  align-items: center;
+  flex-direction: column;
+}
+.box {
+  justify-content: flex-start;
+  align-items: start;
+  margin-right: 77%;
+}
+
+.circular {
+  width: 200px; /* Set your desired width and height */
+  height: 200px;
+  background-color: aquamarine;
+  border-radius: 50%; /* This creates the circular shape */
+  overflow: hidden; /* Hide any parts of the image outside the circle */
+}
+
+.circular img {
+  width: 100%; /* Ensure the image covers the circular container */
+  height: auto; /* Maintain the image's aspect ratio */
+}
+
+.container2 > p {
+  margin-right: 88%;
+  font-weight: bold;
+}
+
+.container2 > h5 {
+  background-color: aquamarine;
+}
+
+button{
+    font-size: 13px;
+    font-weight: 600;
+    gap: 5px;
+    margin-left: 4px;
+    width: 100px;
+    justify-content: start;
+    align-items: flex-start;
+    background-color: rgba(127, 255, 212, 0.963);
+}
+
+.skills{
+    width: 100%;
+}
+
+.container4{
+    margin-right: 80%;
+}

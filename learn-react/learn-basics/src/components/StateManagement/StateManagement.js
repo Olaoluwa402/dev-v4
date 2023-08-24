@@ -9,7 +9,6 @@ export class ClassState extends React.Component {
     };
   }
   render() {
-    
     return (
       <div>
         {this.state.isLoggedIn ? <Dashboard /> : <Login />}
@@ -47,4 +46,3 @@ export const StateManagementHook = () => {
     </div>
   );
 };
- 
