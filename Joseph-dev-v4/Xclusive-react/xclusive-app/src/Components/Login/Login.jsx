@@ -1,17 +1,16 @@
 import React from 'react'
 import styles from './Login.module.css'
 import Advert from '../Advert/Advert'
-import Navigation2 from '../Navigation/Navigation2/Navigation2'
+// import Navigation2 from '../Navigation/Navigation2/Navigation2'
 // import Button2 from '../Button2/Button2'
 // import Button3 from '../Button3/Button3'
 import {Link} from 'react-router-dom'
-import Footer from '../Footer/Footer'
+
 
 const Login = () => {
   return (
     <div className={styles.container}>
     <Advert />
-    <Navigation2 />
   <div className={styles.inner_container}>
     <div><img src='https://res.cloudinary.com/dfeyofjln/image/upload/v1692657182/SignUp_Pix_slj59o.png'/></div>
   <div className={styles.hero}>
@@ -38,7 +37,6 @@ const Login = () => {
     </div>
     
   </div>
-  <Footer />
   </div>
   )
 }

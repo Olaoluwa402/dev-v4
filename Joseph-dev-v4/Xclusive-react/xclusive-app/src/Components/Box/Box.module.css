@@ -5,8 +5,9 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 40px;
   border-radius: 5px;
+  margin-left: 0px;
 }
 .wishlist_image {
   width: 140px;

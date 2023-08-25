@@ -1,11 +1,10 @@
-.container {
-    
-}
+
 .inner_container {
     margin-top: 80px;
     display: flex;
-
 }
+
+
 
 .hero {
     width: 350px;

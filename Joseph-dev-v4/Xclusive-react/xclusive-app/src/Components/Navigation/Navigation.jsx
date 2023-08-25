@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Children } from "react";
 import styles from "./Navigation.module.css";
 import {AiOutlinePlus} from "react-icons/ai"
 import { Link } from "react-router-dom";
@@ -10,7 +10,7 @@ import Plus from "./Plus/Plus";
 
 
 
-const Navigation = () => {
+const Navigation = ({Item1,Item2,Item3,Item4}) => {
 
   return (
     <div className={styles.nav_bar}>
@@ -30,10 +30,10 @@ const Navigation = () => {
         </a>
       </div>
       <div className={styles.nav_images}>
-        <Favourite/>
-        <Carticon/>
-        <User/>
-        <Plus/>
+        {Item1 && <Item1 />}
+        {Item2 && <Item2 />}
+        {Item3 && <Item3 />}
+        {Item4 && <Item4 />}
       </div>
     
     </div>

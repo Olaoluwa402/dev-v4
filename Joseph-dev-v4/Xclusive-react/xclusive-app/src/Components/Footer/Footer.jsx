@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Footer.module.css'
-
+import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <div className={styles.footer}>
@@ -35,9 +35,7 @@ const Footer = () => {
                 <a href="#">
                     <h5>Cart</h5>
                 </a>
-                <a href="#">
-                    <h5>Wishlist</h5>
-                </a>
+                <Link to={"/wishlist"}><h5>Wishlist</h5></Link>
                 <a href="#">
                     <h5>Shop</h5>
                 </a>
@@ -56,6 +54,9 @@ const Footer = () => {
                 <a href="#">
                     <h5>Contact</h5>
                 </a>
+                <Link to={"/colour"}>
+                    <h5>Colours</h5>
+                </Link>
             </div>
 
             <div className={styles.app}>

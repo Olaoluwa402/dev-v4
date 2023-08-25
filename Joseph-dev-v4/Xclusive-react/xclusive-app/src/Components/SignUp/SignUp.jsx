@@ -1,18 +1,27 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from "./SignUp.module.css"
 import {Link, Navigate} from 'react-router-dom'
 import Button2 from '../Button2/Button2'
 import Button3 from '../Button3/Button3'
-import Advert from '../Advert/Advert'
-import Footer from '../Footer/Footer'
-import Navigation2 from '../Navigation/Navigation2/Navigation2'
+import RingLoader from "react-spinners/RingLoader";
+
 
 
 const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    // setLoading(true)
+    // setTimeout(() => {
+    // setLoading(false)
+    // }, 5000)
+
+  }, [])
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,23 +39,31 @@ const SignUp = () => {
   };
 
   const handleSubmit = (e) => {
+  
     e.preventDefault();
-    const data = {
-      name,
-      email,
-      password,
-    };
+    setLoading(true)
 
-    console.log(data);
+    setTimeout(()=>{
+      const data = {
+        name,
+        email,
+        password,
+      };
+  
+      console.log(data);
+      setLoading(false)
+    },5000)
+    
   };
 
-  console.log(name, email, password);
+  console.log(loading);
     
 
   return (
+    <div className={styles.outter}>
+       
     <div className={styles.container}>
-      <Advert />
-      <Navigation2 />
+    
     <div className={styles.inner_container}>
       <div><img src='https://res.cloudinary.com/dfeyofjln/image/upload/v1692657182/SignUp_Pix_slj59o.png'/></div>
     <div className={styles.hero}>
@@ -89,7 +106,8 @@ const SignUp = () => {
         </input>
       </div>
       <div className={styles.buttons}>
-       <Button2 />
+        {loading ? (<RingLoader />) : <Button2 />}
+       
       <Button3 />
       </div>
       </form>
@@ -100,7 +118,7 @@ const SignUp = () => {
       </div>
       
     </div>
-    <Footer />
+    </div>
     </div>
   )
 }
