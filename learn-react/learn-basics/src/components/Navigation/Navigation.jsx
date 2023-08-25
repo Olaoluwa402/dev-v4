@@ -24,7 +24,7 @@ const Navigation = ({ title }) => {
             <a href="/">Contact</a>
           </li>
           <li>
-            <a href="/">Apps</a>
+            <NavLink to="/dashboard">Dashboard</NavLink>
           </li>
         </ul>
       </div>
