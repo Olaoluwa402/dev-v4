@@ -1,0 +1,16 @@
+.wishlistitems ul {
+  display: flex;
+  align-items: start;
+  /* justify-content: center; */
+  list-style: none;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-right: 150px;
+}
+
+.wishlistitems ul li img {
+  padding: 3px;
+  width: 20px;
+  height: 20px;
+}

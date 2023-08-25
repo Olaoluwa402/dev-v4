@@ -39,8 +39,49 @@
                     <i class="fa-regular fa-heart"></i>
                     <i class="fa-solid  fa-cart-shopping" id="cart"></i>
                     <i class="fa-regular fa-user"></i>
+                    <i id="addproduct-btn" class="fa-solid  fa-plus"></i>
             </span>
             </div>
+
+            <!-- add product modal -->
+            <div class="modal" id="modal">
+                <span class="close"> &times;</span>
+                <div class="addproduct">
+                    <h2>Add Products</h2>
+                    <div class="form">
+                        <div class="form-grp">
+                            <label for="title">Title <sup style="color: red;">*</sup></label>
+                                <input type="text" name="" class="product-title" placeholder="title">
+                                <p id="error-title" style="padding: 0; margin: 0; color: red;"></p>
+                        </div>
+                        <div class="form-grp">
+                            <label for="title">Price<sup style="color: red;">*</sup></label>
+                                <input type="number" min="1" name="" class="product-price" placeholder="price">
+                                <p id="error-price" style="margin: 0; padding: 0; color: red;"></p>
+                        </div>
+                        <div class="form-grp">
+                            <label for="title">old-Price<sup style="color: red;">*</sup></label>
+                                <input type="number" name="" class="product-oldprice" placeholder="oldPrice">
+                                <p id="error-oldprice" style="padding: 0; margin: 0; color: red;"></p>
+                        </div>
+                        <div class="form-grp">
+                            <label for="Img-url">Product Image<sup style="color: red;">*</sup></label>
+                                <input type="text" name="" class="product-img" placeholder="Product Image">
+                                <p id="error-img" style="margin: 0; padding: 0; color: red;"></p>
+                        </div>
+                        <div class="form-grp">
+                            <label for="title">Description <sup style="color: red;">*</sup></label>
+                                <textarea name="desc" id="desc" class="product-desc" cols="30" rows="10" required></textarea>
+                                <p id="error-desc"  style="margin: 0; padding: 0; color: red;"></p>
+                        </div>
+                        <button class="btn" id="add_productBtn">Submit</button>
+                    </div>
+                </div>
+            </div>
+            
+        
+            
+
         </header>
 
         <main>
@@ -53,7 +94,7 @@
                 <div class="display">
                     <span id="per">
                         <p>-35%</p>
-                        <img src="./E-Assets/icon-delete.png" alt="" width="20px" height="20px">
+                        <img src="./E-Assets/icon-delete.png" alt="" width="20px" height="20px" style="border-radius: 50%; background-color: white;">
                     </span>
                     <img src="./E-Assets/gucci-bag.png" alt="" width="150px">
                     <span id="gucci">
@@ -81,7 +122,7 @@
                     <span id="perz">
                         <img src="./E-Assets/icon-delete.png" alt="" width="20px" height="20px">
                     </span>
-                    <img src="./E-Assets/black-pad.png" alt="" width="120px">
+                    <img src="./E-Assets/black-pad.png" alt="" width="113px" height="144px" style="margin-top: 30px;">
                     <span id="gucci">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <p>Add to Cart</p>
@@ -94,7 +135,7 @@
                     <span id="perz">
                         <img src="./E-Assets/icon-delete.png" alt="" width="20px" height="20px">
                     </span>
-                    <img src="./E-Assets/jacket.png" alt="" width="120px">
+                    <img src="./E-Assets/jacket.png" alt="" width="113px" height="144px" style="margin-top: 27px;">
                     <span id="gucci">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <p>Add to Cart</p>
@@ -112,8 +153,8 @@
                 </span>
                 <p>See All</p>
             </div>
-            <div class="display-items">
-                <div class="display">
+            <div class="display-item">
+             <div class="displayz">
                     <span id="per">
                         <p>-35%</p>
                         <img src="./E-Assets/Quick View.png" alt="" width="20px" height="20px">
@@ -136,7 +177,7 @@
                             <p>(65)</p>
                          </span>
                 </div>
-                <div class="display">
+                <div class="displayz">
                     <span id="perz">
                         <img src="./E-Assets/Quick View.png" alt="" width="20px" height="20px">
                     </span>
@@ -158,7 +199,7 @@
                         <p>(65)</p>
                          </span>
                 </div>
-                <div class="display">
+                <div class="displayz">
                     <span id="perz">
                         <img src="./E-Assets/Quick View.png" alt="" width="20px" height="20px">
                     </span>
@@ -180,7 +221,7 @@
                             <p>(65)</p>
                          </span>
                 </div>
-                <div class="display">
+                <div class="displayz">
                     <span id="perz">
                         <img src="./E-Assets/Quick View.png" alt="" width="20px" height="20px">
                     </span>
@@ -200,7 +241,7 @@
                         <img src="./E-Assets/yellowstar.png" alt="">
                         <img src="./E-Assets/yellowstar.png" alt="">
                             <p>(65)</p>
-                         </span>
+                         </span> 
                 </div>
             </div>
         </main>
@@ -272,13 +313,31 @@
 
                     </div>
                     <div class="coupon">
-                        <input type="text" name="" id="" placeholder="coupon code"><span><button>Apply Coupon</button></span>
-                        <div class="text-area">
-                            <button>Check Out</button>
-                        </div>
-    
+                        <span id="coupon-code">
+                            <input type="text" name="" id="" placeholder="coupon code">
+                            <button>Apply Coupon</button>
+                        </span>
+                       
+                        <div class="box">
+                            <h4>Cart Total</h4>
+                            <span class="cache">
+                                <p>Subtotal:</p>
+                                <p>$1750</p>
+                            </span>
+                            <hr>
+                            <span class="cache">
+                                <p>Shipping:</p>
+                                <p>free</p>
+                            </span>
+                            <hr>
+                            <span class="cache">
+                                <p>Total:</p>
+                                <p>$1750</p>
+                            </span>
+                            <button id="checkout-btn">Process to checkout</button>
+                        </div> 
                     </div>
-                    <div class="box"></div>  
+                    
                 </div> 
                   
             </div>
