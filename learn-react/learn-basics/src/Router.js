@@ -6,6 +6,7 @@ import Layout from "./components/Layout/Layout";
 import Notifications from "./screens/Notifications";
 import Users from "./screens/Users";
 import Analytics from "./screens/Analytics";
+import User from "./screens/User";
 import DashboardLayout from "./components/DashboardLayout/Layout.jsx";
 
 const Router = () => {
@@ -28,10 +29,29 @@ const Router = () => {
         }
       />
 
+      <Route
+        path="/posts"
+        element={
+          <Layout>
+            <AboutScreen />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/posts/:id"
+        element={
+          <Layout>
+            <AboutScreen />
+          </Layout>
+        }
+      />
+
       {/* nested route - dashboard */}
       <Route path="/dashboard" element={<DashboardLayout />}>
         <Route index element={<Analytics />} />
         <Route path="users" element={<Users />} />
+        <Route path="users/:id" element={<User />} />
         <Route path="notifications" element={<Notifications />} />
       </Route>
       {/* end of nested routes */}
