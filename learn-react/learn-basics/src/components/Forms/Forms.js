@@ -23,7 +23,12 @@ const Forms = () => {
       password,
     };
 
+    // send the data to backend
+
     console.log(data);
+
+    setEmail("");
+    setPassword("");
   };
 
   console.log(email, password);

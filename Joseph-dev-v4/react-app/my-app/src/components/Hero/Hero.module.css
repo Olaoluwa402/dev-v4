@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    gap: 20px;
+    /* height: calc(100vh - 85px); */
+  }
+  
+  .hero__left {
+    flex: 1;
+  }
+  
+  .hero__left img {
+    height: 100%;
+  }
+  
+  .hero__right {
+    flex: 1;
+  }
+  
