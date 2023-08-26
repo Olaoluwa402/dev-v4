@@ -35,7 +35,7 @@ const Forms = () => {
         <div className={styles.formGroup}>
           <label htmlFor="email">email</label>
           <input
-            type="text"
+            type="text" nhj
             placeholder="email"
             name="email"
             value={email}
