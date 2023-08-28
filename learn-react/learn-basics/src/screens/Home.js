@@ -55,8 +55,8 @@ const HomeScreen = () => {
         <Hero />
       </section>
       {/* state */}
-      <Forms />
-      {/* <Form2 /> */}
+      {/* <Forms /> */}
+      <Form2 />
       <Conditional />
       {/* blog */}
       <Blog blogData={blogData} />

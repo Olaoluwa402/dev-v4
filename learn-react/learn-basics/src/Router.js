@@ -51,6 +51,7 @@ const Router = () => {
       <Route path="/dashboard" element={<DashboardLayout />}>
         <Route index element={<Analytics />} />
         <Route path="users" element={<Users />} />
+        {/* param dymaic path */}
         <Route path="users/:id" element={<User />} />
         <Route path="notifications" element={<Notifications />} />
       </Route>
