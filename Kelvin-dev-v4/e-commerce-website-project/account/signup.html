@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="./css/components.css" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="./signup.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,7 +38,7 @@
 
     <!-- navbar start -->
     <nav>
-      <img src="./Assets/lodo black.png" alt="" id="navlogo" />
+      <img src="../Assets/lodo black.png" alt="" id="navlogo" />
 
       <i
         class="fa-solid fa-bars"
@@ -47,10 +47,10 @@
       ></i>
 
       <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./contact/contact.html">Contact</a></li>
-        <li><a href="./About/about.html">About</a></li>
-        <li><a href="./account/signup.html">Sign Up</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+        <li><a href="../About/about.html">About</a></li>
+        <li><a href="">Sign Up</a></li>
       </ul>
 
       <div>
@@ -62,7 +62,7 @@
 
         <i class="fa-regular fa-heart"></i>
         <ion-icon name="cart-outline" class="cart" id="navCartId"></ion-icon>
-        <img src="./Assets/user.png" alt="" id="user-icon" />
+        <img src="../Assets/user.png" alt="" id="user-icon" />
       </div>
     </nav>
     <!-- navbar end -->
@@ -70,10 +70,10 @@
     <!-- mobile nav -->
     <div class="menuclose" id="mobilenav">
       <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./contact/contact.html">Contact</a></li>
-        <li><a href="./About/about.html">About</a></li>
-        <li><a href="./account/signup.html">Sign Up</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+        <li><a href="../About/about.html">About</a></li>
+        <li><a href="">Sign Up</a></li>
       </ul>
 
       <div>
@@ -90,22 +90,62 @@
             class="cart"
             id="navCartIdMobile"
           ></ion-icon>
-          <img src="./Assets/user.png" alt="" id="user-icon-mobile" />
+          <img src="../Assets/user.png" alt="" id="user-icon-mobile" />
         </div>
       </div>
     </div>
     <!-- mobile nav -->
 
+    <!-- midsection start -->
+    <main>
+      <div class="signup_container">
+        <img
+          src="../Assets/signin-assets/SideImage.png"
+          alt=""
+          class="sideimg"
+        />
+        <form>
+          <div>
+            <h1>Create an account</h1>
+            <p>Enter your details below</p>
+          </div>
+          <input type="text" placeholder="Name" name="name" value="" />
+          <input
+            type="Email"
+            placeholder="Email or phone number"
+            name="email"
+            value=""
+          />
+          <input
+            type="Password"
+            placeholder="Password"
+            name="password"
+            value=""
+          />
+          <div class="btnContainer">
+            <button class="btn1" type="submit">Create Account</button>
+            <button class="btn2">Sign up with Google</button>
+          </div>
+          <p>Already have account? <a href="">Log in</a></p>
+        </form>
+      </div>
+    </main>
+    <!-- midsection end -->
+
     <!-- footer start -->
     <footer>
-      <img src="./Assets/logo white.png" alt="" />
+      <img src="../Assets/logo white.png" alt="" />
       <div id="footer-grid">
         <div>
           <h5>Subscribe</h5>
           <p>Get 10% off your first order</p>
           <div>
             <input type="email" placeholder="Enter your email" />
-            <img src="./Assets/icon-send.png" alt="" id="footer-email-submit" />
+            <img
+              src="../Assets/icon-send.png"
+              alt=""
+              id="footer-email-submit"
+            />
           </div>
         </div>
 
@@ -121,7 +161,7 @@
           <li>My Account</li>
           <li>Login / Register</li>
           <li>Cart</li>
-          <li><a href="./wishlist/wishlist.html">Wishlist</a></li>
+          <li><a href="../wishlist/wishlist.html">Wishlist</a></li>
           <li>Shop</li>
         </ul>
 
@@ -138,17 +178,17 @@
           <p>Save $3 with App New User Only</p>
           <div id="footer-grid-link">
             <img
-              src="./Assets/wishlist-page-assets/wishlist-Qrcode 1.png"
+              src="../Assets/wishlist-page-assets/wishlist-Qrcode 1.png"
               alt=""
               id="footer-qr"
             />
             <img
-              src="./Assets/wishlist-page-assets/wishlist-googleplay-img.png"
+              src="../Assets/wishlist-page-assets/wishlist-googleplay-img.png"
               alt=""
               id="footer-gp"
             />
             <img
-              src="./Assets/wishlist-page-assets/wishlist-appstore-img.png"
+              src="../Assets/wishlist-page-assets/wishlist-appstore-img.png"
               alt=""
               id="footer-as"
             />
@@ -172,7 +212,7 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <script src="./js/nav.js"></script>
-    <script src="./js/modal.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/modal.js"></script>
   </body>
 </html>

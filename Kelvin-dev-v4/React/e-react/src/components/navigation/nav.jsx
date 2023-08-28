@@ -23,7 +23,6 @@ function Nav() {
       {/* navbar start */}
       <nav>
         <NavLink to="/">
-          {" "}
           <img
             src="../Assets/lodo black.png"
             alt=""
@@ -33,10 +32,14 @@ function Nav() {
         <AiOutlineMenu className={styles.hamburger_icon} id="hamburger_icon" />
 
         <ul>
-          <li>Home</li>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
           <li>Contact</li>
           <li>About</li>
-          <li>Sign Up</li>
+          <li>
+            <NavLink to="/accountscreen">Sign Up</NavLink>
+          </li>
         </ul>
         <div>
           <div className={styles.searchDiv}>
@@ -46,7 +49,7 @@ function Nav() {
 
           <BsHeart className={styles.i} />
           <BsCart3 className={styles.i} id="navCartId" />
-          <NavLink to="/accountscreen">
+          <NavLink to="/loginscreen">
             <FiUser className={styles.userIcon} id="user_icon" />
           </NavLink>
         </div>

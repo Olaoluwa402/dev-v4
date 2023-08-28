@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+  overflow-x: hidden;
+}
+
+main {
+  margin-top: -100px;
+}
+
+input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 10px;
+  color: rgb(37, 37, 37);
+  border-bottom: 1px solid rgb(145, 145, 145);
+}
+
+.signup_container {
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.signup_container form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 100px;
+  width: 40%;
+}
+
+.signup_container > img {
+  width: 55%;
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn1,
+.btn2 {
+  padding: 15px;
+  border-radius: 3px;
+  transition: all 0.4s;
+}
+
+.btn1:hover {
+  background-color: rgb(189, 0, 0);
+}
+
+.signup_container form p {
+  font-size: 13px;
+  color: grey;
+}

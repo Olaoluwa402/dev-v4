@@ -5,6 +5,7 @@ footer {
   padding-left: 40px;
   padding-right: 40px;
   text-align: left;
+  padding-top: 50px;
 }
 
 footer > img {
@@ -201,6 +202,6 @@ footer ul > li {
 
 @media screen and (min-width: 1204px) {
   .footer_grid {
-    grid-template-columns: 200px auto auto 10% auto;
+    grid-template-columns: 150px auto auto 11% auto;
   }
 }

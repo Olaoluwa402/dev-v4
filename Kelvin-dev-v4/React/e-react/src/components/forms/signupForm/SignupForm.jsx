@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import FormImg from "../formImg/FormImg";
 import Input from "../formInput/Input";
 import Signup from "./SignupForm.module.css";
@@ -51,21 +52,21 @@ function SignupForm() {
           placehold="Name"
           name="name"
           value={fullName}
-          onChange={changeFunc}
+          changeFunc={changeFunc}
         />
         <Input
           type="Email"
           placehold="Email or phone number"
           name="email"
           value={email}
-          // onChange={changeFunc}
+          changeFunc={changeFunc}
         />
         <Input
           type="Password"
           placehold="Password"
           name="password"
           value={password}
-          // onChange={changeFunc}
+          changeFunc={changeFunc}
         />
         <div className={Signup.btnContainer}>
           <button className={Signup.btn1} type="submit">
@@ -74,7 +75,7 @@ function SignupForm() {
           <button className={Signup.btn2}>Sign up with Google</button>
         </div>
         <p>
-          Already have account? <a href="">Log in</a>
+          Already have account? <NavLink to={"/loginscreen"}>Log in</NavLink>
         </p>
       </form>
     </div>

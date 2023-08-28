@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+.top_mainContainer {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+.side {
+  width: 500px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.top {
+  background-color: aqua;
+  height: 100px;
+}
+.main {
+  background-color: black;
+}
