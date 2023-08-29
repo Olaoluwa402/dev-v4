@@ -1,0 +1,60 @@
+.developer img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+.verified{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.developer p{
+  color: grey;
+  margin: 10px 0;
+}
+
+.btn button {
+  background-color: rgb(34, 231, 231);
+  border: none;
+  min-width: 50px;
+  height: 25px;
+  border-radius: 6px;
+  padding: 4px;
+  color: aliceblue;
+}
+
+.btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.container {
+  background-color: rgba(220, 238, 237, 0.912);
+  margin: 70px 250px;
+  border-radius: 2px;
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container span{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.clock{
+    display: flex;
+    align-items: center;
+}
+
+.inner_container{
+  background-color:white;
+  border-radius: 6px;
+  height: 340px;
+  margin: 0 10px;
+  padding: 10px 20px;
+}

@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Roboto+Condensed:ital,wght@0,400;0,700;1,300&family=Roboto:ital,wght@0,100;0,300;0,700;1,100;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;0,6..96,900;1,6..96,600&family=Source+Sans+3:wght@300;400;500;600;700;900&display=swap");
+
+:root {
+  --white100: #fff;
+  --white90: #f3f3f3;
+  --brown100: brown;
+  --black90: #333333;
+  --purple400: #c084fc;
+  --blue500: #3b82f6;
+  --font-stack_1: "Roboto", sans-serif;
+  --font-stack_2: "Bodoni Moda", serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-stack);
+  /* font-size: calc(7px + 2vw); */
+  color: var(--black90);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-stack_2);
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+}
+
+.wrapper {
+  background-color: var(--white90);
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  } 
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  } 
+}

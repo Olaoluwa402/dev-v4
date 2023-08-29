@@ -1,5 +1,7 @@
 import React from "react";
 import Title from "../Title/Title";
+import Article from "../Article/Article";
+
 import styles from "./Blog.module.css";
 
 const Blog = ({ blogData }) => {
@@ -9,12 +11,7 @@ const Blog = ({ blogData }) => {
       <Title />
       <div className={styles.blog__articles}>
         {blogData && blogData.length > 0 ? (
-          blogData.map((item) => (
-            <div key={item.id} className={styles.blog__article}>
-              <h4>{item.title}</h4>
-              <p>{item.desc}</p>
-            </div>
-          ))
+          blogData.map((item) => <Article key={item.id} item={item} />)
         ) : (
           <h2>No blog artile yet</h2>
         )}

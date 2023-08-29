@@ -1,5 +1,3 @@
 {
-    "liveServer.settings.port": 5502,
-    "livePreview.defaultPreviewPath": "/eddie-dev-v4/colorib-project/coloribindex.html",
-    "git.ignoreLimitWarning": true
+    "liveServer.settings.port": 5502
 }

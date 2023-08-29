@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+ 
+}
+
+/* .first {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(150, 162, 249, 0.67),
+    rgba(77, 0, 128, 0.653)
+  );
+  border-radius: 5px;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  
+}
+
+.second {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  height: 70%;
+}
+
+.second > h3 {
+  font-size: 30px;
+} */
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#check {
+  display: inline;
+  width: 20px;
+}
+.login {
+  border: 10px;
+  border-radius: 6px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(150, 162, 249, 0.67),
+    rgba(77, 0, 128, 0.653)
+  );
+  transition: background-color 0.5s ease-in-out;
+  color: white;
+}
+.login:hover {
+  background-color: darkviolet;
+}
+input {
+  margin-bottom: 15px;
+  width: 80%;
+  padding: 10px 60px 10px 5px;
+}
+.container2 {
+  display: flex;
+  justify-content: center;
+}
+.hello {
+  padding: 40px;
+  background-color:fuchsia
+}
+
+.close {
+  font-size: 30px;
+  cursor: pointer;
+}

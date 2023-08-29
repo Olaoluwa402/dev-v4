@@ -1,8 +1,13 @@
 import React from "react";
-import Navigation from "../components/Navigation/Navigation";
 import Hero from "../components/Hero/Hero";
 import Blog from "../components/Blog/Blog";
-import Footer from "../components/Footer/Footer";
+import {
+  ClassState,
+  StateManagementHook,
+} from "../components/StateManagement/StateManagement";
+import Forms from "../components/Forms/Forms";
+import Form2 from "../components/Forms/Forms-2/Form-2";
+import Conditional from "../components/ConditionalRendering/Conditional";
 
 import styles from "./Home.module.css";
 const HomeScreen = () => {
@@ -46,15 +51,16 @@ const HomeScreen = () => {
   return (
     <div>
       <section className={styles.header}>
-        {/* navigation */}
-        <Navigation title="our navigation" />
         {/* hero */}
         <Hero />
       </section>
+      {/* state */}
+      {/* <Forms /> */}
+      <Form2 />
+      <Conditional />
       {/* blog */}
       <Blog blogData={blogData} />
       {/* footer */}
-      <Footer />
     </div>
   );
 };
