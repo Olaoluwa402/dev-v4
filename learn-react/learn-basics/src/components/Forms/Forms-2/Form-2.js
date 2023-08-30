@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Spinner from "../../Spinner/CustomSpinner.tsx";
 import styles from "../Forms.module.css";
 
 const Forms = () => {
@@ -11,41 +12,49 @@ const Forms = () => {
   const [input, setInput] = useState(initialValues);
 
   //destructuring of form fields from the state
-  const [email, password, username, confirmPassword] = input;
+  // const [email, password, username, confirmPassword] = input;
 
   const [isLoading, setIsLoading] = useState(false);
+
+  // useEffect(()=> {
+
+  // }, [])
 
   const changeHandler = (e) => {
     const { name, value } = e.target;
 
     setInput((currState) => ({
+      ...currState,
       [name]: value,
     }));
   };
 
+  console.log(input);
+
   const submitHander = (e) => {
     e.preventDefault();
     // set loading
-
+    setIsLoading(true);
     //cause a delay befor submiting the date
+    setTimeout(() => {
+      //submit the data after the dalay
+      const data = {
+        email: input.email,
+        username: input.username,
+        password: input.password,
+      };
 
-    //submit the data after the dalay
-    const data = {
-      email: email,
-      username: username,
-      password: password,
-    };
+      console.log(data);
 
-    console.log(data);
-
-    //set loading again
-
-    setInput({
-      email: "",
-      password: "",
-      confirmPassword: "",
-      username: "",
-    });
+      //set loading again
+      setIsLoading(false);
+      setInput({
+        email: "",
+        password: "",
+        confirmPassword: "",
+        username: "",
+      });
+    }, 5000);
   };
 
   console.log(input);
@@ -60,7 +69,7 @@ const Forms = () => {
             type="text"
             placeholder="email"
             name="email"
-            value={email}
+            value={input.email}
             // onChange={(e) => setEmail(e.target.value)}
             onChange={changeHandler}
           />
@@ -71,7 +80,7 @@ const Forms = () => {
             type="username"
             placeholder="username"
             name="username"
-            value={username}
+            value={input.username}
             onChange={changeHandler}
           />
         </div>
@@ -81,7 +90,7 @@ const Forms = () => {
             type="password"
             placeholder="password"
             name="password"
-            value={password}
+            value={input.password}
             onChange={changeHandler}
           />
         </div>
@@ -92,13 +101,13 @@ const Forms = () => {
             type="confirm-password"
             placeholder="confirm-password"
             name="confirm-password"
-            value={confirmPassword}
+            value={input.confirmPassword}
             onChange={changeHandler}
           />
         </div>
 
         {isLoading ? (
-          <h2>Loading ....</h2>
+          <Spinner />
         ) : (
           <button onClick={submitHander} type="submit">
             submit
