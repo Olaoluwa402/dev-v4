@@ -172,3 +172,10 @@ const threeD = [
 ];
 //  accessing the value
 console.log(threeD[1][3][1]);
+
+
+const sortMap = ["HTML", "PYTHON", "CSS", "JS", "JAVA"]
+
+const truemap = sortMap.map((like)=> `${like} skill`)
+
+console.log(truemap)
