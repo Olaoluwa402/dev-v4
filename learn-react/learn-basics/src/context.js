@@ -1,12 +1,21 @@
-import React from "react";
-
-//create a context
+import React, { useState } from "react";
+import { blogData } from "./components/data";
 const GlobalContext = React.createContext();
 
-//provider
-const Provider = GlobalContext.Provider;
+const Provider = ({ children }) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const sum = (arr) => {
+    return arr.reduce((acc, cur) => acc + cur, 0);
+  };
+  const store = {
+    blogData: blogData,
+    sum: sum,
+    isLoading,
+    setIsLoading,
+  };
+  return (
+    <GlobalContext.Provider value={store}>{children}</GlobalContext.Provider>
+  );
+};
 
-//consumer
-const Consumer = GlobalContext.Consumer;
-
-export { GlobalContext, Provider, Consumer };
+export { Provider, GlobalContext };
