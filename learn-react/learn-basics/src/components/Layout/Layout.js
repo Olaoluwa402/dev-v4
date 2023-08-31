@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
       <Navigation />
       {open && <SideBar />}
       <main>{children}</main>
-      <Footer />
+      <Footer/>
     </div>
   );
 };
