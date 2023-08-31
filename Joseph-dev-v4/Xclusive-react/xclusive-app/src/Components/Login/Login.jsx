@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './Login.module.css'
-import Advert from '../Advert/Advert'
 // import Navigation2 from '../Navigation/Navigation2/Navigation2'
 // import Button2 from '../Button2/Button2'
 // import Button3 from '../Button3/Button3'
@@ -10,7 +9,6 @@ import {Link} from 'react-router-dom'
 const Login = () => {
   return (
     <div className={styles.container}>
-    <Advert />
   <div className={styles.inner_container}>
     <div><img src='https://res.cloudinary.com/dfeyofjln/image/upload/v1692657182/SignUp_Pix_slj59o.png'/></div>
   <div className={styles.hero}>
@@ -30,7 +28,7 @@ const Login = () => {
       <input type='password' id={styles.name} placeholder='Password'></input>
     </div>
     <div className={styles.buttons}>
-        <button className={styles.login}><Link to= '/'>Log in</Link></button>
+        <button className={styles.login}><Link to= '/dashboard'>Log in</Link></button>
         <button className={styles.forget}><Link to= '/'>Forget Password?</Link></button>
     </div>
              

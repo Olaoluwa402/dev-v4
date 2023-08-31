@@ -1,0 +1,77 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "name": "Joseph Ikeanyi",
+        "email": "joseph_ikeanyi@gmail.com",
+        "password": "Gbenga100"
+      },
+      {
+        "id": 2,
+        "name": "Ayomide Smith",
+        "email": "ayomidesmith@yahoo.com.",
+        "password": "Weconquer112"
+      },
+      {
+        "id": 3,
+        "name": "Kelvin Clark",
+        "email": "kelvin_clark@gmail.com",
+        "password": "Kelvin16"
+      },
+      {
+        "id": 4,
+        "name": "Juliet Samuel",
+        "email": "julietsamuel@yahoo.com.",
+        "password": "Jully4eva"
+      },
+      {
+        "id": 5,
+        "name": "Ijeoma Ezekwe",
+        "email": "ijeomaezekwe@gmail.com",
+        "password": "Gbenga100"
+      },
+      {
+        "id": 6,
+        "name": "Quadri Kazzem",
+        "email": "kazman@yahoo.com.",
+        "password": "Weconquer112"
+      },
+      {
+        "id": 7,
+        "name": "Daniel Wale",
+        "email": "daniel_wale@gmail.com",
+        "password": "Godknows100"
+      },
+      {
+        "id": 8,
+        "name": "Grace Smith",
+        "email": "gracesmith@yahoo.com.",
+        "password": "Weconquer112"
+      },
+      {
+        "id": 9,
+        "name": "Faith Sunday",
+        "email": "faith_sunday@gmail.com",
+        "password": "Gbenga100"
+      },
+      {
+        "id": 10,
+        "name": "Paul Stone",
+        "email": "paulstone@yahoo.com.",
+        "password": "Weconquer112"
+      },
+      {
+        "id": 11,
+        "name": "Precious Agboola",
+        "email": "preciousagboola@gmail.com",
+        "password": "Gbenga100"
+      },
+      {
+        "id": 12,
+        "name": " Deborah Smith",
+        "email": "ayomidesmith@yahoo.com.",
+        "password": "Weconquer112"
+      }
+      
+    ]
+  }

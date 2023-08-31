@@ -13,6 +13,12 @@ import Carticon from "./Components/Navigation/Carticon/Carticon";
 import User from "./Components/Navigation/User/User";
 import Plus from "./Components/Navigation/Plus/Plus";
 import ColourPage from "./Pages/ColourPage";
+import DashboardLayout from './Components/DashboardLayout/Layout'
+import Analytics from './Pages/AnalyticsPage'
+import Account  from "./Pages/Account"
+import Companies from "./Pages/Companies";
+import CustomersPage from "./Pages/CustomersPage";
+
 
 
 
@@ -62,6 +68,17 @@ const Router = () => {
             <ContactPage />
         }
       />
+      <Route
+        path="/dashboard"
+        element={<DashboardLayout /> }>
+        <Route index element= {<Analytics />} />
+        <Route path="overview" element= {<Analytics />} />
+        <Route path="customer" element= {<CustomersPage />} />
+        <Route path= "account" element= {<Account />} />
+        <Route path="company" element= {<Companies />} />
+      
+      </Route>
+      
 
       <Route path="/cartproducts"
       element={<Cart/>} />

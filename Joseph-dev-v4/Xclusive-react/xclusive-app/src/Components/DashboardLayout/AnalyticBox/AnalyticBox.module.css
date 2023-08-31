@@ -1,0 +1,112 @@
+.boxcontainer{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 15px;
+}
+
+.box{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 245px;
+    height: 150px;
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 20px;
+    box-shadow: 0px 3px 3px 4px rgba(77, 76, 76, 0.2);;
+    
+}
+
+.topbox {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin-right: 20px;
+}
+
+.toptext {
+    padding: 15px;
+}
+
+.toptext h4{
+    font-size: .7rem;
+    font-family: 'Times New Roman', Times, serif;
+    opacity: 0.6;
+}
+
+.toptext p {
+
+    font-size: 1.8rem;
+    font-weight: 700;
+ 
+}
+
+.outtericon{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(226, 46, 46);
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.outtericons{
+
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(96, 190, 96);
+    align-items: center;
+    justify-content: center;
+}
+
+.innericon{
+    display: flex;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon{
+    font-size: .8rem;
+    color: rgb(226, 46, 46);
+}
+
+.icons{
+    color: white;
+    font-size: 1.3rem;
+}
+
+.bottombox{
+    display: flex;
+    margin-left: 15px;
+    align-items: center;
+}
+
+.bottombox span {
+    font-size: 0.8rem;
+    padding-left: 10px;
+    opacity: 0.8;
+
+}
+
+.icon2 {
+    display: flex;
+    color: rgb(109, 243, 109);
+    align-items: center;
+}
+
+
+.bartop .sync {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+

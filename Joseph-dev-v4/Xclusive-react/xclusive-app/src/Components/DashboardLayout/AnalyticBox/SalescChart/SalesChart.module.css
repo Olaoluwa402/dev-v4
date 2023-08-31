@@ -1,0 +1,42 @@
+.bar_chart{
+    margin-top: 40px;
+    width: 750px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 20px;
+    box-shadow: 0px 3px 3px 4px rgba(77, 76, 76, 0.2);
+    margin-left: 40px;
+
+}
+.bar_chart{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+}
+
+.sync {
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+    font-weight: 800;
+    gap: 10px;
+}
+
+
+.bar_chart .bartop {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.barchart{
+
+    margin-top: 20px;
+    margin-left: 30px;
+}

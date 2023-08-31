@@ -29,9 +29,9 @@ const Footer = () => {
                 <a href="#">
                     <h5>My Account</h5>
                 </a>
-                <a href="#">
+                <Link to={"/login"}>
                     <h5>Login / Register</h5>
-                </a>
+                </Link>
                 <a href="#">
                     <h5>Cart</h5>
                 </a>

@@ -43,7 +43,7 @@ const Hero = () => {
       <Box />
       <BoxTop2/>
       <div className={styles.box2}>
-      <Box2 boxData={boxData}/>
+      <Box2 />
       </div>
       
     
