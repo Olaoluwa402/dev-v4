@@ -12,8 +12,9 @@ import { GlobalContext } from "../context";
 
 import styles from "./Home.module.css";
 const HomeScreen = () => {
-  const { blogData } = useContext(GlobalContext);
+  const { blogData, isLoading, sum } = useContext(GlobalContext);
 
+  console.log(isLoading, sum([10, 20, 30, 40]));
   const [count, setCount] = useState(0);
 
   useEffect(() => {
