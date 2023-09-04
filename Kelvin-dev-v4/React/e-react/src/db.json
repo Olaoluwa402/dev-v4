@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "Json Developer"
+    },
+    {
+      "id": 2,
+      "title": "Kubernetes Update",
+      "author": "Cloud Developer Team Lead"
+    },
+    {
+      "id": 3,
+      "title": "Serverside Rendering",
+      "author": "NextJs Developer"
+    },
+    {
+      "id": 4,
+      "title": "KYC Issues",
+      "author": "Customer Services"
+    },
+    {
+      "id": 5,
+      "title": "Docker Installment",
+      "author": "Cloud Developer Team Lead"
+    },
+    {
+      "id": 6,
+      "title": "mobile Integration",
+      "author": "Mobile Developer Team"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

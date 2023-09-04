@@ -35,8 +35,12 @@ function Nav() {
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
-          <li>Contact</li>
-          <li>About</li>
+          <li>
+            <NavLink to={"/contact"}>Contact</NavLink>
+          </li>
+          <li>
+            <NavLink to={"/about"}>About</NavLink>
+          </li>
           <li>
             <NavLink to="/accountscreen">Sign Up</NavLink>
           </li>
@@ -49,7 +53,10 @@ function Nav() {
 
           <BsHeart className={styles.i} />
           <BsCart3 className={styles.i} id="navCartId" />
-          <NavLink to="/loginscreen">
+          <NavLink
+            to="/dashboard
+          "
+          >
             <FiUser className={styles.userIcon} id="user_icon" />
           </NavLink>
         </div>
@@ -59,10 +66,18 @@ function Nav() {
       {/* mobile nav */}
       <div className={`${styles.mobilenav} menuclose`} id="mobilenav">
         <ul>
-          <li>Home</li>
-          <li>Contact</li>
-          <li>About</li>
-          <li>Sign Up</li>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to={"/contact"}>Contact</NavLink>
+          </li>
+          <li>
+            <NavLink to={"/about"}>About</NavLink>
+          </li>
+          <li>
+            <NavLink to="/accountscreen">Sign Up</NavLink>
+          </li>
         </ul>
 
         <div>

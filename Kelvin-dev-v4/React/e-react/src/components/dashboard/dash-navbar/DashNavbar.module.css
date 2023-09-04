@@ -27,9 +27,9 @@
   grid-template-columns: 30px auto;
   align-items: center;
   grid-gap: 20px;
-  width: 20px;
+  width: 15px;
   height: 20px;
-  padding: 5px 8px;
+  padding: 5px 10px;
   border-radius: 50px;
   overflow: hidden;
   height: fit-content;

@@ -1,0 +1,151 @@
+.container body {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  font-family: poppins;
+  overflow-x: hidden;
+}
+.container p {
+  font-size: 12px;
+  margin: 0;
+  margin-top: 10px;
+}
+.container h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+.container h3 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-top: -100px;
+}
+
+.about_hero {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* overflow-y: auto; */
+}
+
+.about_hero > div {
+  position: absolute;
+  top: 50%;
+  background-color: white;
+  padding: 25px;
+  border-radius: 3px;
+  /* box-shadow: 0px 0px 2px rgba(128, 128, 128, 0.336); */
+}
+
+.about_hero_img {
+  width: 100vw;
+}
+
+.about_features_container,
+.about_services {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.about_features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 120px;
+  padding: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.466);
+  transition: all 0.4s;
+}
+
+.about_features:hover {
+  background-color: #db4444;
+  color: white;
+  border-color: #db4444;
+}
+
+.about_features img,
+.about_service img {
+  width: 40px;
+}
+
+.about_section_main {
+  margin-top: 40vh;
+  margin-bottom: 100px;
+}
+
+.about_team_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 30px;
+  overflow-x: scroll;
+  margin: 100px 60px 60px 60px;
+}
+
+.about_team_container img {
+  min-width: 100px;
+  max-width: 250px;
+}
+
+.about_team_container > div {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.about_services {
+  margin: 80px 0;
+}
+
+.about_service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  padding: 20px;
+}
+
+@media screen and (min-width: 950px) {
+  .container p {
+    font-size: 14px;
+  }
+  .container h2 {
+    font-size: 16px;
+  }
+  .container h3 {
+    font-size: 15px;
+  }
+
+  .about_hero {
+    flex-direction: row;
+    margin: 0;
+  }
+
+  .about_hero > div {
+    position: static;
+    background-color: transparent;
+    padding: 75px;
+  }
+
+  .about_hero_img {
+    width: 50%;
+  }
+
+  .about_team_container {
+    display: flex;
+    justify-content: space-around;
+  }
+}

@@ -1,8 +1,8 @@
 import React from "react";
 import DashSidebar from "../../components/dashboard/dash-sidebar/DashSidebar";
-import DashMain from "../../components/dashboard/dash-main/DashMain.jsx";
 import DashNavbar from "../../components/dashboard/dash-navbar/DashNavbar.jsx";
 import dashboard from "./Dashboard.module.css";
+import { Outlet } from "react-router-dom";
 
 function Dashboard() {
   return (
@@ -10,7 +10,8 @@ function Dashboard() {
       <DashSidebar className={dashboard.side} />
       <div className={dashboard.top_mainContainer}>
         <DashNavbar className={dashboard.top} />
-        <DashMain className={dashboard.main} />
+        {/* <DashMain className={dashboard.main} /> */}
+        <main className={dashboard.main}>{<Outlet />}</main>
       </div>
     </div>
   );

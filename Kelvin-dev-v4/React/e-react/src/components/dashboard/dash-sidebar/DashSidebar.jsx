@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import {
   BsFillBarChartFill as BsChart,
   BsGearWideConnected as BsGear,
@@ -19,42 +20,60 @@ const DashSidebar = () => {
     <div className={sidebar.container}>
       <div>
         <div>
-          <h5>Devias</h5>
+          <NavLink to={"/"}>
+            <h5>Devias</h5>
+          </NavLink>
           <p>Production</p>
         </div>
       </div>
       <ul>
         <li>
-          <BsChart className={sidebar.listIcon} />
-          Overview
+          <NavLink to={"/dashboard"} className={sidebar.a}>
+            <BsChart className={sidebar.listIcon} />
+            Overview
+          </NavLink>
         </li>
         <li>
-          <HiUsers className={sidebar.listIcon} />
-          Customers
+          <NavLink to={"staff"} className={sidebar.a}>
+            <HiUsers className={sidebar.listIcon} />
+            Staff
+          </NavLink>
         </li>
         <li>
-          <HiBag className={sidebar.listIcon} />
-          Companies
+          <NavLink to={"companies"} className={sidebar.a}>
+            <HiBag className={sidebar.listIcon} />
+            Companies
+          </NavLink>
         </li>
         <li>
-          <HiUser className={sidebar.listIcon} />
-          Account
+          <NavLink to={"accounts"} className={sidebar.a}>
+            <HiUser className={sidebar.listIcon} />
+            Account
+          </NavLink>
         </li>
         <li>
-          <BsGear className={sidebar.listIcon} />
-          Settings
+          <NavLink className={sidebar.a}>
+            <BsGear className={sidebar.listIcon} />
+            Settings
+          </NavLink>
         </li>
         <li>
-          <BsBagFill className={sidebar.listIcon} />
-          Login
+          <NavLink className={sidebar.a}>
+            <BsBagFill className={sidebar.listIcon} />
+            Login
+          </NavLink>
         </li>
         <li>
-          <BiSolidUserPlus className={sidebar.listIcon} />
-          Register
+          <NavLink className={sidebar.a}>
+            <BiSolidUserPlus className={sidebar.listIcon} />
+            Register
+          </NavLink>
         </li>
         <li>
-          <HiXCircle className={sidebar.listIcon} />
-          Error
+          <NavLink className={sidebar.a}>
+            <HiXCircle className={sidebar.listIcon} />
+            Error
+          </NavLink>
         </li>
       </ul>
     </div>
