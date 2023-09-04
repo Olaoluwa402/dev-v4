@@ -13,6 +13,7 @@ if (document.readyState == "loading") {
   ready();
 }
 
+
 function ready() {
   // load cart count
   displayCartCount();

@@ -3,3 +3,9 @@
   flex-wrap: wrap;
   gap: 20px;
 }
+
+.blog__article {
+  width: 200px;
+  padding: 5px;
+  box-shadow: 0 0 3px rgba(151, 29, 29, 0.5);
+}

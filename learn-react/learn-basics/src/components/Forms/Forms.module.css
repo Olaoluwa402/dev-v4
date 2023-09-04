@@ -1,0 +1,17 @@
+.container {
+  width: 300px;
+  height: 400px;
+  background-color: black;
+  color: #fff;
+  margin: 2rem auto;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.formGroup input {
+  padding: 0.6rem 0.2rem;
+}
