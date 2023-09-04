@@ -12,15 +12,18 @@ const Navigation = ({ title }) => {
         <NavLink to="/">LOGO</NavLink>
         <ul>
           <li>
-            <FaUserAlt />
+            {/* <FaUserAlt /> */}
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <FaSearchengin />
+            {/* <FaSearchengin /> */}
             <NavLink to="/about">About</NavLink>
           </li>
           <li>
-            <BsSearchHeart />
+            <NavLink to="/shop">Shop</NavLink>
+          </li>
+          <li>
+            {/* <BsSearchHeart /> */}
             <a href="/">Contact</a>
           </li>
           <li>
