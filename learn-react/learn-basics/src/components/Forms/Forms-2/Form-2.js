@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Spinner from "../../Spinner/CustomSpinner.tsx";
+// import Spinner from "../../Spinner/CustomSpinner";
 import styles from "../Forms.module.css";
 
 const Forms = () => {
@@ -107,7 +107,7 @@ const Forms = () => {
         </div>
 
         {isLoading ? (
-          <Spinner />
+          <h2>Loadding...</h2>
         ) : (
           <button onClick={submitHander} type="submit">
             submit
