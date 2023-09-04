@@ -10,15 +10,19 @@ const Provider = ({ children }) => {
 
   //get product using useCallback hook for caching mechanism
   const getProducts = useCallback(async () => {
-    const url = `http://localhost:3000/products`;
+    const url = `http://localhost:4000/products`;
     const config = {
       headers: {
         "Context-Type": "Application/json",
       },
     };
-    const { data } = await axios.get(url, config);
+    try {
+      const { data } = await axios.get(url, config);
 
-    setProducts(data);
+      setProducts(data);
+    } catch (err) {
+      console.log(err, "err");
+    }
   }, []);
 
   useEffect(() => {
