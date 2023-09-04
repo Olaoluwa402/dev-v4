@@ -8,7 +8,7 @@ const Blog = ({ blogData }) => {
   return (
     <div className={`${styles.container} container`}>
       {/* header title */}
-      <Title />
+      <Title title="Blog" />
       <div className={styles.blog__articles}>
         {blogData && blogData.length > 0 ? (
           blogData.map((item) => <Article key={item.id} item={item} />)
