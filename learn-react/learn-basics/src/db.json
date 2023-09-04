@@ -114,7 +114,7 @@
       "isVerified": false
     }
   ],
-  "cart": "[]",
-  "wishlist": "[]",
-  "orders": "[]"
+  "carts": [],
+  "wishlists": [],
+  "orders": []
 }

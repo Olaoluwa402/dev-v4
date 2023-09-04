@@ -1,10 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import axios from "axios";
 import { blogData } from "./components/data";
 const GlobalContext = React.createContext();
 
 const Provider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
+  const [products, setProducts] = useState([]);
   const [user, setUser] = useState(null);
+
+  //get product using useCallback hook for caching mechanism
+  const getProducts = useCallback(async () => {
+    const url = `http://localhost:3000/products`;
+    const config = {
+      headers: {
+        "Context-Type": "Application/json",
+      },
+    };
+    const { data } = await axios.get(url, config);
+
+    setProducts(data);
+  }, []);
+
+  useEffect(() => {
+    //make api call to get all products
+    getProducts();
+  }, [getProducts]);
+
   const sum = (arr) => {
     return arr.reduce((acc, cur) => acc + cur, 0);
   };
@@ -16,6 +37,7 @@ const Provider = ({ children }) => {
     setUser,
     isLoading,
     setIsLoading,
+    products,
   };
   return (
     <GlobalContext.Provider value={store}>{children}</GlobalContext.Provider>
