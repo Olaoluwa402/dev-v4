@@ -8,6 +8,7 @@ import Users from "./screens/Users";
 import Analytics from "./screens/Analytics";
 import User from "./screens/User";
 import DashboardLayout from "./components/DashboardLayout/Layout.jsx";
+import ProductsScreen from "./screens/Products";
 
 const Router = () => {
   return (
@@ -47,10 +48,20 @@ const Router = () => {
         }
       />
 
+      <Route
+        path="/shop"
+        element={
+          <Layout>
+            <ProductsScreen />
+          </Layout>
+        }
+      />
+
       {/* nested route - dashboard */}
       <Route path="/dashboard" element={<DashboardLayout />}>
         <Route index element={<Analytics />} />
         <Route path="users" element={<Users />} />
+        {/* param dymaic path */}
         <Route path="users/:id" element={<User />} />
         <Route path="notifications" element={<Notifications />} />
       </Route>

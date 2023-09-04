@@ -1,0 +1,120 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "product-A",
+      "price": "NGN3000",
+      "stock": 20,
+      "inCart": false,
+      "product_img": "",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 2,
+      "title": "product-B",
+      "price": "NGN4000",
+      "stock": 20,
+      "inCart": false,
+      "product_img": "",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 3,
+      "title": "product-C",
+      "price": "NGN5000",
+      "stock": 20,
+      "inCart": false,
+      "product_img": "",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 4,
+      "title": "product-D",
+      "price": "NGN3000",
+      "stock": 20,
+      "inCart": false,
+      "product_img": "",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 5,
+      "title": "product-E",
+      "price": "NGN6000",
+      "stock": 20,
+      "inCart": false,
+      "product_img": "",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 6,
+      "title": "product-F",
+      "price": "NGN4500",
+      "stock": 20,
+      "inCart": false,
+      "product_img": "",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 7,
+      "title": "product-G",
+      "price": "NGN6700",
+      "stock": 20,
+      "inCart": false,
+      "product_img": "",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 8,
+      "title": "product-H",
+      "price": "NGN2000",
+      "stock": 20,
+      "inCart": false,
+      "product_img": "",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 9,
+      "title": "product-I",
+      "price": "NGN1000",
+      "stock": 20,
+      "inCart": false,
+      "product_img": "",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 10,
+      "title": "product-J",
+      "price": "NGN2000",
+      "stock": 20,
+      "inCart": false,
+      "product_img": "",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "user1",
+      "email": "usr1@gmail.com",
+      "password": "12345",
+      "isVerified": false
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "email": "usr2@gmail.com",
+      "password": "12345",
+      "isVerified": false
+    },
+    {
+      "id": 3,
+      "username": "user3",
+      "email": "usr3@gmail.com",
+      "password": "12345",
+      "isVerified": false
+    }
+  ],
+  "carts": [],
+  "wishlists": [],
+  "orders": []
+}
