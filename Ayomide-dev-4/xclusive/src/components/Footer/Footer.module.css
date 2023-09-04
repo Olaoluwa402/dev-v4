@@ -1,36 +1,37 @@
+/* Footer */
 footer {
     background-color: #000;
     margin-top: 100px;
   }
   
-  .footerflexed {
+  .footer_flexed {
     display: flex;
     justify-content: space-around;
     padding: 55px;
   }
   
-  .footflexed h3 {
+  .foot_flexed h3 {
     color: white;
     font-size: 24px;
     font-weight: 400;
   }
   
-  .footflexed ul li {
+  .foot_flexed ul li {
     padding: 10px 0;
   }
   
-  .footflexed a {
+  .foot_flexed a {
     text-decoration: none;
     color: white;
     font-size: 18px;
     font-weight: 300;
   }
   
-  .emailcontainer {
+  .email_container {
     position: relative;
   }
   
-  .searchbuttons {
+  .search_buttons {
     padding: 14px;
     border: 1px solid white;
     border-radius: 4px;
@@ -41,7 +42,7 @@ footer {
     font-weight: 300;
   }
   
-  .cursurbutton {
+  .cursur_button {
     position: absolute;
     top: 13px;
     left: 170px;
@@ -50,98 +51,99 @@ footer {
     cursor: pointer;
   }
   
-  .cursurbutton img {
+  .cursur_button img {
     width: 30px;
   }
-
-.footflexed2 h4 {
+  
+  /* footer2 */
+  
+  .foot_flexed2 h4 {
     color: white;
     font-size: 20px;
     font-weight: 400;
   }
   
-  .footflexed2 {
+  .foot_flexed2 {
     width: 13%;
   }
   
-  .footflexed2 p {
+  .foot_flexed2 p {
     color: white;
     font-size: 16px;
     font-weight: 300;
     padding: 10px 0;
   }
   
-  .footflexed2 a {
+  .foot_flexed2 a {
     text-decoration: none;
     color: white;
     font-size: 15px;
     font-weight: 300;
   }
   
-  .footflexed2 {
+  .foot_flexed2 {
     text-decoration: none;
     color: white;
     font-size: 18px;
     font-weight: 300;
   }
   
-  .footflexed3 h4 {
+  .foot_flexed3 h4 {
     color: white;
     font-size: 20px;
     font-weight: 400;
   }
   
-  .footflexed3 ul li {
+  .foot_flexed3 ul li {
     padding: 8px 0;
   }
   
-  .footflexed3 a {
+  .foot_flexed3 a {
     text-decoration: none;
     color: white;
     font-size: 16px;
     font-weight: 300;
   }
   
-  .footflexed5 h3 {
+  .foot_flexed5 h3 {
     color: white;
     font-size: 20px;
     font-weight: 400;
   }
   
-  .footflexed5 span {
+  .foot_flexed5 span {
     color: gray;
     font-size: 12px;
     font-weight: 300;
     padding: 10px 0;
   }
   
-  .appdownload {
+  .app_download {
     display: flex;
     flex-direction: column;
     gap: 6px;
   }
   
-  .innerflexed {
+  .inner_flexed {
     display: flex;
     gap: 10px;
     padding-top: 10px;
     align-items: center;
   }
   
-  .socialhandles {
+  .social_handles {
     display: flex;
     gap: 25px;
     padding: 20px;
-    color:white;
   }
   
-  .flast p {
+  .f_last p {
     font-size: 16px;
     color: rgb(79, 76, 76);
     font-weight: 300;
   }
   
-  .flast {
+  .f_last {
     height: 70px;
     background-color: #000;
     display: flex;

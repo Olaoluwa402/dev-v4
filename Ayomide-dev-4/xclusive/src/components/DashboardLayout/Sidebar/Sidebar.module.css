@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+}
+
+.tabbar {
+  background-color: rgba(25, 25, 112, 0.993);
+  color: white;
+  margin: 0;
+}
+
+.icon {
+  padding: 10px;
+  margin: 15px;
+  color: blue;
+}
+
+a {
+    color: white;
+}
+
+.dash {
+  background-color: navy;
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name span {
+  padding: 0;
+}
+
+.layers {
+  margin: 10px;
+  border-top: 1px solid rgba(128, 128, 128, 0.436);
+}
+
+.layers li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap:5px;
+  margin: 15px;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.layers li:hover {
+  color: blue;
+  background-color:lightskyblue;
+  width:200px;
+  border: 5px;
+  border-radius: 5px;
+  transform: scale(1.2);
+  cursor: pointer;
+}

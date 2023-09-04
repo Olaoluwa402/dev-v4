@@ -1,0 +1,44 @@
+.container {
+    display:flex;
+    align-items:center;
+    width:100%;
+    height:100vh;
+    background-color: white;
+}
+
+.container1 {
+    width:100%;
+    height: 90vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.listitems{
+    margin-left: 70px;
+    padding:20px;
+}
+
+.listitems ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+}
+
+.listitems ul li{
+    padding-top: 30px;
+    background-color: lightblue;
+    width: 300px;
+    height:150px;
+    padding:20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.listitems ul li:hover {
+    background-color: lightblue;
+    transform: scale(1.1);
+}
