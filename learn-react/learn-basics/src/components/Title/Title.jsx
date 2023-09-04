@@ -1,8 +1,12 @@
 import React from "react";
 
 import styles from "./Title.module.css";
-const Title = () => {
-  return <h2 className={styles.title}>Blog</h2>;
+const Title = ({ title, fontSize, color }) => {
+  return (
+    <h2 style={{ fontSize: fontSize, color: color }} className={styles.title}>
+      {title}
+    </h2>
+  );
 };
 
 export default Title;
