@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import styles from "./Navbar.module.css";
 import {AiOutlineHeart, AiOutlinePlus} from "react-icons/ai"
@@ -21,14 +22,18 @@ const Navigation = () => {
           <option value="">French</option>
         </select>
       </header>
-      <navbar>
-        <b>Exclusive</b>
-        <ul className={styles.navhome}>
-          <li>Home</li>
-          <li>Contact</li>
-          <li>About</li>
-          <li>Sign Up</li>
-        </ul>
+      
+
+          <nav className={styles.nav }>
+            <ul>
+              <li><NavLink to="/">Home</NavLink></li>
+              <li><NavLink to="/about">about</NavLink></li>
+              <li><NavLink to="/contact">contact</NavLink></li>
+              <li><NavLink to="/signup">signup</NavLink></li>
+              <li><NavLink to="/dashboard">dashboard</NavLink></li>
+    
+            </ul>
+          
         {/* <!-- <i class="fa-solid fa-bars" id="hamburger-icon"></i> --> */}
         <div className={styles.searchcontainer}>
           <input
@@ -51,11 +56,12 @@ const Navigation = () => {
              <AiOutlinePlus/>
             </div>
         </div>
+        </nav>
         {/* <!-- <div id="menubar">
         <a href="#"><img src="./Exclusive Assets/menu.png" alt="menu bar" /></a>
         </div> -->
         <!-- <div class="cart"> --> */}
-      </navbar>
+      
     </div>
   );
 };
