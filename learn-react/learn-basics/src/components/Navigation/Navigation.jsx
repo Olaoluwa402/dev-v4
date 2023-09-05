@@ -1,11 +1,14 @@
-import React from "react";
-import { FaUserAlt, FaSearchengin } from "react-icons/fa";
+import React, { useContext } from "react";
+import { FaUserAlt, FaSearchengin, FaShopify } from "react-icons/fa";
 import { BsSearchHeart } from "react-icons/bs";
+import { GlobalContext } from "../../context";
 import { NavLink } from "react-router-dom";
 import styles from "./Navigation.module.css";
 
 const Navigation = ({ title }) => {
-  console.log(title);
+  const { cartTotal } = useContext(GlobalContext);
+
+  console.log(cartTotal, "cartTotal");
   return (
     <nav className={styles.wrapper}>
       <div className={`${styles.container} container `}>
@@ -21,6 +24,14 @@ const Navigation = ({ title }) => {
           </li>
           <li>
             <NavLink to="/shop">Shop</NavLink>
+          </li>
+          <li>
+            <div style={{ position: "relative" }}>
+              <NavLink to="/shop">
+                <FaShopify />
+              </NavLink>
+              <div className={styles.cartTotal}>{cartTotal}</div>
+            </div>
           </li>
           <li>
             {/* <BsSearchHeart /> */}
