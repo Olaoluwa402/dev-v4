@@ -132,6 +132,15 @@
       "userId": 1
     }
   ],
-  "wishlists": [],
+  "wishlists": [
+    {
+      "id": 1,
+      "title": "product-A",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "price": "NGN3000",
+      "userId": 1
+    }
+  ],
   "orders": []
 }

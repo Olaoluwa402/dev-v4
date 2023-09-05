@@ -19,6 +19,7 @@ export const addToCartReq = async ({ id, title, qty, product_img, price }) => {
     return data;
   } catch (err) {
     console.log(err, "err");
+    toast.error(err);
   }
 };
 
@@ -34,6 +35,7 @@ export const allCartItemsReq = async () => {
     return data;
   } catch (err) {
     console.log(err, "err");
+    toast.error(err);
   }
 };
 
@@ -50,6 +52,7 @@ export const incrementCartQtyReq = async () => {
     return data;
   } catch (err) {
     console.log(err, "err");
+    toast.error(err);
   }
 };
 
@@ -82,6 +85,7 @@ export const clearCartItemsReq = async () => {
     return data;
   } catch (err) {
     console.log(err, "err");
+    toast.error(err);
   }
 };
 
@@ -98,5 +102,6 @@ export const cartTotalReq = async () => {
     return data;
   } catch (err) {
     console.log(err, "err");
+    toast.error(err);
   }
 };
