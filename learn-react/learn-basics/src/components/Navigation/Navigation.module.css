@@ -27,3 +27,19 @@
   text-decoration: none;
   color: var(--white100);
 }
+
+.cartTotal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  color: #fff;
+  font-size: 0.5rem;
+  font-weight: 900;
+}
