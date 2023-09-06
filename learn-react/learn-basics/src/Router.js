@@ -8,6 +8,7 @@ import Users from "./screens/Users";
 import Analytics from "./screens/Analytics";
 import User from "./screens/User";
 import DashboardLayout from "./components/DashboardLayout/Layout.jsx";
+import ProductsScreen from "./screens/Products";
 
 const Router = () => {
   return (
@@ -45,6 +46,15 @@ const Router = () => {
         element={
           <Layout>
             <AboutScreen />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/shop"
+        element={
+          <Layout>
+            <ProductsScreen />
           </Layout>
         }
       />

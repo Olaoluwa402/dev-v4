@@ -10,8 +10,8 @@ const Layout = ({ children }) => {
     <div className={styles.container}>
       <Navigation />
       {open && <SideBar />}
-      <main>{children}</main>
-      <Footer/>
+      <main className={styles.main}>{children}</main>
+      <Footer />
     </div>
   );
 };
