@@ -1,29 +1,32 @@
 import React, { useState, useEffect, useCallback } from "react";
-import axios from "axios";
+import { getProductsReq, addToCartReq, allCartItemsReq } from "./apiRequets";
+
 import { blogData } from "./components/data";
+import { all } from "axios";
 const GlobalContext = React.createContext();
 
 const Provider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
+  const [cartTotal, setCartTotal] = useState(0);
   const [products, setProducts] = useState([]);
   const [user, setUser] = useState(null);
 
   //get product using useCallback hook for caching mechanism
   const getProducts = useCallback(async () => {
-    const url = `http://localhost:3000/products`;
-    const config = {
-      headers: {
-        "Context-Type": "Application/json",
-      },
-    };
-    const { data } = await axios.get(url, config);
-
+    const data = await getProductsReq();
     setProducts(data);
   }, []);
+
+  const getCartTotal = async () => {
+    const cartTotal = await allCartItemsReq();
+    setCartTotal(cartTotal.length);
+  };
 
   useEffect(() => {
     //make api call to get all products
     getProducts();
+    //get cart total
+    getCartTotal();
   }, [getProducts]);
 
   const sum = (arr) => {
@@ -38,6 +41,9 @@ const Provider = ({ children }) => {
     isLoading,
     setIsLoading,
     products,
+    addToCart: addToCartReq,
+    allCartItems: allCartItemsReq,
+    cartTotal: cartTotal,
   };
   return (
     <GlobalContext.Provider value={store}>{children}</GlobalContext.Provider>

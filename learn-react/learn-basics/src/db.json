@@ -6,7 +6,7 @@
       "price": "NGN3000",
       "stock": 20,
       "inCart": false,
-      "product_img": "",
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
       "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
     },
     {
@@ -15,7 +15,7 @@
       "price": "NGN4000",
       "stock": 20,
       "inCart": false,
-      "product_img": "",
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
       "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
     },
     {
@@ -24,7 +24,7 @@
       "price": "NGN5000",
       "stock": 20,
       "inCart": false,
-      "product_img": "",
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
       "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
     },
     {
@@ -33,7 +33,7 @@
       "price": "NGN3000",
       "stock": 20,
       "inCart": false,
-      "product_img": "",
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
       "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
     },
     {
@@ -42,7 +42,7 @@
       "price": "NGN6000",
       "stock": 20,
       "inCart": false,
-      "product_img": "",
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
       "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
     },
     {
@@ -51,7 +51,7 @@
       "price": "NGN4500",
       "stock": 20,
       "inCart": false,
-      "product_img": "",
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
       "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
     },
     {
@@ -60,7 +60,7 @@
       "price": "NGN6700",
       "stock": 20,
       "inCart": false,
-      "product_img": "",
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
       "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
     },
     {
@@ -69,7 +69,7 @@
       "price": "NGN2000",
       "stock": 20,
       "inCart": false,
-      "product_img": "",
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
       "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
     },
     {
@@ -78,7 +78,7 @@
       "price": "NGN1000",
       "stock": 20,
       "inCart": false,
-      "product_img": "",
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
       "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
     },
     {
@@ -87,7 +87,7 @@
       "price": "NGN2000",
       "stock": 20,
       "inCart": false,
-      "product_img": "",
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
       "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
     }
   ],
@@ -114,7 +114,24 @@
       "isVerified": false
     }
   ],
-  "carts": [],
+  "carts": [
+    {
+      "id": 1,
+      "title": "product-A",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "price": "NGN3000",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "title": "product-B",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "price": "NGN4000",
+      "userId": 1
+    }
+  ],
   "wishlists": [],
   "orders": []
 }
