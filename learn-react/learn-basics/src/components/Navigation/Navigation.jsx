@@ -27,7 +27,7 @@ const Navigation = ({ title }) => {
           </li>
           <li>
             <div style={{ position: "relative" }}>
-              <NavLink to="/shop">
+              <NavLink to="/cart">
                 <FaShopify />
               </NavLink>
               <div className={styles.cartTotal}>{cartTotal}</div>

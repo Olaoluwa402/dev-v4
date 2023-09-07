@@ -33,7 +33,7 @@ const Provider = ({ children }) => {
     getProducts();
     //get cart total
     getCartTotal();
-  }, [getProducts]);
+  }, []);
 
   const sum = (arr) => {
     return arr.reduce((acc, cur) => acc + cur, 0);
@@ -52,6 +52,7 @@ const Provider = ({ children }) => {
     cartTotal: cartTotal,
     addToFavorite: addToFavoriteReq,
     allFavorite: allFavoriteItemsReq,
+    getCartTotal: getCartTotal,
   };
   return (
     <GlobalContext.Provider value={store}>{children}</GlobalContext.Provider>
