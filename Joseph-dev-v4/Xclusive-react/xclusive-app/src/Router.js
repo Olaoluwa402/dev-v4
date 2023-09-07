@@ -18,6 +18,7 @@ import Analytics from './Pages/AnalyticsPage'
 import Account  from "./Pages/Account"
 import Companies from "./Pages/Companies";
 import CustomersPage from "./Pages/CustomersPage";
+import HomePage from "./Pages/HomePage";
 
 
 
@@ -26,6 +27,14 @@ import CustomersPage from "./Pages/CustomersPage";
 const Router = () => {
   return (
     <Routes>
+       <Route
+       
+       path="/"
+       element={ <Layout >
+           <HomePage />
+           </Layout>
+       }
+     />
       <Route
        
         path="/wishlist"
@@ -37,7 +46,10 @@ const Router = () => {
       <Route
         path="/about"
         element={
-            <AboutPage />
+          <Layout Item1={Favourite} Item2={Carticon} Item3={User} Item4={Plus}>
+             <AboutPage />
+            </Layout>
+           
         }
       />
       <Route

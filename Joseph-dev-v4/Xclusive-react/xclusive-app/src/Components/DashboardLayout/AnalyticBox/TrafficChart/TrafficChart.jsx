@@ -1,37 +1,62 @@
-import React from 'react'
-import styles from './TrafficChart.module.css'
-import {Charts as ChartJS, ArcElement, Tooltip, Legend} from 'chart.js'
-import {Doughnut} from 'react-chartjs-2'
+import React from "react";
+import styles from "./TrafficChart.module.css";
+import Chart from "react-google-charts";
+import {IoMdDesktop} from 'react-icons/io'
+import {BsTablet} from 'react-icons/bs'
+import {BsTelephoneFill} from 'react-icons/bs'
 
 const TrafficChart = () => {
-    ChartJS.register(ArcElement, Tooltip, Legend);
-    const data = {
-        labels: ["Desktop", "Tablet", "Phone"],
-        dataset: [{
-            label:"# of Likes",
-            data:[63, 15, 22],
-            backgroundcolor: [
-                "rgb(54, 162, 235)",
-                "rgb(255, 205, 86)",
-                "rgb(255, 159, 64)"
-            ],
-        },
-    ],
-    };
+  const data = [
+    ["Devices", "Traffic"],
+    ["Desktop", 63],
+    ["Tablet", 15],
+    ["Phone", 22],
+  ];
+  console.log(data);
+
+  const options = {
+    // title: "Traffic Source",
+    pieHole: 0.6,
+    subtiltle: "Sales, Expenses, and profit: 2014-2017",
+    is3D: false,
+    colors: ["blue", "green", "Orange"],
+    backgroundColor: "transparent",
+    legend: { position: "none" },
+  };
 
   return (
-    <div>
-        <div className={styles.bottom}>
-          <div className={styles.bars}></div>
+    <div className={styles.donut}>
+      <h3>Traffic Source</h3>
+      <div className={styles.traffic}>
+        <Chart
+          chartType="PieChart"
+          width="400px"
+          height="400px"
+          data={data}
+          legendToggle
+          options={options}
+        />
+      </div>
+      <div className={styles.bottom}>
+        <div>
+          <IoMdDesktop />
+          <h4>Desktop</h4>
+          <p>63%</p>
         </div>
-        <div className={styles.donut}>
-          <h3>Traffic Source</h3>
-          <div>
-            <Doughnut data = {data} />
-          </div>
+        <div>
+          <BsTablet />
+          <h4>Tablet</h4>
+          <p>15%</p>
         </div>
+        <div>
+          <BsTelephoneFill />
+          <h4>Phone</h4>
+          <p>22%</p>
+        </div>
+        
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default TrafficChart
+export default TrafficChart;

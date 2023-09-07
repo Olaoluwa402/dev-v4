@@ -85,11 +85,11 @@ const AnalyticBox = () => {
           </div>
         </div>
       </div>
-      <div> className={styles.charts}
+      <div className={styles.charts}> 
         <div className={styles.sales}>
           <SalesChart />
         </div>
-        <div className={styles.Traffic}>
+        <div className={styles.traffic}>
           <TrafficChart />
         </div>
       </div>

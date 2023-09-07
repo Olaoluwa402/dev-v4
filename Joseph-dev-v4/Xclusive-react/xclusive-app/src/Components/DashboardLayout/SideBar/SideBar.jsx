@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './SideBar.module.css'
 import {HiSelector} from 'react-icons/hi'
 import {LiaSignalSolid} from 'react-icons/lia'
+import {AiOutlineHome} from 'react-icons/ai'
 import {HiUsers} from 'react-icons/hi'
 import { NavLink } from 'react-router-dom'
 
@@ -22,6 +23,10 @@ const SideBar = () => {
         </div>
 
         <ul>
+           <NavLink to ={"/"}><li>
+            <AiOutlineHome className={styles.icon} />
+            <span>Home</span>
+            </li></NavLink>
            <NavLink to ={"/dashboard/overview"}><li>
             <LiaSignalSolid className={styles.icon} />
             <span>Overview</span>

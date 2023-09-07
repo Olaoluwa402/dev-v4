@@ -32,9 +32,9 @@ const Footer = () => {
                 <Link to={"/login"}>
                     <h5>Login / Register</h5>
                 </Link>
-                <a href="#">
+                <Link to={"/cartproducts"}>
                     <h5>Cart</h5>
-                </a>
+                </Link>
                 <Link to={"/wishlist"}><h5>Wishlist</h5></Link>
                 <a href="#">
                     <h5>Shop</h5>

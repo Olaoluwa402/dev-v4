@@ -40,7 +40,7 @@ const Hero = () => {
   return (
     <div className={styles.container}>
       <BoxTop/>
-      <Box />
+      <Box  />
       <BoxTop2/>
       <div className={styles.box2}>
       <Box2 />

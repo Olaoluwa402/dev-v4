@@ -110,3 +110,19 @@
     gap: 10px;
 }
 
+.charts{
+    display: flex;
+
+}
+
+.sales{
+    width: 650px;
+}
+
+.traffic {
+    width:400px ;
+}
+
+.traffic {
+    margin-left: 50px;
+}

@@ -3,6 +3,7 @@ import styles from './Contact.module.css'
 import Advert from '../Advert/Advert'
 import Navigation from '../Navigation/Navigation'
 import Footer from '../Footer/Footer'
+import CountDownTimer from '../Home/CountDownTimer/CountDownTimer'
 
 const Contact = () => {
   return (

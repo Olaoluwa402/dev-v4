@@ -73,5 +73,113 @@
         "password": "Weconquer112"
       }
       
-    ]
-  }
+    ],
+
+    "products": [
+      {
+        "id" : 1,
+        "title":"Gucci Duffle Bag",
+        "image":"https://res.cloudinary.com/dfeyofjln/image/upload/v1692172728/guccibag_jmaqgc.png",
+        "price":"960",
+        "inCart": false,
+        "discount": "$1100",
+        "img": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172729/Quick_View_mw2nbt.png ",
+        "discpercent": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172726/Discount_percent_tnik6k.png"
+      },
+      {
+        "id" : 2,
+        "title":"ASUS FHD Gaming Laptop",
+        "image":"https://res.cloudinary.com/dfeyofjln/image/upload/v1692172729/laptop_jnouoi.png",
+        "price":"1000",
+        "inCart": false,
+        "discount": "$1160",
+        "img": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172729/Quick_View_mw2nbt.png "
+    
+      },
+      {
+        "id" : 3,
+        "title":"Quilted Satin Jacket",
+        "image":"https://res.cloudinary.com/dfeyofjln/image/upload/v1692172728/jacket_gjn5dh.png",
+        "price":"540",
+        "inCart": false,
+        "img": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172729/Quick_View_mw2nbt.png "
+    
+      },
+      {
+        "id" : 4,
+        "title":"GP11 Shooter USB Gamepad",
+        "image":"https://res.cloudinary.com/dfeyofjln/image/upload/v1692172726/black-keypad_bj5f8r.png",
+        "price":"750",
+        "inCart": false,
+        "img": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172729/Quick_View_mw2nbt.png "
+    
+      },
+      {
+        "id" : 5,
+        "title":"HAVIT HV-G92 Gamepad",
+        "image":"https://res.cloudinary.com/dfeyofjln/image/upload/v1691701800/red-keypad_nnqcv3.png",
+        "price":"560",
+        "inCart": false,
+        "img": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172729/Quick_View_mw2nbt.png ",
+        "discpercent": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172729/New_Button_ccjduz.png"
+    
+      },
+      {
+        "id" : 6,
+        "title":"IPS LCD Gaming Monitor",
+        "image":"https://res.cloudinary.com/dfeyofjln/image/upload/v1691701799/television_ybro3a.png",
+        "price":"1160",
+        "inCart": false,
+        "img": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172729/Quick_View_mw2nbt.png "
+    
+      },
+      {
+        "id" : 7,
+        "title":"RGB liquid CPU Coolert",
+        "image":"https://res.cloudinary.com/dfeyofjln/image/upload/v1691701799/radio_q29sbh.png",
+        "price":"1960",
+        "inCart": false,
+        "img": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172729/Quick_View_mw2nbt.png "
+    
+      },
+      {
+        "id" : 8,
+        "title":"AK-900 Wired Keyboard",
+        "image":"https://res.cloudinary.com/dfeyofjln/image/upload/v1691701798/keyboard_htihku.png",
+        "price":"200",
+        "inCart": false,
+        "img": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172729/Quick_View_mw2nbt.png "
+    
+      }
+
+     ],
+
+    "users": [
+      {
+        "id": 1,
+        "name": "Joseph Ikeanyi",
+        "email": "joseph_ikeanyi@gmail.com",
+        "password": "Gbenga100",
+        "isVerified": false
+      },
+      {
+        "id": 2,
+        "name": "Ayomide Smith",
+        "email": "ayomidesmith@yahoo.com.",
+        "password": "Weconquer112",
+        "isVerified": false
+      },
+      {
+        "id": 3,
+        "name": "Kelvin Clark",
+        "email": "kelvin_clark@gmail.com",
+        "password": "Kelvin16",
+        "isVerified": false
+      }
+    ],
+
+    "cart" : [],
+
+    "orders" : []
+    }
+
