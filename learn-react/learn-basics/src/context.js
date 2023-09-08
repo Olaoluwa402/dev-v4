@@ -1,8 +1,14 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { getProductsReq, addToCartReq, allCartItemsReq } from "./apiRequets";
+import {
+  getProductsReq,
+  addToCartReq,
+  allCartItemsReq,
+  addToFavoriteReq,
+  allFavoriteItemsReq,
+} from "./apiRequets";
 
 import { blogData } from "./components/data";
-import { all } from "axios";
+
 const GlobalContext = React.createContext();
 
 const Provider = ({ children }) => {
@@ -27,7 +33,7 @@ const Provider = ({ children }) => {
     getProducts();
     //get cart total
     getCartTotal();
-  }, [getProducts]);
+  }, []);
 
   const sum = (arr) => {
     return arr.reduce((acc, cur) => acc + cur, 0);
@@ -44,6 +50,9 @@ const Provider = ({ children }) => {
     addToCart: addToCartReq,
     allCartItems: allCartItemsReq,
     cartTotal: cartTotal,
+    addToFavorite: addToFavoriteReq,
+    allFavorite: allFavoriteItemsReq,
+    getCartTotal: getCartTotal,
   };
   return (
     <GlobalContext.Provider value={store}>{children}</GlobalContext.Provider>
