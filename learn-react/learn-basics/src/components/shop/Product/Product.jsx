@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 
 const Product = ({
   product: { id, product_img, title, desc, inCart, price },
+  isFav,
 }) => {
   const { addToCart, addToFavorite, allCartItems, allFavorite, getCartTotal } =
     useContext(GlobalContext);
@@ -20,7 +21,14 @@ const Product = ({
       toast.warn("product already in cart");
       return;
     }
-    addToCart({ id, title, product_img, price, qty: 1 });
+    addToCart({
+      id,
+      title,
+      product_img,
+      price,
+      qty: 1,
+      priceTotal: qty * +price.replace("NGN", ""),
+    });
     getCartTotal();
   };
 
@@ -43,12 +51,14 @@ const Product = ({
   return (
     <div className="">
       <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
-        <MdOutlineFavorite
-          className={`${styles.icons} ${styles.fav}`}
-          onClick={() =>
-            addToFavoriteHandler({ id, title, product_img, price, qty: 1 })
-          }
-        />
+        {isFav && (
+          <MdOutlineFavorite
+            className={`${styles.icons} ${styles.fav}`}
+            onClick={() =>
+              addToFavoriteHandler({ id, title, product_img, price, qty: 1 })
+            }
+          />
+        )}
 
         <a
           class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl"
