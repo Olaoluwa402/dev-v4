@@ -10,6 +10,7 @@ import User from "./screens/User";
 import DashboardLayout from "./components/DashboardLayout/Layout.jsx";
 import ProductsScreen from "./screens/Products";
 import CheckoutScreen from "./screens/Checkout";
+import FavoriteScreen from "./screens/Favorites";
 
 import CartScreen from "./screens/CartScreen";
 
@@ -74,6 +75,15 @@ const Router = () => {
         element={
           <Layout>
             <CheckoutScreen />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/favorites"
+        element={
+          <Layout>
+            <FavoriteScreen />
           </Layout>
         }
       />
