@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import { FaUserAlt, FaSearchengin, FaShopify } from "react-icons/fa";
+import { MdOutlineFavorite } from "react-icons/md";
 import { BsSearchHeart } from "react-icons/bs";
 import { GlobalContext } from "../../context";
 import { NavLink } from "react-router-dom";
 import styles from "./Navigation.module.css";
 
 const Navigation = ({ title }) => {
-  const { cartTotal } = useContext(GlobalContext);
+  const { cartTotal, favoritesTotal } = useContext(GlobalContext);
 
   console.log(cartTotal, "cartTotal");
   return (
@@ -27,10 +28,19 @@ const Navigation = ({ title }) => {
           </li>
           <li>
             <div style={{ position: "relative" }}>
-              <NavLink to="/shop">
+              <NavLink to="/cart">
                 <FaShopify />
               </NavLink>
               <div className={styles.cartTotal}>{cartTotal}</div>
+            </div>
+          </li>
+
+          <li>
+            <div style={{ position: "relative" }}>
+              <NavLink to="/favorites">
+                <MdOutlineFavorite />
+              </NavLink>
+              <div className={styles.cartTotal}>{favoritesTotal}</div>
             </div>
           </li>
           <li>
