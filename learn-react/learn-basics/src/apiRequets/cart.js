@@ -39,8 +39,8 @@ export const allCartItemsReq = async () => {
   }
 };
 
-export const incrementCartQtyReq = async () => {
-  const url = `http://localhost:4000/products`;
+export const findCartByIdReq = async (id) => {
+  const url = `http://localhost:4000/carts`;
   const config = {
     headers: {
       "Context-Type": "Application/json",
@@ -56,19 +56,30 @@ export const incrementCartQtyReq = async () => {
   }
 };
 
-export const removeCartItemReq = async () => {
-  const url = `http://localhost:4000/products`;
+export const manageCartQtyReq = async (id, qty, price) => {
+  const url = `http://localhost:4000/carts/${id}`;
+  console.log(price, "price");
+  const totlaProductPrice = `NGN${+price.replace("NGN", "") * qty}`;
   const config = {
     headers: {
       "Context-Type": "Application/json",
     },
   };
   try {
-    const { data } = await axios.get(url, config);
+    const foundCart = await findCartByIdReq(id);
+    if (!foundCart) {
+      toast.error("Not found");
+    }
+    const { data } = await axios.patch(
+      url,
+      { qty: qty, priceTotal: totlaProductPrice },
+      config
+    );
 
     return data;
   } catch (err) {
     console.log(err, "err");
+    toast.error(err);
   }
 };
 
