@@ -44,8 +44,7 @@ const Navigation = ({ title }) => {
             </div>
           </li>
           <li>
-            {/* <BsSearchHeart /> */}
-            <a href="/">Contact</a>
+            <NavLink to="/register">Register</NavLink>
           </li>
           <li>
             <NavLink to="/dashboard">Dashboard</NavLink>
