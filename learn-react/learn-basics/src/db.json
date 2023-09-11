@@ -112,6 +112,36 @@
       "email": "usr3@gmail.com",
       "password": "12345",
       "isVerified": false
+    },
+    {
+      "email": "juliet@gmail.com",
+      "password": "12345",
+      "username": "juliet",
+      "id": 4
+    },
+    {
+      "email": "joe@gmail.com",
+      "password": "12345",
+      "username": "joe",
+      "id": 5
+    },
+    {
+      "email": "badmus@gmail.com",
+      "password": "12345",
+      "username": "badmus",
+      "id": 6
+    },
+    {
+      "email": "dedayo16@gmail.com",
+      "password": "12345",
+      "username": "dedayo16",
+      "id": 7
+    },
+    {
+      "email": "ibukunolaoluwa402@gmail.com",
+      "password": "12345",
+      "username": "ibukunolaoluwa40",
+      "id": 8
     }
   ],
   "carts": [
