@@ -13,13 +13,23 @@ import { blogData } from "./components/data";
 const GlobalContext = React.createContext();
 
 const Provider = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState({
+    login: false,
+    register: false,
+  });
   const [cartTotal, setCartTotal] = useState(0);
   const [favoritesTotal, setFavoritesTotal] = useState(0);
   const [products, setProducts] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [carts, setCarts] = useState([]);
-  const [user, setUser] = useState(null);
+
+  //get user info from stroge if it exist
+  const initialUser = localStorage.getItem("userInfo")
+    ? JSON.parse(localStorage.getItem("userInfo"))
+    : null;
+  const [user, setUser] = useState(initialUser);
+
+  console.log(user, "userfromcontext");
 
   //get product using useCallback hook for caching mechanism
   const getProducts = useCallback(async () => {
