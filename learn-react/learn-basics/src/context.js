@@ -13,7 +13,10 @@ import { blogData } from "./components/data";
 const GlobalContext = React.createContext();
 
 const Provider = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState({
+    login: false,
+    register: false,
+  });
   const [cartTotal, setCartTotal] = useState(0);
   const [favoritesTotal, setFavoritesTotal] = useState(0);
   const [products, setProducts] = useState([]);
