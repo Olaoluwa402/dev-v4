@@ -1,0 +1,136 @@
+  
+  .spann {
+    font-size: 16px;
+    font-weight: 200;
+    margin: 70px 130px;
+  }
+
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .right{
+    max-width: 940px;
+    min-height: 400px;
+    padding: 30px;
+    box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+
+  }
+  
+  .inner_right input {
+    width: 205px;
+    margin: 15px 0;
+    padding: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-weight: 100;
+  }
+
+
+  .inner_right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .msg  input{
+    min-width: 730px;
+    min-height: 190px;
+    margin: 15px 0;
+    padding:  10px 18px ;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-weight: 100;
+  }
+
+  .right button{
+    width: 240px;
+    color: #f5f5f5;
+    height: 60px;
+    font-size: 18px;
+    padding: 20px;
+    font-weight: 300;
+    border-radius: 6px;
+    background-color: #db4444;
+    border: none;
+    margin-left: 530px;
+    margin-top: 10px;
+  }
+
+  button:hover{
+    background-color: #e0c2c2;
+  }
+
+  .top_left_placeholder{
+    position: relative;
+  }
+
+  textarea{
+    background-color: #F5F5F5;
+    font-size: 18px;
+    width: 747px;
+    height: 220px;
+    outline: none;
+    padding: 10px;
+    font-family: 'Poppins';
+    border: none;
+  }
+
+  .left{
+    width: 270px;
+    min-height: 400px;
+    padding: 30px;
+    box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+  }
+
+  .call{
+    display:flex ;
+    gap: 20px;
+    align-items: center;
+  }
+  
+.calls{
+  margin: 20px 0;
+  width: 42px;
+  background-color: #db4444;
+  height: 42px;
+  border-radius: 50%;
+}
+
+
+.phone{
+  font-size: 22px;
+  color: #f5f5f5;
+  padding: 10px;
+}
+.call h3{
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.left p{
+  margin-bottom: 10px ;
+  font-size: 14px;
+}
+.left a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  
+}
+
+.b{
+  margin: 15px 0;
+}
+
+
