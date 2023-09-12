@@ -15,6 +15,7 @@ import LoginScreen from "./screens/LoginRegister";
 import RegisterScreen from "./screens/Register";
 
 import CartScreen from "./screens/CartScreen";
+import { ProtectedRoute } from "./components/Auth/ProtectedRoute";
 
 const Router = () => {
   return (
@@ -75,9 +76,11 @@ const Router = () => {
       <Route
         path="/checkout"
         element={
-          <Layout>
-            <CheckoutScreen />
-          </Layout>
+          <ProtectedRoute>
+            <Layout>
+              <CheckoutScreen />
+            </Layout>
+          </ProtectedRoute>
         }
       />
 
@@ -108,13 +111,22 @@ const Router = () => {
       />
 
       {/* nested route - dashboard */}
-      <Route path="/dashboard" element={<DashboardLayout />}>
+
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <DashboardLayout />
+          </ProtectedRoute>
+        }
+      >
         <Route index element={<Analytics />} />
         <Route path="users" element={<Users />} />
         {/* param dymaic path */}
         <Route path="users/:id" element={<User />} />
         <Route path="notifications" element={<Notifications />} />
       </Route>
+
       {/* end of nested routes */}
 
       <Route path="/not-found" element={<NotFound />} />
