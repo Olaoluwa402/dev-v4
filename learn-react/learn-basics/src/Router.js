@@ -11,6 +11,8 @@ import DashboardLayout from "./components/DashboardLayout/Layout.jsx";
 import ProductsScreen from "./screens/Products";
 import CheckoutScreen from "./screens/Checkout";
 import FavoriteScreen from "./screens/Favorites";
+import LoginScreen from "./screens/LoginRegister";
+import RegisterScreen from "./screens/Register";
 
 import CartScreen from "./screens/CartScreen";
 
@@ -84,6 +86,23 @@ const Router = () => {
         element={
           <Layout>
             <FavoriteScreen />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/register"
+        element={
+          <Layout>
+            <RegisterScreen />
+          </Layout>
+        }
+      />
+      <Route
+        path="/login"
+        element={
+          <Layout>
+            <LoginScreen />
           </Layout>
         }
       />
