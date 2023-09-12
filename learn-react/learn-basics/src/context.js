@@ -19,7 +19,14 @@ const Provider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [carts, setCarts] = useState([]);
-  const [user, setUser] = useState(null);
+
+  //get user info from stroge if it exist
+  const initialUser = localStorage.getItem("userInfo")
+    ? JSON.parse(localStorage.getItem("userInfo"))
+    : null;
+  const [user, setUser] = useState(initialUser);
+
+  console.log(user, "userfromcontext");
 
   //get product using useCallback hook for caching mechanism
   const getProducts = useCallback(async () => {

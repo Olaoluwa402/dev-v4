@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { registerReq, loginReq } from "../../../apiRequets/user";
 import { toast } from "react-toastify";
+import { GlobalContext } from "../../../context";
 
 const LoginRegister = ({ register, login }) => {
+  const { user, setUser } = useContext(GlobalContext);
   const navigate = useNavigate();
   const [value, setValue] = useState({
     username: "",
@@ -31,7 +33,12 @@ const LoginRegister = ({ register, login }) => {
       //  reset is Resgister to false
       setIsRegisterd(false);
     }
-  }, [navigate, isRegistered]);
+
+    if (login && user) {
+      //redirect user to login page
+      navigate("/dashboard");
+    }
+  }, [navigate, isRegistered, login, user]);
 
   async function RegisterHandler() {
     // submit the record to the server via api call
@@ -49,7 +56,9 @@ const LoginRegister = ({ register, login }) => {
     const { email, password } = value;
     // console.log(email, password, username);
     const loginUser = await loginReq(email, password);
-    console.log(loginUser);
+
+    //set use to the global context
+    setUser(loginUser);
   }
   return (
     <div>
