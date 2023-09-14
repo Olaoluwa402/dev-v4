@@ -6,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import styles from "./Layout.module.css";
-const Layout = ({ children }) => {
+export const Layout = ({ children }) => {
   const open = false;
   return (
     <div className={styles.container}>

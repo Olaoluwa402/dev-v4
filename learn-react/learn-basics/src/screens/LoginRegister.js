@@ -1,7 +1,7 @@
 import React from "react";
 import LoginRegister from "../components/Auth/LoginRegister/LoginRegister";
 
-const LoginScreen = () => {
+export const LoginScreen = () => {
   return (
     <div>
       <LoginRegister login="login" />

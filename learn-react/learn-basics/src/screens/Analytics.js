@@ -1,6 +1,6 @@
 import React from "react";
 
-const Analytics = () => {
+export const Analytics = () => {
   return (
     <div>
       <h2>Analytics</h2>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-const User = () => {
+export const User = () => {
   const [currentUser, setCurrentUser] = useState(null);
   const [list, setList] = useState([]);
   const [count, setCount] = useState(0);
