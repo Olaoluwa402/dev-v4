@@ -13,8 +13,11 @@ export const loginReq = async (email, password) => {
       if (isVerified(email, password, foundUser)) {
         //handle logged in user
         //persist user record by saving to local storage
-        localStorage.setItem("userInfo", JSON.stringify(foundUser));
-        return foundUser;
+        localStorage.setItem(
+          "userInfo",
+          JSON.stringify(serializeUser(foundUser))
+        );
+        return serializeUser(foundUser);
       } else {
         throw new Error("User credential is incorrect");
       }
@@ -64,6 +67,7 @@ export const registerReq = async (email, password, username) => {
       (user) => user.email === email || user.username === username
     );
     if (userExist) {
+      toast.error("User with crediential already exist");
       throw new Error("User with crediential already exist");
     }
 

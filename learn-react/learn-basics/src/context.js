@@ -6,6 +6,7 @@ import {
   addToFavoriteReq,
   allFavoriteItemsReq,
   manageCartQtyReq,
+  getProductByIdReq,
 } from "./apiRequets";
 
 import { blogData } from "./components/data";
@@ -13,13 +14,26 @@ import { blogData } from "./components/data";
 const GlobalContext = React.createContext();
 
 const Provider = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState({
+    login: false,
+    register: false,
+    addFavorite: false,
+    addToCart: false,
+  });
   const [cartTotal, setCartTotal] = useState(0);
   const [favoritesTotal, setFavoritesTotal] = useState(0);
   const [products, setProducts] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [carts, setCarts] = useState([]);
-  const [user, setUser] = useState(null);
+  const [product, setProduct] = useState(null);
+
+  //get user info from stroge if it exist
+  const initialUser = localStorage.getItem("userInfo")
+    ? JSON.parse(localStorage.getItem("userInfo"))
+    : null;
+  const [user, setUser] = useState(initialUser);
+
+  console.log(user, "userfromcontext");
 
   //get product using useCallback hook for caching mechanism
   const getProducts = useCallback(async () => {
@@ -37,6 +51,13 @@ const Provider = ({ children }) => {
     setFavorites(data);
   }, []);
 
+  const isLoadingHandler = (key, state) => {
+    setIsLoading((prev) => ({
+      ...prev,
+      [key]: state,
+    }));
+  };
+
   const getCartTotal = async () => {
     const carts = await allCartItemsReq();
     setCartTotal(carts.length);
@@ -46,6 +67,11 @@ const Provider = ({ children }) => {
     const favorites = await allFavoriteItemsReq();
     setFavoritesTotal(favorites.length);
   };
+
+  async function getSingleProduct(id) {
+    const product = await getProductByIdReq(id);
+    setProduct(product);
+  }
 
   useEffect(() => {
     //make api call to get all products
@@ -84,6 +110,9 @@ const Provider = ({ children }) => {
     carts,
     manageCartQtyReq,
     getCartTotal: getCartTotal,
+    isLoadingHandler,
+    getProductById: getSingleProduct,
+    product,
   };
   return (
     <GlobalContext.Provider value={store}>{children}</GlobalContext.Provider>

@@ -142,6 +142,24 @@
       "password": "12345",
       "username": "ibukunolaoluwa40",
       "id": 8
+    },
+    {
+      "email": "",
+      "password": "",
+      "username": "",
+      "id": 9
+    },
+    {
+      "email": "deda16@gmail.com",
+      "password": "12345",
+      "username": "dedayo16@gmail.com",
+      "id": 10
+    },
+    {
+      "email": "12345",
+      "password": "",
+      "username": "ibukun402@gmail.com",
+      "id": 11
     }
   ],
   "carts": [

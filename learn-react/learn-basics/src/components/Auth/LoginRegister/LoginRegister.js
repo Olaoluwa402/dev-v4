@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { registerReq, loginReq } from "../../../apiRequets/user";
 import { toast } from "react-toastify";
+import { GlobalContext } from "../../../context";
+import Spinner from "../../Spinner/CustomSpinner";
 
 const LoginRegister = ({ register, login }) => {
+  const { user, setUser, isLoading, setIsLoading } = useContext(GlobalContext);
   const navigate = useNavigate();
   const [value, setValue] = useState({
     username: "",
@@ -31,16 +34,29 @@ const LoginRegister = ({ register, login }) => {
       //  reset is Resgister to false
       setIsRegisterd(false);
     }
-  }, [navigate, isRegistered]);
+
+    if (login && user) {
+      //redirect user to login page
+      navigate("/dashboard");
+    }
+  }, [navigate, isRegistered, login, user]);
 
   async function RegisterHandler() {
     // submit the record to the server via api call
     const { email, password, username } = value;
     // console.log(email, password, username);
+    setIsLoading((prev) => ({
+      ...prev,
+      register: true,
+    }));
     const registeredUser = await registerReq(email, password, username);
     console.log(registeredUser);
     if (registeredUser) {
       setIsRegisterd(true);
+      setIsLoading((prev) => ({
+        ...prev,
+        register: false,
+      }));
     }
   }
 
@@ -48,8 +64,18 @@ const LoginRegister = ({ register, login }) => {
     // submit the record to the server via api call
     const { email, password } = value;
     // console.log(email, password, username);
+    setIsLoading((prev) => ({
+      ...prev,
+      login: true,
+    }));
     const loginUser = await loginReq(email, password);
-    console.log(loginUser);
+
+    //set use to the global context
+    setUser(loginUser);
+    setIsLoading((prev) => ({
+      ...prev,
+      login: false,
+    }));
   }
   return (
     <div>
@@ -141,21 +167,33 @@ const LoginRegister = ({ register, login }) => {
                 </label>
               </div>
               {login ? (
-                <button
-                  onClick={LoginHandler}
-                  type="submit"
-                  className="mt-6 rounded-lg bg-blue-600 px-4 py-2 text-center text-base font-semibold text-white shadow-md outline-none ring-blue-500 ring-offset-2 transition hover:bg-blue-700 focus:ring-2 md:w-32"
-                >
-                  Sign in
-                </button>
+                <div>
+                  {isLoading.login ? (
+                    <Spinner />
+                  ) : (
+                    <button
+                      onClick={LoginHandler}
+                      type="submit"
+                      className="mt-6 rounded-lg bg-blue-600 px-4 py-2 text-center text-base font-semibold text-white shadow-md outline-none ring-blue-500 ring-offset-2 transition hover:bg-blue-700 focus:ring-2 md:w-32"
+                    >
+                      Sign in
+                    </button>
+                  )}
+                </div>
               ) : (
-                <button
-                  onClick={RegisterHandler}
-                  type="submit"
-                  className="mt-6 rounded-lg bg-blue-600 px-4 py-2 text-center text-base font-semibold text-white shadow-md outline-none ring-blue-500 ring-offset-2 transition hover:bg-blue-700 focus:ring-2 md:w-32"
-                >
-                  Register
-                </button>
+                <div>
+                  {isLoading.register ? (
+                    <Spinner />
+                  ) : (
+                    <button
+                      onClick={RegisterHandler}
+                      type="submit"
+                      className="mt-6 rounded-lg bg-blue-600 px-4 py-2 text-center text-base font-semibold text-white shadow-md outline-none ring-blue-500 ring-offset-2 transition hover:bg-blue-700 focus:ring-2 md:w-32"
+                    >
+                      Register
+                    </button>
+                  )}
+                </div>
               )}
 
               {login ? (
