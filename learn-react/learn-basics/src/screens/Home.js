@@ -11,7 +11,8 @@ import Conditional from "../components/ConditionalRendering/Conditional";
 import { GlobalContext } from "../context";
 
 import styles from "./Home.module.css";
-const HomeScreen = () => {
+
+export const HomeScreen = () => {
   const { blogData, isLoading, sum } = useContext(GlobalContext);
 
   console.log(isLoading, sum([10, 20, 30, 40]));
@@ -33,13 +34,13 @@ const HomeScreen = () => {
         {/* hero */}
         <Hero />
       </section>
-      <button onClick={() => setCount((prev) => prev + 1)}>
+      {/* <button onClick={() => setCount((prev) => prev + 1)}>
         Increment Count
-      </button>
+      </button> */}
       {/* state */}
       {/* <Forms /> */}
-      <Form2 />
-      <Conditional />
+      {/* <Form2 />
+      <Conditional /> */}
       {/* blog */}
       <Blog blogData={blogData} />
       {/* footer */}

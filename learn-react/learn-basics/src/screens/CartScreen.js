@@ -1,7 +1,7 @@
 import React from "react";
 import Cart from "../components/shop/Cart/Cart";
 
-const CartScreen = () => {
+export const CartScreen = () => {
   return (
     <div>
       <Cart />

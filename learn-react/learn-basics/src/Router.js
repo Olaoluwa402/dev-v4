@@ -1,21 +1,24 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import HomeScreen from "./screens/Home";
-import AboutScreen from "./screens/About";
-import NotFound from "./screens/NotFound";
-import Layout from "./components/Layout/Layout";
-import Notifications from "./screens/Notifications";
-import Users from "./screens/Users";
-import Analytics from "./screens/Analytics";
-import User from "./screens/User";
-import DashboardLayout from "./components/DashboardLayout/Layout.jsx";
-import ProductsScreen from "./screens/Products";
-import CheckoutScreen from "./screens/Checkout";
-import FavoriteScreen from "./screens/Favorites";
-import LoginScreen from "./screens/LoginRegister";
-import RegisterScreen from "./screens/Register";
 
-import CartScreen from "./screens/CartScreen";
-import { ProtectedRoute } from "./components/Auth/ProtectedRoute";
+import {
+  HomeScreen,
+  AboutScreen,
+  NotFound,
+  Layout,
+  Notifications,
+  DashBoardLayout,
+  Analytics,
+  User,
+  Users,
+  ProductsScreen,
+  CartScreen,
+  CheckoutScreen,
+  ProtectedRoute,
+  FavoriteScreen,
+  RegisterScreen,
+  LoginScreen,
+  SingleProductScreen,
+} from "./screens";
 
 const Router = () => {
   return (
@@ -60,6 +63,15 @@ const Router = () => {
         element={
           <Layout>
             <ProductsScreen />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/shop/:productId"
+        element={
+          <Layout>
+            <SingleProductScreen />
           </Layout>
         }
       />
@@ -116,7 +128,7 @@ const Router = () => {
         path="/dashboard"
         element={
           <ProtectedRoute>
-            <DashboardLayout />
+            <DashBoardLayout />
           </ProtectedRoute>
         }
       >

@@ -1,7 +1,7 @@
 import React from "react";
 import Favorites from "../components/shop/Favorites/Favorites";
 
-const FavoriteScreen = () => {
+export const FavoriteScreen = () => {
   return (
     <div>
       <Favorites />
