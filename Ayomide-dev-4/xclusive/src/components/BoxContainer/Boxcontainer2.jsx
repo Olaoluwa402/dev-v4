@@ -1,49 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import Box from "../Box/Box";
 import styles from "./Boxcontainer.module.css";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BsTrash3 } from "react-icons/bs";
+import { GlobalContext } from "../../context";
 
 const BoxContainer2 = () => {
-  const boxData = [
-    {
-      id: Math.floor(Math.random() * 1000),
-      percent: "-35%",
-      delete: <BsTrash3 />,
-      image: "/Asset/wishlist-asset/guccibag.png",
-      productname: "GUCCI DUFFLE BAG",
-      price: "$1190",
-      discountPrice: " $650",
-    },
-    {
-      id: Math.floor(Math.random() * 1000),
-      percent: "-35%",
-      delete: <BsTrash3 />,
-      image: "/Asset/wishlist-asset/guccibag.png",
-      productname: "GUCCI DUFFLE BAG",
-      price: "$1190",
-      discountPrice: " $650",
-    },
-    {
-      id: Math.floor(Math.random() * 1000),
-      percent: "-35%",
-      delete: <BsTrash3 />,
-      image: "/Asset/wishlist-asset/guccibag.png",
-      productname: "GUCCI DUFFLE BAG",
-      price: "$1190",
-      discountPrice: " $650",
-    },
-    {
-      id: Math.floor(Math.random() * 1000),
-      percent: "-35%",
-      delete: <BsTrash3 />,
-      image: "/Asset/wishlist-asset/guccibag.png",
-      productname: "GUCCI DUFFLE BAG",
-      price: "$1190",
-      discountPrice: " $650",
-    },
-  ];
+   
+  const {products} = useContext(GlobalContext)
   return (
+
     <>
       <section>
         <div className={styles.wishlist}>
@@ -52,7 +18,9 @@ const BoxContainer2 = () => {
         </div>
 
         <div className={styles.connn}>
-          <Box boxData={boxData} />
+          {products && products.length > 0 ? products.map((item)=>(<Box key={item.id} boxData={item}/>)) : (<h2>No Poducts To Display</h2>)}
+          
+          
         </div>
       </section>
     </>

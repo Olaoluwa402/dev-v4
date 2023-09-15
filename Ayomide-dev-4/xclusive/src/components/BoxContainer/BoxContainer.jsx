@@ -51,7 +51,8 @@ import { BsTrash3 } from "react-icons/bs";
           </div>
 
           <div className={styles.connn}>
-            <Box boxData={boxData} />
+            {/* <Box boxData={boxData} /> */}
+            <h2>No Poducts To Display</h2>
             
           </div>
         </section>

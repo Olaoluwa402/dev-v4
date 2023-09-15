@@ -1,0 +1,81 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "product-A",
+      "price": "NGN13000",
+      "stock": 20,
+      "inCart": false,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1692282331/samples/shoe.jpg",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 2,
+      "title": "product-B",
+      "price": "NGN3000",
+      "stock": 10,
+      "inCart": false,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1694002598/wishlist-asset/keyboard_jzjk3r.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 3,
+      "title": "product-C",
+      "price": "NGN20000",
+      "stock": 30,
+      "inCart": false,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1694002598/wishlist-asset/guccibag_v1ppoz.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 4,
+      "title": "product-D",
+      "price": "NGN43000",
+      "stock": 15,
+      "inCart": false,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1694002599/wishlist-asset/television_zhomzi.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 5,
+      "title": "product-E",
+      "price": "NGN72000",
+      "stock": 25,
+      "inCart": false,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1694002599/wishlist-asset/radio_qax58x.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 6,
+      "title": "product-F",
+      "price": "NGN50000",
+      "stock": 20,
+      "inCart": false,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1692282306/samples/ecommerce/analog-classic.jpgg",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 7,
+      "title": "product-G",
+      "price": "NGN23000",
+      "stock": 23,
+      "inCart": false,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1694002598/wishlist-asset/jacket_csbaql.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 8,
+      "title": "product-H",
+      "price": "NGN30000",
+      "stock": 27,
+      "inCart": false,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1694002598/wishlist-asset/laptop_ef15kq.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    }
+  
+    
+  ],
+  
+  "wishlists": [],
+  "orders": []
+}

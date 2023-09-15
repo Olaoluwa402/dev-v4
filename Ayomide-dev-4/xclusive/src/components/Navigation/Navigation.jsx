@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Navigation.module.css";
 import { AiOutlineHeart, AiOutlinePlus } from "react-icons/ai";
+import { FaShopify } from "react-icons/fa";
+
 import { GrCart } from "react-icons/gr";
 import { FiUser } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
+import { GlobalContext } from "../../context";
 
 const Navigation = () => {
+  const {cartTotal} = useContext(GlobalContext)
   return (
     <div>
       <header>
@@ -36,6 +40,9 @@ const Navigation = () => {
           <NavLink to="/signup">
             <li>Sign Up</li>
           </NavLink>
+          <NavLink to={"/dashboard"}>
+            <li>Dashboard</li>
+          </NavLink>
         </ul>
         {/* <!-- <i class="fa-solid fa-bars" id="hamburger-icon"></i> --> */}
         <div className={styles.searchcontainer}>
@@ -55,9 +62,16 @@ const Navigation = () => {
             </div>
           </div>
           <FiUser />
+          <div style={{ position: "relative" }}>
+              <NavLink to="/shop">
+                <FaShopify  style={{ color: "black", fontSize:"25px"}}/>
+              </NavLink>
+              <div className={styles.cartTotal}>{cartTotal}</div>
+            </div>
           <div className="addproductbtn">
             <AiOutlinePlus />
           </div>
+          
         </div>
         {/* <!-- <div id="menubar">
         <a href="#"><img src="./Exclusive Assets/menu.png" alt="menu bar" /></a>

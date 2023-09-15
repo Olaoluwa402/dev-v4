@@ -61,7 +61,7 @@ function Footer() {
               </li>
 
               <li>
-                <Link to={"/dashboard"}>Shop</Link>
+                <Link to={"/shop"}>Shop</Link>
               </li>
             </ul>
           </div>

@@ -43,11 +43,12 @@ section {
 }
 
 .connn {
-  width: /*90vw*/ 80vw;
+  width: /*90vw*/ 100%;
   margin: 0 100px;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  overflow: hidden;
-  overflow-x: scroll;
+  gap: 50px;
+  /* overflow: hidden; */
+  /* overflow-x: scroll; */
 }
