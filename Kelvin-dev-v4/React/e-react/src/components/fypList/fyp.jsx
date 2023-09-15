@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./fyp.module.css";
 import Product from "../product_tab/product";
 import Rating from "../rating/Rating";
 import { BsEye } from "react-icons/bs";
 
+import { GlobalContext } from "../../context";
+
 function Fyp() {
+  const arr23 = [1, 2, 3, 4];
+  const { products } = useContext(GlobalContext);
   return (
     <section>
       <div className={styles.wishlist_cta}>
@@ -12,15 +16,22 @@ function Fyp() {
         <button>See All</button>
       </div>
       <div className={styles.product_tabs} id="product_tabs">
-        <Product
-          prod_icon={<BsEye />}
-          prod_img="/Assets/wishlist-page-assets/wishlist-laptop.png"
-          prod_desc="ASUS FHD Gaming Laptop"
-          prod_price="$960"
-          prod_former_price="$1160"
-          prod_rating={<Rating />}
-        />
-        <Product
+        {products && products.length > 0 ? (
+          products.map((product) => (
+            <Product
+              prod_icon={<BsEye />}
+              prod_img={product.product_img}
+              prod_desc={product.title}
+              prod_price={product.price}
+              // prod_former_price={}
+              prod_rating={<Rating />}
+            />
+          ))
+        ) : (
+          <h1>No Products</h1>
+        )}
+
+        {/* <Product
           prod_icon={<BsEye />}
           prod_img="/Assets/wishlist-page-assets/wishlist-television.png"
           prod_desc="IPS LCD Gaming Monitor"
@@ -40,7 +51,7 @@ function Fyp() {
           prod_desc="AK-900 Wired Keyboard"
           prod_price="$200"
           prod_rating={<Rating />}
-        />
+        /> */}
       </div>
     </section>
   );

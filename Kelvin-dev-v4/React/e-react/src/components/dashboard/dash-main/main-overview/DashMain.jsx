@@ -1,7 +1,6 @@
 import React from "react";
 import ChartDoughnut from "../../../charts/ChartDoughnut";
 import ChartBar from "../../../charts/ChartBar";
-// import Chart from "react-google-charts";
 import dashmain from "./DashMain.module.css";
 
 function DashMain() {

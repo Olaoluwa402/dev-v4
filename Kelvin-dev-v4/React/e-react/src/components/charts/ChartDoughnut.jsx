@@ -12,7 +12,7 @@ const ChartDoughnut = () => {
 
   const options = {
     title: "Traffic source",
-    pieHole: 0.5,
+    pieHole: 0.4,
     colors: ["blue", "green", "orange"],
     is3D: false,
     backgroundColor: "transparent",
@@ -23,7 +23,7 @@ const ChartDoughnut = () => {
     <Chart
       chartType="PieChart"
       width="100%"
-      // height="400px"
+      height="400px"
       data={data}
       options={options}
     />

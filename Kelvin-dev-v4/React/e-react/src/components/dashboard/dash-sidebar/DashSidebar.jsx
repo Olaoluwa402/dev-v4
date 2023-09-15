@@ -27,54 +27,60 @@ const DashSidebar = () => {
         </div>
       </div>
       <ul>
-        <li>
-          <NavLink to={"/dashboard"} className={sidebar.a}>
+        <NavLink to={"/dashboard"} className={sidebar.a}>
+          <li>
             <BsChart className={sidebar.listIcon} />
             Overview
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to={"staff"} className={sidebar.a}>
+          </li>
+        </NavLink>
+
+        <NavLink to={"staff"} className={sidebar.a}>
+          <li>
             <HiUsers className={sidebar.listIcon} />
             Staff
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to={"companies"} className={sidebar.a}>
+          </li>
+        </NavLink>
+        <NavLink to={"companies"} className={sidebar.a}>
+          <li>
             <HiBag className={sidebar.listIcon} />
             Companies
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to={"accounts"} className={sidebar.a}>
+          </li>
+        </NavLink>
+
+        <NavLink to={"accounts"} className={sidebar.a}>
+          <li>
             <HiUser className={sidebar.listIcon} />
             Account
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className={sidebar.a}>
+          </li>
+        </NavLink>
+
+        <NavLink className={sidebar.a}>
+          <li>
             <BsGear className={sidebar.listIcon} />
             Settings
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className={sidebar.a}>
+          </li>
+        </NavLink>
+
+        <NavLink className={sidebar.a}>
+          <li>
             <BsBagFill className={sidebar.listIcon} />
             Login
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className={sidebar.a}>
+          </li>
+        </NavLink>
+
+        <NavLink className={sidebar.a}>
+          <li>
             <BiSolidUserPlus className={sidebar.listIcon} />
             Register
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className={sidebar.a}>
+          </li>
+        </NavLink>
+
+        <NavLink className={sidebar.a}>
+          <li>
             <HiXCircle className={sidebar.listIcon} />
             Error
-          </NavLink>
-        </li>
+          </li>
+        </NavLink>
       </ul>
     </div>
   );
