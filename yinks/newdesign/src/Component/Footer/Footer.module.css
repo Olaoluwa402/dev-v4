@@ -1,0 +1,18 @@
+.footer{
+  background-color: black;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer h3{
+  color: #ffff;
+  padding-bottom: 10px;
+}
+.footer ul li{
+  color: #ffff; 
+  padding: 10px;
+  list-style: none;
+}

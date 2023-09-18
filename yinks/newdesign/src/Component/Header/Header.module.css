@@ -1,0 +1,22 @@
+.Header{
+  height: 80px;
+  width: 100%;
+  border-bottom: 1px solid  black;
+}
+
+.navigation{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.navigation ul li{
+  list-style: none;
+}

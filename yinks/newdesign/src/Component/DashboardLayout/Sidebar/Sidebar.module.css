@@ -1,0 +1,10 @@
+.container{
+  background-color: rgb(2, 2, 46);
+  height: 500px;
+  width:150px
+}
+
+.container h1{
+background-color: rgb(2, 2, 46);
+box-shadow: 1px 1px 1px 1px rgb(2, 2, 46);
+}

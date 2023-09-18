@@ -1,0 +1,44 @@
+
+img{
+  width:100%;
+}
+.wishlist{
+  padding: 0 7rem;
+}
+
+.whishdiv{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+.generaldiv{
+  display: flex;
+  align-items: center;
+  gap:30px
+}
+
+.btnicon{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.cards{
+  border: 2px solid black;
+  height:270px;
+  width: 270px;
+}
+
+.cards img{
+  width: 190px;
+}
+
+ p{
+  text-align: center;
+}
+
+ span{
+  text-align: center;
+}
