@@ -31,33 +31,6 @@ section {
   font-weight: 500;
 }
 
-.product_tabs {
-  display: grid;
-  grid-template-columns: minmax(100px, 200px) minmax(100px, 200px);
-  width: 100%;
-  box-sizing: border-box;
-  align-items: flex-start;
-  text-align: left;
-}
-
-@media screen and (min-width: 450px) {
-  .product_tabs {
-    grid-template-columns: minmax(100px, 200px) minmax(100px, 200px) minmax(
-        100px,
-        200px
-      );
-  }
-}
-
-@media screen and (min-width: 650px) {
-  .product_tabs {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    align-items: flex-start;
-    overflow-x: scroll;
-  }
-}
-
 @media screen and (min-width: 950px) {
   section {
     margin-left: 135px;

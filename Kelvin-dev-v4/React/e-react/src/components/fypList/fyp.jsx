@@ -7,24 +7,23 @@ import { BsEye } from "react-icons/bs";
 import { GlobalContext } from "../../context";
 
 function Fyp() {
-  const arr23 = [1, 2, 3, 4];
   const { products } = useContext(GlobalContext);
+
   return (
     <section>
       <div className={styles.wishlist_cta}>
         <h5>Just for you (4)</h5>
         <button>See All</button>
       </div>
-      <div className={styles.product_tabs} id="product_tabs">
+      <div className={`${styles.product_tabs}  product_tabs`} id="product_tabs">
         {products && products.length > 0 ? (
           products.map((product) => (
             <Product
+              key={product.id}
               prod_icon={<BsEye />}
-              prod_img={product.product_img}
-              prod_desc={product.title}
-              prod_price={product.price}
               // prod_former_price={}
               prod_rating={<Rating />}
+              prod_data={product}
             />
           ))
         ) : (

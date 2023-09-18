@@ -60,3 +60,43 @@ button:hover {
   background-color: black;
   border: none;
 }
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* styling for product container... For ease of development, i'm putting it here instead of a module */
+
+.product_tabs {
+  display: grid;
+  grid-template-columns: minmax(100px, 200px) minmax(100px, 200px);
+  width: 100%;
+  box-sizing: border-box;
+  align-items: flex-start;
+  text-align: left;
+}
+
+@media screen and (min-width: 450px) {
+  .product_tabs {
+    grid-template-columns: minmax(100px, 200px) minmax(100px, 200px) minmax(
+        100px,
+        200px
+      );
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .product_tabs {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: flex-start;
+    overflow-x: scroll;
+  }
+}
+/*  */

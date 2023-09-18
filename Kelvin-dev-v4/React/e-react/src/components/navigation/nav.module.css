@@ -10,12 +10,13 @@
 }
 
 .topAd p {
-  /* text-align: center; */
+  text-align: center;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
   line-height: 11px;
   margin: 0;
+  width: 75%;
 }
 
 .topAd span {
@@ -33,6 +34,7 @@
   color: white;
   border: none;
   font-size: 12px;
+  width: 80px;
 }
 
 .select:focus {
@@ -44,14 +46,11 @@
 /* nav start */
 nav {
   background-color: white;
-  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 30px;
   box-shadow: 0px 0px 3px black;
-  position: sticky;
-  top: 0px;
 }
 
 nav ul,
@@ -72,6 +71,21 @@ nav > div > img {
   font-size: 20px;
   color: black;
 }
+.icon_container {
+  position: relative;
+  padding: 2px 2px 0 0;
+}
+.count {
+  margin: 0;
+  font-size: 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px 5px;
+  background-color: rgb(199, 26, 26);
+  color: #ffffff;
+  border-radius: 50%;
+}
 
 /* nav end */
 
@@ -79,23 +93,24 @@ nav > div > img {
 .menuclose {
   display: flex;
   transform: translateY(-300%);
-  transition: all 0.2s ease-in-out;
+  transition: all 4s ease-in-out;
 }
 
 .menushow {
   display: flex;
   transform: translateY(1%);
+  transition: all 4s ease-in-out;
 }
 
 .mobilenav {
-  position: sticky;
-  top: 40px;
-  z-index: 7;
+  /* position: sticky;
+  top: 0;
+  z-index: 7; */
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
   width: 100%;
-  padding: 0 40px 20px 40px;
+  padding: 10px 40px 20px 40px;
   background-color: white;
   box-shadow: 0px 0px 3px black;
 }
@@ -162,10 +177,6 @@ nav > div > img {
 /* mobile navbar end */
 
 @media screen and (min-width: 950px) {
-  .mobilenav {
-    display: none;
-  }
-
   .top_ad {
     padding: 10px 20px;
     text-align: center;
@@ -251,13 +262,14 @@ nav > div > img {
   nav div > .i,
   .userIcon {
     padding: 5px;
-    border-radius: 40%;
+    border-radius: 45%;
     background-color: transparent;
     transition: all 0.4s;
+    overflow: visible;
   }
   nav div .i:hover,
   .userIcon:hover {
-    background-color: firebrick;
+    background-color: #000;
     color: white;
   }
 
@@ -282,9 +294,6 @@ nav > div > img {
     right: 10px;
   }
 
-  .mobileNav {
-    display: none;
-  }
   /* nav end */
 }
 

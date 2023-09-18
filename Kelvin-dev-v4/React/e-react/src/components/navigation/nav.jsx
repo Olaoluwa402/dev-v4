@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { NavLink } from "react-router-dom";
 import styles from "./nav.module.css";
 import { BsCart3, BsHeart, BsSearch } from "react-icons/bs";
 import { FiUser } from "react-icons/fi";
 import { AiOutlineMenu } from "react-icons/ai";
-import { NavLink } from "react-router-dom";
+import { GlobalContext } from "../../context";
 
 function Nav() {
+  const [dropDown, setDropDown] = useState(false);
+  const { cartLength } = useContext(GlobalContext);
+  // const mobileNavHandler = () => {};
   return (
     <div>
       <div className={styles.topAd}>
@@ -29,7 +33,11 @@ function Nav() {
             className={styles.navlogo}
           />
         </NavLink>
-        <AiOutlineMenu className={styles.hamburger_icon} id="hamburger_icon" />
+        <AiOutlineMenu
+          className={styles.hamburger_icon}
+          id="hamburger_icon"
+          onClick={() => setDropDown((prev) => !prev)}
+        />
 
         <ul>
           <li>
@@ -51,12 +59,18 @@ function Nav() {
             <BsSearch className={styles.nav_search_icon} />
           </div>
 
-          <BsHeart className={styles.i} />
-          <BsCart3 className={styles.i} id="navCartId" />
-          <NavLink
-            to="/dashboard
-          "
-          >
+          <NavLink to="/wishlist">
+            <div className={styles.icon_container}>
+              <BsHeart className={styles.i} id="navCartId" />
+              <span className={styles.count}>4</span>
+            </div>
+          </NavLink>
+          <div className={styles.icon_container}>
+            <BsCart3 className={styles.i} id="navCartId" />
+            <span className={styles.count}>{cartLength}</span>
+          </div>
+
+          <NavLink to="/dashboard">
             <FiUser className={styles.userIcon} id="user_icon" />
           </NavLink>
         </div>
@@ -64,41 +78,46 @@ function Nav() {
       {/* navbar end */}
 
       {/* mobile nav */}
-      <div className={`${styles.mobilenav} menuclose`} id="mobilenav">
-        <ul>
-          <li>
-            <NavLink to="/">Home</NavLink>
-          </li>
-          <li>
-            <NavLink to={"/contact"}>Contact</NavLink>
-          </li>
-          <li>
-            <NavLink to={"/about"}>About</NavLink>
-          </li>
-          <li>
-            <NavLink to="/accountscreen">Sign Up</NavLink>
-          </li>
-        </ul>
+      {dropDown && (
+        <div
+          className={`${styles.mobilenav} ${styles.menushow}`}
+          id="mobilenav"
+        >
+          <ul>
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/contact"}>Contact</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/about"}>About</NavLink>
+            </li>
+            <li>
+              <NavLink to="/accountscreen">Sign Up</NavLink>
+            </li>
+          </ul>
 
-        <div>
-          <div className={styles.searchDiv}>
-            <input type="search" placeholder="What are you looking for?" />
+          <div>
+            <div className={styles.searchDiv}>
+              <input type="search" placeholder="What are you looking for?" />
 
-            <BsSearch className={styles.nav_search_icon} />
-          </div>
+              <BsSearch className={styles.nav_search_icon} />
+            </div>
 
-          <div id={styles.mobilenavIcons}>
-            <BsHeart className={styles.i} />
-            <BsCart3 className={styles.i} id="navCartIdMobile" />
-            <img
-              src="../Assets/user.png"
-              alt=""
-              className={styles.userIconMobile}
-              id="user_icon_mobile"
-            />
+            <div id={styles.mobilenavIcons}>
+              <BsHeart className={styles.i} />
+              <BsCart3 className={styles.i} id="navCartIdMobile" />
+              <img
+                src="../Assets/user.png"
+                alt=""
+                className={styles.userIconMobile}
+                id="user_icon_mobile"
+              />
+            </div>
           </div>
         </div>
-      </div>
+      )}
       {/* mobile nav  */}
     </div>
   );

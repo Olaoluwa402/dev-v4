@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import FormImg from "../formImg/FormImg";
 import Input from "../formInput/Input";
-import Signup from "./SignupForm.module.css";
+import Form from "../Forms.module.css";
 
 function SignupForm() {
   const [email, setEmail] = useState("");
@@ -40,8 +39,12 @@ function SignupForm() {
   };
 
   return (
-    <div className={Signup.signup_container}>
-      <FormImg className={Signup.sideimg} />
+    <div className={Form.sign_container}>
+      <img
+        src="/Assets/signin-assets/SideImage.png"
+        alt="sign in or register image"
+        className={Form.sideimg}
+      />
       <form onSubmit={submitHandler}>
         <div>
           <h1>Create an account</h1>
@@ -68,11 +71,11 @@ function SignupForm() {
           value={password}
           changeFunc={changeFunc}
         />
-        <div className={Signup.btnContainer}>
-          <button className={Signup.btn1} type="submit">
+        <div className={Form.btnContainer}>
+          <button className={Form.btn1} type="submit">
             Create Account
           </button>
-          <button className={Signup.btn2}>Sign up with Google</button>
+          <button className={Form.btn2}>Sign up with Google</button>
         </div>
         <p>
           Already have account? <NavLink to={"/loginscreen"}>Log in</NavLink>

@@ -1,10 +1,16 @@
-.container body {
+.container {
   margin: 0;
   padding: 0;
   /* box-sizing: border-box; */
   font-family: poppins;
   overflow-x: hidden;
 }
+
+.dir {
+  display: flex;
+  gap: 5px;
+}
+
 .container p {
   font-size: 12px;
   margin: 0;

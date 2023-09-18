@@ -1,12 +1,17 @@
 import React from "react";
-import FormImg from "../formImg/FormImg";
+// import FormImg from "../Assets/signin-assets/SiseImage.png";
 import Input from "../formInput/Input";
-import signin from "./SigninForm.module.css";
+import Form from "../Forms.module.css";
 
 function SigninForm() {
   return (
-    <div className={signin.signin_container}>
-      <FormImg className={signin.sideimg} />
+    <div className={Form.sign_container}>
+      {/* <FormImg className={signin.sideimg} /> */}
+      <img
+        src="/Assets/signin-assets/SideImage.png"
+        alt="sign in or register image"
+        className={Form.sideimg}
+      />
       <form>
         <div>
           <h1>Log in to Exclusive</h1>
@@ -14,8 +19,8 @@ function SigninForm() {
         </div>
         <Input type="Email" placehold="Email or phone number" />
         <Input type="Password" placehold="Password" />
-        <div className={signin.btnContainer}>
-          <button className={signin.btn1} type="submit">
+        <div className={Form.btnContainer_in}>
+          <button className={Form.btn1_in} type="submit">
             Log in
           </button>
           <a href="">Forget Password?</a>

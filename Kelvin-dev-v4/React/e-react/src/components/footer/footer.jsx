@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./footer.module.css";
+import { NavLink } from "react-router-dom";
 
 function Footer() {
   return (
@@ -33,7 +34,9 @@ function Footer() {
             <li>My Account</li>
             <li>Login / Register</li>
             <li>Cart</li>
-            <li>Wishlist</li>
+            <NavLink to="/wishlist">
+              <li>Wishlist</li>
+            </NavLink>
             <li>Shop</li>
           </ul>
 

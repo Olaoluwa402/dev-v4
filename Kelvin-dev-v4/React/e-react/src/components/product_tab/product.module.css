@@ -3,9 +3,24 @@
   margin-left: 0;
 }
 
-.product_tab div {
+.product_tab > div {
   width: 100%;
   overflow: hidden;
+}
+
+.top_right_icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  display: flex;
+  gap: 5px;
+}
+.tr_icon {
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 5px 7px;
+  background-color: #ffff;
 }
 
 .tab_main {

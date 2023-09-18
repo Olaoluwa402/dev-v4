@@ -10,7 +10,7 @@ function Wishlist() {
         <h5>Wishlist (4)</h5>
         <button>Move All To Bag</button>
       </div>
-      <div className={styles.product_tabs} id="product_tabs">
+      <div className={`${styles.product_tabs} product_tabs`} id="product_tabs">
         <Product
           prod_icon={<BsTrash3 />}
           prod_img="/Assets/wishlist-page-assets/wishlist-guccibag.png"

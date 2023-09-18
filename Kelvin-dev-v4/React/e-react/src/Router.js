@@ -1,11 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import Homescreen from "./screens/homeScr/Homescreen";
 import Wishlistscreen from "./screens/wishlistscreen";
 import Accountscreen from "./screens/Accountscreen";
 import Layout from "./components/layout/Layout";
 import Loginscreen from "./screens/Loginscreen";
 import Dashboard from "./screens/dashboardScr/Dashboard";
 import Aboutscreen from "./screens/aboutscr/Aboutscreen";
+import Contactscreen from "./screens/contactScr/Contactscreen";
 //
 import DashStaff from "./components/dashboard/dash-main/dash-staff/DashStaff";
 import MainCompanies from "./components/dashboard/dash-main/main-companies/MainCompanies";
@@ -19,7 +21,7 @@ function Router() {
         path="/"
         element={
           <Layout>
-            <Wishlistscreen />
+            <Homescreen />
           </Layout>
         }
       />
@@ -44,6 +46,23 @@ function Router() {
         element={
           <Layout>
             <Aboutscreen />
+          </Layout>
+        }
+      />
+      <Route
+        path="/contact"
+        element={
+          <Layout>
+            <Contactscreen />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/wishlist"
+        element={
+          <Layout>
+            <Wishlistscreen />
           </Layout>
         }
       />
