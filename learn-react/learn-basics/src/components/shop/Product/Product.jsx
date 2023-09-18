@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 const Product = ({
   product: { id, product_img, title, desc, inCart, price },
 }) => {
-  const { addToCart } = useContext(GlobalContext);
+  const { addToCart } = useContext(GlobalContext); 
 
   const addToCartHandler = async ({ id, title, product_img, price, qty }) => {
     const carts = await allCartItemsReq();
