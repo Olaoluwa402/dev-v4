@@ -1,0 +1,32 @@
+.header{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    align-items: center;
+}
+ .search{
+    margin-right: 15px;
+ }
+.container{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    gap: 10px;
+    align-items: center;
+}
+
+.pic{
+ width: 30px;
+ height: 30px;
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: aquamarine;
+}
+
+.iconstyle{
+    font-size: 20px;
+   
+}

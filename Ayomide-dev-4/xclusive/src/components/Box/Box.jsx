@@ -3,40 +3,41 @@ import styles from "./Box.module.css";
 import { BsTrash3 } from "react-icons/bs";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-function Box({img}) {
+const Box =  ({boxData}) => {
   return (
-    <div>
-      {/* <div className={styles.wishlist}>
-          <h4>Wishlist(4)</h4>
-          <button className={styles.matb}>Move All To Bag</button>
-        </div> */}
-      <div className={styles.wishsection}>
-        <div className={styles.wishlisttab1}>
+    <div className={styles.wishsection}>
+      {boxData && boxData.length > 0 ? (boxData.map((item) => (
+        <div key={item.id} className={styles.wishlisttab1}>
           <div className={styles.tabmain}>
             <div className={styles.tab1}>
-              <p>-35%</p>
+              <p>{item.percent}</p>
               <div className={styles.trash}>
-                <BsTrash3 />
+                <p>
+                  {item.delete}
+                </p>
               </div>
             </div>
-            <img src={img} className={styles.pic} alt="" />
+            <img src={item.image} className={styles.pic} alt="" />
             <button className={styles.cartbtn}>
               <AiOutlineShoppingCart /> Add to cart
             </button>
           </div>
           <div className={styles.nameprice}>
-            Gucci duffle bag <br />
+            {item.productname} <br />
             <span style={{ color: "#db4444" }}>
-              $960{" "}
+              {item.price}
               <span className="spa" style={{ color: "#000000" }}>
-                $1160
+                {item.discountPrice}
               </span>
             </span>
           </div>
         </div>
-      </div>
-    </div>
-  );
-}
+      ))
+      ): (<h2>No Product Added</h2>)
+      }
 
+    </div>
+    );
+};
+ 
 export default Box;
