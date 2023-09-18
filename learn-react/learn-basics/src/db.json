@@ -166,64 +166,28 @@
     {
       "id": 1,
       "title": "product-A",
-      "qty": 4,
+      "qty": 13,
       "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
       "price": "NGN3000",
-      "priceTotal": "NGN12000",
+      "priceTotal": "NGN39000",
       "userId": 1
     },
     {
       "id": 2,
       "title": "product-B",
-      "qty": 1,
+      "qty": 6,
       "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
       "price": "NGN4000",
-      "priceTotal": "NGN4000",
+      "priceTotal": "NGN24000",
       "userId": 1
     },
     {
       "id": 3,
       "title": "product-C",
-      "qty": 1,
+      "qty": 2,
       "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
       "price": "NGN5000",
-      "priceTotal": "NGN5000",
-      "userId": 1
-    },
-    {
-      "id": 6,
-      "title": "product-F",
-      "qty": 1,
-      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
-      "price": "NGN4500",
-      "priceTotal": "NGN4500",
-      "userId": 1
-    },
-    {
-      "id": 9,
-      "title": "product-I",
-      "qty": 1,
-      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
-      "price": "NGN1000",
-      "priceTotal": "NGN1000",
-      "userId": 1
-    },
-    {
-      "id": 4,
-      "title": "product-D",
-      "qty": 1,
-      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
-      "price": "NGN3000",
-      "priceTotal": "NGN3000",
-      "userId": 1
-    },
-    {
-      "id": 5,
-      "title": "product-E",
-      "qty": 1,
-      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
-      "price": "NGN6000",
-      "priceTotal": "NGN6000",
+      "priceTotal": "NGN10000",
       "userId": 1
     }
   ],
@@ -258,6 +222,14 @@
       "qty": 1,
       "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
       "price": "NGN2000",
+      "userId": 1
+    },
+    {
+      "id": 7,
+      "title": "product-G",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "price": "NGN6700",
       "userId": 1
     }
   ],
