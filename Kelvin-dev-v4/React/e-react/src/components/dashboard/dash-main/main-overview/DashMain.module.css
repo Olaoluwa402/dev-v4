@@ -1,0 +1,22 @@
+.charts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+  box-sizing: border-box;
+}
+
+.bar,
+.donut {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px grey;
+}
+
+.bar {
+  width: 55%;
+}
+.donut {
+  width: 30%;
+  height: 400px;
+}

@@ -11,8 +11,6 @@
 //   }, 5000);
 // };
 
-
-
 // const callback = (error, result) => {
 //   console.log(error, result);
 //   if (error) {
