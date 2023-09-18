@@ -1,0 +1,46 @@
+.container{
+    width: 50%;
+    margin: 0 auto;
+    background-color: bisque;
+    
+}
+
+.container h2{
+    text-align: center;
+    text-shadow: 2px 2px 2px white;
+    padding-top: 20px;
+}
+
+.form_grp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_grp label{
+    text-align: center;
+    font-weight: 600;
+}
+
+.form_grp input{
+    width: 30%;
+    margin: 20px ;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.container button{
+    margin: 10px 260px 30px;
+    width: 100px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: blueviolet;
+    cursor: pointer;
+
+}
+
+.container button:hover{
+    background-color: rgba(137, 43, 226, 0.442);
+}
