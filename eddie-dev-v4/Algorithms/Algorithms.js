@@ -162,3 +162,64 @@ const continent = [
 // store the created user in local storage
 // log your result in console
 
+
+
+//  test that a string is present in the given data and print true or false
+
+const givenData = "hacking is the act of identifying and then exploring weaknesses in a compiuter system or network,usually";
+
+
+function testRegex(string, keyword){
+const givenstr = /string/gi.test(givenData)
+if (givenstr){
+  return true
+}
+else{return false
+}
+} 
+console.log(testRegex())
+
+// create a student class having a constructor function 
+class Students{
+  constructor(firstName,lastName,age,email,course){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.email = email;
+    this.course = course;
+}
+getFullName(){
+  const fullName = this.firstName + " " + this.lastName + " " + this.age + this.email + " " + this.course;
+  return fullName;
+}
+
+}
+const student1 = new Students("john", "snow", 45, "jonsnow@gmail.com", ["javascript","css", "php"]);
+console.log(student1)
+
+
+const student2 = new Students("ben", "green", 38 , "bg@yahoo.com", ["java", "c++", "nodejs"]);
+
+console.log(student2.getFullName());
+
+
+
+// write a parent class named Bird. include the following fields numLegs, numEyes,Kingdom,sound
+// create a child class caled eagles. include the following fields, name,age, 
+// let the eagle class extend the bird class
+// create tw eagle object from the child class
+
+
+class Bird{
+  constructor(numLegs,numEyes,kingdom,sound){
+    this.numLegs = numLegs;
+    this.numEyes = numEyes;
+    this.kingdom = kingdom;
+    this.sound = sound;
+  }
+}
+  class Eagle extends Bird{
+    constructor(){
+
+  }
+}
