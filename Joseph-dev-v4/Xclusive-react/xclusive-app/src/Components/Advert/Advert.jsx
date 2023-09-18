@@ -14,11 +14,13 @@ const Advert = () => {
         </div>
 
       <div className={styles.select}>
-      <select name="" id="head">
+      <select value="Select Language" id="head">
         <option value="">English</option>
         <option value="">Mandarin</option>
         <option value="">Japan</option>
-        <option value="">Rushian</option>
+        <option value="">Russian</option>
+        <option value="">Portuguese</option>
+        <option value="">French</option>
       </select>
      </div>      
     </div>

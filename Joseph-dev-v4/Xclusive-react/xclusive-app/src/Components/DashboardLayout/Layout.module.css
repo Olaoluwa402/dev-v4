@@ -1,0 +1,51 @@
+.container {
+    background-color: #f3f3f3;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    position: fixed;
+    left: 30px;
+    top: 20px;
+    width: 150px;
+  }
+  
+  .navbar {
+    position: fixed;
+    width: 100%;
+  }
+  
+  .main { 
+    padding-top: 85px;
+    min-height: 100vh;
+    display: flex;
+    
+  
+  }
+  
+  .navbar,
+  .main {
+    margin-left: 180px;
+  }
+  
+  @media (min-width: 768px) {
+    .sidebar {
+      width: 200px;
+    }
+  
+    .navbar,
+    .main {
+      margin-left: 100px;
+    }
+  }
+  
+  @media (min-width: 980px) {
+    .sidebar {
+      width: 250px;
+    }
+    .navbar,
+    .main {
+      margin-left: 280px;
+    }
+  }
+  

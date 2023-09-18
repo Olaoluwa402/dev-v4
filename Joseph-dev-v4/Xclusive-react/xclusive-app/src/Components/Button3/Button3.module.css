@@ -1,0 +1,25 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 50px;
+    padding: 0.5rem 0.9rem;
+    color: var(--black90);
+    background-color: var(--white100);
+    transition: all 0.5s ease-in;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    border: solid 0.5px;
+    box-shadow: 2px 2px 4px rgba(0 0 0 0.5);
+    gap: 10px;
+  }
+  .btn img {
+    width: 20px;
+  }
+  
+  .btn:hover {
+    opacity: 0.5;
+    transform: scale(1.04);
+  }

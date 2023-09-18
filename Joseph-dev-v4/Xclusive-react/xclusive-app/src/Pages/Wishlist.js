@@ -7,16 +7,13 @@ import Footer from "../Components/Footer/Footer";
 
 
 
-const HomePage = () => {
+const WishlistPage = () => {
  
   return (
     <div>
-      <Advert/>
-      <Navigation/>
       <Hero/>
-      <Footer/>
     </div>
   )
 }
 
-export default HomePage
+export default WishlistPage;
