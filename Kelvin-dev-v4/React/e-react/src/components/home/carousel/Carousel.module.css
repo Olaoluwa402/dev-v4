@@ -1,0 +1,62 @@
+.listCarouselContainer {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  padding: 50px 0;
+}
+.listCarouselContainer > ul {
+  width: 20%;
+  height: 100%;
+  border-right: 1px solid grey;
+}
+/* .listCarouselContainer > div {
+  flex-grow: 1;
+} */
+
+.listCarouselContainer a {
+  color: white;
+  display: inline;
+}
+
+.slideContainer {
+  background-color: black;
+  color: white;
+  position: relative;
+}
+
+.slide {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  align-items: center;
+}
+.slide > div {
+  text-align: left;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+
+.buttonContainer > button {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: none;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.shopBtn {
+  font-size: 12px;
+  transition: all 0.4s;
+}
+.shopBtn:hover {
+  border-bottom: 1px solid white;
+}

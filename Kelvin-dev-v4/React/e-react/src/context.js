@@ -1,24 +1,25 @@
 import React, { useState, useEffect, useCallback } from "react";
-import axios from "axios";
-import { getCart, addToCartHandler } from "./api";
+// import axios from "axios";
+import {
+  getCart,
+  addToCartHandler,
+  getProductsReq,
+  addToWishlistHandler,
+  getWishlist,
+} from "./api";
 const GlobalContext = React.createContext();
 
 const Provider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [cartData, setCartData] = useState([]);
+  const [wishlistData, setWishlistData] = useState([]);
+  const [wishlistLength, setWishlistLength] = useState([]);
   const [cartLength, setCartLength] = useState(0);
 
   //get product using useCallback hook for caching mechanism
   const getProducts = useCallback(async () => {
-    const url = `http://localhost:3004/products`;
-
-    try {
-      const { data } = await axios.get(url);
-
-      setProducts(data);
-    } catch (err) {
-      console.log(err, "err");
-    }
+    const data = await getProductsReq();
+    setProducts(data);
   }, []);
 
   async function getCartData() {
@@ -27,15 +28,23 @@ const Provider = ({ children }) => {
     setCartLength(cart.length);
     return cart;
   }
+  async function getWishlistData() {
+    const wishlist = await getWishlist();
+    setWishlistData(wishlist);
+    setWishlistLength(wishlist.length);
+    return wishlist;
+  }
 
   useEffect(() => {
     //make api call to get all products
     getProducts();
     getCart();
     getCartData();
-  }, [getProducts]);
+    getWishlistData();
+  }, []);
 
   console.log(cartLength, "dod");
+  console.log(cartData, "op");
   console.log(cartData, "op");
 
   console.log(products);
@@ -43,10 +52,17 @@ const Provider = ({ children }) => {
   const store = {
     products,
     addToCartHandler,
+    addToWishlistHandler,
     cartLength,
     cartData,
+    wishlistLength,
+    wishlistData,
     getCartData,
+    getWishlistData,
     getCart,
+    setProducts,
+    getProducts,
+    getProductsReq,
   };
   return (
     <GlobalContext.Provider value={store}>{children}</GlobalContext.Provider>

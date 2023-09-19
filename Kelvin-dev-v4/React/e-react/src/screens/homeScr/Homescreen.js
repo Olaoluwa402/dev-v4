@@ -1,9 +1,10 @@
 import React from "react";
+import Carousel from "../../components/home/carousel/Carousel";
 
 const Homescreen = () => {
   return (
-    <div>
-      <h1>Home screen</h1>
+    <div style={{ padding: "0 50px 0 50px" }}>
+      <Carousel />
     </div>
   );
 };

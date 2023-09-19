@@ -116,15 +116,87 @@
   ],
   "carts": [
     {
-      "id": "",
-      "title": "",
-      "price": "",
-      "stock": "",
-      "product_img": "",
-      "desc": ""
+      "id": 1,
+      "title": "product-A",
+      "price": "NGN3000",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
+      "userId": 1
+    },
+    {
+      "id": 4,
+      "title": "product-D",
+      "price": "NGN3000",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
+      "userId": 1
+    },
+    {
+      "id": 7,
+      "title": "product-G",
+      "price": "NGN6700",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
+      "userId": 1
+    },
+    {
+      "id": 6,
+      "title": "product-F",
+      "price": "NGN4500",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
+      "userId": 1
+    },
+    {
+      "price": "$750",
+      "qty": 1,
+      "product_img": "/Assets/wishlist-page-assets/wishlist-jacket.png",
+      "desc": "Quilted Satin Jacket",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "price": "$550",
+      "qty": 1,
+      "product_img": "/Assets/wishlist-page-assets/wishlist-black-gamepad.png",
+      "desc": "GP11 Shooter USB Gamepad",
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "id": 3,
+      "title": "product-C",
+      "price": "NGN5000",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
+      "userId": 1
     }
   ],
-  "wishlists": [],
+  "wishlists": [
+    {
+      "id": 2,
+      "title": "product-B",
+      "price": "NGN4000",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
+      "userId": 1
+    },
+    {
+      "id": 1,
+      "title": "product-A",
+      "price": "NGN3000",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
+      "userId": 1
+    }
+  ],
   "orders": [],
   "posts": [
     {

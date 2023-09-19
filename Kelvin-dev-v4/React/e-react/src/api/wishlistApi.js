@@ -1,18 +1,17 @@
 import axios from "axios";
 
-const cartUrl = "http://localhost:3004/carts";
+const wishlistUrl = "http://localhost:3004/wishlists";
 
-export const getCart = async () => {
+export const getWishlist = async () => {
   try {
-    const { data } = await axios.get(cartUrl);
-    // console.log(data);
+    const { data } = await axios.get(wishlistUrl);
     return data;
   } catch (err) {
     console.log(err.message);
   }
 };
 
-export const addToCartHandler = async ({
+export const addToWishlistHandler = async ({
   id,
   title,
   price,
@@ -21,7 +20,7 @@ export const addToCartHandler = async ({
   desc,
 }) => {
   try {
-    const { data } = await axios.post(cartUrl, {
+    const { data } = await axios.post(wishlistUrl, {
       id,
       title,
       price,
