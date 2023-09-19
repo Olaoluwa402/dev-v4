@@ -1,28 +1,45 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import styles from "./Product.module.css";
 import { MdOutlineFavorite } from "react-icons/md";
 import { FaShopify } from "react-icons/fa";
 import { GlobalContext } from "../../../context";
 import { toast } from "react-toastify";
+import Spinner from "../../Spinner/CustomSpinner";
+import { Link } from "react-router-dom";
 
 const Product = ({
   product: { id, product_img, title, desc, inCart, price },
   isFav,
 }) => {
-  const { addToCart, addToFavorite, allCartItems, allFavorite, getCartTotal } =
-    useContext(GlobalContext);
+  const {
+    addToCart,
+    addToFavorite,
+    allCartItems,
+    allFavorite,
+    getCartTotal,
+    isLoading,
+    isLoadingHandler,
+  } = useContext(GlobalContext);
+
+  const [activeId, setActiveId] = useState(null);
 
 
   const addToCartHandler = async ({ id, title, product_img, price, qty }) => {
     console.log("clicked");
+    //set Active ID
+    setActiveId(id);
+    //set loading back to true when action starts
+    isLoadingHandler("addToCart", true);
     const carts = await allCartItems();
     //check if product already exist in cart
     const exist = carts.find((prdt) => prdt.id === id);
     if (exist) {
       toast.warn("product already in cart");
+      //set loading back to false when action is done
+      isLoadingHandler("addToCart", false);
       return;
     }
-    addToCart({
+    await addToCart({
       id,
       title,
       product_img,
@@ -30,7 +47,10 @@ const Product = ({
       qty: 1,
       priceTotal: qty * +price.replace("NGN", ""),
     });
-    getCartTotal();
+    await getCartTotal();
+
+    //set loading back to false when action is done
+    isLoadingHandler("addToCart", false);
   };
 
   const addToFavoriteHandler = async ({
@@ -40,40 +60,63 @@ const Product = ({
     price,
     qty,
   }) => {
+    //set Active ID
+    setActiveId(id);
+
+    //set loading back to true when action starts
+    isLoadingHandler("addFavorite", true);
     const whishlist = await allFavorite();
     //check if product already exist in cart
     const exist = whishlist.find((prdt) => prdt.id === id);
     if (exist) {
       toast.warn("product already in wishlist");
+      //set loading back to false when action is done
+      isLoadingHandler("addFavorite", false);
       return;
     }
-    addToFavorite({ id, title, product_img, price, qty: 1 });
+    await addToFavorite({ id, title, product_img, price, qty: 1 });
+
+    //set loading back to false when action is done
+    isLoadingHandler("addFavorite", false);
   };
+
+  console.log(isLoading.addToCart);
   return (
     <div className="">
       <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
         {isFav && (
-          <MdOutlineFavorite
-            className={`${styles.icons} ${styles.fav}`}
-            onClick={() =>
-              addToFavoriteHandler({ id, title, product_img, price, qty: 1 })
-            }
-          />
+          <div className={`${styles.icons} ${styles.fav}`}>
+            {isLoading.addFavorite && activeId === id ? (
+              <Spinner />
+            ) : (
+              <MdOutlineFavorite
+                onClick={() =>
+                  addToFavoriteHandler({
+                    id,
+                    title,
+                    product_img,
+                    price,
+                    qty: 1,
+                  })
+                }
+              />
+            )}
+          </div>
         )}
 
-        <a
+        <Link
           class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl"
-          href="/"
+          to={`/shop/${id}`}
         >
           <img class="object-cover" src={product_img} alt="productimage" />
           <span class="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">
             39% OFF
           </span>
-        </a>
+        </Link>
         <div class="mt-4 px-5 pb-5">
-          <a href="/">
+          <Link to={`/shop/${id}`}>
             <h5 class="text-xl tracking-tight text-slate-900">{title}</h5>
-          </a>
+          </Link>
           <div class="mt-2 mb-5 flex items-center justify-between">
             <p>
               <span class="text-3xl font-bold text-slate-900">
@@ -132,28 +175,32 @@ const Product = ({
               </span>
             </div>
           </div>
-          <div
-            onClick={() =>
-              addToCartHandler({ id, title, product_img, price, qty: 1 })
-            }
-            class="flex items-center justify-center cursor-pointer rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="mr-2 h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
+          {isLoading.addToCart && activeId === id ? (
+            <Spinner />
+          ) : (
+            <div
+              onClick={() =>
+                addToCartHandler({ id, title, product_img, price, qty: 1 })
+              }
+              class="flex items-center justify-center cursor-pointer rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-              />
-            </svg>
-            Add to cart
-          </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="mr-2 h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+              Add to cart
+            </div>
+          )}
         </div>
       </div>
 

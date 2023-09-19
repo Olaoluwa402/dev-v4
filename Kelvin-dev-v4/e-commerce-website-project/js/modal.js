@@ -1,30 +1,37 @@
-// get the modal body
-const modalBody = document.getElementById("modal-container");
-console.log(modalBody, "l");
+modalFunction("cartContainer", "navCartId", "navCartIdMobile", "cartClose");
+modalFunction(
+  "accountContainer",
+  "user-icon",
+  "user-icon-mobile",
+  "accountClose"
+);
 
-// get the open button
-const openModal = document.getElementById("nav-cart-id");
-console.log(openModal, "k");
+function modalFunction(
+  modalContainer,
+  modalOpener,
+  modalOpenerMobile,
+  modalCloser
+) {
+  // get the modal body
+  const modalBody = document.getElementById(`${modalContainer}`);
+  console.log(modalBody);
 
-const openModalMobile = document.getElementById("nav-cart-id-mobile");
-
-const closeModal = document.getElementById("modalclose");
-
-openModal.onclick = function () {
-  modalBody.style.display = "block";
-};
-
-openModalMobile.onclick = function () {
-  modalBody.style.display = "block";
-};
-
-closeModal.onclick = function () {
-  modalBody.style.display = "none";
-};
-// create a function that uses the button on the modal
-// openModal.addEventListener("click", function () {
-//   console.log(modalBody);
-//   modalBody.style.display = "block";
-// });
-
-// function openClick() {}
+  // get the open button
+  const openModal = document.getElementById(`${modalOpener}`);
+  // get the open button for mobile
+  const openModalMobile = document.getElementById(`${modalOpenerMobile}`);
+  //get the closer button
+  const closeModal = document.getElementById(`${modalCloser}`);
+  //function to open the modal
+  openModal.onclick = function () {
+    modalBody.style.display = "block";
+  };
+  // function to open the modal in mobile
+  openModalMobile.onclick = function () {
+    modalBody.style.display = "block";
+  };
+  //function to close modal
+  closeModal.onclick = function () {
+    modalBody.style.display = "none";
+  };
+}

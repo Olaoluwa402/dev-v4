@@ -1,20 +1,24 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import HomeScreen from "./screens/Home";
-import AboutScreen from "./screens/About";
-import NotFound from "./screens/NotFound";
-import Layout from "./components/Layout/Layout";
-import Notifications from "./screens/Notifications";
-import Users from "./screens/Users";
-import Analytics from "./screens/Analytics";
-import User from "./screens/User";
-import DashboardLayout from "./components/DashboardLayout/Layout.jsx";
-import ProductsScreen from "./screens/Products";
-import CheckoutScreen from "./screens/Checkout";
-import FavoriteScreen from "./screens/Favorites";
-import LoginScreen from "./screens/LoginRegister";
-import RegisterScreen from "./screens/Register";
 
-import CartScreen from "./screens/CartScreen";
+import {
+  HomeScreen,
+  AboutScreen,
+  NotFound,
+  Layout,
+  Notifications,
+  DashBoardLayout,
+  Analytics,
+  User,
+  Users,
+  ProductsScreen,
+  CartScreen,
+  CheckoutScreen,
+  ProtectedRoute,
+  FavoriteScreen,
+  RegisterScreen,
+  LoginScreen,
+  SingleProductScreen,
+} from "./screens";
 
 const Router = () => {
   return (
@@ -64,6 +68,15 @@ const Router = () => {
       />
 
       <Route
+        path="/shop/:productId"
+        element={
+          <Layout>
+            <SingleProductScreen />
+          </Layout>
+        }
+      />
+
+      <Route
         path="/cart"
         element={
           <Layout>
@@ -75,9 +88,11 @@ const Router = () => {
       <Route
         path="/checkout"
         element={
-          <Layout>
-            <CheckoutScreen />
-          </Layout>
+          <ProtectedRoute>
+            <Layout>
+              <CheckoutScreen />
+            </Layout>
+          </ProtectedRoute>
         }
       />
 
@@ -108,13 +123,22 @@ const Router = () => {
       />
 
       {/* nested route - dashboard */}
-      <Route path="/dashboard" element={<DashboardLayout />}>
+
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <DashBoardLayout />
+          </ProtectedRoute>
+        }
+      >
         <Route index element={<Analytics />} />
         <Route path="users" element={<Users />} />
         {/* param dymaic path */}
         <Route path="users/:id" element={<User />} />
         <Route path="notifications" element={<Notifications />} />
       </Route>
+
       {/* end of nested routes */}
 
       <Route path="/not-found" element={<NotFound />} />

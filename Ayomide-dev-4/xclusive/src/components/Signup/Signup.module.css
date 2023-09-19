@@ -1,0 +1,90 @@
+body{
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+}
+
+.pics{
+    width: 750px;
+    
+    
+
+}
+
+.pics img {
+    width:100%
+}
+
+.section{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    height: 100vh;
+   margin-top: 100px;
+    
+}
+
+.form{
+    margin: 20px;
+    width: 720px;
+
+    
+}
+
+.form > b {
+ font-size: 67px;
+}
+
+.form > p {
+    font-weight: 500;
+    font-size: 20px;
+
+}
+
+input {
+    border: none;
+    border-radius: none;
+    background-color: transparent;
+    border-style: none;
+    padding: 10px;
+    margin: 15px 0;
+    border-bottom: 1px solid grey;
+    width: 100%; 
+    outline: none;
+}
+
+.account > button {
+    background-color: red;
+    width: 100%;
+    margin-top: 30px;
+    height: 50px;
+    color: white;
+    border: 0px;
+}
+
+.google > button {
+    background-color: transparent;
+    border: 1px solid;
+    border-color: black;
+    color: rgba(0, 0, 0, 0.632);
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    height: 50px;
+}
+
+button{
+    gap:1px
+}
+
+.log > a {
+    color: black;
+}
+
+.log{
+    padding: 10px;
+    margin-left: 72px;
+}
+
+

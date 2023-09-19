@@ -4,6 +4,8 @@ import Blog from "../components/Blog/Blog";
 import Navigation from "../components/Navigation/Navigation";
 import Advert from "../components/Advert/Advert";
 import Hero from "../components/Hero/Hero";
+import Products from "../components/Products/Products";
+
 
 
 const HomePage = () =>  {
@@ -44,10 +46,22 @@ const HomePage = () =>  {
       desc: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, explicabo?",
     },
   ];
+
+  const productData = [
+    {
+      id : Math.floor(Math.random() * 1000),
+      title:"Gucci Duffle Bag",
+      image:"https://res.cloudinary.com/dfeyofjln/image/upload/v1692172728/guccibag_jmaqgc.png",
+      price:"960",
+    },]
+
+ 
   return (
  <div>
+   
    <Advert/>
-   <Navigation/>
+   <Navigation/>  
+   <Products productData={productData}/> 
    <Hero/>
    <Blog blogData= {blogData}/>
   <Footer/>

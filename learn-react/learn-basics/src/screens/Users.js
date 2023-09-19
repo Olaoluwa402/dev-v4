@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const Users = () => {
+export const Users = () => {
   const users = [
     { id: 1, name: "john" },
     { id: 2, name: "Dayo" },

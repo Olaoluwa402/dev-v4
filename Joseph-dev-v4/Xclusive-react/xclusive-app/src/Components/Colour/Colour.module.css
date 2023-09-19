@@ -1,0 +1,28 @@
+.outter_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    margin-top: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: azure;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border: solid 3px;
+    width: 150px;
+    height: 50px;
+    box-shadow: 0 0 0 2 rgba(0,0,0,0.5);
+    border-radius: 6px;
+}
+
+.btn:hover {
+    background-color: blueviolet;
+    cursor: pointer;
+    transform: scale(1.1);
+}

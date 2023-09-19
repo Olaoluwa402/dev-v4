@@ -1,0 +1,29 @@
+.Main{
+    width:100%;
+   display:flex;
+   /* align-items: center; */
+   height: 50vh;
+}
+
+.Side{
+    width:20%;
+    height: 100vh;
+    background-color: midnightblue;
+    /* position: fixed; */
+}
+
+.Hero{
+    width:100%;
+    height: 100vh;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    
+}
+
+.Head {
+    width:100%;
+   background-color: white;
+}
+
+
+    

@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "react-icons": "^4.10.1"
-  },
-  "devDependencies": {
-    "prettier": "^2.8.8"
-  }
-}

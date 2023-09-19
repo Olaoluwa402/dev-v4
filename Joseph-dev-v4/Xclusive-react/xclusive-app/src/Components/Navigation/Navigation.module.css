@@ -63,7 +63,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 90px;
+  margin-left: 10px;
+  gap: 20px;
 }
 
 #buy_cart:hover {
@@ -87,27 +88,6 @@
 
 #menubar img {
   width: 40px;
-}
-
-.add_product_btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  padding: 10px;
-  background: rgb(51, 105, 167);
-  color: black;
-  border: none;
-  border-radius: 10px;
-  margin: 5px 0;
-  cursor: pointer;
-  font: 600;
-}
-
-.add_product_btn:hover {
-  color: goldenrod;
-  transform: scale(1.1);
 }
 
 .icon {
