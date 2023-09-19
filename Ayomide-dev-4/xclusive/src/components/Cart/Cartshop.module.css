@@ -1,0 +1,7 @@
+.outer_container{
+    position: relative;
+    overflow-y: auto;
+}
+.outer_container>* {
+    height: 100%;
+}

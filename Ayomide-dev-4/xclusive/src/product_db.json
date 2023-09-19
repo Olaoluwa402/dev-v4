@@ -123,19 +123,19 @@
       "userId": 1
     },
     {
-      "id": 6,
-      "title": "product-F",
-      "qty": 1,
-      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1692282306/samples/ecommerce/analog-classic.jpgg",
-      "price": "NGN50000",
-      "userId": 1
-    },
-    {
       "id": 3,
       "title": "product-C",
       "qty": 1,
       "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1694002598/wishlist-asset/guccibag_v1ppoz.png",
       "price": "NGN20000",
+      "userId": 1
+    },
+    {
+      "id": 6,
+      "title": "product-F",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1692282306/samples/ecommerce/analog-classic.jpgg",
+      "price": "NGN50000",
       "userId": 1
     }
   ],

@@ -14,7 +14,7 @@ const Box =  ({boxData: { id, product_img, title, desc, inCart, price }}) => {
 
   const addToCartHandler = async ({ id, title, product_img, price, qty = 1 }) => {
     const carts = await allCartItemsReq();
-    console.log(carts)
+    console.log(carts, "carts")
     //check if product already exist in cart
     const exist = carts.find((prdt) => prdt.id === id);
     if (exist) {

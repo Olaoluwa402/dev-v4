@@ -36,5 +36,155 @@
       "Email": "candy@gmail.com",
       "Password": "panda@456"
     }
-  ]
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "product-A",
+      "price": "NGN13000",
+      "stock": 20,
+      "inCart": false,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1692282331/samples/shoe.jpg",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 2,
+      "title": "product-B",
+      "price": "NGN3000",
+      "stock": 10,
+      "inCart": false,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1694002598/wishlist-asset/keyboard_jzjk3r.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 3,
+      "title": "product-C",
+      "price": "NGN20000",
+      "stock": 30,
+      "inCart": false,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1694002598/wishlist-asset/guccibag_v1ppoz.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 4,
+      "title": "product-D",
+      "price": "NGN43000",
+      "stock": 15,
+      "inCart": false,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1694002599/wishlist-asset/television_zhomzi.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 5,
+      "title": "product-E",
+      "price": "NGN72000",
+      "stock": 25,
+      "inCart": false,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1694002599/wishlist-asset/radio_qax58x.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 6,
+      "title": "product-F",
+      "price": "NGN50000",
+      "stock": 20,
+      "inCart": false,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1692282306/samples/ecommerce/analog-classic.jpgg",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 7,
+      "title": "product-G",
+      "price": "NGN23000",
+      "stock": 23,
+      "inCart": false,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1694002598/wishlist-asset/jacket_csbaql.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    },
+    {
+      "id": 8,
+      "title": "product-H",
+      "price": "NGN30000",
+      "stock": 27,
+      "inCart": false,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1694002598/wishlist-asset/laptop_ef15kq.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe."
+    }
+  ],
+  "carts": [
+    {
+      "id": 1,
+      "title": "product-A",
+      "qty": 2,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "price": "NGN3000",
+      "userId": 1,
+      "priceTotal": "NGN6000"
+    },
+    {
+      "id": 2,
+      "title": "product-B",
+      "qty": 4,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "price": "NGN4000",
+      "userId": 1,
+      "priceTotal": "NGN16000"
+    },
+    {
+      "id": 5,
+      "title": "product-E",
+      "qty": 3,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1694002599/wishlist-asset/radio_qax58x.png",
+      "price": "NGN72000",
+      "userId": 1,
+      "priceTotal": "NGN216000"
+    },
+    {
+      "id": 4,
+      "title": "product-D",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1694002599/wishlist-asset/television_zhomzi.png",
+      "price": "NGN43000",
+      "userId": 1,
+      "priceTotal": "NGN43000"
+    },
+    {
+      "id": 8,
+      "title": "product-H",
+      "qty": 2,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1694002598/wishlist-asset/laptop_ef15kq.png",
+      "price": "NGN30000",
+      "userId": 1,
+      "priceTotal": "NGN60000"
+    },
+    {
+      "id": 7,
+      "title": "product-G",
+      "qty": 2,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1694002598/wishlist-asset/jacket_csbaql.png",
+      "price": "NGN23000",
+      "userId": 1,
+      "priceTotal": "NGN46000"
+    },
+    {
+      "id": 6,
+      "title": "product-F",
+      "qty": 3,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1692282338/cld-sample-5.jpg",
+      "price": "NGN50000",
+      "userId": 1,
+      "priceTotal": "NGN150000"
+    },
+    {
+      "id": 3,
+      "title": "product-C",
+      "qty": 3,
+      "product_img": "https://res.cloudinary.com/dze23o7gv/image/upload/v1694002598/wishlist-asset/guccibag_v1ppoz.png",
+      "price": "NGN20000",
+      "userId": 1,
+      "priceTotal": "NGN60000"
+    }
+  ],
+  "wishlists": [],
+  "orders": []
 }

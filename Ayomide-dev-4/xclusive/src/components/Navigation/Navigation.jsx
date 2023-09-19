@@ -63,8 +63,8 @@ const Navigation = () => {
           </div>
           <FiUser />
           <div style={{ position: "relative" }}>
-              <NavLink to="/shop">
-                <FaShopify  style={{ color: "black", fontSize:"25px"}}/>
+              <NavLink to={"/shop"}>
+                <FaShopify   style={{ color: "black", fontSize:"25px"}}/>
               </NavLink>
               <div className={styles.cartTotal}>{cartTotal}</div>
             </div>
