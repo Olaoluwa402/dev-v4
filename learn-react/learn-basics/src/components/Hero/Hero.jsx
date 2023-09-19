@@ -3,7 +3,7 @@ import React from "react";
 
 import styles from "./Hero.module.css";
 import Button from "../Button/Button";
-import { ButtonStyled } from "../ButtonStyled";
+// import { ButtonStyled } from "../ButtonStyled";
 
 const Hero = () => {
   return (
@@ -21,13 +21,13 @@ const Hero = () => {
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
           repellat ratione quas, laboriosam architecto tempora.
         </p>
-        <ButtonStyled color="red" bgColor="green">
+        {/* <ButtonStyled color="red" bgColor="green">
           our list
         </ButtonStyled>
 
         <ButtonStyled color="white" bgColor="purple">
           our list
-        </ButtonStyled>
+        </ButtonStyled> */}
 
         {/* button component */}
         <Button

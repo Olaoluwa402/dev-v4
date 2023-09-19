@@ -3,43 +3,42 @@ import React from "react";
 import styles from "./Hero.module.css";
 import Button from "../Button/Button";
 import { ButtonStyled } from "../ButtonStyled";
+import Products from "../Products/Products";
 
 const Hero = () => {
-  return (
-    <div className= {styles.wishlist}>
-    <div id="wishlist1">
-        <h4>Wishlist (4)</h4>
-        <button><a href="#">Move All To Bag</a></button>
-    </div>
-    <div className={styles.wishlist_container}>
-        <div className={styles.wishlistbox}>
-            <div className={styles.topbox}>
-                <div class="image">
-                    <img src="./Exclusive Assets/Discount percent.png" />
-                </div>
-                <div className={styles.topbox_img}>
-                    <a href="#"><img src="./Exclusive Assets/icon-delete.png" /></a>
-                </div>
 
-                <div className={styles.wislist_image}>
-                    <img src="./Exclusive Assets/guccibag.png" />
-                </div>
-            </div>
-            <div className={styles.addtocart}>
-                <img src="./Excl
-                usive Assets/Cart1.png" />
-                <a href="#">
-                    <p>Add to Cart</p>
-                </a>
-            </div>
-            <div className={styles.wishlistitems}>
-                <h4>Gucci duffle bag</h4>
-                <div class="prices">
-                    <p>$960</p>
-                    <h5>$1160</h5>
-                </div>
-            </div>
-        </div>
+  const productData = [
+    {
+      id : Math.floor(Math.random() * 1000),
+      title:"Gucci Duffle Bag",
+      image:"https://res.cloudinary.com/dfeyofjln/image/upload/v1692172728/guccibag_jmaqgc.png",
+      price:"960",
+      discount: "$1100"
+    },
+    {
+      id : Math.floor(Math.random() * 1000),
+      title:"Laptop",
+      image:"https://res.cloudinary.com/dfeyofjln/image/upload/v1692172729/laptop_jnouoi.png",
+      price:"1000",
+     
+  
+    },
+    {
+      id : Math.floor(Math.random() * 1000),
+      title:"Gucci Duffle Bag",
+      image:"https://res.cloudinary.com/dfeyofjln/image/upload/v1692172728/jacket_gjn5dh.png",
+      price:"540",
+      discount: "1100"
+  
+    },
+  
+   ]
+  return (
+
+    <div className={styles.container}>
+
+        <Products productData={productData}/>
+
         <ButtonStyled color="red" bgColor="green">
           our list
         </ButtonStyled>
@@ -60,7 +59,7 @@ const Hero = () => {
           color="var(--white90)"
           bgColor="var(--brown100)"
         />
-      </div>
+
     </div>
   );
 };

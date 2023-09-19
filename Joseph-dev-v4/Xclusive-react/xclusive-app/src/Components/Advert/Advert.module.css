@@ -45,14 +45,15 @@
 }
 
 select {
-  border: none;
-  background-color: transparent;
-  color: white;
+  /* border: solid 1px; */
+  border-radius: 5px;
+  background-color: black;
+  color:white;
   font-size: 14px;
 }
 
 select:focus {
-  outline: none;
+  outline:none;
 }
 
 

@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+  }
+  
+  .container ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .container ul li {
+    margin-right: 25px;
+  }
+  
+  .container > a {
+    font-size: 3rem;
+    color: white;
+    padding-left: 20px;
+  }
+  
+  .container a {
+    text-decoration: none;
+    color: white;
+  }
+  .container{
+    color: black;
+  }
+  
