@@ -19,12 +19,16 @@ const Provider = ({ children }) => {
     register: false,
     addFavorite: false,
     addToCart: false,
+    manageCart: false,
   });
   const [cartTotal, setCartTotal] = useState(0);
   const [favoritesTotal, setFavoritesTotal] = useState(0);
   const [products, setProducts] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [carts, setCarts] = useState([]);
+  const [cartTotalPrice, setCartTotalPrice] = useState(0);
+  const [shippingCost, setShippingCost] = useState(8);
+  const [grandTotal, setGrandTotal] = useState(8);
   const [product, setProduct] = useState(null);
 
   //get user info from stroge if it exist
@@ -44,6 +48,16 @@ const Provider = ({ children }) => {
   const getCarts = useCallback(async () => {
     const data = await allCartItemsReq();
     setCarts(data);
+    console.log(data, "dataTojhkjhk");
+    const cartTotal =
+      data &&
+      data.length > 0 &&
+      data.reduce(
+        (acc, cur) => acc + Number(cur.priceTotal.replace("NGN", "")),
+        0
+      );
+    setCartTotalPrice(cartTotal);
+    setGrandTotal(cartTotal + shippingCost);
   }, []);
 
   const getFavorites = useCallback(async () => {
@@ -108,6 +122,10 @@ const Provider = ({ children }) => {
     allFavorite: allFavoriteItemsReq,
     favorites,
     carts,
+    getCarts,
+    grandTotal,
+    shippingCost,
+    cartTotalPrice,
     manageCartQtyReq,
     getCartTotal: getCartTotal,
     isLoadingHandler,

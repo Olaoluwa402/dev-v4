@@ -23,6 +23,7 @@ const Product = ({
 
   const [activeId, setActiveId] = useState(null);
 
+
   const addToCartHandler = async ({ id, title, product_img, price, qty }) => {
     console.log("clicked");
     //set Active ID

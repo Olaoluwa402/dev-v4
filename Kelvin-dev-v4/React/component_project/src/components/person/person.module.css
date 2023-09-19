@@ -1,0 +1,23 @@
+.container {
+  background-color: rgb(216, 214, 214);
+  padding: 40px;
+}
+
+.container div {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.container h6 {
+  text-align: left;
+  font-size: 16px;
+}
+
+.container img {
+  border-radius: 50%;
+}
+
+.container p {
+  color: grey;
+}

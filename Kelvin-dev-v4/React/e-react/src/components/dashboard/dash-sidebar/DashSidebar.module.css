@@ -1,0 +1,72 @@
+.container {
+  background-color: rgb(16, 20, 36);
+  width: 50%;
+  /* position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0; */
+  text-align: left;
+}
+
+.container > div {
+  padding: 25px;
+  border-bottom: 1px solid rgb(33, 36, 46);
+}
+
+.container > div > div {
+  background-color: rgb(33, 36, 46);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.container > div > div h5 {
+  color: white;
+  font-size: 18px;
+  margin: 0;
+}
+.container p {
+  font-weight: 400;
+  margin: 10px 0;
+}
+.container p,
+.container li,
+.a {
+  color: #9e9e9e;
+  font-size: 14px;
+}
+
+.container ul {
+  margin: 0;
+  padding: 25px 20px;
+}
+
+.container ul li {
+  padding: 10px 0;
+  border-radius: 10px;
+}
+.container ul li:hover {
+  background-color: rgb(33, 36, 46);
+  color: white;
+}
+.container ul li:hover .listIcon {
+  color: rgb(77, 56, 194);
+}
+.container ul li:hover .a {
+  color: white;
+}
+
+.listIcon {
+  margin: 0 20px;
+}
+
+@media (min-width: 720px) {
+  .container {
+    width: 30%;
+  }
+}
+
+@media (min-width: 720px) {
+  .container {
+    width: 25%;
+  }
+}

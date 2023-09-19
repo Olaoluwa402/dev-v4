@@ -1,0 +1,188 @@
+.flashsales {
+  background-color: black;
+}
+
+.mainimage > img {
+  padding-top: 25px;
+  width: 550px;
+}
+
+.imagecount > ul > li > img {
+  width: 15px;
+}
+
+.vertical {
+  border-right: 2px solid;
+  border-color: rgb(211, 208, 208);
+  height: 500px;
+  position: absolute;
+  left: 400px;
+  top: 80px;
+}
+
+.topleft {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heroleft {
+  display: inline-flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  gap: 16px;
+  width: 300px;
+  margin-top: 0px;
+}
+
+.heroleft h3 {
+  color: var(--Text2, #000);
+  font-family: Poppins;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  margin-left: 50px;
+}
+
+.flashsales {
+  display: flex;
+  flex-direction: column;
+  width: 950px;
+  height: 400px;
+}
+
+.innerflash {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.heropage {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.imagecount {
+  margin-top: 30px;
+}
+
+.imagecount ul {
+  display: flex;
+  align-items: center;
+  margin-left: 400px;
+}
+
+.imagecount ul li {
+  padding-left: 10px;
+}
+
+.flash {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.flashimage {
+  display: flex;
+  align-items: center;
+}
+
+.flashimage > img {
+  width: 50px;
+}
+
+.flashimage > span {
+  padding-left: 20px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.flash > h3 {
+  color: white;
+  font-size: 3.2rem;
+  width: 70%;
+  font-family: inter;
+  font-family: 600;
+}
+
+#shop {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 1.3rem;
+}
+
+#shop p {
+  text-underline-offset: 9px;
+}
+
+#shop #icon {
+  font-size: 40px;
+  padding-left: 10px;
+}
+
+.todays_sale {
+  display: block;
+  margin-top: 120px;
+  margin-left: 110px;
+}
+
+.today {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.today h4 {
+  color: var(--Secondary-2, #db4444);
+  /* Title/16PX Semibold */
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 125% */
+}
+
+.today img {
+  width: 20px;
+}
+
+.arrows img {
+  width: 46px;
+}
+
+.flashes {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.arrows {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 550px;
+}
+
+.countdown {
+  margin-left: 80px;
+}
+
+.fsales h2 {
+  color: var(--Text2, #000);
+  /* Heading/36PX SemiBold */
+  font-family: Inter;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 48px; /* 133.333% */
+  letter-spacing: 1.44px;
+  margin-top: 30px;
+}
+
+#boxes {
+    margin-top: 30px;
+}

@@ -1,0 +1,88 @@
+.SignUp {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.wrapper {
+  width: 35%;
+  padding: 20px;
+}
+
+.wrapper p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+.wrapper h2 {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 400;
+}
+
+.wrapper input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid gray;
+  margin: 20px 0;
+  font-size: 17px;
+  padding: 10px;
+}
+
+.btn button {
+  width: 100%;
+  background-color: #db4444;
+  padding: 15px 10px;
+  border-radius: 4px;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 10px 0px;
+  border: none;
+}
+
+.btn button:hover{
+  background:#ff9c9e ;
+}
+
+.google button {
+  border: 1px solid gray;
+  width: 100%;
+  background: #fff;
+  padding: 15px 10px;
+  border-radius: 4px;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 10px 0px;
+  border-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.link a{
+  color: gray;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.link a:hover{
+  border-bottom: 1px solid gray;
+  font-size: 20px;
+}

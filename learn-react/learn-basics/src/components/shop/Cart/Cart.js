@@ -1,23 +1,63 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../../../context";
+import Spinner from "../../Spinner/CustomSpinner";
 
 const Cart = () => {
-  const { allCartItems, carts, manageCartQtyReq } = useContext(GlobalContext);
+  const {
+    carts,
+    getCarts,
+    manageCartQtyReq,
+    isLoading,
+    isLoadingHandler,
+    grandTotal,
+    shippingCost,
+    cartTotalPrice,
+  } = useContext(GlobalContext);
+
+  const [active, setActive] = useState({
+    id: null,
+    type: null,
+  });
 
   useEffect(() => {
-    allCartItems();
+    getCarts();
   }, []);
 
   const manageCartHanler = async (type, id, qty, price) => {
+    //set loading back to true when action starts
+    isLoadingHandler("manageCart", true);
+
     if (type === "increment") {
+      setActive({
+        id: id,
+        type: "increment",
+      });
       qty = qty + 1;
       await manageCartQtyReq(id, qty, price);
-      allCartItems();
+
+      // if we getr here, then increment call is successfule, set the state
+
+      await getCarts();
+      //set loading back to true when action starts
+      isLoadingHandler("manageCart", false);
     } else {
-      qty = qty - 1;
+      setActive({
+        id: id,
+        type: "decrement",
+      });
+
+      if (qty == 1) {
+        qty = qty;
+      } else {
+        qty = qty - 1;
+      }
+
       await manageCartQtyReq(id, qty, price);
-      allCartItems();
+      // if we getr here, then decrement call is successfule, set the state
+      await getCarts();
+      //set loading back to true when action starts
+      isLoadingHandler("manageCart", false);
     }
   };
 
@@ -44,7 +84,10 @@ const Cart = () => {
                           qty,
                           priceTotal,
                         }) => (
-                          <li className="flex flex-col space-y-3 py-6 text-left sm:flex-row sm:space-x-5 sm:space-y-0">
+                          <li
+                            key={id}
+                            className="flex flex-col space-y-3 py-6 text-left sm:flex-row sm:space-x-5 sm:space-y-0"
+                          >
                             <div className="shrink-0">
                               <img
                                 className="h-24 w-24 max-w-full rounded-lg object-cover"
@@ -65,6 +108,12 @@ const Cart = () => {
                                 </div>
 
                                 <div className="mt-4 flex items-end justify-between sm:mt-0 sm:items-start sm:justify-end">
+                                  <div className="pr-8 sm:pr-5">
+                                    <p className="text-base font-semibold text-gray-900">
+                                      {price.replace("NGN", "$")}
+                                    </p>
+                                  </div>
+
                                   <p className="shrink-0 w-20 text-base font-semibold text-gray-900 sm:order-2 sm:ml-8 sm:text-right">
                                     {priceTotal.replace("NGN", "$")}
                                   </p>
@@ -82,7 +131,13 @@ const Cart = () => {
                                         }
                                         className="flex items-center justify-center rounded-l-md bg-gray-200 px-4 transition hover:bg-black hover:text-white"
                                       >
-                                        -
+                                        {isLoading.manageCart &&
+                                        active.id == id &&
+                                        active.type == "decrement" ? (
+                                          <Spinner />
+                                        ) : (
+                                          "-"
+                                        )}
                                       </button>
                                       <div className="flex w-full items-center justify-center bg-gray-100 px-4 text-xs uppercase transition">
                                         {qty}
@@ -98,7 +153,13 @@ const Cart = () => {
                                         }
                                         className="flex items-center justify-center rounded-r-md bg-gray-200 px-4 transition hover:bg-black hover:text-white"
                                       >
-                                        +
+                                        {isLoading.manageCart &&
+                                        active.id == id &&
+                                        active.type == "increment" ? (
+                                          <Spinner />
+                                        ) : (
+                                          "+"
+                                        )}
                                       </button>
                                     </div>
                                   </div>
@@ -141,12 +202,14 @@ const Cart = () => {
                   <div className="flex items-center justify-between">
                     <p className="text-sm text-gray-400">Subtotal</p>
                     <p className="text-lg font-semibold text-gray-900">
-                      $399.00
+                      ${cartTotalPrice}
                     </p>
                   </div>
                   <div className="flex items-center justify-between">
                     <p className="text-sm text-gray-400">Shipping</p>
-                    <p className="text-lg font-semibold text-gray-900">$8.00</p>
+                    <p className="text-lg font-semibold text-gray-900">
+                      ${shippingCost}
+                    </p>
                   </div>
                 </div>
                 <div className="mt-6 flex items-center justify-between">
@@ -155,7 +218,7 @@ const Cart = () => {
                     <span className="text-xs font-normal text-gray-400">
                       USD
                     </span>{" "}
-                    408.00
+                    {grandTotal}
                   </p>
                 </div>
 
