@@ -1,0 +1,43 @@
+.container {
+    display: block;
+    align-items: center;
+    height: 85px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between;  */
+
+}
+
+.search {
+    margin-left: 30px;
+}
+
+
+.icons {
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.righticons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 950px;
+}
+
+
+.userimage{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(197, 144, 221);
+}
+
+.userimage img{
+    width:18px ;
+}

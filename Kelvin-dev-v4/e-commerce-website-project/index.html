@@ -2,9 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
     <link
       rel="stylesheet"
@@ -15,6 +24,155 @@
     />
   </head>
   <body>
-    <i class="fa-solid fa-bars" style="color: #09101a"></i>
+    <div id="top-ad">
+      <p>
+        Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+        <span>ShopNow</span>
+      </p>
+      <select name="" id="select">
+        <option value="">English</option>
+        <option value="">French</option>
+        <option value="">Japanese</option>
+      </select>
+    </div>
+
+    <!-- navbar start -->
+    <nav>
+      <img src="./Assets/lodo black.png" alt="" id="navlogo" />
+
+      <i
+        class="fa-solid fa-bars"
+        style="color: #09101a"
+        id="hamburger-icon"
+      ></i>
+
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./contact/contact.html">Contact</a></li>
+        <li><a href="./About/about.html">About</a></li>
+        <li><a href="./account/signup.html">Sign Up</a></li>
+      </ul>
+
+      <div>
+        <div id="search-div">
+          <input type="search" placeholder="What are you looking for?" />
+
+          <i class="fa-solid fa-magnifying-glass" id="nav-search-icon"></i>
+        </div>
+
+        <i class="fa-regular fa-heart"></i>
+        <ion-icon name="cart-outline" class="cart" id="navCartId"></ion-icon>
+        <img src="./Assets/user.png" alt="" id="user-icon" />
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- mobile nav -->
+    <div class="menuclose" id="mobilenav">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./contact/contact.html">Contact</a></li>
+        <li><a href="./About/about.html">About</a></li>
+        <li><a href="./account/signup.html">Sign Up</a></li>
+      </ul>
+
+      <div>
+        <div id="search-div">
+          <input type="search" placeholder="What are you looking for?" />
+
+          <i class="fa-solid fa-magnifying-glass" id="nav-search-icon"></i>
+        </div>
+
+        <div id="mobilenav-icons">
+          <i class="fa-regular fa-heart"></i>
+          <ion-icon
+            name="cart-outline"
+            class="cart"
+            id="navCartIdMobile"
+          ></ion-icon>
+          <img src="./Assets/user.png" alt="" id="user-icon-mobile" />
+        </div>
+      </div>
+    </div>
+    <!-- mobile nav -->
+
+    <!-- footer start -->
+    <footer>
+      <img src="./Assets/logo white.png" alt="" />
+      <div id="footer-grid">
+        <div>
+          <h5>Subscribe</h5>
+          <p>Get 10% off your first order</p>
+          <div>
+            <input type="email" placeholder="Enter your email" />
+            <img src="./Assets/icon-send.png" alt="" id="footer-email-submit" />
+          </div>
+        </div>
+
+        <ul>
+          <li class="footer-list-head">Support</li>
+          <li>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</li>
+          <li>exclusive@gmail.com</li>
+          <li>+88015-88888-9999</li>
+        </ul>
+
+        <ul>
+          <li class="footer-list-head">Account</li>
+          <li>My Account</li>
+          <li>Login / Register</li>
+          <li>Cart</li>
+          <li><a href="./wishlist/wishlist.html">Wishlist</a></li>
+          <li>Shop</li>
+        </ul>
+
+        <ul>
+          <li class="footer-list-head">Quick Link</li>
+          <li>Privacy Policy</li>
+          <li>Terms Of Use</li>
+          <li>FAQ</li>
+          <li>Contact</li>
+        </ul>
+
+        <div id="footer-app-link">
+          <h4 class="footer-list-head">Download App</h4>
+          <p>Save $3 with App New User Only</p>
+          <div id="footer-grid-link">
+            <img
+              src="./Assets/wishlist-page-assets/wishlist-Qrcode 1.png"
+              alt=""
+              id="footer-qr"
+            />
+            <img
+              src="./Assets/wishlist-page-assets/wishlist-googleplay-img.png"
+              alt=""
+              id="footer-gp"
+            />
+            <img
+              src="./Assets/wishlist-page-assets/wishlist-appstore-img.png"
+              alt=""
+              id="footer-as"
+            />
+          </div>
+          <div id="footer-sm-icons">
+            <i class="fa-brands fa-facebook-f" style="color: #ffffff"></i>
+            <i class="fa-brands fa-twitter" style="color: #ffffff"></i>
+            <i class="fa-brands fa-instagram" style="color: #ffffff"></i>
+            <i class="fa-brands fa-linkedin-in" style="color: #ffffff"></i>
+          </div>
+        </div>
+      </div>
+      <p id="copyright-text">
+        <span>&copy</span> Copyright Rimel 2022. All right reserved
+      </p>
+    </footer>
+    <!-- footer end -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./js/nav.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
