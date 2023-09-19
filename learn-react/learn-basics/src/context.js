@@ -1,14 +1,24 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { getProductsReq, addToCartReq, allCartItemsReq } from "./apiRequets";
+import {
+  getProductsReq,
+  addToCartReq,
+  allCartItemsReq,
+  addToFavoriteReq,
+  allFavoriteItemsReq,
+  manageCartQtyReq,
+} from "./apiRequets";
 
 import { blogData } from "./components/data";
-import { all } from "axios";
+
 const GlobalContext = React.createContext();
 
 const Provider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [cartTotal, setCartTotal] = useState(0);
+  const [favoritesTotal, setFavoritesTotal] = useState(0);
   const [products, setProducts] = useState([]);
+  const [favorites, setFavorites] = useState([]);
+  const [carts, setCarts] = useState([]);
   const [user, setUser] = useState(null);
 
   //get product using useCallback hook for caching mechanism
@@ -17,17 +27,40 @@ const Provider = ({ children }) => {
     setProducts(data);
   }, []);
 
+  const getCarts = useCallback(async () => {
+    const data = await allCartItemsReq();
+    setCarts(data);
+  }, []);
+
+  const getFavorites = useCallback(async () => {
+    const data = await allFavoriteItemsReq();
+    setFavorites(data);
+  }, []);
+
   const getCartTotal = async () => {
-    const cartTotal = await allCartItemsReq();
-    setCartTotal(cartTotal.length);
+    const carts = await allCartItemsReq();
+    setCartTotal(carts.length);
+  };
+
+  const getFavoritesTotal = async () => {
+    const favorites = await allFavoriteItemsReq();
+    setFavoritesTotal(favorites.length);
   };
 
   useEffect(() => {
     //make api call to get all products
     getProducts();
+    //make api call to get all favorites
+    getFavorites();
     //get cart total
     getCartTotal();
-  }, [getProducts]);
+
+    //carts
+    getCarts();
+
+    //get favorites total
+    getFavoritesTotal();
+  }, []);
 
   const sum = (arr) => {
     return arr.reduce((acc, cur) => acc + cur, 0);
@@ -44,6 +77,13 @@ const Provider = ({ children }) => {
     addToCart: addToCartReq,
     allCartItems: allCartItemsReq,
     cartTotal: cartTotal,
+    favoritesTotal: favoritesTotal,
+    addToFavorite: addToFavoriteReq,
+    allFavorite: allFavoriteItemsReq,
+    favorites,
+    carts,
+    manageCartQtyReq,
+    getCartTotal: getCartTotal,
   };
   return (
     <GlobalContext.Provider value={store}>{children}</GlobalContext.Provider>

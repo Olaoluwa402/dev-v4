@@ -9,6 +9,12 @@ import Analytics from "./screens/Analytics";
 import User from "./screens/User";
 import DashboardLayout from "./components/DashboardLayout/Layout.jsx";
 import ProductsScreen from "./screens/Products";
+import CheckoutScreen from "./screens/Checkout";
+import FavoriteScreen from "./screens/Favorites";
+import LoginScreen from "./screens/LoginRegister";
+import RegisterScreen from "./screens/Register";
+
+import CartScreen from "./screens/CartScreen";
 
 const Router = () => {
   return (
@@ -53,6 +59,50 @@ const Router = () => {
         element={
           <Layout>
             <ProductsScreen />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/cart"
+        element={
+          <Layout>
+            <CartScreen />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/checkout"
+        element={
+          <Layout>
+            <CheckoutScreen />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/favorites"
+        element={
+          <Layout>
+            <FavoriteScreen />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/register"
+        element={
+          <Layout>
+            <RegisterScreen />
+          </Layout>
+        }
+      />
+      <Route
+        path="/login"
+        element={
+          <Layout>
+            <LoginScreen />
           </Layout>
         }
       />

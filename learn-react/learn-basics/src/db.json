@@ -112,9 +112,104 @@
       "email": "usr3@gmail.com",
       "password": "12345",
       "isVerified": false
+    },
+    {
+      "email": "juliet@gmail.com",
+      "password": "12345",
+      "username": "juliet",
+      "id": 4
+    },
+    {
+      "email": "joe@gmail.com",
+      "password": "12345",
+      "username": "joe",
+      "id": 5
+    },
+    {
+      "email": "badmus@gmail.com",
+      "password": "12345",
+      "username": "badmus",
+      "id": 6
+    },
+    {
+      "email": "dedayo16@gmail.com",
+      "password": "12345",
+      "username": "dedayo16",
+      "id": 7
+    },
+    {
+      "email": "ibukunolaoluwa402@gmail.com",
+      "password": "12345",
+      "username": "ibukunolaoluwa40",
+      "id": 8
     }
   ],
   "carts": [
+    {
+      "id": 1,
+      "title": "product-A",
+      "qty": 4,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "price": "NGN3000",
+      "priceTotal": "NGN12000",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "title": "product-B",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "price": "NGN4000",
+      "priceTotal": "NGN4000",
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "title": "product-C",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "price": "NGN5000",
+      "priceTotal": "NGN5000",
+      "userId": 1
+    },
+    {
+      "id": 6,
+      "title": "product-F",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "price": "NGN4500",
+      "priceTotal": "NGN4500",
+      "userId": 1
+    },
+    {
+      "id": 9,
+      "title": "product-I",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "price": "NGN1000",
+      "priceTotal": "NGN1000",
+      "userId": 1
+    },
+    {
+      "id": 4,
+      "title": "product-D",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "price": "NGN3000",
+      "priceTotal": "NGN3000",
+      "userId": 1
+    },
+    {
+      "id": 5,
+      "title": "product-E",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "price": "NGN6000",
+      "priceTotal": "NGN6000",
+      "userId": 1
+    }
+  ],
+  "wishlists": [
     {
       "id": 1,
       "title": "product-A",
@@ -130,8 +225,23 @@
       "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
       "price": "NGN4000",
       "userId": 1
+    },
+    {
+      "id": 9,
+      "title": "product-I",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "price": "NGN1000",
+      "userId": 1
+    },
+    {
+      "id": 8,
+      "title": "product-H",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "price": "NGN2000",
+      "userId": 1
     }
   ],
-  "wishlists": [],
   "orders": []
 }
