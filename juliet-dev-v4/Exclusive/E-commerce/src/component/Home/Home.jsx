@@ -4,7 +4,7 @@ import PictureSlide from "../PictureSlide/PictureSlide";
 import { BsApple, BsArrowRight, BsArrowLeft} from "react-icons/bs";
 import { Link } from "react-router-dom";
 import HomeUl from "../HomeUl/HomeUl";
-import Moment from "../Moment./Moment";
+import Moment from "../Moment/Moment";
 import AboutDelivery from "../AboutDelivery/AboutDelivery";
 import { AbtDeliv } from "../AboutDelivery/Data4";
 import Categories from "../Categories/Categories";
