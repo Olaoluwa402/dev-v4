@@ -1,6 +1,6 @@
 import React from "react";
 
-const AboutScreen = () => {
+export const AboutScreen = () => {
   return <div>About Screen</div>;
 };
 

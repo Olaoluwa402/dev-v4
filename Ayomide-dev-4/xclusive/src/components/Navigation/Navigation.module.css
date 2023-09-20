@@ -85,3 +85,6 @@ navbar {
   list-style: none;
   gap: 35px;
 }
+.navhome a {
+  color: #000000;
+}

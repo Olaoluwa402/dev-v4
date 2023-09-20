@@ -6,19 +6,19 @@
 
 .spinner .ldsdualRing {
   display: inline-block;
-  width: 74px;
-  height: 74px;
+  width: 64px;
+  height: 64px;
 }
 
 .spinner:after {
   content: " ";
   display: block;
-  width: 56px;
-  height: 56px;
+  width: 46px;
+  height: 66px;
   margin: 1px;
   border-radius: 50%;
   border: 5px solid #fff;
-  border-color: var(--primaryColor) transparent var(--primaryColor) transparent;
+  border-color: #000 transparent #000 transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
 
