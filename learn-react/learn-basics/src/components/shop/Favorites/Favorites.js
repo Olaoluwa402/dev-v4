@@ -11,6 +11,7 @@ const Favorites = () => {
   useEffect(() => {
     allFavorite();
   }, []);
+  
   return (
     <div>
       <Title title="Favorites" />

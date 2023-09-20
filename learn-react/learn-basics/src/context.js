@@ -90,9 +90,10 @@ const Provider = ({ children }) => {
     favoritesTotal: favoritesTotal,
     addToFavorite: addToFavoriteReq,
     allFavorite: allFavoriteItemsReq,
-    favorites,
+     favorites,
     carts,
     manageCartQtyReq,
+    getCarts,
     getCartTotal: getCartTotal,
   };
   return (
