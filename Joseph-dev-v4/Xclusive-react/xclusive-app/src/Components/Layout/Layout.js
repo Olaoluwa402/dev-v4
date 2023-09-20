@@ -7,6 +7,7 @@ import Favourite from "../Navigation/Favourite/Favourite";
 import Carticon from "../Navigation/Carticon/Carticon";
 import User from "../Navigation/User/User";
 import Plus from "../Navigation/Plus/Plus";
+import { ToastContainer } from "react-toastify";
 
 import styles from "./Layout.module.css";
 

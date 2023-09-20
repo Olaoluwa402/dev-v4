@@ -5,6 +5,37 @@
     justify-content: center;
 }
 
+.button{
+    width: 50px;
+    height: 40px;
+}
+.button button {
+    height: 40px;
+    width: 30px;
+
+}
+
+.button button p{
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.qty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    background-color: whitesmoke;
+    height: 50px;
+}
+
+.qty p{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: black;
+}
+
+
 .btn {
     margin-top: 40px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -25,4 +56,18 @@
     background-color: blueviolet;
     cursor: pointer;
     transform: scale(1.1);
+}
+
+.button {
+    text-align: center;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.button button{
+    width: 80px;
+    height: 50px;
+    background-color: azure;
+    color: black;
 }

@@ -1,13 +1,12 @@
-import React from 'react'
-import Colour from '../Components/Colour/Colour'
+import React from "react";
+import Colour from "../Components/Quantity/Quantity";
 
 const ColourPage = () => {
   return (
     <div>
       <Colour />
     </div>
-  )
-}
+  );
+};
 
-export default ColourPage
-
+export default ColourPage;

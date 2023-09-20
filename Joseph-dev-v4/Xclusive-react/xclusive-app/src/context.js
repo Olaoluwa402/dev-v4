@@ -1,7 +1,13 @@
 import React, {useState, useEffect, useCallback} from 'react'
 import axios from 'axios'
-import { getProductsReq} from "./apiCalls/product";
-import {allCartItemsReq, addToCartReq} from "./apiCalls/cart";
+import { 
+  getProductsReq, 
+  allCartItemsReq,
+  addToCartReq, 
+  allFavouriteItemsReq, 
+  addToFavouritesReq,
+  manageCartQtyReq,} from "./apiCalls";
+
 import {blogData} from "./Components/data";
 
 
@@ -11,8 +17,18 @@ const GlobalContext = React.createContext();
 const Provider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [cartTotal, setCartTotal] = useState(0);
+  const [favouritesTotal, setFavouritesTotal] = useState(0);
+  const [favourites, setFavourites]= useState([]);
   const [products, setProducts] = useState([]);
-  const [user, setUser] = useState(null);
+  const [carts, setCarts] = useState([]);
+
+  const initialUser = localStorage.getItem("userInfo")
+    ? JSON.parse(localStorage.getItem("userInfo"))
+    : null;
+  const [user, setUser] = useState(initialUser);
+
+  console.log(user, "userfromcontext");
+
 
   //get product using useCallback hook for caching mechanism
   const getProducts = useCallback(async () => {
@@ -20,16 +36,36 @@ const Provider = ({ children }) => {
     setProducts(data);
   }, []);
 
+  const getCarts = useCallback(async () => {
+     const data = await allCartItemsReq();
+     setCarts(data)
+
+    //  console.log(data, "Datas")
+
+  },[])
+
   const getCartTotal = async () => {
-    const cartTotal = await allCartItemsReq();
-    setCartTotal(cartTotal.length);
+    const carts = await allCartItemsReq();
+    setCartTotal(carts.length);
   };
 
+ const getFavourites = useCallback( async () => {
+  const data = await allFavouriteItemsReq();
+  setFavourites(data)
+ },[])
+
+ const getFavouritesTotal = async () => {
+  const favourites = await allFavouriteItemsReq();
+   setFavouritesTotal(favourites.length);
+ };
   useEffect(() => {
     //make api call to get all products
     getProducts();
 
-    getCartTotal()
+    getCartTotal();
+    getCarts();
+    getFavourites();
+    getFavouritesTotal();
   }, [getProducts]);
 
   const sum = (arr) => {
@@ -43,9 +79,18 @@ const Provider = ({ children }) => {
     setUser,
     isLoading,
     setIsLoading,
+    allCartItems: allCartItemsReq,
     products,
     addToCart: addToCartReq,
-    cartTotal : cartTotal
+    cartTotal : cartTotal,
+    getCartTotal,
+    carts,
+    addToFavourites: addToFavouritesReq,
+    getFavouritesTotal,
+    favourites,
+    manageCartQtyReq,
+    favouritesTotal: favouritesTotal,
+    allFavouriteItems : allFavouriteItemsReq
   };
   return (
     <GlobalContext.Provider value={store}>{children}</GlobalContext.Provider>

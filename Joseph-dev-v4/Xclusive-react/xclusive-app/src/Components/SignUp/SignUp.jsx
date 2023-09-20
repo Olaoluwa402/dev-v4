@@ -1,56 +1,62 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import styles from "./SignUp.module.css";
-import { Link, Navigate } from "react-router-dom";
-import Button2 from "../Button2/Button2";
-import Button3 from "../Button3/Button3";
-import BeatLoader from "react-spinners/BeatLoader";
+import React, { useState, useEffect, useContext} from "react";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { registerReq} from "../../apiCalls";
+import { toast } from "react-toastify";
+import { GlobalContext } from "../../context";
+import styles from "./SignUp.module.css"
+import {BeatLoader} from "react-spinners"
+import Button2 from "../Button2/Button2"
+import Button3 from "../Button3/Button3"
 
 const SignUp = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
+  const {isLoading, setIsLoading } = useContext(GlobalContext);
+  const navigate = useNavigate();
+  const [value, setValue] = useState({
+    username: "",
+    password: "",
+    email: "",
+    remember: "",
+  });
 
-  useEffect(() => {
-    // setLoading(true)
-    // setTimeout(() => {
-    // setLoading(false)
-    // }, 5000)
-  }, []);
+  console.log(value, "valueee");
 
-  const handleChange = (e) => {
+  const [isRegistered, setIsRegistered] = useState(false); 
+
+  function handleChange(e) {
     const { name, value } = e.target;
 
-    if (name === "name") {
-      setName(value);
+    setValue((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  }
+
+  useEffect(() => {
+  
+      setIsRegistered(false);
+    }, [navigate, isRegistered,]);
+
+  async function handleSubmit() {
+    // submit the record to the server via api call
+    const { email, password, username } = value;
+    // console.log(email, password, username);
+    
+    setIsLoading((prev) => ({
+      ...prev,
+      register: true,
+    }));
+    const registeredUser = await registerReq(email, password, username);
+    console.log(registeredUser);
+    if (registeredUser) {
+      setIsRegistered(true);
+      setIsLoading((prev) => ({
+        ...prev,
+        register: false,
+      }));
     }
-    if (name === "email") {
-      setEmail(value);
-    }
-
-    if (name === "password") {
-      setPassword(value);
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    setTimeout(() => {
-      const data = {
-        name,
-        email,
-        password,
-      };
-
-      console.log(data);
-      setLoading(false);
-    }, 5000);
-  };
-
-  console.log(loading);
+  }
+ 
 
   return (
     <div className={styles.outter}>
@@ -68,10 +74,9 @@ const SignUp = () => {
               <div className={styles.input_group}>
                 <input
                   type="text"
-                  name="name"
+                  name="username"
                   id={styles.name}
-                  placeholder="Name"
-                  value={name || ""}
+                  placeholder="Username"
                   onChange={handleChange}
                 ></input>
               </div>
@@ -82,7 +87,6 @@ const SignUp = () => {
                   name="email"
                   id={styles.name}
                   placeholder="Email or Phone Number"
-                  value={email || ""}
                   onChange={handleChange}
                 ></input>
               </div>
@@ -93,12 +97,11 @@ const SignUp = () => {
                   name="password"
                   id={styles.name}
                   placeholder="Password"
-                  value={password || ""}
                   onChange={handleChange}
                 ></input>
               </div>
               <div className={styles.buttons}>
-                {loading ? (
+                {isLoading ? (
                   <BeatLoader color="#36d7b7" />
                 ) : (
                   <Button2 />

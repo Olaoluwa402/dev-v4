@@ -30,7 +30,7 @@ const Router = () => {
        <Route
        
        path="/"
-       element={ <Layout >
+       element={ <Layout Item1={Favourite} Item2={Carticon} Item3={User} Item4={Plus} >
            <HomePage />
            </Layout>
        }

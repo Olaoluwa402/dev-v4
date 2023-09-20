@@ -72,3 +72,14 @@ font-weight: 400;
 line-height: 24px; /* 150% */
 }
 
+.topright {
+    display: flex;
+    align-items: center;
+}
+
+.topright img {
+    width: 170px;
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
