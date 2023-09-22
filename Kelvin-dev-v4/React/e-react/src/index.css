@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -75,7 +79,7 @@ button:hover {
 
 .product_tabs {
   display: grid;
-  grid-template-columns: minmax(100px, 200px) minmax(100px, 200px);
+  grid-template-columns: minmax(80px, 100px) minmax(80px, 100px);
   width: 100%;
   box-sizing: border-box;
   align-items: flex-start;
@@ -84,9 +88,9 @@ button:hover {
 
 @media screen and (min-width: 450px) {
   .product_tabs {
-    grid-template-columns: minmax(100px, 200px) minmax(100px, 200px) minmax(
-        100px,
-        200px
+    grid-template-columns: minmax(80px, 100px) minmax(80px, 100px) minmax(
+        80px,
+        100px
       );
   }
 }

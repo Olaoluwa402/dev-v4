@@ -5,15 +5,15 @@ import { BsCart3, BsXLg } from "react-icons/bs";
 import { GlobalContext } from "../../context";
 
 const Product = ({
-  product,
   prod_icon,
-  prod_rating,
   prod_former_price,
+  prod_rating,
   id,
   title,
   price,
   product_img,
   desc,
+  click,
 }) => {
   const {
     addToCartHandler,
@@ -22,6 +22,7 @@ const Product = ({
     wishlistData,
     addToWishlistHandler,
     getWishlistData,
+    removeWishlist,
   } = useContext(GlobalContext);
 
   const cartDataHandler = async ({
@@ -78,6 +79,10 @@ const Product = ({
           <span
             className={styles.tr_icon}
             onClick={() =>
+              // {
+              //   removeWishlist(id);
+              //   console.log(id);
+              // }
               wishlistDataHandler({
                 id,
                 title,

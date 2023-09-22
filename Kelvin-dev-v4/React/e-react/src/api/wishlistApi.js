@@ -36,3 +36,14 @@ export const addToWishlistHandler = async ({
     return;
   }
 };
+
+export const removeWishlist = async (id) => {
+  const url = `http://localhost:3004/wishlists/${id}`;
+  try {
+    const { data } = await axios.get(url);
+    console.log(`data ${id} data`);
+    return data;
+  } catch (err) {
+    console.log(err.message);
+  }
+};

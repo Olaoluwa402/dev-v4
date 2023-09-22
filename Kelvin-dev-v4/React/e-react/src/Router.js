@@ -8,6 +8,7 @@ import Loginscreen from "./screens/Loginscreen";
 import Dashboard from "./screens/dashboardScr/Dashboard";
 import Aboutscreen from "./screens/aboutscr/Aboutscreen";
 import Contactscreen from "./screens/contactScr/Contactscreen";
+import Cartscreen from "./screens/Cartscreen";
 //
 import DashStaff from "./components/dashboard/dash-main/dash-staff/DashStaff";
 import MainCompanies from "./components/dashboard/dash-main/main-companies/MainCompanies";
@@ -63,6 +64,15 @@ function Router() {
         element={
           <Layout>
             <Wishlistscreen />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/cart"
+        element={
+          <Layout>
+            <Cartscreen />
           </Layout>
         }
       />

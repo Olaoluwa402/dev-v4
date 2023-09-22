@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
-// import axios from "axios";
+import axios from "axios";
 import {
   getCart,
   addToCartHandler,
   getProductsReq,
   addToWishlistHandler,
   getWishlist,
+  removeWishlist,
 } from "./api";
 const GlobalContext = React.createContext();
 
@@ -22,12 +23,16 @@ const Provider = ({ children }) => {
     setProducts(data);
   }, []);
 
+  // Function to handle gathering of cart data
+
   async function getCartData() {
     const cart = await getCart();
     setCartData(cart);
     setCartLength(cart.length);
     return cart;
   }
+
+  // Function to handle gathering of wishlist data
   async function getWishlistData() {
     const wishlist = await getWishlist();
     setWishlistData(wishlist);
@@ -39,6 +44,7 @@ const Provider = ({ children }) => {
     //make api call to get all products
     getProducts();
     getCart();
+    getWishlist();
     getCartData();
     getWishlistData();
   }, []);
@@ -60,9 +66,13 @@ const Provider = ({ children }) => {
     getCartData,
     getWishlistData,
     getCart,
+    getWishlist,
     setProducts,
+    setWishlistData,
     getProducts,
     getProductsReq,
+    deleteWishItem: removeWishlist,
+    removeWishlist,
   };
   return (
     <GlobalContext.Provider value={store}>{children}</GlobalContext.Provider>
