@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { buyCakeAction } from "./redux/actions/buyCakeAction";
 function App() {
+  //subsrcibe to store
+  const { remainingItem, sold, noOfcakes } = useSelector(
+    (state) => state.cakes
+  );
+  const [qty, setQty] = useState(1);
+  const dispatch = useDispatch();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Buy Cake</h2>
+      <p>Total Item: {noOfcakes}</p>
+      <p>Remaining Item: {remainingItem}</p>
+      <p>Sold: {sold}</p>
+      <input type="text" value={qty} onChange={(e) => setQty(e.target.value)} />
+      <button onClick={() => dispatch(buyCakeAction(+qty))}>Buy Now</button>
     </div>
   );
 }
