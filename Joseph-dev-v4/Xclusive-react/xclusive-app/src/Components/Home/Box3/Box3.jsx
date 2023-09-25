@@ -114,15 +114,15 @@ const Box3 = ({
             ></img>
           </Link>
           <div className={styles.topbox_img}>
-            <a href="#">
+            <Link to = "/home/:productId">
               <img src={img} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
       <div className={styles.wishlist_image}>
-        <img src={image} alt="" />
+       <Link to = "/home/:productId"> <img src={image} alt="" /></Link>
       </div>
 
       <div className={styles.addtocart}>

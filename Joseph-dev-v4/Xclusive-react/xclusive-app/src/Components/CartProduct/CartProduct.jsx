@@ -2,15 +2,40 @@ import React, { useEffect, useState, useContext } from "react";
 import styles from "./CartProduct.module.css";
 import { GlobalContext } from "../../context";
 import Quantity from "../Quantity/Quantity";
+import { Link } from "react-router-dom";
+
 
 const CartProduct = () => {
-  const { allCartItems, manageCartQtyReq, carts} = useContext(GlobalContext);
+  const { allCartItems, manageCartQtyReq, carts, getCarts } = useContext(GlobalContext);
   console.log(carts, "Data");
 
   useEffect(() => {
     allCartItems();
     manageCartQtyReq();
   }, []);
+
+  const manageCartHandler = async (type,id,qty,price) => {
+    // isLoadingHandler("manageCart", true);
+
+    if (type === "increment") {
+      qty = qty + 1;
+      await manageCartQtyReq(id, qty, price);
+      await getCarts();
+      //set loading back to true when action starts
+      // isLoadingHandler("manageCart", false);
+    } else if(qty == 1) {
+         qty = qty;
+     } else {
+        qty = qty - 1;
+      }
+
+      await manageCartQtyReq(id, qty, price);
+
+      await getCarts();
+
+      // isLoadingHandler("manageCart", false);
+    
+  };
 
   // const manageCartHandler = async (type, id, qty, price) => {
   //   if (type === "increment") {
@@ -39,7 +64,7 @@ const CartProduct = () => {
               <th>Product</th>
               <th>Price</th>
               <th>Quantity</th>
-              <th>Subtotal</th>
+              <th>Pricetotal</th>
               <th>Remove</th>
             </tr>
           </thead>
@@ -52,7 +77,7 @@ const CartProduct = () => {
                     <img
                       src={image}
                       style={{ width: "90px", height: "90px" }}
-                      alt="roduct Image"
+                      alt="product Image"
                     />
                     <p>{title}</p>
                   </td>
@@ -60,7 +85,27 @@ const CartProduct = () => {
                     <p>${price}</p>
                   </td>
                   <td className={styles.qty}>
-                    <Quantity qty = {qty} />
+                    <div className={styles.button}>
+                      <div className={styles.container}>
+                        <button
+                          onClick={() =>
+                            manageCartHandler("decrement", id, qty, price)
+                          }
+                          className="flex items-center justify-center rounded-l-md bg-gray-200 px-4 transition hover:bg-black hover:text-white"
+                        >
+                          -
+                        </button>
+                        <div className={styles.qty}>{qty}</div>
+                        <button
+                          onClick={() =>
+                            manageCartHandler("increment", id, qty, price)
+                          }
+                          className="flex items-center justify-center rounded-r-md bg-gray-200 px-4 transition hover:bg-black hover:text-white"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
                   </td>
                   <td className={styles.prices}>
                     <p>${priceTotal}</p>
@@ -134,7 +179,9 @@ const CartProduct = () => {
               <p>Total:</p>
               <p className={styles.cart_subtotal}>$1750</p>
             </li>
-            <button className={styles.proceedbtn}>Proceed to checkout</button>
+            <Link to="/checkout">
+              <button className={styles.proceedbtn}>Proceed to checkout</button>
+            </Link>
           </ul>
         </div>
       </div>

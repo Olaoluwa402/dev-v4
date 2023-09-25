@@ -6,7 +6,8 @@ import {
   addToCartReq, 
   allFavouriteItemsReq, 
   addToFavouritesReq,
-  manageCartQtyReq,} from "./apiCalls";
+  manageCartQtyReq,
+getProductByIdReq,} from "./apiCalls";
 
 import {blogData} from "./Components/data";
 
@@ -21,6 +22,7 @@ const Provider = ({ children }) => {
   const [favourites, setFavourites]= useState([]);
   const [products, setProducts] = useState([]);
   const [carts, setCarts] = useState([]);
+  const [product, setProduct] = useState(null);
 
   const initialUser = localStorage.getItem("userInfo")
     ? JSON.parse(localStorage.getItem("userInfo"))
@@ -44,10 +46,22 @@ const Provider = ({ children }) => {
 
   },[])
 
+  const isLoadingHandler = (key, state) => {
+    setIsLoading((prev) => ({
+      ...prev,
+      [key]: state,
+    }));
+  };
+
   const getCartTotal = async () => {
     const carts = await allCartItemsReq();
     setCartTotal(carts.length);
   };
+
+  async function getSingleProduct(id) {
+    const product = await getProductByIdReq(id);
+    setProduct(product);
+  }
 
  const getFavourites = useCallback( async () => {
   const data = await allFavouriteItemsReq();
@@ -66,7 +80,7 @@ const Provider = ({ children }) => {
     getCarts();
     getFavourites();
     getFavouritesTotal();
-  }, [getProducts]);
+  }, []);
 
   const sum = (arr) => {
     return arr.reduce((acc, cur) => acc + cur, 0);
@@ -81,6 +95,7 @@ const Provider = ({ children }) => {
     setIsLoading,
     allCartItems: allCartItemsReq,
     products,
+    product,
     addToCart: addToCartReq,
     cartTotal : cartTotal,
     getCartTotal,
@@ -88,9 +103,12 @@ const Provider = ({ children }) => {
     addToFavourites: addToFavouritesReq,
     getFavouritesTotal,
     favourites,
+    getCarts,
     manageCartQtyReq,
     favouritesTotal: favouritesTotal,
-    allFavouriteItems : allFavouriteItemsReq
+    allFavouriteItems : allFavouriteItemsReq,
+    getProductByIdReq :getSingleProduct,
+    isLoadingHandler,
   };
   return (
     <GlobalContext.Provider value={store}>{children}</GlobalContext.Provider>

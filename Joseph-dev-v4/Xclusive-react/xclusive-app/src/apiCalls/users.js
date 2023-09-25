@@ -84,7 +84,7 @@ export const registerReq = async (email, password, username) => {
   };
   
   function serializeUser(user) {
-    const { password, ...others } = user;
-    const newUser = { ...others };
+    const { password, ...rest } = user;
+    const newUser = { ...rest };
     return newUser;
   }

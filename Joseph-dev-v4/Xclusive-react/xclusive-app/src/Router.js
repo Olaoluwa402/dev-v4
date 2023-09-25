@@ -19,6 +19,9 @@ import Account  from "./Pages/Account"
 import Companies from "./Pages/Companies";
 import CustomersPage from "./Pages/CustomersPage";
 import HomePage from "./Pages/HomePage";
+import SingleProductPage from "./Pages/SingleProductPage";
+import CheckoutPage from "./Pages/CheckoutPage";
+import { ProtectedRoute } from "./Components/Login/ProtectedRoute";
 
 
 
@@ -30,7 +33,7 @@ const Router = () => {
        <Route
        
        path="/"
-       element={ <Layout Item1={Favourite} Item2={Carticon} Item3={User} Item4={Plus} >
+       element={ <Layout Item1={Favourite} Item2={Carticon} Item3={User}>
            <HomePage />
            </Layout>
        }
@@ -38,7 +41,7 @@ const Router = () => {
       <Route
        
         path="/wishlist"
-        element={ <Layout Item1={Favourite} Item2={Carticon} Item3={User} Item4={Plus}>
+        element={ <Layout Item1={Favourite} Item2={Carticon} Item3={User}>
             <WishlistPage />
             </Layout>
         }
@@ -46,7 +49,7 @@ const Router = () => {
       <Route
         path="/about"
         element={
-          <Layout Item1={Favourite} Item2={Carticon} Item3={User} Item4={Plus}>
+          <Layout Item1={Favourite} Item2={Carticon} Item3={User}>
              <AboutPage />
             </Layout>
            
@@ -67,6 +70,26 @@ const Router = () => {
         }
       />
       <Route
+        path="/checkout"
+        element={
+          <ProtectedRoute>
+            <Layout>
+            <CheckoutPage />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+
+     <Route
+        path="/home/:productId"
+        element={
+          <Layout Item1={Favourite} Item2={Carticon} Item3={User} >
+            <SingleProductPage />
+          </Layout>
+        }
+      />
+
+      <Route
         path="/login"
         element={
           <Layout>
@@ -82,7 +105,9 @@ const Router = () => {
       />
       <Route
         path="/dashboard"
-        element={<DashboardLayout /> }>
+        element={<ProtectedRoute>
+          <DashboardLayout />
+        </ProtectedRoute> }>
         <Route index element= {<Analytics />} />
         <Route path="overview" element= {<Analytics />} />
         <Route path="customer" element= {<CustomersPage />} />

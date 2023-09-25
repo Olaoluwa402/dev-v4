@@ -1,0 +1,94 @@
+body {
+
+    margin : 0;
+    padding : 0;
+}
+.container{
+    background-image: url(https://res.cloudinary.com/dfeyofjln/image/upload/v1695412088/website_background_q2irjo.jpg) ;
+    width: 100%;
+    height: 100vh;  
+    background-size: cover;
+}
+
+h1 {
+    padding-top: 50px;
+    font-size: 4rem;
+    color: red;
+}
+
+.login {
+    width: 340px;
+    height: 450px;
+    background-color: white;
+    margin-left: 580px;
+    border-radius: 15px;
+}
+
+.login h2 {
+    padding-top: 30px;
+    font-style: italic;
+    font-weight: 700;
+
+}
+
+.login input {
+    width: 300px;
+    height: 30px;
+    font-style: normal;
+    margin: auto;
+    border-radius: 5px;
+
+    
+}
+
+
+.email {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.password{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+/* .login label{
+    align-items:start;
+     padding-right: 235px; 
+     font-size: 1.2rem;
+}   */
+
+.label {
+    padding-right: 247px;
+    font-size: 1.2rem;
+}
+.label2 {
+    padding-right: 220px;
+    font-size: 1.2rem;
+}
+
+.login button {
+    width : 300px;
+    height : 45px;
+    margin: auto;
+    background-color: brown;
+    color : white;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 20px;
+    font-size: 1.2rem;
+}
+
+.bottom p {
+    text-underline-offset: 7px;
+}
+
+

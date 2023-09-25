@@ -1,25 +1,37 @@
-import React from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import styles from './Box.module.css';
+import { GlobalContext } from '../../context';
 
 
-const Box = ({ boxData }) => {
+
+const Box = () => {
+
+  const { allFavouriteItems, favourites} = useContext(GlobalContext);
+  // console.log(favourites, "fav");
+
+  useEffect(() => {
+    allFavouriteItems();
+    
+  }, []);
+
+
   return (
     <div className={styles.wishlistbox}>
-      {boxData && boxData.length > 0 ? (
-        boxData.map((item) => (
-          <div key={item.id} className={styles.topbox}>
+      {favourites && favourites.length > 0 ? (
+        favourites.map(({id,title,image,price,discount,img,discpercent }) => (
+          <div className={styles.topbox}>
             <div className={styles.image}>
-                 <img src= {item.discpercent} />
+                 <img src= {discpercent} />
             </div>
             <div className={styles.topbox_img}>
             
               <a href="#">
-                <img src={item.img} />
+                <img src={img} />
               </a>
             </div>
 
             <div className={styles.wishlist_image}>
-              <img src= {item.image} alt="" />
+              <img src= {image} alt="" />
             </div>
             
             <div className={styles.addtocart}>
@@ -30,10 +42,10 @@ const Box = ({ boxData }) => {
             </div>
             
             <div className={styles.wishlistitems}>
-              <h4>{item.title}</h4>
+              <h4>{title}</h4>
               <div className={styles.prices}>
-                <p>${item.price}</p>
-                <h5>{item.discount}</h5>
+                <p>${price}</p>
+                <h5>{discount}</h5>
               </div>
             </div>
             <div className={styles.wishlistitems}>
@@ -50,7 +62,7 @@ const Box = ({ boxData }) => {
           </div>
         ))
       ) : (
-        <h2>No Product Added Yet</h2>
+        <h2>No favourite Added Yet</h2>
       )}
   
     </div>

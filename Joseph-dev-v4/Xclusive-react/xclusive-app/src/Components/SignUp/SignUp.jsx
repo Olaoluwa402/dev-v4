@@ -11,12 +11,11 @@ import Button3 from "../Button3/Button3"
 
 const SignUp = () => {
   const {isLoading, setIsLoading } = useContext(GlobalContext);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [value, setValue] = useState({
     username: "",
     password: "",
     email: "",
-    remember: "",
   });
 
   console.log(value, "valueee");
@@ -35,7 +34,7 @@ const SignUp = () => {
   useEffect(() => {
   
       setIsRegistered(false);
-    }, [navigate, isRegistered,]);
+    }, [isRegistered]);
 
   async function handleSubmit() {
     // submit the record to the server via api call
@@ -43,18 +42,16 @@ const SignUp = () => {
     // console.log(email, password, username);
     
     setIsLoading((prev) => ({
-      ...prev,
-      register: true,
+      ...prev, register: true,
     }));
     const registeredUser = await registerReq(email, password, username);
     console.log(registeredUser);
     if (registeredUser) {
       setIsRegistered(true);
       setIsLoading((prev) => ({
-        ...prev,
-        register: false,
+        ...prev, register: false,
       }));
-    }
+    } 
   }
  
 

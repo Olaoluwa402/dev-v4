@@ -144,24 +144,23 @@
     }
   ],
   "users": [
-   
     {
       "email": "ikeanyi_joseph@yahoo.com ",
+      "password": "200504",
+      "username": "jossyhod",
+      "id": 1
+    },
+    {
+      "email": "quadri@gamial.com",
       "password": "12345",
-      "username": "Jossy",
+      "username": "Laquad",
       "id": 2
     },
     {
-      "email": "ikeanyi_joseph@yahoo.com",
-      "password": "12345",
-      "username": "jossyhod",
+      "email": "",
+      "password": "",
+      "username": "",
       "id": 3
-    },
-    {
-      "email": "grace@gmail.com",
-      "password": "12345",
-      "username": "Linda",
-      "id": 4
     }
   ],
   "cart": [
@@ -171,7 +170,8 @@
       "image": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172728/guccibag_jmaqgc.png",
       "price": "960",
       "qty": 1,
-      "userId": 1
+      "userId": 1,
+      "priceTotal": "960"
     },
     {
       "id": 2,
@@ -179,7 +179,8 @@
       "image": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172729/laptop_jnouoi.png",
       "price": "1000",
       "qty": 1,
-      "userId": 1
+      "userId": 1,
+      "priceTotal": "1000"
     },
     {
       "id": 3,
@@ -187,24 +188,42 @@
       "image": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172728/jacket_gjn5dh.png",
       "price": "540",
       "qty": 1,
-      "userId": 1
+      "userId": 1,
+      "priceTotal": "540"
     },
     {
       "id": 8,
       "title": "AK-900 Wired Keyboard",
       "image": "https://res.cloudinary.com/dfeyofjln/image/upload/v1691701798/keyboard_htihku.png",
       "price": "200",
-      "qty": 1,
-      "userId": 1
+      "qty": 2,
+      "userId": 1,
+      "priceTotal": "400"
     }
   ],
   "orders": [],
   "wishlists": [
     {
-      "id": 3,
-      "title": "Quilted Satin Jacket",
-      "image": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172728/jacket_gjn5dh.png",
-      "price": "540",
+      "id": 1,
+      "title": "Gucci Duffle Bag",
+      "image": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172728/guccibag_jmaqgc.png",
+      "price": "960",
+      "discount": "$1100",
+      "img": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172729/Quick_View_mw2nbt.png ",
+      "discpercent": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172726/Discount_percent_tnik6k.png"
+    },
+    {
+      "id": 4,
+      "title": "GP11 Shooter USB Gamepad",
+      "image": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172726/black-keypad_bj5f8r.png",
+      "price": "750",
+      "img": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172729/Quick_View_mw2nbt.png "
+    },
+    {
+      "id": 8,
+      "title": "AK-900 Wired Keyboard",
+      "image": "https://res.cloudinary.com/dfeyofjln/image/upload/v1691701798/keyboard_htihku.png",
+      "price": "200",
       "img": "https://res.cloudinary.com/dfeyofjln/image/upload/v1692172729/Quick_View_mw2nbt.png "
     }
   ]
