@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { buyCakeAction } from "./redux/actions/buyCakeAction";
+
 function App() {
   //subsrcibe to store
   const { remainingItem, sold, noOfcakes } = useSelector(
