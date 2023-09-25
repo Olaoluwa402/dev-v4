@@ -34,6 +34,8 @@ function Fyp() {
               price={data.price}
               product_img={data.product_img}
               desc={data.desc}
+              isFyp={true}
+              isWishlist={false}
             />
           ))}
       </div>

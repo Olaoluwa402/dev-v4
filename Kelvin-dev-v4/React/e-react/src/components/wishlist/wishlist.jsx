@@ -29,8 +29,11 @@ function Wishlist() {
               prod_icon={<BsTrash3 />}
               product_img={data.product_img}
               desc={data.title}
+              id={data.id}
               price={data.price}
               prod_rating={<Rating />}
+              isFyp={false}
+              isWishlist={true}
             />
           ))
         ) : (

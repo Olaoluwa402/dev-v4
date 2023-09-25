@@ -13,7 +13,8 @@ const Product = ({
   price,
   product_img,
   desc,
-  click,
+  isWishlist,
+  isFyp,
 }) => {
   const {
     addToCartHandler,
@@ -65,6 +66,13 @@ const Product = ({
     alert("product added to wishlist");
   };
 
+  async function wishRemoveHandler(id) {
+    await removeWishlist(id);
+    alert("product removed from wishlist.");
+    console.log(id);
+    await getWishlistData();
+  }
+
   return (
     <div className={styles.product_tab}>
       <div className={styles.tab_main}>
@@ -76,25 +84,36 @@ const Product = ({
         <span className={styles.top_right_icon}>
           <span className={styles.tr_icon}>{prod_icon ? prod_icon : "x"}</span>
 
-          <span
-            className={styles.tr_icon}
-            onClick={() =>
-              // {
-              //   removeWishlist(id);
-              //   console.log(id);
-              // }
-              wishlistDataHandler({
-                id,
-                title,
-                price,
-                qty: 1,
-                product_img,
-                desc,
-              })
-            }
-          >
-            {prod_icon ? prod_icon : "x"}
-          </span>
+          {isFyp && (
+            <span
+              className={styles.tr_icon}
+              onClick={() =>
+                wishlistDataHandler({
+                  id,
+                  title,
+                  price,
+                  qty: 1,
+                  product_img,
+                  desc,
+                })
+              }
+            >
+              {prod_icon ? prod_icon : "x"}
+            </span>
+          )}
+          {isWishlist && (
+            <span
+              className={styles.tr_icon}
+              onClick={async () => {
+                await removeWishlist(id);
+                alert("product removed from wishlist.");
+                console.log(id);
+                await getWishlistData();
+              }}
+            >
+              {prod_icon ? prod_icon : "x"}
+            </span>
+          )}
         </span>
 
         <img src={product_img} alt="" />
@@ -113,7 +132,7 @@ const Product = ({
       <div className={styles.tab_desc}>
         <h6>{desc ? desc : "Product description"}</h6>
         <p>
-          {price ? price : "Product price"}
+          {price ? +price.replace("NGN", "") : "Product price"}
           <span>{prod_former_price ? prod_former_price : ""}</span>
         </p>
         {prod_rating ? prod_rating : ""}

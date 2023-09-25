@@ -116,54 +116,17 @@
   ],
   "carts": [
     {
-      "id": 1,
-      "title": "product-A",
-      "price": "NGN3000",
+      "id": 2,
+      "price": "NGN4000",
       "qty": 1,
       "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
-      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
-      "userId": 1
-    },
-    {
-      "id": 4,
-      "title": "product-D",
-      "price": "NGN3000",
-      "qty": 1,
-      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
-      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
+      "desc": "product-B",
       "userId": 1
     },
     {
       "id": 7,
       "title": "product-G",
       "price": "NGN6700",
-      "qty": 1,
-      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
-      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
-      "userId": 1
-    },
-    {
-      "id": 6,
-      "title": "product-F",
-      "price": "NGN4500",
-      "qty": 1,
-      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
-      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
-      "userId": 1
-    },
-    {
-      "id": 3,
-      "title": "product-C",
-      "price": "NGN5000",
-      "qty": 1,
-      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
-      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
-      "userId": 1
-    },
-    {
-      "id": 2,
-      "title": "product-B",
-      "price": "NGN4000",
       "qty": 1,
       "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
       "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
@@ -184,51 +147,6 @@
       "id": 2,
       "title": "product-B",
       "price": "NGN4000",
-      "qty": 1,
-      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
-      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
-      "userId": 1
-    },
-    {
-      "id": 3,
-      "title": "product-C",
-      "price": "NGN5000",
-      "qty": 1,
-      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
-      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
-      "userId": 1
-    },
-    {
-      "id": 4,
-      "title": "product-D",
-      "price": "NGN3000",
-      "qty": 1,
-      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
-      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
-      "userId": 1
-    },
-    {
-      "id": 5,
-      "title": "product-E",
-      "price": "NGN6000",
-      "qty": 1,
-      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
-      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
-      "userId": 1
-    },
-    {
-      "id": 8,
-      "title": "product-H",
-      "price": "NGN2000",
-      "qty": 1,
-      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
-      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
-      "userId": 1
-    },
-    {
-      "id": 10,
-      "title": "product-J",
-      "price": "NGN2000",
       "qty": 1,
       "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
       "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",

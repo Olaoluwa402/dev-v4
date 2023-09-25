@@ -1,12 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Cart from "../components/cart/Cart";
+import CartCheckout from "../components/cart/CartCheckout";
 import { GlobalContext } from "../context";
 
 const Cartscreen = () => {
-  const { cartData } = useContext(GlobalContext);
+  const [isCheckout, SetIsCheckout] = useState(false);
+  // const { cartData } = useContext(GlobalContext);
   return (
     <div style={{ position: "relative", height: "fit-content" }}>
-      <Cart cartData={cartData} />
+      {isCheckout ? (
+        <CartCheckout checkout={SetIsCheckout} />
+      ) : (
+        <Cart checkout={SetIsCheckout} />
+      )}
     </div>
   );
 };

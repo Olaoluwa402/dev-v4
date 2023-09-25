@@ -79,7 +79,7 @@ button:hover {
 
 .product_tabs {
   display: grid;
-  grid-template-columns: minmax(80px, 100px) minmax(80px, 100px);
+  grid-template-columns: minmax(80px, 400px) minmax(80px, 400px);
   width: 100%;
   box-sizing: border-box;
   align-items: flex-start;
@@ -88,9 +88,9 @@ button:hover {
 
 @media screen and (min-width: 450px) {
   .product_tabs {
-    grid-template-columns: minmax(80px, 100px) minmax(80px, 100px) minmax(
-        80px,
-        100px
+    grid-template-columns: minmax(100px, 400px) minmax(100px, 400px) minmax(
+        100px,
+        400px
       );
   }
 }

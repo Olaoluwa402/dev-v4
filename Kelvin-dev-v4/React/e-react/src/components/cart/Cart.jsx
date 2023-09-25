@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../../context";
 import CartList from "./cartList";
 
-const Cart = () => {
+const Cart = ({ checkout }) => {
   const { cartData } = useContext(GlobalContext);
   console.log(cartData);
 
@@ -59,6 +59,7 @@ const Cart = () => {
                   <button
                     type="button"
                     class="group inline-flex w-full items-center justify-center rounded-md bg-gray-900 px-6 py-4 text-lg font-semibold text-white transition-all duration-200 ease-in-out focus:shadow hover:bg-gray-800"
+                    onClick={() => checkout(true)}
                   >
                     Checkout
                     <svg

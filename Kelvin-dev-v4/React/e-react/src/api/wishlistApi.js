@@ -40,9 +40,9 @@ export const addToWishlistHandler = async ({
 export const removeWishlist = async (id) => {
   const url = `http://localhost:3004/wishlists/${id}`;
   try {
-    const { data } = await axios.get(url);
+    await axios.delete(url);
     console.log(`data ${id} data`);
-    return data;
+    return;
   } catch (err) {
     console.log(err.message);
   }
