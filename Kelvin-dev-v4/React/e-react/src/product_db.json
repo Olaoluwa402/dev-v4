@@ -151,6 +151,15 @@
       "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
       "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
       "userId": 1
+    },
+    {
+      "id": 3,
+      "title": "product-C",
+      "price": "NGN5000",
+      "qty": 1,
+      "product_img": "https://res.cloudinary.com/dklrn1vdy/image/upload/v1680626666/toyota-03_r7d9xp.png",
+      "desc": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique dolore ea quos. Alias, saepe.",
+      "userId": 1
     }
   ],
   "orders": [],

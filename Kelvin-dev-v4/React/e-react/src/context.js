@@ -7,6 +7,7 @@ import {
   addToWishlistHandler,
   getWishlist,
   removeWishlist,
+  getProductDataById,
 } from "./api";
 const GlobalContext = React.createContext();
 
@@ -16,6 +17,7 @@ const Provider = ({ children }) => {
   const [wishlistData, setWishlistData] = useState([]);
   const [wishlistLength, setWishlistLength] = useState([]);
   const [cartLength, setCartLength] = useState(0);
+  const [product, setProduct] = useState(null);
 
   //get product using useCallback hook for caching mechanism
   const getProducts = useCallback(async () => {
@@ -40,6 +42,12 @@ const Provider = ({ children }) => {
     return wishlist;
   }
 
+  //
+  async function getSingleProduct(id) {
+    const product = await getProductDataById(id);
+    setProduct(product);
+  }
+
   useEffect(() => {
     //make api call to get all products
     getProducts();
@@ -57,6 +65,8 @@ const Provider = ({ children }) => {
 
   const store = {
     products,
+    product,
+    getSingleProduct,
     addToCartHandler,
     addToWishlistHandler,
     cartLength,
@@ -73,6 +83,7 @@ const Provider = ({ children }) => {
     getProductsReq,
     deleteWishItem: removeWishlist,
     removeWishlist,
+    getProductById: getSingleProduct,
   };
   return (
     <GlobalContext.Provider value={store}>{children}</GlobalContext.Provider>

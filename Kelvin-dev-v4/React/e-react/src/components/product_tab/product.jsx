@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import styles from "./product.module.css";
 import { BsCart3, BsXLg } from "react-icons/bs";
+import { Link } from "react-router-dom";
 // import { BsEye } from "react-icons/bs";
 import { GlobalContext } from "../../context";
 
@@ -115,9 +116,9 @@ const Product = ({
             </span>
           )}
         </span>
-
-        <img src={product_img} alt="" />
-
+        <Link to={`/products/:${id}`}>
+          <img src={product_img} alt="" />
+        </Link>
         <button
           onClick={() => {
             cartDataHandler({ id, title, price, qty: 1, product_img, desc });
@@ -132,7 +133,7 @@ const Product = ({
       <div className={styles.tab_desc}>
         <h6>{desc ? desc : "Product description"}</h6>
         <p>
-          {price ? +price.replace("NGN", "") : "Product price"}
+          {price ? price : "Product price"}
           <span>{prod_former_price ? prod_former_price : ""}</span>
         </p>
         {prod_rating ? prod_rating : ""}

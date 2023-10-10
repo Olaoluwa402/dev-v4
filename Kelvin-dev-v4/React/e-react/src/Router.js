@@ -9,6 +9,7 @@ import Dashboard from "./screens/dashboardScr/Dashboard";
 import Aboutscreen from "./screens/aboutscr/Aboutscreen";
 import Contactscreen from "./screens/contactScr/Contactscreen";
 import Cartscreen from "./screens/Cartscreen";
+import SingleProductScreen from "./screens/SingleProduct";
 //
 import DashStaff from "./components/dashboard/dash-main/dash-staff/DashStaff";
 import MainCompanies from "./components/dashboard/dash-main/main-companies/MainCompanies";
@@ -73,6 +74,15 @@ function Router() {
         element={
           <Layout>
             <Cartscreen />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/products/:productId"
+        element={
+          <Layout>
+            <SingleProductScreen />
           </Layout>
         }
       />
