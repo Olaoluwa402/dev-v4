@@ -7,6 +7,7 @@ import colors from "colors";
 import cors from "cors";
 import httpStatus from "http-status";
 import { dbConnect } from "./config/db.js";
+import { config } from "./config/config.js";
 
 //controllers
 import UserRoute from "./Routes/User.js";
@@ -16,6 +17,7 @@ const app = express();
 //general middlewares
 app.use(cors());
 app.use(morgan("dev"));
+app.use(express.json());
 
 // routes instantiation
 app.use("/users", UserRoute);
@@ -40,15 +42,14 @@ dbConnect()
     console.log(`db connection successful`.bgCyan);
 
     //listen to request from clients via a set port
-    const port =
-      process.env.NODE_ENV === "production" ? process.env.NODE_ENV : 9000;
+    const port = config.env === "production" ? config.env : 9000;
     app.listen(port, (err) => {
       if (err) {
         console.log(`error: ${err}`.bgRed);
         return;
       }
       console.log(
-        `app connected on port:${port} in ${process.env.NODE_ENV} mode`.bgGreen
+        `app connected on port:${port} in ${config.env} mode`.bgGreen
       );
     });
   })
