@@ -1,0 +1,3 @@
+node_modules
+.env
+mongo_uri:mongodb+srv://kazeemquadri75:<password>@cluster0.m8jbwt9.mongodb.net/
