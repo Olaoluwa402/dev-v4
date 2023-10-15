@@ -5,16 +5,30 @@ import morgan from "morgan";
 import colors from "colors";
 import httpStatus from "http-status";
 import { dbConnect } from "./config/db.js";
+import UserRoutes from "./Routes/UserRoutes.js";
 
+// general middleware and .env config
 dotenv.config();
 const app = express();
 app.use(cors());
 app.use(morgan("dev"));
 
+// router initialization
+app.use("/users", UserRoutes);
+
+// initial http request from endpoint
 app.get("/", (req, res) => {
   res.status(httpStatus.OK).json({
     status: "success",
     payload: "Server running. Welcome!",
+  });
+});
+
+// req handler to handle deviant links
+app.all("*", (req, res) => {
+  res.status(httpStatus.NOT_FOUND).json({
+    status: "success",
+    payload: "ERROR: Endpoint or payload undefined",
   });
 });
 
