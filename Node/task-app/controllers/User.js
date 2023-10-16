@@ -1,22 +1,76 @@
 import httpStatus from "http-status";
 import UserModel from "../models/User.js";
 import { generateCode } from "../utils/generateUniqueCode.js";
+import { serializeUser } from "../utils/serializeUser.js";
+import { generateToken } from "../utils/jwt-token.js";
+import bcrypt from "bcrypt";
+
+export const loginUser = async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    //confirm that email exist in db
+    const userExist = await UserModel.findOne({ email: email });
+    if (!userExist) {
+      res.status(httpStatus.NOT_FOUND).json({
+        status: "error",
+        payload: "User does not exist, please register",
+      });
+      return;
+    }
+
+    //check that the supplied password matched the existing password for the account in db
+    const decodeRes = await bcrypt.compare(password, userExist.password);
+    if (!decodeRes) {
+      res.status(httpStatus.FORBIDDEN).json({
+        status: "error",
+        payload: "Credential does not match",
+      });
+      return;
+    }
+
+    res.status(httpStatus.OK).json({
+      status: "success",
+      payload: serializeUser(userExist),
+      token: generateToken(userExist._id, userExist.email),
+    });
+  } catch (err) {
+    res.status(httpStatus.BAD_REQUEST).json({
+      status: "error",
+      payload: err.message,
+    });
+  }
+};
 
 export const createUser = async (req, res) => {
   const { firstName, lastName, email, password, phoneNumber } = req.body;
 
   try {
+    //check if email exist
+    const userExist = await UserModel.findOne({ email: email });
+    if (userExist) {
+      res.status(httpStatus.NOT_FOUND).json({
+        status: "error",
+        payload: "User with email already exist",
+      });
+      return;
+    }
+
+    //has password
+    const saltRounds = 10;
+    const hashedPassword = await bcrypt.hash(password, saltRounds);
+
     const user = await UserModel.create({
       firstName,
       lastName,
       email,
-      password,
+      password: hashedPassword,
       phoneNumber,
       userCode: generateCode(6),
     });
     res.status(httpStatus.OK).json({
       status: "success",
-      payload: user,
+      payload: serializeUser(user),
     });
   } catch (err) {
     res.status(httpStatus.BAD_REQUEST).json({
@@ -66,6 +120,7 @@ export const getUser = async (req, res) => {
 };
 
 export const updateUser = async (req, res) => {
+  console.log(req.user, "from update controller");
   const { id } = req.params;
   const data = req.body;
   try {
@@ -85,7 +140,7 @@ export const updateUser = async (req, res) => {
     });
     res.status(httpStatus.OK).json({
       status: "success",
-      payload: updatedUser,
+      payload: serializeUser(updatedUser),
     });
   } catch (err) {
     res.status(httpStatus.BAD_REQUEST).json({

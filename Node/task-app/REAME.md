@@ -19,3 +19,15 @@
     USERS, TASK,
     user fields: id, role (admin, default,supervisor), firsName, lastName, phoneNumber, userCode
     task fields: id userId(reference to user model - one => many), title, desc, status
+- Authentication
+  client side header: 
+   const call = async()=> {
+    const user = {eamil:"hkhkgjg",password:"hhgj", token:"hjghgj" }
+    const config = {
+      headers:{
+        "Content-Type":"application/json",
+        authorization:`Bearer ${user.token}`
+      }
+    }
+     await axios.get(url, config)
+  }
