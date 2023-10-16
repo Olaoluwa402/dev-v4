@@ -120,6 +120,7 @@ export const getUser = async (req, res) => {
 };
 
 export const updateUser = async (req, res) => {
+  console.log(req.user, "from update controller");
   const { id } = req.params;
   const data = req.body;
   try {
@@ -139,7 +140,7 @@ export const updateUser = async (req, res) => {
     });
     res.status(httpStatus.OK).json({
       status: "success",
-      payload: updatedUser,
+      payload: serializeUser(updatedUser),
     });
   } catch (err) {
     res.status(httpStatus.BAD_REQUEST).json({
