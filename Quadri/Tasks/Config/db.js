@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-export const dbConnect = ()=>{
-    const connection = mongoose.connect(process.env.MONGO_URI);
-
+import {config} from "./config.js"
+export const dbConnect = () => {
+    const connection = mongoose.connect("mongodb+srv://kazeemquadri75:$Immaculate@cluster0.m8jbwt9.mongodb.net/Task");
     return connection;
-}
+  };

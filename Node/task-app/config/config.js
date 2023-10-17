@@ -26,6 +26,6 @@ export const config = {
   port: envVar.PORT,
   api_key: envVar.API_KEY,
   mongodb: {
-    db_url: envVar.MONGO_URI,
+    db_url: envVar.MONGODB_URI,
   },
 };
