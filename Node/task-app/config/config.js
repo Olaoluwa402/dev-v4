@@ -10,6 +10,8 @@ const envValidation = Joi.object()
     PORT: Joi.number().default(9000),
     API_KEY: Joi.string().required(),
     MONGO_URI: Joi.string().required(),
+    JWT_SECRET: Joi.string().required(),
+    JWT_EXPIRY: Joi.string().required(),
   })
   .unknown();
 
@@ -24,6 +26,10 @@ if (error) {
 export const config = {
   env: envVar.NODE_ENV,
   port: envVar.PORT,
+  jwt: {
+    jwt_secret: envVar.JWT_SECRET,
+    jwt_expiry: envVar.JWT_EXPIRY,
+  },
   api_key: envVar.API_KEY,
   mongodb: {
     db_url: envVar.MONGODB_URI,
