@@ -4,13 +4,21 @@ import {
   getUsers,
   getUser,
   editUser,
-  deleteUsers,
+  deleteUser,
+  loginUser,
 } from "../controllers/UserController.js";
+import { verifyUser } from "../middleware/auth.js";
 
 const router = express.Router();
 
+router.route("/login").post(loginUser);
+
 router.route("/").post(createUsers).get(getUsers);
 
-router.route("/:id").get(getUser).patch(editUser).delete(deleteUsers);
+router
+  .route("/:id")
+  .get(verifyUser, getUser)
+  .patch(verifyUser, editUser)
+  .delete(verifyUser, deleteUser);
 
 export default router;
