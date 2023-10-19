@@ -131,6 +131,7 @@ const Provider = ({ children }) => {
     isLoadingHandler,
     getProductById: getSingleProduct,
     product,
+    
   };
   return (
     <GlobalContext.Provider value={store}>{children}</GlobalContext.Provider>

@@ -35,8 +35,8 @@ function App() {
         {error && <h2 style={{ color: "brown" }}>Error:{error}</h2>}
         {user && (
           <>
-            <p>Username:{user.username}</p>
-            <p>Email:{user.email}</p>
+            <p>Username:{username}</p>
+            <p>Email:{email}</p>
           </>
         )}
         click the button to create user
@@ -54,6 +54,7 @@ function App() {
           Create User
         </button>
       </div>
+      
     </div>
   );
 }
