@@ -6,3 +6,4 @@ export const generateToken = (id, email) => {
     expiresIn: config.jwt.jwt_expiry,
   });
 };
+ 
