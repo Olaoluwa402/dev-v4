@@ -15,6 +15,7 @@ const UserSchema = mongoose.Schema(
     phoneNumber: { type: String, required: true, unique: true },
     userCode: { type: String, required: true, unique: true },
     password: { type: String, required: true },
+    isVerified:{type:Boolean, default:false}
   },
   { timestamp: true }
 );
