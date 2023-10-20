@@ -6,13 +6,18 @@ import {
   updateUser,
   deleteUser,
   loginUser,
-} from "../controllers/User.js";
+} from "../controllers/User/User.js";
 import { verifyUser, authorized } from "../middleware/auth.js";
+import validationMiddleware from "../middleware/validation.js";
+import { CreateUserSchema } from "../controllers/User/UserSchema.js";
 
 const router = express.Router();
 
 router.route("/login").post(loginUser);
-router.route("/").post(createUser).get(getUsers);
+router
+  .route("/")
+  .post(validationMiddleware(CreateUserSchema), createUser)
+  .get(getUsers);
 router
   .route("/:id")
   .get(verifyUser, authorized(["default", "admin"]), getUser)
