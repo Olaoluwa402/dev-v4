@@ -83,7 +83,7 @@ export const createUser = async (req, res) => {
 
 export const getUsers = async (req, res) => {
   try {
-    const users = await UserModel.find({});
+    const users = await UserModel.find({}).populate("tasks");
     res.status(httpStatus.OK).json({
       status: "success",
       payload: users,

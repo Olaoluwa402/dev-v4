@@ -11,6 +11,7 @@ import { config } from "./config/config.js";
 
 //controllers
 import UserRoute from "./Routes/User.js";
+import TaskRoute from "./Routes/Task.js";
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(express.json());
 
 // routes instantiation
 app.use("/users", UserRoute);
+app.use("/tasks", TaskRoute);
 
 app.get("/", (req, res) => {
   res.status(httpStatus.OK).json({
