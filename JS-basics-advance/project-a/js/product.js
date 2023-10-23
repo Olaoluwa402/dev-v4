@@ -13,6 +13,7 @@ if (document.readyState == "loading") {
   ready();
 }
 
+
 function ready() {
   // load cart count
   displayCartCount();
@@ -148,12 +149,14 @@ function displayProducts() {
     wishlistbox.className = "wishlistbox";
 
     const content = `
-    <div class="topbox">
-    <div class="topbox-img">
-      <a href="#"><img src="./Exclusive Assets/Quick View.png" /></a>
-    </div>
+  <div class="topbox">
+      <div class="topbox-img">
+       <a href="#"><img src="./Exclusive Assets/Quick View.png" /></a>
+      </div>
+  </div>
 
-    <div class="wishlist-image">
+
+  <div class="wishlist-image">
       <img src=${p.imgeUrl} />
     </div>
   </div>

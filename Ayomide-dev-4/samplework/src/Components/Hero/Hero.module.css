@@ -1,0 +1,36 @@
+.container1 {
+  width: 90%;
+  background-color: skyblue;
+  margin-top: 50px;
+  padding: 40px;
+  margin:30px;
+  border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  margin: 50px;
+  background-color: rgba(128, 128, 128, 0.099);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+input {
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+button {
+  width: 250px;
+  height: 50px;
+  background-color: rgba(177, 58, 58, 0.932);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 40px;
+}

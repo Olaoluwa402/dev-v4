@@ -1,0 +1,37 @@
+.container {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  
+}
+
+.container .error{
+    text-align: center;
+}
+
+.container h2 {
+  margin-top: 70px;
+  color: #000;
+  font-family: Inter;
+  font-size: 110px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 115px; /* 104.545% */
+  letter-spacing: 3.3px;
+}
+
+.container p{
+color: var(--text-2, #000);
+/* Title/16PX Regular */
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+
+.container button {
+    margin-top: 15px;
+}

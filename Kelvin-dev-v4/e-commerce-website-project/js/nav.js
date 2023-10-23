@@ -8,15 +8,3 @@ menuButton.addEventListener("click", () => {
 
   mobileNav.classList.toggle("menushow");
 });
-
-window.onclick = function (event) {
-  if (
-    !event.target.matches("#hamburger-icon") &&
-    !event.target.matches("#mobilenav").innerHTML()
-  ) {
-    if (mobileNav.classList.contains("menushow")) {
-      mobileNav.classList.remove("menushow");
-      mobileNav.classList.add("menuclose");
-    }
-  }
-};

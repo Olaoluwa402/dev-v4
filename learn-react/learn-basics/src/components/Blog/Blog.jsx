@@ -13,9 +13,13 @@ const Blog = ({ blogData }) => {
     <div className={styles.container}>
       {/* header title */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <h2>Blog</h2>
 =======
       <Title />
+=======
+      <Title title="Blog" />
+>>>>>>> ebe484db843f3f2c550a9a19f81a5cb36eb87872
       <div className={styles.blog__articles}>
         {blogData && blogData.length > 0 ? (
           blogData.map((item) => <Article key={item.id} item={item} />)

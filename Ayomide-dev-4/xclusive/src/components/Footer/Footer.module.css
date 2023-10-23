@@ -1,0 +1,155 @@
+/* Footer */
+footer {
+    background-color: #000;
+    margin-top: 100px;
+  }
+  
+  .footer_flexed {
+    display: flex;
+    justify-content: space-around;
+    padding: 55px;
+  }
+  
+  .foot_flexed h3 {
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  
+  .foot_flexed ul li {
+    padding: 10px 0;
+  }
+  
+  .foot_flexed a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  
+  .email_container {
+    position: relative;
+  }
+  
+  .search_buttons {
+    padding: 14px;
+    border: 1px solid white;
+    border-radius: 4px;
+    width: 220px;
+    background-color: inherit;
+    color: #fafafa;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  
+  .cursur_button {
+    position: absolute;
+    top: 13px;
+    left: 170px;
+    border: none;
+    background-color: #000;
+    cursor: pointer;
+  }
+  
+  .cursur_button img {
+    width: 30px;
+  }
+  
+  /* footer2 */
+  
+  .foot_flexed2 h4 {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .foot_flexed2 {
+    width: 13%;
+  }
+  
+  .foot_flexed2 p {
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 10px 0;
+  }
+  
+  .foot_flexed2 a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  
+  .foot_flexed2 {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  
+  .foot_flexed3 h4 {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .foot_flexed3 ul li {
+    padding: 8px 0;
+  }
+  
+  .foot_flexed3 a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  
+  .foot_flexed5 h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .foot_flexed5 span {
+    color: gray;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 10px 0;
+  }
+  
+  .app_download {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .inner_flexed {
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+    align-items: center;
+  }
+  
+  .social_handles {
+    display: flex;
+    gap: 25px;
+    padding: 20px;
+  }
+  
+  .f_last p {
+    font-size: 16px;
+    color: rgb(79, 76, 76);
+    font-weight: 300;
+  }
+  
+  .f_last {
+    height: 70px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-top: 1px solid rgb(39, 36, 36);
+    padding: auto 0;
+  }

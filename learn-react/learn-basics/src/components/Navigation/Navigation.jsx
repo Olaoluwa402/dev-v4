@@ -1,30 +1,53 @@
-import React from "react";
-import { FaUserAlt, FaSearchengin } from "react-icons/fa";
+import React, { useContext } from "react";
+import { FaUserAlt, FaSearchengin, FaShopify } from "react-icons/fa";
+import { MdOutlineFavorite } from "react-icons/md";
 import { BsSearchHeart } from "react-icons/bs";
+import { GlobalContext } from "../../context";
 import { NavLink } from "react-router-dom";
 import styles from "./Navigation.module.css";
 
 const Navigation = ({ title }) => {
-  console.log(title);
+  const { cartTotal, favoritesTotal } = useContext(GlobalContext);
+
+  console.log(cartTotal, "cartTotal");
   return (
     <nav className={styles.wrapper}>
       <div className={`${styles.container} container `}>
         <NavLink to="/">LOGO</NavLink>
         <ul>
           <li>
-            <FaUserAlt />
+            {/* <FaUserAlt /> */}
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <FaSearchengin />
+            {/* <FaSearchengin /> */}
             <NavLink to="/about">About</NavLink>
           </li>
           <li>
-            <BsSearchHeart />
-            <a href="/">Contact</a>
+            <NavLink to="/shop">Shop</NavLink>
           </li>
           <li>
-            <a href="/">Apps</a>
+            <div style={{ position: "relative" }}>
+              <NavLink to="/cart">
+                <FaShopify />
+              </NavLink>
+              <div className={styles.cartTotal}>{cartTotal}</div>
+            </div>
+          </li>
+
+          <li>
+            <div style={{ position: "relative" }}>
+              <NavLink to="/favorites">
+                <MdOutlineFavorite />
+              </NavLink>
+              <div className={styles.cartTotal}>{favoritesTotal}</div>
+            </div>
+          </li>
+          <li>
+            <NavLink to="/register">Register</NavLink>
+          </li>
+          <li>
+            <NavLink to="/dashboard">Dashboard</NavLink>
           </li>
         </ul>
       </div>

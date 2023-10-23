@@ -1,0 +1,22 @@
+
+.container {
+    display: flex;
+    gap: 20px;
+    height: calc(100vh - 85px);
+    background-image: url("https://images.unsplash.com/photo-1451188502541-13943edb6acb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    background-repeat: no-repeat;
+    color: aliceblue;
+    margin-top: 50px;
+    
+       
+}
+.hero_right{
+    text-align: center;
+    flex: 1;
+   
+    
+}
+.hero_left{
+    height: 100%;
+    flex:1 ;
+}

@@ -1,0 +1,54 @@
+.container {
+  background-color: #f3f3f3;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 70px;
+  background-color: black;
+}
+
+.topbar {
+  height: 85px;
+  position: fixed;
+  width: 100%;
+  background-color: blue;
+}
+
+.main {
+  padding-top: 85px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+}
+
+.topbar,
+.main {
+  margin-left: 70px;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    width: 100px;
+  }
+
+  .topbar,
+  .main {
+    margin-left: 100px;
+  }
+}
+
+@media (min-width: 980px) {
+  .sidebar {
+    width: 180px;
+  }
+  .topbar,
+  .main {
+    margin-left: 180px;
+  }
+}

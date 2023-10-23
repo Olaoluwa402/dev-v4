@@ -1,0 +1,48 @@
+.div {
+  background-color: rgb(216, 214, 214);
+  padding: 40px;
+}
+
+.div div {
+  background-color: skyblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  padding: 40px;
+}
+
+.div h4 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.div h4,
+.div p {
+  text-align: center;
+}
+
+.div form {
+  background-color: skyblue;
+  border-radius: 5px;
+}
+
+.div form > input {
+  padding: 5px;
+  margin: 10px;
+}
+
+.div input,
+.button {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.button {
+  color: white;
+  margin: 20px;
+  padding: 8px 50px;
+  width: 300px;
+  background-color: rgb(221, 56, 56);
+}

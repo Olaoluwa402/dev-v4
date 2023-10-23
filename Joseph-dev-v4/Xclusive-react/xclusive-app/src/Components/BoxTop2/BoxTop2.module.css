@@ -1,0 +1,50 @@
+#just {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+  }
+  
+  #just button {
+    width: 150px;
+    height: 56px;
+    display: flex;
+    /* padding: 16px 48px; */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    border: 2px solid rgba(36, 35, 35, 0.5);
+    background: white;
+    color: var(--text-2, #000);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    margin-right: 40px;
+  }
+  
+  .just2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    padding: 10px;
+  }
+  
+  .just2 img {
+    width: 20px;
+    height: 40px;
+  }
+  
+  .just2 h4 {
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    padding-left: 10px;
+  }

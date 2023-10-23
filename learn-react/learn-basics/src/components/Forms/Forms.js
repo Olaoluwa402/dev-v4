@@ -23,7 +23,12 @@ const Forms = () => {
       password,
     };
 
+    // send the data to backend
+
     console.log(data);
+
+    setEmail("");
+    setPassword("");
   };
 
   console.log(email, password);
@@ -35,7 +40,7 @@ const Forms = () => {
         <div className={styles.formGroup}>
           <label htmlFor="email">email</label>
           <input
-            type="text"
+            type="text" 
             placeholder="email"
             name="email"
             value={email}

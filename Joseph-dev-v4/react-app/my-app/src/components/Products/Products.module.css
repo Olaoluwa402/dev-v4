@@ -1,0 +1,22 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.container .innercontainer {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+
+.container_img{
+    width: 100px;
+}
