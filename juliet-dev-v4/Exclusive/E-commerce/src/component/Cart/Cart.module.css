@@ -1,0 +1,139 @@
+.modal_item{
+  margin: 0 100px;
+}
+
+ul{
+  list-style: none;
+}
+
+.spann {
+    font-size: 16px;
+    font-weight: 200;
+    padding-top: 50px;
+  }
+  
+  .product_items {
+    border-radius: 4px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 80px;
+    margin: 50px 0;
+  }
+  
+  .product_items ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  
+  .selected_items {
+    display: flex;
+    justify-content: space-around;
+    font-size: 18px;
+    font-weight: 300;
+    border-radius: 4px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 80px;
+    margin-bottom: 40px;
+  }
+  
+  .inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+  }
+  .cancel {
+    position: absolute;
+    top: 10px;
+    left: -9px;
+  }
+  
+  .selected_items p {
+    margin: 30px 0;
+  }
+  
+  .modal_ibtn button {
+    border: 1px solid gray;
+    width: 200px;
+    min-height: 60px;
+    font-size: 16px;
+    font-family: poppins;
+    font-weight: 400;
+    background-color: #fff;
+    border-color: gray;
+    border-radius: 6px;
+  }
+  
+  .modal_ibtn {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  
+  .checkout_flexed {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .inner_check input {
+    width: 240px;
+    height: 15px;
+    font-size: 16px;
+    padding: 20px;
+    font-weight: 300;
+    border-radius: 5px;
+    margin-right: 15px;
+  }
+  .inner_check button {
+    width: 220px;
+    color: #f5f5f5;
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #db4444;
+    border: none;
+  }
+  
+  a button:hover{
+    background-color: #e0c2c2;
+  }
+  
+  .checkout {
+    border: 1px solid gray;
+    width: 500px;
+    padding: 20px;
+  }
+  .checkout h5 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .subtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .subtotal p {
+    font-size: 17px;
+    font-weight: 300;
+    margin: 10px 0;
+  }
+  
+  .checkout button {
+    width: 280px;
+    color: #f5f5f5;
+    height: 60px;
+    font-size: 16px;
+    padding: 20px;
+    font-weight: 300;
+    border-radius: 8px;
+    background-color: #db4444;
+    border: none;
+    margin-left: 80px;
+  }

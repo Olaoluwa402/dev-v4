@@ -14,7 +14,7 @@ function Body() {
       <section className={styles.container1}>
         <div className={styles.box}>
           <div className={styles.circular}>
-            <img src="myimage.jpg" alt="" />
+            <img src="../logo192.png" alt="" />
           </div>
           <h4>
             DEBORAH SMITH <LuVerified style={iconstyle} />

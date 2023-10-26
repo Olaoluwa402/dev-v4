@@ -1,0 +1,19 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  border-right: 1px solid rgb(219, 215, 215);
+
+}
+
+.lists{
+    display: flex;
+    gap: 45px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+

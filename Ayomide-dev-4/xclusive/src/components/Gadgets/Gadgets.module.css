@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+}

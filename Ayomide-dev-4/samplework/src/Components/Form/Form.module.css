@@ -1,0 +1,49 @@
+body{
+    background-color: white;
+}
+
+
+.form > b {
+ font-size: 27px;
+}
+
+.form > p {
+    font-weight: 400;
+}
+
+input {
+    border: none;
+    border-radius: none;
+    background-color: transparent;
+    border-style: none;
+}
+
+.account > button {
+    background-color: red;
+    width: 100%;
+}
+
+.google > button {
+    background-color: transparent;
+    border: 1px solid;
+    border-color: black;
+    color: rgba(0, 0, 0, 0.632);
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+button{
+    gap:1px
+}
+
+.log > a {
+    color: black;
+}
+
+.log{
+    padding: 10px;
+    margin-left: 72px;
+}
+
+
