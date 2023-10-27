@@ -1,0 +1,45 @@
+.wrapper {
+  background-color: var(--brown100);
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+}
+
+.container ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.container ul li {
+  margin-right: 20px;
+}
+
+.container > a {
+  font-size: 3rem;
+}
+
+.container a {
+  text-decoration: none;
+  color: var(--white100);
+}
+
+.cartTotal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  color: #fff;
+  font-size: 0.5rem;
+  font-weight: 900;
+}
