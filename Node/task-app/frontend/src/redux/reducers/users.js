@@ -66,7 +66,7 @@ export const GetAllUserReducer = (
     case GET_USERS_ERROR:
       return { ...state, error: action.payload, loading: false };
     default:
-      state;
+      return state;
   }
 };
 
