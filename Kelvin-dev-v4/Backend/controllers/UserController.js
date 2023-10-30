@@ -7,6 +7,7 @@ import { generateCode } from "../utils/generateUniqueCode.js";
 
 export const createUsers = async (req, res) => {
   const { firstName, lastName, email, password, phoneNumber } = req.body;
+  console.log(firstName);
   try {
     // check for email match
     const userExist = await UserModel.findOne({ email: email });
