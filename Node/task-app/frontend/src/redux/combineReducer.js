@@ -19,4 +19,5 @@ export const reducers = combineReducers({
   updateUser: updateUserReducer,
   createTask: CreateTaskReducer,
   getAllTasks: GetAllTasksReducer,
+  
 });

@@ -8,7 +8,9 @@ const userSchema = mongoose.Schema(
     email: {type:String, required: true, unique:true},
     phoneNumber: {type:String, required: true, unique:true},
     userCode: {type:String, required: true, unique: true},
-    password: {type:String, required: true}
+    password: {type:String, required: true},
+    isVerified:{type:Boolean,default:true},
+    tasks:[{type:mongoose.Schema.ObjectId}]
 },
 
 {timestamp:true}

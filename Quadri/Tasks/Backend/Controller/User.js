@@ -1,6 +1,51 @@
 import httpStatus  from "http-status";
 import userModel from "../model/User.js"
 import { codeGenerator } from "../Utility/UniqueCode.js";
+import {serializeUser} from "../Utility/serializeUser.js"
+import { generateToken } from "../Utility/jwt-token.js";
+import bcryptjs from "bcryptjs"
+
+
+ export const userLogin = async (req,res)=>{
+
+    const {email, password} = req.body
+
+    try {
+        const userExist= await userModel.findOne({email: email})
+        console.log(userExist,"exist")
+        if(!userExist){
+            res.status(httpStatus.NOT_FOUND).json({
+                status:"error",
+                payload:"User does not exist, please register"
+            })
+            return
+        }
+
+        const decodePassword = await bcryptjs.compare(password, userExist.password)
+        if(!decodePassword){
+            res.status(httpStatus.FORBIDDEN).json({
+                status:"error",
+                payload: "credentials does not match "
+               
+            })
+            return
+
+        }
+
+        res.status(httpStatus.OK).json({
+            status:"success",
+            payload: serializeUser(userExist),
+            token: generateToken(userExist._id, userExist.email)
+        })
+    } catch (error) {
+        res.status(httpStatus.BAD_REQUEST).json({
+            status:"error",
+            payload:error.message
+        })
+        
+    }
+
+}
 
 export const createUser= async (req,res)=>{
 
@@ -8,19 +53,31 @@ export const createUser= async (req,res)=>{
      
     try {
 
+        const userExist = await userModel.findOne({email : email})
+        if(userExist){
+            res.status(httpStatus.CONFLICT).json({
+                status:"error",
+                payload:"User with the email already exists"
+            })
+            return
+        }
+
+        const saltRounds = 10;
+        const hashedPassword = await bcryptjs.hash(password,saltRounds)
         const user = await userModel.create({
 
-            firstName,
-            lastName,
-            email,
-            password,
-            phoneNumber,
+            firstName:firstName,
+            lastName:lastName,
+            email:email,
+            password:hashedPassword,
+            phoneNumber:phoneNumber,
+            role:"admin",
             userCode:codeGenerator(6)
 
         });
         res.status(httpStatus.OK).json({
             status:"success",
-            payload: user
+            payload: serializeUser(user)
         });
         
     } catch (err) {
