@@ -16,7 +16,47 @@ import {
   UPDATE_USER_REQUEST,
   UPDATE_USER_SUCCESS,
   UPDATE_USER_ERROR,
+  LOGIN_USER_REQUEST,
+  LOGIN_USER_SUCCESS,
+  LOGIN_USER_ERROR,
+  LOGIN_USER_RESET,
 } from "../constants";
+
+export const LoginUserReducer = (
+  state = { user: null, loading: false, success: false, error: null },
+  action
+) => {
+  switch (action.type) {
+    case LOGIN_USER_REQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+    case LOGIN_USER_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        success: true,
+        user: action.payload,
+      };
+    case LOGIN_USER_RESET:
+      return {
+        loading: false,
+        success: false,
+        user: null,
+        error: null,
+      };
+    case LOGIN_USER_ERROR:
+      return {
+        ...state,
+        loading: false,
+        success: false,
+        error: action.payload,
+      };
+    default:
+      return state;
+  }
+};
 
 export const CreateUserReducer = (
   state = { user: null, loading: false, success: false, error: null },

@@ -14,7 +14,8 @@ router
   .patch(
     validationMiddleware(UserSchemaFromAdmin),
     verifyUser,
-    authorized(["admin"])
+    authorized(["admin"]),
+    updateRole
   );
 
 export default router;
