@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Spinner from "../../Spinner/CustomSpinner";
+import { loginUserAction } from "../../../redux/actions/userAction";
+import { LOGIN_USER_RESET } from "../../../redux/constants";
 
 const LoginRegister = ({ register, login }) => {
-  const { createUser } = useSelector((state) => state);
+  const dispatch = useDispatch();
+  const { createUser, loginUser } = useSelector((state) => state);
+
+  const { error, success, user } = loginUser;
   const navigate = useNavigate();
   const [value, setValue] = useState({
     username: "",
@@ -26,17 +31,26 @@ const LoginRegister = ({ register, login }) => {
   }
 
   useEffect(() => {
-    // if (isRegistered) {
-    //   //redirect user to login page
-    //   navigate("/login");
-    //   //  reset is Resgister to false
-    //   setIsRegisterd(false);
+    if (success) {
+      toast.success(`Welcom back ${user.firstName}`);
+
+      setTimeout(() => {
+        navigate("/dashboard");
+      }, 5000);
+    }
+
+    if (error) {
+      toast.error(`${error}`);
+
+      setTimeout(() => {
+        dispatch({ type: LOGIN_USER_RESET });
+      }, 5000);
+    }
+
     // }
-    // if (login && user) {
-    //   //redirect user to login page
-    //   navigate("/dashboard");
-    // }
-  }, []);
+
+    //eslint-disable-next-line
+  }, [success, error]);
 
   async function RegisterHandler() {
     // submit the record to the server via api call
@@ -58,20 +72,7 @@ const LoginRegister = ({ register, login }) => {
   }
 
   async function LoginHandler() {
-    // submit the record to the server via api call
-    // const { email, password } = value;
-    // // console.log(email, password, username);
-    // setIsLoading((prev) => ({
-    //   ...prev,
-    //   login: true,
-    // }));
-    // const loginUser = await loginReq(email, password);
-    // //set use to the global context
-    // setUser(loginUser);
-    // setIsLoading((prev) => ({
-    //   ...prev,
-    //   login: false,
-    // }));
+    dispatch(loginUserAction({ email: value.email, password: value.password }));
   }
   return (
     <div>
