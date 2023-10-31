@@ -9,7 +9,10 @@ import {
 } from "../controllers/User/User.js";
 import { verifyUser, authorized } from "../middleware/auth.js";
 import validationMiddleware from "../middleware/validation.js";
-import { CreateUserSchema } from "../controllers/User/UserSchema.js";
+import {
+  CreateUserSchema,
+  updateUserSchema,
+} from "../controllers/User/UserSchema.js";
 
 const router = express.Router();
 
@@ -21,7 +24,12 @@ router
 router
   .route("/:id")
   .get(verifyUser, authorized(["default", "admin"]), getUser)
-  .patch(verifyUser, authorized(["default", "admin"]), updateUser)
+  .patch(
+    validationMiddleware(updateUserSchema),
+    verifyUser,
+    authorized(["default", "admin"]),
+    updateUser
+  )
   .delete(verifyUser, authorized(["default"]), deleteUser);
 
 export default router;
