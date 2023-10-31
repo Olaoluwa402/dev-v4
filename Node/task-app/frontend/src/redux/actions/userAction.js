@@ -9,12 +9,64 @@ import {
   GET_USER_REQUEST,
   GET_USER_SUCCESS,
   GET_USER_ERROR,
+  DELETE_USER_REQUEST,
+  DELETE_USER_SUCCESS,
+  DELETE_USER_ERROR,
+  UPDATE_USER_REQUEST,
+  UPDATE_USER_SUCCESS,
+  UPDATE_USER_ERROR,
+  LOGIN_USER_REQUEST,
+  LOGIN_USER_SUCCESS,
+  LOGIN_USER_ERROR,
 } from "../constants";
 import axios from "axios";
 
 const backend_base_url = "http://localhost:9000";
 // console.log(config.backend_base_url, "config.backend_base_url");
 // asynchronous process
+
+export const loginUserAction = (BodyData) => async (dispatch, state) => {
+  const user = {};
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+  try {
+    dispatch({
+      type: LOGIN_USER_REQUEST,
+    });
+    // make the call
+
+    console.log(BodyData, "bodyDAte");
+    const { data } = await axios.post(
+      `${backend_base_url}/users/login`,
+      {
+        email: BodyData.email,
+        password: BodyData.password,
+      },
+      config
+    );
+
+    //if we get here, then request is a success case
+    dispatch({
+      type: LOGIN_USER_SUCCESS,
+      payload: data.payload,
+    });
+  } catch (error) {
+    let message =
+      error.response && error.response.data.errors
+        ? error.response.data.errors.join(",")
+        : error.message;
+
+    console.log(message, "error");
+    dispatch({
+      type: LOGIN_USER_ERROR,
+      payload: message,
+    });
+  }
+};
+
 export const createUserAction = (BodyData) => async (dispatch, state) => {
   const user = {};
   const config = {
@@ -43,7 +95,16 @@ export const createUserAction = (BodyData) => async (dispatch, state) => {
       payload: data.payload,
     });
   } catch (error) {
-    console.log(error.message, "error");
+    let message =
+      error.response && error.response.data.errors
+        ? error.response.data.errors.join(",")
+        : error.message;
+
+    console.log(message, "error");
+    dispatch({
+      type: LOGIN_USER_ERROR,
+      payload: message,
+    });
     dispatch({
       type: CREATE_USER_ERROR,
       payload: error.message,
@@ -73,7 +134,16 @@ export const getUsersAction = () => async (dispatch, state) => {
       payload: data.payload,
     });
   } catch (error) {
-    console.log(error.message, "error");
+    let message =
+      error.response && error.response.data.errors
+        ? error.response.data.errors.join(",")
+        : error.message;
+
+    console.log(message, "error");
+    dispatch({
+      type: LOGIN_USER_ERROR,
+      payload: message,
+    });
     dispatch({
       type: GET_USERS_ERROR,
       payload: error.message,
@@ -103,9 +173,103 @@ export const GetUserAction = (id) => async (dispatch, state) => {
       payload: data.payload,
     });
   } catch (error) {
-    console.log(error.message, "error");
+    let message =
+      error.response && error.response.data.errors
+        ? error.response.data.errors.join(",")
+        : error.message;
+
+    console.log(message, "error");
+    dispatch({
+      type: LOGIN_USER_ERROR,
+      payload: message,
+    });
     dispatch({
       type: GET_USER_ERROR,
+      payload: error.message,
+    });
+  }
+};
+
+export const DeleteUserAction = (id) => async (dispatch, state) => {
+  const user = {};
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      authorization: `Bearer ${user.token}`,
+    },
+  };
+  try {
+    console.log(dispatch, "dispatch");
+    dispatch({
+      type: DELETE_USER_REQUEST,
+    });
+    // make the call
+    const { data } = await axios.delete(
+      `${backend_base_url}/users/${id}`,
+      config
+    );
+    console.log(data, "data");
+    //if we get here, then request is a success case
+    dispatch({
+      type: DELETE_USER_SUCCESS,
+      payload: data.payload,
+    });
+  } catch (error) {
+    let message =
+      error.response && error.response.data.errors
+        ? error.response.data.errors.join(",")
+        : error.message;
+
+    console.log(message, "error");
+    dispatch({
+      type: LOGIN_USER_ERROR,
+      payload: message,
+    });
+    dispatch({
+      type: DELETE_USER_ERROR,
+      payload: error.message,
+    });
+  }
+};
+
+export const updateUserAction = (id, data) => async (dispatch, state) => {
+  const user = {};
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      authorization: `Bearer ${user.token}`,
+    },
+  };
+  try {
+    console.log(dispatch, "dispatch");
+    dispatch({
+      type: UPDATE_USER_REQUEST,
+    });
+    // make the call
+    const { data } = await axios.patch(
+      `${backend_base_url}/users/${id}`,
+      data,
+      config
+    );
+    console.log(data, "data");
+    //if we get here, then request is a success case
+    dispatch({
+      type: UPDATE_USER_SUCCESS,
+      payload: data.payload,
+    });
+  } catch (error) {
+    let message =
+      error.response && error.response.data.errors
+        ? error.response.data.errors.join(",")
+        : error.message;
+
+    console.log(message, "error");
+    dispatch({
+      type: LOGIN_USER_ERROR,
+      payload: message,
+    });
+    dispatch({
+      type: UPDATE_USER_ERROR,
       payload: error.message,
     });
   }

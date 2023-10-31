@@ -8,10 +8,12 @@ import {
   updateUserReducer,
   CreateTaskReducer,
   GetAllTasksReducer,
+  LoginUserReducer,
 } from "./reducers";
 
 export const reducers = combineReducers({
   cakes: buyCake,
+  loginUser: LoginUserReducer,
   createUser: CreateUserReducer,
   allUsers: GetAllUserReducer,
   user: GetUserReducer,

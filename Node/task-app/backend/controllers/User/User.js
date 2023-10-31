@@ -8,6 +8,8 @@ import bcrypt from "bcrypt";
 export const loginUser = async (req, res) => {
   const { email, password } = req.body;
 
+  console.log(req.body, "req.body");
+
   try {
     //confirm that email exist in db
     const userExist = await UserModel.findOne({ email: email });
@@ -67,7 +69,7 @@ export const createUser = async (req, res) => {
       password: hashedPassword,
       phoneNumber,
       userCode: generateCode(6),
-      role: "supervisor",
+      role: "admin",
     });
     res.status(httpStatus.OK).json({
       status: "success",

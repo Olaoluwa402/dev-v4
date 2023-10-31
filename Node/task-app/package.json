@@ -8,7 +8,7 @@
     "start:prod": "node backend/server.js",
     "start:dev": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run client\" && \"npm run start:dev\""
+    "dev": "concurrently \"npm run client\" \"npm run start:dev\""
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
     "concurrently": "^8.2.2",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
