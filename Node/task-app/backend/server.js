@@ -1,6 +1,11 @@
 //load evn variable into process.env
 import dotenv from "dotenv";
-dotenv.config();
+import path from "path";
+
+const __dir = path.resolve();
+const envFilePath = path.resolve(__dir, ".env");
+dotenv.config({ path: envFilePath });
+
 import express from "express";
 import morgan from "morgan";
 import colors from "colors";
@@ -12,6 +17,7 @@ import { config } from "./config/config.js";
 //controllers
 import UserRoute from "./Routes/User.js";
 import TaskRoute from "./Routes/Task.js";
+import AdminRoute from "./Routes/AdminRoute.js";
 
 const app = express();
 
@@ -21,6 +27,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 // routes instantiation
+app.use("/admin", AdminRoute);
 app.use("/users", UserRoute);
 app.use("/tasks", TaskRoute);
 

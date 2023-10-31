@@ -67,7 +67,7 @@ export const createUser = async (req, res) => {
       password: hashedPassword,
       phoneNumber,
       userCode: generateCode(6),
-      role: "supervisor",
+      role: "admin",
     });
     res.status(httpStatus.OK).json({
       status: "success",

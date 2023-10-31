@@ -1,6 +1,12 @@
 import Joi from "joi";
 import dotenv from "dotenv";
-dotenv.config({});
+import path from "path";
+
+// Specify the path to your .env file here
+const __dir = path.resolve();
+
+const envFilePath = path.resolve(__dir, ".env");
+dotenv.config({ path: envFilePath });
 
 const envValidation = Joi.object()
   .keys({
@@ -32,6 +38,6 @@ export const config = {
   },
   api_key: envVar.API_KEY,
   mongodb: {
-    db_url: envVar.MONGODB_URI,
+    db_url: envVar.MONGO_URI,
   },
 };
