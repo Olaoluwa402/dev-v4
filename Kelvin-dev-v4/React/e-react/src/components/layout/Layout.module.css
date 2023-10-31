@@ -8,4 +8,12 @@
 .main {
   position: relative;
   margin-top: 120px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main > * {
+  width: 100%;
 }

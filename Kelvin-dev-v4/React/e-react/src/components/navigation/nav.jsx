@@ -8,7 +8,7 @@ import { GlobalContext } from "../../context";
 
 function Nav() {
   const [dropDown, setDropDown] = useState(false);
-  const { cartLength } = useContext(GlobalContext);
+  const { cartLength, wishlistLength } = useContext(GlobalContext);
   // const mobileNavHandler = () => {};
   return (
     <div>
@@ -62,13 +62,16 @@ function Nav() {
           <NavLink to="/wishlist">
             <div className={styles.icon_container}>
               <BsHeart className={styles.i} id="navCartId" />
-              <span className={styles.count}>4</span>
+              <span className={styles.count}>{wishlistLength}</span>
             </div>
           </NavLink>
-          <div className={styles.icon_container}>
-            <BsCart3 className={styles.i} id="navCartId" />
-            <span className={styles.count}>{cartLength}</span>
-          </div>
+
+          <NavLink to="/cart">
+            <div className={styles.icon_container}>
+              <BsCart3 className={styles.i} id="navCartId" />
+              <span className={styles.count}>{cartLength}</span>
+            </div>
+          </NavLink>
 
           <NavLink to="/dashboard">
             <FiUser className={styles.userIcon} id="user_icon" />

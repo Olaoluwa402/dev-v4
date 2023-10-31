@@ -16,7 +16,7 @@ export const addToCartHandler = async ({
   id,
   title,
   price,
-  stock,
+  qty,
   product_img,
   desc,
 }) => {
@@ -24,17 +24,16 @@ export const addToCartHandler = async ({
     const { data } = await axios.post(cartUrl, {
       id,
       title,
+      price,
       qty,
       product_img,
-      price,
+      desc,
       userId: 1,
     });
 
-    alert("Product added to cart");
     return data;
   } catch (err) {
     console.log(err, "err");
-    alert(err);
     return;
   }
 };
