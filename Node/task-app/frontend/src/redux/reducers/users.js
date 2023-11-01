@@ -22,8 +22,16 @@ import {
   LOGIN_USER_RESET,
 } from "../constants";
 
+const userInfoFromStorage = localStorage.getItem("userInfo")
+  ? JSON.parse(localStorage.getItem("userInfo"))
+  : null;
 export const LoginUserReducer = (
-  state = { user: null, loading: false, success: false, error: null },
+  state = {
+    user: userInfoFromStorage,
+    loading: false,
+    success: false,
+    error: null,
+  },
   action
 ) => {
   switch (action.type) {
