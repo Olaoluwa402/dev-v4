@@ -2,13 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Sidebar.module.css";
 import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
+
+import { logout } from "../../../redux/actions/userAction";
 
 const Sidebar = () => {
+  const dispatch = useDispatch();
   function logoutHandler() {
-    //emptry the user localstorage object
-    // localStorage.setItem("userInfo", null);
-    // //empty the use global state
-    // setUser(null);
+    dispatch(logout());
   }
   return (
     <div>
