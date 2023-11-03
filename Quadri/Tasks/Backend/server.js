@@ -8,7 +8,8 @@ import httpStatus from "http-status"
 import { dbConnect } from "./Config/db.js";
 import { config } from "./Config/config.js";
 
-import router from "./routes/User.js";
+import router from "./Routes/User.js";
+import taskRouter from "./Routes/Task.js";
 
 const app = express()
 
@@ -17,6 +18,7 @@ app.use(morgan("dev"))
 app.use(express.json())
 
 app.use("/users",router)
+app.use("/tasks",taskRouter)
 // app.use("/user/id",router)
 app.get("/",(req,res)=>{
 res.status(httpStatus.OK).json({
