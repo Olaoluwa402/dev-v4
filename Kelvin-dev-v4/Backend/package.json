@@ -17,7 +17,7 @@
     "task app",
     "manage task"
   ],
-  "author": "Olaoluwa Daniel",
+  "author": "Kelvin Okpara",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
