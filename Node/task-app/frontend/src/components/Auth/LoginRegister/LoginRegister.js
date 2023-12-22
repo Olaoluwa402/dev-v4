@@ -3,7 +3,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Spinner from "../../Spinner/CustomSpinner";
-import { loginUserAction } from "../../../redux/actions/userAction";
+import {
+  loginUserAction,
+  createUserAction,
+} from "../../../redux/actions/userAction";
 import { LOGIN_USER_RESET } from "../../../redux/constants";
 
 const LoginRegister = ({ register, login }) => {
@@ -52,27 +55,18 @@ const LoginRegister = ({ register, login }) => {
     //eslint-disable-next-line
   }, [success, error]);
 
-  async function RegisterHandler() {
-    // submit the record to the server via api call
-    // const { email, password, username } = value;
-    // // console.log(email, password, username);
-    // setIsLoading((prev) => ({
-    //   ...prev,
-    //   register: true,
-    // }));
-    // const registeredUser = await registerReq(email, password, username);
-    // console.log(registeredUser);
-    // if (registeredUser) {
-    //   setIsRegisterd(true);
-    //   setIsLoading((prev) => ({
-    //     ...prev,
-    //     register: false,
-    //   }));
-    // }
-  }
-
   async function LoginHandler() {
     dispatch(loginUserAction({ email: value.email, password: value.password }));
+  }
+
+  async function RegisterHandler() {
+    dispatch(
+      createUserAction({
+        username: value.username,
+        email: value.email,
+        password: value.password,
+      })
+    );
   }
   return (
     <div>
