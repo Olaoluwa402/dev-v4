@@ -1,0 +1,28 @@
+.slider-container {
+    position: relative;
+   }
+    .slider-container .slider-parent {
+      height: 70vh;
+      max-width: 250px;
+      width: 100%;
+      background: #6C7A89;
+      position: absolute;
+      right: -250px;
+      top: 50px;
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+      transition: .2s all linear;
+      padding: 10px;
+   }
+     .slider-container .slider-parent.active {
+        visibility: visible;
+        pointer-events: inherit;
+        transition: .2s all ease-in-out;
+        opacity: 1;
+        right: 0;
+   }
+   .slider-trigger{
+    display: flex;
+  float: right;
+   }

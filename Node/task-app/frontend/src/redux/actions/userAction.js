@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import {
   CREATE_USER_REQUEST,
   CREATE_USER_SUCCESS,
@@ -18,6 +19,7 @@ import {
   LOGIN_USER_REQUEST,
   LOGIN_USER_SUCCESS,
   LOGIN_USER_ERROR,
+  LOGIN_USER_RESET,
 } from "../constants";
 import axios from "axios";
 
@@ -38,7 +40,6 @@ export const loginUserAction = (BodyData) => async (dispatch, state) => {
     });
     // make the call
 
-    console.log(BodyData, "bodyDAte");
     const { data } = await axios.post(
       `${backend_base_url}/users/login`,
       {
@@ -49,16 +50,21 @@ export const loginUserAction = (BodyData) => async (dispatch, state) => {
     );
 
     //if we get here, then request is a success case
+    const userInfo = { ...data.payload, token: data.token };
     dispatch({
       type: LOGIN_USER_SUCCESS,
-      payload: data.payload,
+      payload: userInfo,
     });
+
+    //persist user login detail in local storage
+    localStorage.setItem("userInfo", JSON.stringify(userInfo));
   } catch (error) {
     let message =
       error.response && error.response.data.errors
         ? error.response.data.errors.join(",")
+        : error.response && error.response.data.message
+        ? error.response.data.message
         : error.message;
-
     console.log(message, "error");
     dispatch({
       type: LOGIN_USER_ERROR,
@@ -67,12 +73,18 @@ export const loginUserAction = (BodyData) => async (dispatch, state) => {
   }
 };
 
+export const logout = () => async (dispatch, state) => {
+  console.log("loogged out");
+  dispatch({ type: LOGIN_USER_RESET });
+  localStorage.setItem("userInfo", null);
+  toast.success("logged out");
+};
+
 export const createUserAction = (BodyData) => async (dispatch, state) => {
   const user = {};
   const config = {
     headers: {
       "Content-Type": "application/json",
-      authorization: `Bearer ${user.token}`,
     },
   };
   try {
@@ -98,22 +110,22 @@ export const createUserAction = (BodyData) => async (dispatch, state) => {
     let message =
       error.response && error.response.data.errors
         ? error.response.data.errors.join(",")
+        : error.response && error.response.data.message
+        ? error.response.data.message
         : error.message;
-
     console.log(message, "error");
     dispatch({
       type: LOGIN_USER_ERROR,
       payload: message,
     });
-    dispatch({
-      type: CREATE_USER_ERROR,
-      payload: error.message,
-    });
   }
 };
 
 export const getUsersAction = () => async (dispatch, state) => {
-  const user = {};
+  const {
+    loginUser: { user },
+  } = state();
+
   const config = {
     headers: {
       "Content-Type": "application/json",
@@ -126,7 +138,7 @@ export const getUsersAction = () => async (dispatch, state) => {
       type: GET_USERS_REQUEST,
     });
     // make the call
-    const { data } = await axios.get(`${backend_base_url}/users`, config);
+    const { data } = await axios.get(`${backend_base_url}/admin`, config);
     console.log(data, "data");
     //if we get here, then request is a success case
     dispatch({
@@ -137,16 +149,17 @@ export const getUsersAction = () => async (dispatch, state) => {
     let message =
       error.response && error.response.data.errors
         ? error.response.data.errors.join(",")
+        : error.response && error.response.data.message
+        ? error.response.data.message
         : error.message;
 
-    console.log(message, "error");
+    console.log(error, "error");
+    if (message.toLowerCase().includes("jwt")) {
+      dispatch(logout());
+    }
     dispatch({
       type: LOGIN_USER_ERROR,
       payload: message,
-    });
-    dispatch({
-      type: GET_USERS_ERROR,
-      payload: error.message,
     });
   }
 };
@@ -176,16 +189,13 @@ export const GetUserAction = (id) => async (dispatch, state) => {
     let message =
       error.response && error.response.data.errors
         ? error.response.data.errors.join(",")
+        : error.response && error.response.data.message
+        ? error.response.data.message
         : error.message;
-
     console.log(message, "error");
     dispatch({
       type: LOGIN_USER_ERROR,
       payload: message,
-    });
-    dispatch({
-      type: GET_USER_ERROR,
-      payload: error.message,
     });
   }
 };
@@ -218,16 +228,13 @@ export const DeleteUserAction = (id) => async (dispatch, state) => {
     let message =
       error.response && error.response.data.errors
         ? error.response.data.errors.join(",")
+        : error.response && error.response.data.message
+        ? error.response.data.message
         : error.message;
-
     console.log(message, "error");
     dispatch({
       type: LOGIN_USER_ERROR,
       payload: message,
-    });
-    dispatch({
-      type: DELETE_USER_ERROR,
-      payload: error.message,
     });
   }
 };
@@ -261,16 +268,13 @@ export const updateUserAction = (id, data) => async (dispatch, state) => {
     let message =
       error.response && error.response.data.errors
         ? error.response.data.errors.join(",")
+        : error.response && error.response.data.message
+        ? error.response.data.message
         : error.message;
-
     console.log(message, "error");
     dispatch({
       type: LOGIN_USER_ERROR,
       payload: message,
-    });
-    dispatch({
-      type: UPDATE_USER_ERROR,
-      payload: error.message,
     });
   }
 };
