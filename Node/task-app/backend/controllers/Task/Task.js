@@ -1,6 +1,7 @@
 import httpStatus from "http-status";
 import UserModel from "../../models/User.js";
 import taskModel from "../../models/Task.js";
+import { paginate } from "../../utils/pagination.js";
 
 export const createTask = async (req, res) => {
   // collect required field from the body
@@ -40,13 +41,20 @@ export const createTask = async (req, res) => {
 
 export const getTasks = async (req, res) => {
   try {
-    const tasks = await taskModel
-      .find({ userId: req.user.id })
-      .populate("userId");
+    const model = "Task";
+    const query = { userId: req.user.id };
+    const page = 1;
+    const pageSize = 10;
+    const populateField = ["userId"];
+    const data = await paginate(model, query, page, pageSize, populateField);
+
+    // const tasks = await taskModel
+    //   .find({ userId: req.user.id })
+    //   .populate("userId");
 
     res.status(httpStatus.OK).json({
       status: "success",
-      payload: tasks,
+      payload: data,
     });
   } catch (error) {
     res.status(httpStatus.BAD_REQUEST).json({
