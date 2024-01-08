@@ -63,7 +63,7 @@ dbConnect()
     console.log(`db connection successful`.bgCyan);
 
     //listen to request from clients via a set port
-    const port = config.env === "production" ? config.env : 9000;
+    const port = config.env === "production" ? process.env.PORT : 9000;
     app.listen(port, (err) => {
       if (err) {
         console.log(`error: ${err}`.bgRed);
