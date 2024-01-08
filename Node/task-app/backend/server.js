@@ -33,7 +33,7 @@ app.use("/users", UserRoute);
 app.use("/tasks", TaskRoute);
 
 //set static folder for frontend build to be served by the backend in production
-
+console.log(process.env.NODE_ENV, "process.env.NODE_ENV");
 const __dirname = path.resolve();
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/frontend/build")));

@@ -10,10 +10,6 @@
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run client\" \"npm run start:dev\""
   },
-  "repository": {
-    "type": "git",
-    "url": "hhjghjgjhhjghj"
-  },
   "keywords": [
     "task",
     "task app",
