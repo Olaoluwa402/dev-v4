@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styles from "./fyp.module.css";
 import Product from "../product_tab/product";
 import Rating from "../rating/Rating";
@@ -7,7 +7,13 @@ import { BsEye } from "react-icons/bs";
 import { GlobalContext } from "../../context";
 
 function Fyp() {
-  const { products } = useContext(GlobalContext);
+  const { products, getProducts, setProducts, getProductsReq } =
+    useContext(GlobalContext);
+
+  useEffect(() => {
+    getProductsReq();
+  }, []);
+  console.log(products);
 
   return (
     <section>
@@ -15,42 +21,23 @@ function Fyp() {
         <h5>Just for you (4)</h5>
         <button>See All</button>
       </div>
-      <div className={`${styles.product_tabs}  product_tabs`} id="product_tabs">
-        {products && products.length > 0 ? (
-          products.map((product) => (
+      <div className={`${styles.product_tabs} product_tabs`} id="product_tabs">
+        {products &&
+          products.map((data) => (
             <Product
-              key={product.id}
+              key={data.id}
               prod_icon={<BsEye />}
-              // prod_former_price={}
               prod_rating={<Rating />}
-              prod_data={product}
+              product={data}
+              id={data.id}
+              title={data.title}
+              price={data.price}
+              product_img={data.product_img}
+              desc={data.desc}
+              isFyp={true}
+              isWishlist={false}
             />
-          ))
-        ) : (
-          <h1>No Products</h1>
-        )}
-
-        {/* <Product
-          prod_icon={<BsEye />}
-          prod_img="/Assets/wishlist-page-assets/wishlist-television.png"
-          prod_desc="IPS LCD Gaming Monitor"
-          prod_price="$1160"
-          prod_rating={<Rating />}
-        />
-        <Product
-          prod_icon={<BsEye />}
-          prod_img="/Assets/wishlist-page-assets/wishlist-red-gamepad.png"
-          prod_desc="HAVIT HV-G92 Gamepad"
-          prod_price="$560"
-          prod_rating={<Rating />}
-        />
-        <Product
-          prod_icon={<BsEye />}
-          prod_img="/Assets/wishlist-page-assets/wishlist-keyboard.png"
-          prod_desc="AK-900 Wired Keyboard"
-          prod_price="$200"
-          prod_rating={<Rating />}
-        /> */}
+          ))}
       </div>
     </section>
   );

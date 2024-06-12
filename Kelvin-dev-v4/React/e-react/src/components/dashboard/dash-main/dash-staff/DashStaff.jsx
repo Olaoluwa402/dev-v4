@@ -6,7 +6,7 @@ function DashStaff() {
   const [staffs, setrep] = useState([]);
 
   useEffect(() => {
-    const url = "http://localhost:4000/posts";
+    const url = "http://localhost:3004/posts";
     // console.log(url);
     const getStaffReport = async () => {
       return axios

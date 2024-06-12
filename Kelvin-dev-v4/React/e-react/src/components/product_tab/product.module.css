@@ -1,3 +1,7 @@
+* {
+  transition: all 0.2s;
+}
+
 .product_tab {
   margin-right: 40px;
   margin-left: 0;
@@ -29,7 +33,7 @@
   flex-direction: column;
   align-items: center;
   padding: 15px;
-  height: 100px;
+  height: 80px;
   position: relative;
 }
 .tab_main:hover button {
@@ -131,7 +135,7 @@
 
 @media screen and (min-width: 650px) {
   .product_tab {
-    width: 200px;
+    width: 150px;
     margin: 30px;
   }
 
